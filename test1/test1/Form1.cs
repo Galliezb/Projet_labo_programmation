@@ -9,22 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace test1 {
-    public partial class Form1 : Form {
-        public Form1 () {
+    public partial class FormStart : Form {
+        public FormStart () {
             InitializeComponent();
-            //Chauvequipeut
-            //Blav ozico izcezv nae f d
-            //veldj ebm ùlkanvm ajrv oa"jbvr lkeav na
-            // aovd vojvb ejn bornbaer nba
-            // connerie 1
-            // connerie 2
-            // connerie 3
-            // connerie 4
+            FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
-            // connerie 1
-            // connerie 2
-            // connerie 3
-            // connerie 4
+            Label lbLogin = new Label();
+            TextBox txtLogin = new TextBox();
+
+            Label lbMdp = new Label();
+            TextBox txtMdp = new TextBox();
         }
 
         private void Form1_Load ( object sender , EventArgs e ) {
