@@ -16,6 +16,15 @@ namespace test1 {
             //Blav ozico izcezv nae f d
             //veldj ebm ùlkanvm ajrv oa"jbvr lkeav na
             // aovd vojvb ejn bornbaer nba
+            // connerie 1
+            // connerie 2
+            // connerie 3
+            // connerie 4
+
+            // connerie 1
+            // connerie 2
+            // connerie 3
+            // connerie 4
         }
 
         private void Form1_Load ( object sender , EventArgs e ) {
