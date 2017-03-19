@@ -26,19 +26,20 @@
             this.pNews = new System.Windows.Forms.Panel();
             this.lbNews = new System.Windows.Forms.Label();
             this.pIdentification = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bEnter = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbIdentification = new System.Windows.Forms.Label();
             this.bIdentification = new System.Windows.Forms.Button();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.tbPwd = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pCreate = new System.Windows.Forms.Panel();
             this.bCreate = new System.Windows.Forms.Button();
             this.tbCreatePwd = new System.Windows.Forms.TextBox();
             this.tbCreateLogin = new System.Windows.Forms.TextBox();
             this.lbCreate = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pIdentification.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pCreate.SuspendLayout();
             this.SuspendLayout();
             // 
             // pNews
@@ -72,16 +73,16 @@
             this.pIdentification.Size = new System.Drawing.Size(353, 203);
             this.pIdentification.TabIndex = 2;
             // 
-            // button1
+            // bEnter
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(874, 644);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(353, 147);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ENTER";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bEnter.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEnter.Location = new System.Drawing.Point(874, 644);
+            this.bEnter.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.bEnter.Name = "bEnter";
+            this.bEnter.Size = new System.Drawing.Size(353, 147);
+            this.bEnter.TabIndex = 3;
+            this.bEnter.Text = "ENTER";
+            this.bEnter.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -129,21 +130,22 @@
             this.tbPwd.TabIndex = 2;
             this.tbPwd.Text = "Password";
             // 
-            // panel1
+            // pCreate
             // 
-            this.panel1.Controls.Add(this.bCreate);
-            this.panel1.Controls.Add(this.tbCreatePwd);
-            this.panel1.Controls.Add(this.tbCreateLogin);
-            this.panel1.Controls.Add(this.lbCreate);
-            this.panel1.Location = new System.Drawing.Point(874, 350);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 214);
-            this.panel1.TabIndex = 10;
+            this.pCreate.Controls.Add(this.textBox1);
+            this.pCreate.Controls.Add(this.bCreate);
+            this.pCreate.Controls.Add(this.tbCreatePwd);
+            this.pCreate.Controls.Add(this.tbCreateLogin);
+            this.pCreate.Controls.Add(this.lbCreate);
+            this.pCreate.Location = new System.Drawing.Point(874, 350);
+            this.pCreate.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pCreate.Name = "pCreate";
+            this.pCreate.Size = new System.Drawing.Size(353, 286);
+            this.pCreate.TabIndex = 10;
             // 
             // bCreate
             // 
-            this.bCreate.Location = new System.Drawing.Point(20, 152);
+            this.bCreate.Location = new System.Drawing.Point(18, 217);
             this.bCreate.Name = "bCreate";
             this.bCreate.Size = new System.Drawing.Size(321, 33);
             this.bCreate.TabIndex = 9;
@@ -177,14 +179,22 @@
             this.lbCreate.TabIndex = 6;
             this.lbCreate.Text = "Create Account";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(20, 153);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(321, 27);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Text = "Password";
+            // 
             // FormStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 804);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pCreate);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bEnter);
             this.Controls.Add(this.pIdentification);
             this.Controls.Add(this.lbNews);
             this.Controls.Add(this.pNews);
@@ -194,8 +204,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pIdentification.ResumeLayout(false);
             this.pIdentification.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pCreate.ResumeLayout(false);
+            this.pCreate.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,17 +216,18 @@
         private System.Windows.Forms.Panel pNews;
         private System.Windows.Forms.Label lbNews;
         private System.Windows.Forms.Panel pIdentification;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bEnter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbIdentification;
         private System.Windows.Forms.TextBox tbPwd;
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Button bIdentification;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pCreate;
         private System.Windows.Forms.Button bCreate;
         private System.Windows.Forms.TextBox tbCreatePwd;
         private System.Windows.Forms.TextBox tbCreateLogin;
         private System.Windows.Forms.Label lbCreate;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
