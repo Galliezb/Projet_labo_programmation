@@ -12,8 +12,10 @@ namespace test1 {
     public partial class FormStart : Form {
         public FormStart () {
             InitializeComponent();
-            FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            
+            // Passage en full screen
+            //FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
 
             Label lbLogin = new Label();
             TextBox txtLogin = new TextBox();
@@ -23,6 +25,10 @@ namespace test1 {
         }
 
         private void Form1_Load ( object sender , EventArgs e ) {
+
+        }
+
+        private void domainUpDown1_SelectedItemChanged ( object sender , EventArgs e ) {
 
         }
     }
