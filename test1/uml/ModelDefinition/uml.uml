@@ -396,6 +396,25 @@
                 LastKnownLocation="uml.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="eda1eb76-7d04-469c-9786-c7ef54bfc8c0"
+            name="password"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="uml.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -455,6 +474,24 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
+          <operation
+            Id="04f2edda-b519-46d7-948e-b25e66b78d6c"
+            name="sendInvitation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6647465f-cce1-4c95-baf7-5a81e4b0ba4a"
+                  name="int idPlayer[]"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -839,9 +876,9 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                LastKnownName="Boolean"
+              <undefinedTypeMoniker
+                Id="9f2d8d0a-c008-49f5-8efc-98fb802b7f64"
+                LastKnownName="Date"
                 LastKnownLocation="uml.uml" />
             </type_NamedElement>
           </property>
@@ -1201,6 +1238,104 @@
       <undefinedType
         Id="9f2d8d0a-c008-49f5-8efc-98fb802b7f64"
         name="Date" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9fb20d0e-a79e-4bca-9c57-c6a0ec13e83e"
+        name="Admin"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="dfb830c9-97fa-43de-ab2f-4f0eba726725"
+            name="name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="uml.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="2590a1eb-bcfc-411c-8dc4-c865e58e1931"
+            name="Admin"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ea9492dd-8974-431c-9fe5-f6dd9022c98f"
+            name="~Admin"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1bfadf88-71ee-4839-853d-fb7536e3d286"
+            name="changeName"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="06e76d82-29de-4266-ac86-eaa425e90be8"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2b25969c-dddb-4bab-bec9-548b94a98b30"
+            name="createOrganizer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="70c1d7e5-5298-450a-8412-53432a78466f"
+            name="ImportActiveDirectory"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a15c6d60-8220-46e6-a48b-76bb4fa9c26a"
+            name="UpdateActiveDirectory"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7bc08ab2-1cab-48c1-bf0c-d031ee2986fd"
+            name="AddAdmin"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
