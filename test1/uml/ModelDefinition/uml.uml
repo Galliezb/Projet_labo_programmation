@@ -562,7 +562,20 @@
                   isDerivedUnion="false"
                   aggregation="Shared"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d0cddd45-c1e7-4774-a9b8-8ae617c7604e"
+                      name="Lower"
+                      value="0,1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6fd2c1ab-c445-46a3-b122-c887e63626a9"
+                      name="Upper"
+                      value="0,1" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -612,7 +625,20 @@
                   isDerivedUnion="false"
                   aggregation="Shared"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="14bc6497-26a3-43f6-99e4-dceabf89ebf9"
+                      name="Lower"
+                      value="0,1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="44362c59-519b-4e42-a7ac-74ffb7b98770"
+                      name="Upper"
+                      value="0,1" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -851,7 +877,20 @@
                   isDerivedUnion="false"
                   aggregation="Shared"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="23450f9b-040a-41b4-83e9-04ec77e70855"
+                      name="Lower"
+                      value="0,n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e455d53e-a06b-485b-9165-5d0f3a7d5d2d"
+                      name="Upper"
+                      value="0,n" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -867,13 +906,13 @@
                     <literalString
                       Id="ed5e5291-63a5-4bce-9a93-8f36075d8f6c"
                       name="Lower"
-                      value="0,n" />
+                      value="1,n" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
                       Id="a7c961ae-f34b-46f2-a7e7-fda008fbf98d"
                       name="Upper"
-                      value="0,n" />
+                      value="1,n" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
