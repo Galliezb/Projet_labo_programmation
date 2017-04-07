@@ -1,7 +1,6 @@
 ﻿***** SQL SERVER *****
-nom du serveur : azuregestiontournoi.database.windows.net
-loginAdmin : adminConnectionAzureServer
-pwd : 696SzmPHDKpg42y
-
+nom du serveur : 5.135.176.126
+loginAdmin : mysqlConnectionK
+pwd : Ho5DOeHdx8b3QFm8
+BDD : gestionTournoi
 Chaine de connection :
-Server=tcp:azuregestiontournoi.database.windows.net,1433;Initial Catalog=gestion_tournoi;Persist Security Info=False;User ID=adminConnectionAzureServer;Password=696SzmPHDKpg42y;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
