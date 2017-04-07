@@ -96,6 +96,9 @@
   <ItemGroup>
     <None Include="Resources\304cae8c141683515667132206_700w_0.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="backup_info.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
