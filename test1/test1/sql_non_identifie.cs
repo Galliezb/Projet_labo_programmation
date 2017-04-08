@@ -7,11 +7,11 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace test1 {
-    class sql_non_identifie {
+    class Sql_non_identifie {
 
         DatabaseConnection maConnexionMysql;
 
-        public sql_non_identifie () {
+        public Sql_non_identifie () {
 
             maConnexionMysql = new DatabaseConnection();
 

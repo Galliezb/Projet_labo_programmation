@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace test1 {
     public partial class FormStart : Form {
 
-        sql_non_identifie test = new sql_non_identifie();
+        Sql_non_identifie test = new Sql_non_identifie();
 
         public FormStart () {
             InitializeComponent();
