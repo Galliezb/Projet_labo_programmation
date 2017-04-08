@@ -10,9 +10,13 @@ using System.Windows.Forms;
 
 namespace test1 {
     public partial class FormStart : Form {
+
+        sql_non_identifie test = new sql_non_identifie();
+
         public FormStart () {
             InitializeComponent();
-            
+
+
             // Passage en full screen
             //FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
@@ -25,6 +29,8 @@ namespace test1 {
         }
 
         private void Form1_Load ( object sender , EventArgs e ) {
+
+            test.test();
 
         }
 
