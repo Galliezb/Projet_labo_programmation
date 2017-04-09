@@ -37,5 +37,31 @@ namespace test1 {
         private void domainUpDown1_SelectedItemChanged ( object sender , EventArgs e ) {
 
         }
+
+        private void bCreate_Click(object sender, EventArgs e)
+        {
+            if (tbCreatePwd.Text == tbVerifPwd.Text)
+            {
+                test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());
+                PageDAccueil page = new PageDAccueil(tbLogin.Text.ToString());
+                page.ShowDialog();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("les mots de passe ne correspondent pas");
+            }
+        }
+
+        private void bIdentification_Click(object sender, EventArgs e)
+        {
+            if (tbPwd.Text.ToString() == test.test2(tbLogin.Text.ToString(),"password"))
+            {
+                PageDAccueil page = new PageDAccueil(tbLogin.Text.ToString());
+                page.ShowDialog();
+                Hide();
+            }
+            
+        }
     }
 }

@@ -59,10 +59,10 @@
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Organizer.cs" />
-    <Compile Include="PageDAccueil.cs">
+    <Compile Include="Form\PageDAccueil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PageDAccueil.Designer.cs">
+    <Compile Include="Form\PageDAccueil.Designer.cs">
       <DependentUpon>PageDAccueil.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -72,7 +72,7 @@
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PageDAccueil.resx">
+    <EmbeddedResource Include="Form\PageDAccueil.resx">
       <DependentUpon>PageDAccueil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

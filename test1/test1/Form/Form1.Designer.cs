@@ -26,18 +26,18 @@
             this.pNews = new System.Windows.Forms.Panel();
             this.lbNews = new System.Windows.Forms.Label();
             this.pIdentification = new System.Windows.Forms.Panel();
+            this.lbIdentification = new System.Windows.Forms.Label();
+            this.tbPwd = new System.Windows.Forms.TextBox();
+            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.bIdentification = new System.Windows.Forms.Button();
             this.bEnter = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbIdentification = new System.Windows.Forms.Label();
-            this.bIdentification = new System.Windows.Forms.Button();
-            this.tbLogin = new System.Windows.Forms.TextBox();
-            this.tbPwd = new System.Windows.Forms.TextBox();
             this.pCreate = new System.Windows.Forms.Panel();
+            this.tbVerifPwd = new System.Windows.Forms.TextBox();
             this.bCreate = new System.Windows.Forms.Button();
             this.tbCreatePwd = new System.Windows.Forms.TextBox();
             this.tbCreateLogin = new System.Windows.Forms.TextBox();
             this.lbCreate = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pIdentification.SuspendLayout();
             this.pCreate.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +73,43 @@
             this.pIdentification.Size = new System.Drawing.Size(353, 203);
             this.pIdentification.TabIndex = 2;
             // 
+            // lbIdentification
+            // 
+            this.lbIdentification.AutoSize = true;
+            this.lbIdentification.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdentification.Location = new System.Drawing.Point(113, 13);
+            this.lbIdentification.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbIdentification.Name = "lbIdentification";
+            this.lbIdentification.Size = new System.Drawing.Size(118, 18);
+            this.lbIdentification.TabIndex = 5;
+            this.lbIdentification.Text = "Identification";
+            // 
+            // tbPwd
+            // 
+            this.tbPwd.Location = new System.Drawing.Point(18, 87);
+            this.tbPwd.Name = "tbPwd";
+            this.tbPwd.Size = new System.Drawing.Size(321, 27);
+            this.tbPwd.TabIndex = 2;
+            this.tbPwd.Text = "Password";
+            // 
+            // tbLogin
+            // 
+            this.tbLogin.Location = new System.Drawing.Point(18, 43);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(321, 27);
+            this.tbLogin.TabIndex = 1;
+            this.tbLogin.Text = "Login";
+            // 
+            // bIdentification
+            // 
+            this.bIdentification.Location = new System.Drawing.Point(18, 132);
+            this.bIdentification.Name = "bIdentification";
+            this.bIdentification.Size = new System.Drawing.Size(321, 33);
+            this.bIdentification.TabIndex = 0;
+            this.bIdentification.Text = "Send";
+            this.bIdentification.UseVisualStyleBackColor = true;
+            this.bIdentification.Click += new System.EventHandler(this.bIdentification_Click);
+            // 
             // bEnter
             // 
             this.bEnter.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,45 +131,9 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "label2";
             // 
-            // lbIdentification
-            // 
-            this.lbIdentification.AutoSize = true;
-            this.lbIdentification.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIdentification.Location = new System.Drawing.Point(113, 13);
-            this.lbIdentification.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lbIdentification.Name = "lbIdentification";
-            this.lbIdentification.Size = new System.Drawing.Size(118, 18);
-            this.lbIdentification.TabIndex = 5;
-            this.lbIdentification.Text = "Identification";
-            // 
-            // bIdentification
-            // 
-            this.bIdentification.Location = new System.Drawing.Point(18, 132);
-            this.bIdentification.Name = "bIdentification";
-            this.bIdentification.Size = new System.Drawing.Size(321, 33);
-            this.bIdentification.TabIndex = 0;
-            this.bIdentification.Text = "Send";
-            this.bIdentification.UseVisualStyleBackColor = true;
-            // 
-            // tbLogin
-            // 
-            this.tbLogin.Location = new System.Drawing.Point(18, 43);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(321, 27);
-            this.tbLogin.TabIndex = 1;
-            this.tbLogin.Text = "Login";
-            // 
-            // tbPwd
-            // 
-            this.tbPwd.Location = new System.Drawing.Point(18, 87);
-            this.tbPwd.Name = "tbPwd";
-            this.tbPwd.Size = new System.Drawing.Size(321, 27);
-            this.tbPwd.TabIndex = 2;
-            this.tbPwd.Text = "Password";
-            // 
             // pCreate
             // 
-            this.pCreate.Controls.Add(this.textBox1);
+            this.pCreate.Controls.Add(this.tbVerifPwd);
             this.pCreate.Controls.Add(this.bCreate);
             this.pCreate.Controls.Add(this.tbCreatePwd);
             this.pCreate.Controls.Add(this.tbCreateLogin);
@@ -143,6 +144,14 @@
             this.pCreate.Size = new System.Drawing.Size(353, 286);
             this.pCreate.TabIndex = 10;
             // 
+            // tbVerifPwd
+            // 
+            this.tbVerifPwd.Location = new System.Drawing.Point(20, 153);
+            this.tbVerifPwd.Name = "tbVerifPwd";
+            this.tbVerifPwd.Size = new System.Drawing.Size(321, 27);
+            this.tbVerifPwd.TabIndex = 10;
+            this.tbVerifPwd.Text = "Password";
+            // 
             // bCreate
             // 
             this.bCreate.Location = new System.Drawing.Point(18, 217);
@@ -151,6 +160,7 @@
             this.bCreate.TabIndex = 9;
             this.bCreate.Text = "Send";
             this.bCreate.UseVisualStyleBackColor = true;
+            this.bCreate.Click += new System.EventHandler(this.bCreate_Click);
             // 
             // tbCreatePwd
             // 
@@ -162,6 +172,7 @@
             // 
             // tbCreateLogin
             // 
+            this.tbCreateLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tbCreateLogin.Location = new System.Drawing.Point(20, 57);
             this.tbCreateLogin.Name = "tbCreateLogin";
             this.tbCreateLogin.Size = new System.Drawing.Size(321, 27);
@@ -179,19 +190,11 @@
             this.lbCreate.TabIndex = 6;
             this.lbCreate.Text = "Create Account";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(20, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 27);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Password";
-            // 
             // FormStart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1241, 804);
+            this.ClientSize = new System.Drawing.Size(1234, 801);
             this.Controls.Add(this.pCreate);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bEnter);
@@ -200,6 +203,7 @@
             this.Controls.Add(this.pNews);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FormStart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tournoi Management";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pIdentification.ResumeLayout(false);
@@ -227,7 +231,7 @@
         private System.Windows.Forms.TextBox tbCreatePwd;
         private System.Windows.Forms.TextBox tbCreateLogin;
         private System.Windows.Forms.Label lbCreate;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbVerifPwd;
     }
 }
 
