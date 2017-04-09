@@ -64,6 +64,7 @@
             this.tbName.Size = new System.Drawing.Size(196, 20);
             this.tbName.TabIndex = 1;
             this.tbName.Visible = false;
+            this.tbName.TextChanged += new System.EventHandler(this.tbName_TextChanged);
             // 
             // tbPwd1
             // 
@@ -169,20 +170,20 @@
             // 
             this.lbNom.AutoSize = true;
             this.lbNom.BackColor = System.Drawing.Color.White;
-            this.lbNom.Font = new System.Drawing.Font("PT Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNom.Location = new System.Drawing.Point(107, 23);
             this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(58, 25);
+            this.lbNom.Size = new System.Drawing.Size(58, 24);
             this.lbNom.TabIndex = 12;
             this.lbNom.Text = "NOM";
             // 
             // lblb
             // 
             this.lblb.AutoSize = true;
-            this.lblb.Font = new System.Drawing.Font("PT Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.lblb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblb.Location = new System.Drawing.Point(12, 23);
             this.lblb.Name = "lblb";
-            this.lblb.Size = new System.Drawing.Size(89, 25);
+            this.lblb.Size = new System.Drawing.Size(89, 24);
             this.lblb.TabIndex = 13;
             this.lblb.Text = "Bonjour ";
             // 

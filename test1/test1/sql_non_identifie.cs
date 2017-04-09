@@ -24,6 +24,10 @@ namespace test1 {
 
         }
 
+        /*
+         
+         EXEMPLE DE LECTURE DE TOUS LES CHAMPS ET TOUTES LES LIGNES D'UNE BDD
+
         public void test()
         {
 
@@ -34,8 +38,7 @@ namespace test1 {
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
 
             MySqlDataReader monReaderMysql = maConnexionMysql.Lacommande.ExecuteReader();
-            if (monReaderMysql.Read())
-            {
+            while (monReaderMysql.Read()) {
 
 
                 MessageBox.Show("id : " + monReaderMysql.GetInt32(0).ToString());
@@ -48,19 +51,20 @@ namespace test1 {
             maConnexionMysql.Laconnexion.Close();
 
         }
+        */
 
         public string test2(string namedd,string ValueType)
         {
 
             maConnexionMysql.Laconnexion.Open();
-
             // creation requête et ajout à la commande
             string sqlRequest = "SELECT * FROM user";
             //maConnexionMysql.Lacommande.Parameters.AddWithValue("@namedd", namedd);
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
             string result;
             MySqlDataReader monReaderMysql = maConnexionMysql.Lacommande.ExecuteReader();
-            if (monReaderMysql.Read())
+
+            while (monReaderMysql.Read())
             {
 
                /*MessageBox.Show("id : " + monReaderMysql.GetInt32(0).ToString());
@@ -72,28 +76,17 @@ namespace test1 {
                 {
                     if (monReaderMysql.GetString(1).ToString() == namedd)
                     {
-                        maConnexionMysql.Laconnexion.Close();
+                        
                         result=monReaderMysql.GetString(4).ToString();
+                        maConnexionMysql.Laconnexion.Close();
                         return result;
                     }
-                    else
-                    {
-                        maConnexionMysql.Laconnexion.Close();
-                        return "NONE";
-                    }
-                }
-                else
-                {
-                    maConnexionMysql.Laconnexion.Close();
-                    return "NONE";
                 }
 
             }
-            else
-            {
-                maConnexionMysql.Laconnexion.Close();
-                return "NONE";
-            }
+            maConnexionMysql.Laconnexion.Close();
+            MessageBox.Show( "Identifiants incorrects" );
+            return "NONE";
 
 
 

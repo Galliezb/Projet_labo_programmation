@@ -39,5 +39,9 @@ namespace test1
             tbPwd2.Visible = true;
             btSave.Visible = true;
         }
+
+        private void tbName_TextChanged ( object sender , EventArgs e ) {
+
+        }
     }
 }

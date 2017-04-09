@@ -30,7 +30,7 @@ namespace test1 {
 
         private void Form1_Load ( object sender , EventArgs e ) {
 
-            test.test();
+            //test.test();
 
         }
 
@@ -57,11 +57,12 @@ namespace test1 {
         {
             if (tbPwd.Text.ToString() == test.test2(tbLogin.Text.ToString(),"password"))
             {
-                PageDAccueil page = new PageDAccueil(tbLogin.Text.ToString());
+                this.Hide();
+                PageDAccueil page = new PageDAccueil( tbLogin.Text.ToString() );
                 page.ShowDialog();
-                Hide();
+                this.Close();
             }
-            
+
         }
     }
 }
