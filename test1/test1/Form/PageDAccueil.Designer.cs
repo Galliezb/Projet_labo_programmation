@@ -110,6 +110,7 @@
             this.btSave.Text = "Sauvegarder";
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Visible = false;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // lbName
             // 
