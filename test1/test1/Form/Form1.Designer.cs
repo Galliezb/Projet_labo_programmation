@@ -302,7 +302,7 @@
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormStart";
-            this.Text = "Tournoi Management";
+            this.Text = "Tournament Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pCreate.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
