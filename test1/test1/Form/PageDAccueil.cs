@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace test1
 {
     public partial class PageDAccueil : Form
     {
+        Objet_A_Update o= new Objet_A_Update();
         string name_;
+        Page_D_Accueil_SQL_Request test = new Page_D_Accueil_SQL_Request();
         public PageDAccueil()
         {
             InitializeComponent();
@@ -38,10 +41,30 @@ namespace test1
             tbPwd1.Visible = true;
             tbPwd2.Visible = true;
             btSave.Visible = true;
+            tbMail.Text= test.getMailUser(name_);
+            tbName.Text = name_;
+            tbPwd1.Text = test.getPWDUser(name_);
+            tbFirstName.Text = test.getFirstnameUser(name_);
+            
         }
 
         private void tbName_TextChanged ( object sender , EventArgs e ) {
 
+        }
+
+        private void btSave_Click(object sender, EventArgs e)
+        {
+            if (tbPwd1.Text.ToString() == tbPwd2.Text.ToString())
+            {
+                o.email = tbMail.Text.ToString();
+                o.firstName = tbFirstName.Text.ToString();
+                o.name = tbName.Text.ToString();
+                o.password = tbPwd1.Text.ToString();
+
+                test.updateInfo(o, lbNom.Text.ToString());
+                lbNom.Text = tbName.Text;
+            }
+           
         }
     }
 }

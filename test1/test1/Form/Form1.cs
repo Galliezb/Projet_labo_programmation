@@ -43,7 +43,7 @@ namespace test1 {
             if (tbCreatePwd.Text == tbVerifPwd.Text)
             {
                 test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());
-                PageDAccueil page = new PageDAccueil(tbLogin.Text.ToString());
+                PageDAccueil page = new PageDAccueil(tbCreateLogin.Text.ToString());
                 page.ShowDialog();
                 Hide();
             }
@@ -61,6 +61,10 @@ namespace test1 {
                 PageDAccueil page = new PageDAccueil( tbLogin.Text.ToString() );
                 page.ShowDialog();
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Les identifiants sont incorrects");
             }
 
         }
