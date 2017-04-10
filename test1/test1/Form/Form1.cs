@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace test1 {
     public partial class FormStart : Form {
+
+        Sql_non_identifie test = new Sql_non_identifie();
+
         System.Media.SoundPlayer SP = new System.Media.SoundPlayer(@"D:\Storage\Informatique deuxième\Projet C#\Projet_labo_programmation\test1\test1\Resources\Kwouin.wav");
        
         public FormStart () {
             InitializeComponent();
-
+            
             // Passage en full screen
             //FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
@@ -34,7 +37,7 @@ namespace test1 {
         }
 
         private void Form1_Load ( object sender , EventArgs e ) {
-            
+
         }
 
         private void domainUpDown1_SelectedItemChanged ( object sender , EventArgs e ) {
@@ -89,6 +92,33 @@ namespace test1 {
         private void bEnter_Click(object sender, EventArgs e)
         {
             SP.Play();   
+        }
+
+        private void bCreate_Click(object sender, EventArgs e)
+        {
+            if (tbCreatePwd.Text == tbVerifPwd.Text)
+            {
+                test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());
+                PageDAccueil page = new PageDAccueil(tbLogin.Text.ToString());
+                page.ShowDialog();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("les mots de passe ne correspondent pas");
+            }
+        }
+
+        private void bIdentification_Click(object sender, EventArgs e)
+        {
+            if (tbPwd.Text.ToString() == test.test2(tbLogin.Text.ToString(),"password"))
+            {
+                this.Hide();
+                PageDAccueil page = new PageDAccueil( tbLogin.Text.ToString() );
+                page.ShowDialog();
+                this.Close();
+            }
+
         }
     }
 }
