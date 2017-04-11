@@ -15,7 +15,7 @@ namespace test1
     {
         Objet_A_Update o= new Objet_A_Update();
         string name_;
-        Page_D_Accueil_SQL_Request test = new Page_D_Accueil_SQL_Request();
+        SQL_Request_Form_Accueil test = new SQL_Request_Form_Accueil();
         public PageDAccueil()
         {
             InitializeComponent();
@@ -65,6 +65,11 @@ namespace test1
                 lbNom.Text = tbName.Text;
             }
            
+        }
+
+        private void PageDAccueil_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,7 +23,6 @@
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
         private void InitializeComponent () {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStart));
             this.bEnter = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbCreateLogin = new System.Windows.Forms.TextBox();
             this.lbCreate = new System.Windows.Forms.Label();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pIdentification = new System.Windows.Forms.Panel();
             this.panelTbPwd = new System.Windows.Forms.Panel();
@@ -103,6 +101,7 @@
             this.bCreate.TabIndex = 8;
             this.bCreate.Text = "Send";
             this.bCreate.UseVisualStyleBackColor = false;
+            this.bCreate.Click += new System.EventHandler(this.bCreate_Click);
             this.bCreate.MouseLeave += new System.EventHandler(this.bCreate_MouseLeave);
             this.bCreate.MouseHover += new System.EventHandler(this.bCreate_MouseHover);
             // 
@@ -185,20 +184,15 @@
             this.lbCreate.TabIndex = 8;
             this.lbCreate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pIdentification);
             this.panel1.Controls.Add(this.pCreate);
             this.panel1.Controls.Add(this.bEnter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(958, 0);
+            this.panel1.Location = new System.Drawing.Point(997, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 804);
+            this.panel1.Size = new System.Drawing.Size(283, 840);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -286,6 +280,7 @@
             this.bIdentification.TabIndex = 0;
             this.bIdentification.Text = "Send";
             this.bIdentification.UseVisualStyleBackColor = false;
+            this.bIdentification.Click += new System.EventHandler(this.bIdentification_Click);
             this.bIdentification.MouseLeave += new System.EventHandler(this.bIdentification_MouseLeave);
             this.bIdentification.MouseHover += new System.EventHandler(this.bIdentification_MouseHover);
             // 
@@ -296,12 +291,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1241, 804);
+            this.ClientSize = new System.Drawing.Size(1280, 840);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormStart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tournament Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pCreate.ResumeLayout(false);

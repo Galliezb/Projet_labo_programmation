@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
+using test1.Norbert;
 namespace test1 {
     public partial class FormStart : Form {
 
-        Sql_non_identifie test = new Sql_non_identifie();
+        SQL_Request_Form_Login test = new SQL_Request_Form_Login();
 
         System.Media.SoundPlayer SP = new System.Media.SoundPlayer(@"D:\Storage\Informatique deuxième\Projet C#\Projet_labo_programmation\test1\test1\Resources\Kwouin.wav");
        
@@ -98,10 +99,12 @@ namespace test1 {
         {
             if (tbCreatePwd.Text == tbVerifPwd.Text)
             {
+                
                 test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());
+                this.Hide();
                 PageDAccueil page = new PageDAccueil(tbCreateLogin.Text.ToString());
                 page.ShowDialog();
-                Hide();
+                this.Close();
             }
             else
             {

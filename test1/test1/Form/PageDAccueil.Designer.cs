@@ -211,6 +211,7 @@
             this.Name = "PageDAccueil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PageDAccueil";
+            this.Load += new System.EventHandler(this.PageDAccueil_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

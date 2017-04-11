@@ -10,29 +10,18 @@ using System.Windows.Forms;
 
 namespace test1
 {
-    class Page_D_Accueil_SQL_Request
+    class SQL_Request_Form_Accueil
     {
         DatabaseConnection maConnexionMysql;
         MySqlParameter param; 
-        public Page_D_Accueil_SQL_Request()
+        public SQL_Request_Form_Accueil()
         {
             maConnexionMysql = new DatabaseConnection();
-            param = new MySqlParameter();
+            
         }
 
         
-        public void ajoutCompte(string name, string pass)
-        {
-
-            maConnexionMysql.Laconnexion.Open();
-
-            maConnexionMysql.Lacommande.CommandText = "INSERT INTO user (name,password) VALUES (@name,@pass );";
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@name", name);
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@pass", pass);
-            maConnexionMysql.Lacommande.ExecuteNonQuery();
-
-            maConnexionMysql.Laconnexion.Close();
-        }
+        
 
         public string getMailUser(string name)
         {
@@ -52,8 +41,9 @@ namespace test1
             while (monReaderMysql.Read())
             {
                 string result = monReaderMysql["email"].ToString();
-                maConnexionMysql.Lacommande.Parameters.Clear();
+                
                 maConnexionMysql.Laconnexion.Close();
+                maConnexionMysql.Lacommande.Parameters.Clear();
                 return result;
 
             }
@@ -80,14 +70,15 @@ namespace test1
             while (monReaderMysql.Read())
             {
                 string result = monReaderMysql["firstName"].ToString();
-                maConnexionMysql.Lacommande.Parameters.Clear();
-                maConnexionMysql.Laconnexion.Close();
                 
+                maConnexionMysql.Laconnexion.Close();
+                maConnexionMysql.Lacommande.Parameters.Clear();
                 return result;
 
             }
-            maConnexionMysql.Lacommande.Parameters.Clear();
+            
             maConnexionMysql.Laconnexion.Close();
+            maConnexionMysql.Lacommande.Parameters.Clear();
             return "NONE";
 
 
@@ -109,13 +100,15 @@ namespace test1
             while (monReaderMysql.Read())
             {
                 string result = monReaderMysql["password"].ToString();
-                maConnexionMysql.Lacommande.Parameters.Clear();
+                
                 maConnexionMysql.Laconnexion.Close();
+                maConnexionMysql.Lacommande.Parameters.Clear();
                 return result;
 
             }
-            maConnexionMysql.Lacommande.Parameters.Clear();
+            
             maConnexionMysql.Laconnexion.Close();
+            maConnexionMysql.Lacommande.Parameters.Clear();
             return "NONE";
 
 
@@ -132,8 +125,9 @@ namespace test1
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@passwordupdate", o.password);
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
             maConnexionMysql.Lacommande.ExecuteNonQuery();
-            maConnexionMysql.Lacommande.Parameters.Clear();
+            
             maConnexionMysql.Laconnexion.Close();
+            maConnexionMysql.Lacommande.Parameters.Clear();
 
         }
 
