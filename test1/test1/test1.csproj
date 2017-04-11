@@ -54,6 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bruno\form_organisateur_accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bruno\form_organisateur_accueil.Designer.cs">
+      <DependentUpon>form_organisateur_accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bruno\sql_organisateur_accueil.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>
