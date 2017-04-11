@@ -62,6 +62,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Norbert\Form_Page_Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\Form_Page_Accueil.Designer.cs">
+      <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Norbert\Objet_A_Update.cs" />
     <Compile Include="Norbert\SQL_Request_Form_Login.cs" />
     <Compile Include="Organizer.cs" />
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\PageDAccueil.resx">
       <DependentUpon>PageDAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\Form_Page_Accueil.resx">
+      <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
