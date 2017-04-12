@@ -5,6 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace test1.Bruno {
-    class sql_organizer_start {
+    class Sql_organizer_start {
     }
 }
