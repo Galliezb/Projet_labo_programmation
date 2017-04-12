@@ -73,7 +73,37 @@ namespace test1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FriendsList {
+        internal static System.Drawing.Bitmap bouton_config {
+            get {
+                object obj = ResourceManager.GetObject("bouton_config", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bouton01 {
+            get {
+                object obj = ResourceManager.GetObject("bouton01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap creation_tournoi {
+            get {
+                object obj = ResourceManager.GetObject("creation_tournoi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dark_souls {
             get {
                 object obj = ResourceManager.GetObject("dark_souls", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
