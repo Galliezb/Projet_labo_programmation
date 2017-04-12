@@ -13,5 +13,9 @@ namespace test1.Bruno {
         public form_organisateur_accueil () {
             InitializeComponent();
         }
+
+        private void form_organisateur_accueil_Load ( object sender , EventArgs e ) {
+
+        }
     }
 }

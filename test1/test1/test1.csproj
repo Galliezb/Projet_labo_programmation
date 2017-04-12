@@ -89,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sql_non_identifie.cs" />
     <Compile Include="Tournament.cs" />
+    <EmbeddedResource Include="Bruno\form_organisateur_accueil.resx">
+      <DependentUpon>form_organisateur_accueil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +133,7 @@
     <Content Include="DLL\MySql.Data.dll" />
     <Content Include="news-red-button-300x300.jpg" />
     <Content Include="Resources\button_news %281%29.png" />
+    <None Include="Resources\kwouin.bmp" />
     <Content Include="Resources\Kwouin.wav" />
     <Content Include="Resources\news-red-button-300x300.jpg" />
   </ItemGroup>

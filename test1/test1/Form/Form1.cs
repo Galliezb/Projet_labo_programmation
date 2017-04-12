@@ -14,8 +14,8 @@ namespace test1 {
 
         SQL_Request_Form_Login test = new SQL_Request_Form_Login();
 
-        System.Media.SoundPlayer SP = new System.Media.SoundPlayer(@"D:\Storage\Informatique deuxième\Projet C#\Projet_labo_programmation\test1\test1\Resources\Kwouin.wav");
-       
+        System.Media.SoundPlayer SP = new System.Media.SoundPlayer( Properties.Resources.Kwouin );
+
         public FormStart () {
             InitializeComponent();
             
