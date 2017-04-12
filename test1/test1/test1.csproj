@@ -136,10 +136,12 @@
     <Content Include="Resources\DLL\Bunifu_UI_v1.52.dll" />
     <Content Include="Resources\DLL\MySql.Data.dll" />
     <Content Include="Resources\button_news %281%29.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Team.png" />
+    <None Include="Resources\Records.png" />
     <None Include="Resources\kwouin.bmp" />
-    <None Include="Resources\FriendsList.ico" />
+    <None Include="Resources\FriendsList.png" />
     <Content Include="Resources\Kwouin.wav" />
-    <None Include="Resources\Menu.ico" />
     <Content Include="Resources\news-red-button-300x300.jpg" />
   </ItemGroup>
   <ItemGroup />
