@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace test1
 {
-    class Objet_A_Update
+    class PlayerClass
     {
-        string pass_;
-        string fn_;
-        string name_;
-        string email_;
-
-
-        public Objet_A_Update ()
+        static string pass_;
+        static string firstName_;
+        static string name_;
+        static string email_;
+        static string pseudo_;
+        static int IDUser_;
+        public PlayerClass()
         {
 
         }
@@ -28,10 +28,22 @@ namespace test1
             set { name_ = value; }
         }
 
+        public int ID
+        {
+            get { return IDUser_; }
+            set { IDUser_ = value; }
+        }
+
+        public string pseudo
+        {
+            get { return pseudo_; }
+            set { pseudo_ = value; }
+        }
+
         public string firstName
         {
-            get { return fn_; }
-            set { fn_ = value; }
+            get { return firstName_; }
+            set { firstName_ = value; }
         }
 
         public string email

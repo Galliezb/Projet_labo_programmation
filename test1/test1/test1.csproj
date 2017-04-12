@@ -81,14 +81,8 @@
     <Compile Include="Norbert\Form_Page_Accueil.Designer.cs">
       <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Norbert\Objet_A_Update.cs" />
+    <Compile Include="Norbert\PlayerClass.cs" />
     <Compile Include="Norbert\SQL_Request_Form_Login.cs" />
-    <Compile Include="Norbert\PageDAccueil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Norbert\PageDAccueil.Designer.cs">
-      <DependentUpon>PageDAccueil.cs</DependentUpon>
-    </Compile>
     <Compile Include="Norbert\SQL_Request_Form_Accueil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -98,9 +92,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nicolas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Norbert\PageDAccueil.resx">
-      <DependentUpon>PageDAccueil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Norbert\Form_Page_Accueil.resx">
       <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
@@ -205,11 +196,11 @@
     <Content Include="Resources\DLL\Bunifu_UI_v1.52.dll" />
     <Content Include="Resources\DLL\MySql.Data.dll" />
     <Content Include="Resources\button_news %281%29.png" />
-    <None Include="Resources\Settings.png" />
-    <None Include="Resources\Team.png" />
-    <None Include="Resources\Records.png" />
+    <None Include="Resources\Norbert\Settings.png" />
+    <None Include="Resources\Norbert\Team.png" />
+    <None Include="Resources\Norbert\Records.png" />
     <None Include="Resources\kwouin.bmp" />
-    <None Include="Resources\FriendsList.png" />
+    <None Include="Resources\Norbert\FriendsList.png" />
     <Content Include="Resources\Kwouin.wav" />
     <Content Include="Resources\news-red-button-300x300.jpg" />
   </ItemGroup>
