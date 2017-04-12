@@ -102,7 +102,7 @@ namespace test1 {
                 
                 test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());
                 this.Hide();
-                PageDAccueil page = new PageDAccueil(tbCreateLogin.Text.ToString());
+                Form_Page_Accueil page = new Form_Page_Accueil(tbCreateLogin.Text.ToString());
                 page.ShowDialog();
                 this.Close();
             }
@@ -117,7 +117,7 @@ namespace test1 {
             if (tbPwd.Text.ToString() == test.test2(tbLogin.Text.ToString(),"password"))
             {
                 this.Hide();
-                PageDAccueil page = new PageDAccueil( tbLogin.Text.ToString() );
+                Form_Page_Accueil page = new Form_Page_Accueil( tbLogin.Text.ToString() );
                 page.ShowDialog();
                 this.Close();
             }
