@@ -68,6 +68,13 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Nicolas\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nicolas\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nicolas\test_class.cs" />
     <Compile Include="Norbert\Form_Page_Accueil.cs">
       <SubType>Form</SubType>
     </Compile>
