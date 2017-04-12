@@ -195,6 +195,12 @@
     <None Include="Resources\bruno\zoom-in.png" />
     <None Include="Resources\bruno\zoom-out.png" />
     <None Include="Resources\bruno\config.jpg" />
+    <None Include="Resources\bruno\creer_tournoi01.jpg" />
+    <None Include="Resources\bruno\creer_tournoi02.jpg" />
+    <None Include="Resources\bruno\bouton_config.jpg" />
+    <None Include="Resources\bruno\bouton01.jpg" />
+    <None Include="Resources\bruno\bouton02.jpg" />
+    <None Include="Resources\bruno\creation_tournoi.jpg" />
     <Content Include="Resources\DLL\Bunifu_UI_v1.52.dll" />
     <Content Include="Resources\DLL\MySql.Data.dll" />
     <Content Include="Resources\button_news %281%29.png" />

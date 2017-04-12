@@ -23,31 +23,62 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent () {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.labelCreationTournoi = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
+            this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 801);
-            this.panel1.TabIndex = 0;
+            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenu.Controls.Add(this.labelCreationTournoi);
+            this.panelMenu.Controls.Add(this.pictureBox1);
+            this.panelMenu.Controls.Add(this.pictureBoxMenu);
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(200, 840);
+            this.panelMenu.TabIndex = 0;
+            // 
+            // labelCreationTournoi
+            // 
+            this.labelCreationTournoi.BackColor = System.Drawing.Color.Transparent;
+            this.labelCreationTournoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelCreationTournoi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelCreationTournoi.Image = global::test1.Properties.Resources.bouton01;
+            this.labelCreationTournoi.Location = new System.Drawing.Point(47, 75);
+            this.labelCreationTournoi.Name = "labelCreationTournoi";
+            this.labelCreationTournoi.Size = new System.Drawing.Size(150, 50);
+            this.labelCreationTournoi.TabIndex = 1;
+            this.labelCreationTournoi.Text = "Créer un Tournoi";
+            this.labelCreationTournoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCreationTournoi.MouseLeave += new System.EventHandler(this.pictureMenuOut);
+            this.labelCreationTournoi.MouseHover += new System.EventHandler(this.pictureMenuHover);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::test1.Properties.Resources.config;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Image = global::test1.Properties.Resources.creation_tournoi;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxMenu
+            // 
+            this.pictureBoxMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxMenu.Image = global::test1.Properties.Resources.bouton_config;
+            this.pictureBoxMenu.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxMenu.Name = "pictureBoxMenu";
+            this.pictureBoxMenu.Size = new System.Drawing.Size(50, 50);
+            this.pictureBoxMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMenu.TabIndex = 1;
+            this.pictureBoxMenu.TabStop = false;
+            this.pictureBoxMenu.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form_organizer_start
             // 
@@ -55,8 +86,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1264, 801);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1280, 840);
+            this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -64,15 +95,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_organisateur_accueil";
             this.Load += new System.EventHandler(this.form_organisateur_accueil_Load);
-            this.panel1.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.PictureBox pictureBoxMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelCreationTournoi;
     }
 }
