@@ -349,7 +349,7 @@
             // 
             // tm
             // 
-            this.tm.Interval = 10;
+            this.tm.Interval = 1;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // Form_Page_Accueil

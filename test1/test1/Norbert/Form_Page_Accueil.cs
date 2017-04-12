@@ -85,26 +85,30 @@ namespace test1.Norbert
 
         private void tm_Tick(object sender, EventArgs e)
         {
+            int past = 0;
             Point location_ = new Point();
             if (PanelGaucheDeploye == false)
             {
-                if (panelGauche.Width >= 276)
+               
+                if (panelGauche.Width >= 275)
                 {
                     this.tm.Enabled = false;
                     PanelGaucheDeploye = true;
                     location_.X = 240;
                     location_.Y = 6;
                     btMenu.Location= location_;
+                    past = 1;
                 }
                 else
                 {
-                    panelGauche.Width += 2;
+                    panelGauche.Width += 3;
+                    pbLogoBig.Visible = true;
                 }
             }
 
-            if (PanelGaucheDeploye == true)
+            if (PanelGaucheDeploye == true && past!=1)
             {
-                if (panelGauche.Width <= 49)
+                if (panelGauche.Width <= 50)
                 {
                     this.tm.Enabled = false;
                     
@@ -113,12 +117,15 @@ namespace test1.Norbert
                     location_.X = 12;
                     location_.Y = 52;
                     btMenu.Location = location_;
+                    
                 }
                 else
                 {
-                    panelGauche.Width -= 2;
+                    panelGauche.Width -= 3;
+                    pbLogoBig.Visible = false;
                 }
             }
+            past = 0;
 
         }
     }
