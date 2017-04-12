@@ -103,6 +103,16 @@ namespace test1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dark_souls {
+            get {
+                object obj = ResourceManager.GetObject("dark_souls", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FriendsList {
             get {
                 object obj = ResourceManager.GetObject("FriendsList", resourceCulture);
