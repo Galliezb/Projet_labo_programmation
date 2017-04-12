@@ -61,11 +61,10 @@
       <DependentUpon>form_organizer_start.cs</DependentUpon>
     </Compile>
     <Compile Include="Bruno\sql_organizer_start.cs" />
-    <Compile Include="Class1.cs" />
-    <Compile Include="Form\Form1.cs">
+    <Compile Include="Nicolas\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form1.Designer.cs">
+    <Compile Include="Nicolas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
@@ -77,25 +76,23 @@
     </Compile>
     <Compile Include="Norbert\Objet_A_Update.cs" />
     <Compile Include="Norbert\SQL_Request_Form_Login.cs" />
-    <Compile Include="Organizer.cs" />
-    <Compile Include="Form\PageDAccueil.cs">
+    <Compile Include="Norbert\PageDAccueil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\PageDAccueil.Designer.cs">
+    <Compile Include="Norbert\PageDAccueil.Designer.cs">
       <DependentUpon>PageDAccueil.cs</DependentUpon>
     </Compile>
     <Compile Include="Norbert\SQL_Request_Form_Accueil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sql_non_identifie.cs" />
-    <Compile Include="Tournament.cs" />
     <EmbeddedResource Include="Bruno\form_organizer_start.resx">
       <DependentUpon>form_organizer_start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Form1.resx">
+    <EmbeddedResource Include="Nicolas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\PageDAccueil.resx">
+    <EmbeddedResource Include="Norbert\PageDAccueil.resx">
       <DependentUpon>PageDAccueil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Norbert\Form_Page_Accueil.resx">
@@ -129,14 +126,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="backup_info.txt" />
-    <Content Include="DLL\Bunifu_UI_v1.52.dll" />
-    <Content Include="DLL\MySql.Data.dll" />
-    <Content Include="news-red-button-300x300.jpg" />
+    <Content Include="Resources\DLL\Bunifu_UI_v1.52.dll" />
+    <Content Include="Resources\DLL\MySql.Data.dll" />
     <Content Include="Resources\button_news %281%29.png" />
     <None Include="Resources\kwouin.bmp" />
     <Content Include="Resources\Kwouin.wav" />
     <Content Include="Resources\news-red-button-300x300.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

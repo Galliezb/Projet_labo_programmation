@@ -127,5 +127,9 @@ namespace test1 {
             }
 
         }
+
+        private void tbCreateLogin_TextChanged ( object sender , EventArgs e ) {
+
+        }
     }
 }

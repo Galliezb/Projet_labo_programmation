@@ -170,6 +170,7 @@
             this.tbCreateLogin.Size = new System.Drawing.Size(235, 20);
             this.tbCreateLogin.TabIndex = 1;
             this.tbCreateLogin.Text = "Login";
+            this.tbCreateLogin.TextChanged += new System.EventHandler(this.tbCreateLogin_TextChanged);
             // 
             // lbCreate
             // 
