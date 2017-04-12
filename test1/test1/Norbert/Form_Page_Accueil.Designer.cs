@@ -32,10 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Page_Accueil));
             this.Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelGauche = new System.Windows.Forms.Panel();
-            this.PanelBot = new System.Windows.Forms.Panel();
-            this.PanelTop = new System.Windows.Forms.Panel();
-            this.LabelAccueil = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.panelFill = new System.Windows.Forms.Panel();
             this.pbLogoBig = new System.Windows.Forms.PictureBox();
             this.btMenu = new Bunifu.Framework.UI.BunifuImageButton();
             this.btManageTeam = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,12 +39,16 @@
             this.btRecords = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btSettings = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.PanelBot = new System.Windows.Forms.Panel();
+            this.PanelTop = new System.Windows.Forms.Panel();
             this.btQuit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.LabelAccueil = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.panelFill = new System.Windows.Forms.Panel();
             this.panelGauche.SuspendLayout();
-            this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoBig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,46 +70,8 @@
             this.panelGauche.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelGauche.Location = new System.Drawing.Point(0, 39);
             this.panelGauche.Name = "panelGauche";
-            this.panelGauche.Size = new System.Drawing.Size(275, 768);
+            this.panelGauche.Size = new System.Drawing.Size(275, 729);
             this.panelGauche.TabIndex = 0;
-            // 
-            // PanelBot
-            // 
-            this.PanelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.PanelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelBot.Location = new System.Drawing.Point(0, 807);
-            this.PanelBot.Name = "PanelBot";
-            this.PanelBot.Size = new System.Drawing.Size(1280, 33);
-            this.PanelBot.TabIndex = 1;
-            // 
-            // PanelTop
-            // 
-            this.PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.PanelTop.Controls.Add(this.btQuit);
-            this.PanelTop.Controls.Add(this.LabelAccueil);
-            this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTop.Location = new System.Drawing.Point(0, 0);
-            this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(1280, 39);
-            this.PanelTop.TabIndex = 2;
-            // 
-            // LabelAccueil
-            // 
-            this.LabelAccueil.AutoSize = true;
-            this.LabelAccueil.ForeColor = System.Drawing.Color.White;
-            this.LabelAccueil.Location = new System.Drawing.Point(29, 13);
-            this.LabelAccueil.Name = "LabelAccueil";
-            this.LabelAccueil.Size = new System.Drawing.Size(42, 18);
-            this.LabelAccueil.TabIndex = 0;
-            this.LabelAccueil.Text = "Test";
-            // 
-            // panelFill
-            // 
-            this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(275, 39);
-            this.panelFill.Name = "panelFill";
-            this.panelFill.Size = new System.Drawing.Size(1005, 768);
-            this.panelFill.TabIndex = 3;
             // 
             // pbLogoBig
             // 
@@ -156,7 +118,7 @@
             this.btManageTeam.IconVisible = true;
             this.btManageTeam.IconZoom = 50D;
             this.btManageTeam.IsTab = true;
-            this.btManageTeam.Location = new System.Drawing.Point(0, 267);
+            this.btManageTeam.Location = new System.Drawing.Point(0, 252);
             this.btManageTeam.Margin = new System.Windows.Forms.Padding(22, 11, 22, 11);
             this.btManageTeam.Name = "btManageTeam";
             this.btManageTeam.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -191,7 +153,7 @@
             this.btFriendsList.IconVisible = true;
             this.btFriendsList.IconZoom = 50D;
             this.btFriendsList.IsTab = true;
-            this.btFriendsList.Location = new System.Drawing.Point(0, 218);
+            this.btFriendsList.Location = new System.Drawing.Point(0, 208);
             this.btFriendsList.Margin = new System.Windows.Forms.Padding(13, 8, 13, 8);
             this.btFriendsList.Name = "btFriendsList";
             this.btFriendsList.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -211,7 +173,7 @@
             this.btRecords.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btRecords.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btRecords.BorderRadius = 0;
-            this.btRecords.ButtonText = "             Records";
+            this.btRecords.ButtonText = "              Records";
             this.btRecords.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btRecords.DisabledColor = System.Drawing.Color.Gray;
             this.btRecords.Iconcolor = System.Drawing.Color.Transparent;
@@ -226,7 +188,7 @@
             this.btRecords.IconVisible = true;
             this.btRecords.IconZoom = 50D;
             this.btRecords.IsTab = true;
-            this.btRecords.Location = new System.Drawing.Point(0, 166);
+            this.btRecords.Location = new System.Drawing.Point(-5, 163);
             this.btRecords.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.btRecords.Name = "btRecords";
             this.btRecords.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -235,7 +197,7 @@
             this.btRecords.selected = false;
             this.btRecords.Size = new System.Drawing.Size(275, 48);
             this.btRecords.TabIndex = 4;
-            this.btRecords.Text = "             Records";
+            this.btRecords.Text = "              Records";
             this.btRecords.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btRecords.Textcolor = System.Drawing.Color.White;
             this.btRecords.TextFont = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,6 +248,26 @@
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
+            // PanelBot
+            // 
+            this.PanelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.PanelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelBot.Location = new System.Drawing.Point(0, 768);
+            this.PanelBot.Name = "PanelBot";
+            this.PanelBot.Size = new System.Drawing.Size(1264, 33);
+            this.PanelBot.TabIndex = 1;
+            // 
+            // PanelTop
+            // 
+            this.PanelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.PanelTop.Controls.Add(this.btQuit);
+            this.PanelTop.Controls.Add(this.LabelAccueil);
+            this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTop.Location = new System.Drawing.Point(0, 0);
+            this.PanelTop.Name = "PanelTop";
+            this.PanelTop.Size = new System.Drawing.Size(1264, 39);
+            this.PanelTop.TabIndex = 2;
+            // 
             // btQuit
             // 
             this.btQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -300,12 +282,30 @@
             this.btQuit.Zoom = 20;
             this.btQuit.Click += new System.EventHandler(this.btQuit_Click);
             // 
+            // LabelAccueil
+            // 
+            this.LabelAccueil.AutoSize = true;
+            this.LabelAccueil.ForeColor = System.Drawing.Color.White;
+            this.LabelAccueil.Location = new System.Drawing.Point(29, 13);
+            this.LabelAccueil.Name = "LabelAccueil";
+            this.LabelAccueil.Size = new System.Drawing.Size(42, 18);
+            this.LabelAccueil.TabIndex = 0;
+            this.LabelAccueil.Text = "Test";
+            // 
+            // panelFill
+            // 
+            this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFill.Location = new System.Drawing.Point(275, 39);
+            this.panelFill.Name = "panelFill";
+            this.panelFill.Size = new System.Drawing.Size(989, 729);
+            this.panelFill.TabIndex = 3;
+            // 
             // Form_Page_Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(1280, 840);
+            this.ClientSize = new System.Drawing.Size(1264, 801);
             this.Controls.Add(this.panelFill);
             this.Controls.Add(this.panelGauche);
             this.Controls.Add(this.PanelBot);
@@ -318,11 +318,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Page_Accueil";
             this.panelGauche.ResumeLayout(false);
-            this.PanelTop.ResumeLayout(false);
-            this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogoBig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.PanelTop.ResumeLayout(false);
+            this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).EndInit();
             this.ResumeLayout(false);
 

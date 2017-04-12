@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using test1.Bruno;
+using test1.Norbert;
+using test1.Nicolas;
 
 namespace test1 {
     static class Program {

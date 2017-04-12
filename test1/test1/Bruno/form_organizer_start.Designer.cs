@@ -1,5 +1,5 @@
 ﻿namespace test1.Bruno {
-    partial class form_organisateur_accueil {
+    partial class form_organizer_start {
         /// <summary>
         /// Required designer variable.
         /// </summary>

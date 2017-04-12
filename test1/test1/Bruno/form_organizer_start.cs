@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace test1.Bruno {
-    public partial class form_organisateur_accueil : Form {
-        public form_organisateur_accueil () {
+    public partial class form_organizer_start : Form {
+        public form_organizer_start () {
             InitializeComponent();
         }
 
