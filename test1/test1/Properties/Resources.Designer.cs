@@ -63,9 +63,9 @@ namespace test1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _304cae8c141683515667132206_700w_0 {
+        internal static System.Drawing.Bitmap bonjour {
             get {
-                object obj = ResourceManager.GetObject("304cae8c141683515667132206_700w_0", resourceCulture);
+                object obj = ResourceManager.GetObject("bonjour", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

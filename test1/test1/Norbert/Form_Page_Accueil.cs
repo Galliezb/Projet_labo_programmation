@@ -12,9 +12,12 @@ namespace test1.Norbert
 {
     public partial class Form_Page_Accueil : Form
     {
+        
+        //Animator bonjour;// = new Animator();
         public Form_Page_Accueil()
         {
             InitializeComponent();
+            
         }
 
         private void btQuit_Click(object sender, EventArgs e)
@@ -29,7 +32,7 @@ namespace test1.Norbert
 
         private void btMenu_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

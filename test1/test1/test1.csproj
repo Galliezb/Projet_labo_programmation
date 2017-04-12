@@ -134,7 +134,9 @@
     <Content Include="news-red-button-300x300.jpg" />
     <Content Include="Resources\button_news %281%29.png" />
     <None Include="Resources\kwouin.bmp" />
+    <None Include="Resources\FriendsList.ico" />
     <Content Include="Resources\Kwouin.wav" />
+    <None Include="Resources\Menu.ico" />
     <Content Include="Resources\news-red-button-300x300.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
