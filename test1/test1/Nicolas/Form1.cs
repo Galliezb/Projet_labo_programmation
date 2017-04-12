@@ -18,13 +18,11 @@ namespace test1 {
 
         public FormStart () {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.DoubleBuffer , true );
-
+            
             // Passage en full screen
             //FormBorderStyle = FormBorderStyle.None;
             //this.WindowState = FormWindowState.Maximized;
-            // BackgroundImageLayout = ImageLayout.Stretch;
+           // BackgroundImageLayout = ImageLayout.Stretch;
             Label lbLogin = new Label();
             TextBox txtLogin = new TextBox();
             panel1.BackColor = Color.FromArgb(85, 0, 0, 51);

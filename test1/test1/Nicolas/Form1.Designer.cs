@@ -28,35 +28,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pCreate = new System.Windows.Forms.Panel();
             this.bCreate = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.tbVerifPwd = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tbCreatePwd = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tbCreateLogin = new System.Windows.Forms.TextBox();
             this.lbCreate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pIdentification = new System.Windows.Forms.Panel();
-            this.panelTbPwd = new System.Windows.Forms.Panel();
             this.tbPwd = new System.Windows.Forms.TextBox();
-            this.panelTbLog = new System.Windows.Forms.Panel();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.lbIdentification = new System.Windows.Forms.Label();
             this.bIdentification = new System.Windows.Forms.Button();
             this.pCreate.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pIdentification.SuspendLayout();
-            this.panelTbPwd.SuspendLayout();
-            this.panelTbLog.SuspendLayout();
             this.SuspendLayout();
             // 
             // bEnter
             // 
             this.bEnter.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEnter.Location = new System.Drawing.Point(23, 601);
+            this.bEnter.Location = new System.Drawing.Point(23, 680);
             this.bEnter.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bEnter.Name = "bEnter";
             this.bEnter.Size = new System.Drawing.Size(245, 147);
@@ -77,25 +67,26 @@
             // 
             // pCreate
             // 
+            this.pCreate.Controls.Add(this.tbVerifPwd);
+            this.pCreate.Controls.Add(this.tbCreatePwd);
+            this.pCreate.Controls.Add(this.tbCreateLogin);
             this.pCreate.Controls.Add(this.bCreate);
-            this.pCreate.Controls.Add(this.panel4);
-            this.pCreate.Controls.Add(this.panel3);
-            this.pCreate.Controls.Add(this.panel2);
             this.pCreate.Controls.Add(this.lbCreate);
-            this.pCreate.Location = new System.Drawing.Point(7, 307);
+            this.pCreate.Location = new System.Drawing.Point(7, 354);
             this.pCreate.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pCreate.Name = "pCreate";
-            this.pCreate.Size = new System.Drawing.Size(276, 286);
+            this.pCreate.Size = new System.Drawing.Size(276, 239);
             this.pCreate.TabIndex = 10;
             // 
             // bCreate
             // 
             this.bCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bCreate.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCreate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bCreate.Location = new System.Drawing.Point(16, 196);
+            this.bCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(193)))), ((int)(((byte)(221)))));
+            this.bCreate.Location = new System.Drawing.Point(16, 187);
             this.bCreate.Name = "bCreate";
             this.bCreate.Size = new System.Drawing.Size(245, 33);
             this.bCreate.TabIndex = 8;
@@ -105,69 +96,42 @@
             this.bCreate.MouseLeave += new System.EventHandler(this.bCreate_MouseLeave);
             this.bCreate.MouseHover += new System.EventHandler(this.bCreate_MouseHover);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.tbVerifPwd);
-            this.panel4.Location = new System.Drawing.Point(16, 149);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(245, 30);
-            this.panel4.TabIndex = 8;
-            // 
             // tbVerifPwd
             // 
             this.tbVerifPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
             this.tbVerifPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbVerifPwd.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbVerifPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(164)))));
-            this.tbVerifPwd.Location = new System.Drawing.Point(5, 5);
+            this.tbVerifPwd.Location = new System.Drawing.Point(22, 143);
             this.tbVerifPwd.Margin = new System.Windows.Forms.Padding(5);
             this.tbVerifPwd.Name = "tbVerifPwd";
-            this.tbVerifPwd.Size = new System.Drawing.Size(235, 20);
+            this.tbVerifPwd.Size = new System.Drawing.Size(235, 26);
             this.tbVerifPwd.TabIndex = 1;
             this.tbVerifPwd.Text = "Password";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.tbCreatePwd);
-            this.panel3.Location = new System.Drawing.Point(16, 103);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(245, 30);
-            this.panel3.TabIndex = 8;
             // 
             // tbCreatePwd
             // 
             this.tbCreatePwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
             this.tbCreatePwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCreatePwd.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCreatePwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(164)))));
-            this.tbCreatePwd.Location = new System.Drawing.Point(5, 5);
+            this.tbCreatePwd.Location = new System.Drawing.Point(22, 113);
             this.tbCreatePwd.Margin = new System.Windows.Forms.Padding(5);
             this.tbCreatePwd.Name = "tbCreatePwd";
-            this.tbCreatePwd.Size = new System.Drawing.Size(235, 20);
+            this.tbCreatePwd.Size = new System.Drawing.Size(235, 26);
             this.tbCreatePwd.TabIndex = 1;
             this.tbCreatePwd.Text = "Password";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.tbCreateLogin);
-            this.panel2.Location = new System.Drawing.Point(16, 57);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 30);
-            this.panel2.TabIndex = 7;
             // 
             // tbCreateLogin
             // 
             this.tbCreateLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
             this.tbCreateLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCreateLogin.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCreateLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(164)))));
-            this.tbCreateLogin.Location = new System.Drawing.Point(5, 5);
+            this.tbCreateLogin.Location = new System.Drawing.Point(22, 60);
             this.tbCreateLogin.Margin = new System.Windows.Forms.Padding(5);
             this.tbCreateLogin.Name = "tbCreateLogin";
-            this.tbCreateLogin.Size = new System.Drawing.Size(235, 20);
+            this.tbCreateLogin.Size = new System.Drawing.Size(235, 26);
             this.tbCreateLogin.TabIndex = 1;
             this.tbCreateLogin.Text = "Login";
             this.tbCreateLogin.TextChanged += new System.EventHandler(this.tbCreateLogin_TextChanged);
@@ -199,8 +163,8 @@
             // 
             // pIdentification
             // 
-            this.pIdentification.Controls.Add(this.panelTbPwd);
-            this.pIdentification.Controls.Add(this.panelTbLog);
+            this.pIdentification.Controls.Add(this.tbLogin);
+            this.pIdentification.Controls.Add(this.tbPwd);
             this.pIdentification.Controls.Add(this.lbIdentification);
             this.pIdentification.Controls.Add(this.bIdentification);
             this.pIdentification.Location = new System.Drawing.Point(7, 96);
@@ -209,47 +173,29 @@
             this.pIdentification.Size = new System.Drawing.Size(276, 203);
             this.pIdentification.TabIndex = 3;
             // 
-            // panelTbPwd
-            // 
-            this.panelTbPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.panelTbPwd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTbPwd.Controls.Add(this.tbPwd);
-            this.panelTbPwd.Location = new System.Drawing.Point(16, 87);
-            this.panelTbPwd.Name = "panelTbPwd";
-            this.panelTbPwd.Size = new System.Drawing.Size(245, 30);
-            this.panelTbPwd.TabIndex = 7;
-            // 
             // tbPwd
             // 
             this.tbPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
             this.tbPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPwd.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(164)))));
-            this.tbPwd.Location = new System.Drawing.Point(5, 5);
+            this.tbPwd.Location = new System.Drawing.Point(22, 95);
             this.tbPwd.Margin = new System.Windows.Forms.Padding(5);
             this.tbPwd.Name = "tbPwd";
-            this.tbPwd.Size = new System.Drawing.Size(235, 20);
+            this.tbPwd.Size = new System.Drawing.Size(235, 26);
             this.tbPwd.TabIndex = 1;
             this.tbPwd.Text = "Password";
-            // 
-            // panelTbLog
-            // 
-            this.panelTbLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
-            this.panelTbLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTbLog.Controls.Add(this.tbLogin);
-            this.panelTbLog.Location = new System.Drawing.Point(16, 51);
-            this.panelTbLog.Name = "panelTbLog";
-            this.panelTbLog.Size = new System.Drawing.Size(245, 30);
-            this.panelTbLog.TabIndex = 6;
             // 
             // tbLogin
             // 
             this.tbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(30)))));
             this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLogin.Font = new System.Drawing.Font("Century Schoolbook", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(242)))), ((int)(((byte)(164)))));
-            this.tbLogin.Location = new System.Drawing.Point(5, 5);
+            this.tbLogin.Location = new System.Drawing.Point(22, 51);
             this.tbLogin.Margin = new System.Windows.Forms.Padding(5);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(235, 20);
+            this.tbLogin.Size = new System.Drawing.Size(235, 26);
             this.tbLogin.TabIndex = 1;
             this.tbLogin.Text = "Login";
             this.tbLogin.TextChanged += new System.EventHandler(this.tbLogin_TextChanged);
@@ -272,14 +218,15 @@
             // 
             this.bIdentification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bIdentification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bIdentification.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bIdentification.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bIdentification.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bIdentification.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bIdentification.Location = new System.Drawing.Point(16, 123);
+            this.bIdentification.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(193)))), ((int)(((byte)(221)))));
+            this.bIdentification.Location = new System.Drawing.Point(16, 156);
             this.bIdentification.Name = "bIdentification";
             this.bIdentification.Size = new System.Drawing.Size(245, 33);
             this.bIdentification.TabIndex = 0;
-            this.bIdentification.Text = "Send";
+            this.bIdentification.Text = "CONNECT";
             this.bIdentification.UseVisualStyleBackColor = false;
             this.bIdentification.Click += new System.EventHandler(this.bIdentification_Click);
             this.bIdentification.MouseLeave += new System.EventHandler(this.bIdentification_MouseLeave);
@@ -293,8 +240,8 @@
             this.BackgroundImage = global::test1.Properties.Resources.dark_souls;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 840);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormStart";
@@ -302,18 +249,10 @@
             this.Text = "Tournament Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pCreate.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pCreate.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.pIdentification.ResumeLayout(false);
-            this.panelTbPwd.ResumeLayout(false);
-            this.panelTbPwd.PerformLayout();
-            this.panelTbLog.ResumeLayout(false);
-            this.panelTbLog.PerformLayout();
+            this.pIdentification.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,16 +268,11 @@
         private System.Windows.Forms.Label lbIdentification;
         private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Button bIdentification;
-        private System.Windows.Forms.Panel panelTbLog;
-        private System.Windows.Forms.Panel panelTbPwd;
         private System.Windows.Forms.TextBox tbPwd;
         private System.Windows.Forms.Label lbCreate;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbCreateLogin;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tbCreatePwd;
         private System.Windows.Forms.Button bCreate;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox tbVerifPwd;
     }
 }
