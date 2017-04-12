@@ -19,7 +19,7 @@ namespace test1.Norbert
             maConnexionMysql = new DatabaseConnection();
         }
 
-        public void ajoutCompte(string name, string pass)
+        public int ajoutCompte(string name, string pass)
         {
 
             maConnexionMysql.Laconnexion.Open();
@@ -28,46 +28,38 @@ namespace test1.Norbert
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@name", name);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@pass", pass);
             maConnexionMysql.Lacommande.ExecuteNonQuery();
-
+            maConnexionMysql.Lacommande.Parameters.Clear();
             maConnexionMysql.Laconnexion.Close();
+            return Identification( name,  pass);
         }
 
-        public string test2(string namedd, string ValueType)
+        public int Identification(string namedd, string password)
         {
 
             maConnexionMysql.Laconnexion.Open();
             // creation requête et ajout à la commande
-            string sqlRequest = "SELECT * FROM user";
-            //maConnexionMysql.Lacommande.Parameters.AddWithValue("@namedd", namedd);
+            string sqlRequest = "SELECT idUser FROM user where name = @namelogin && password =@passlogin ";
+            maConnexionMysql.Lacommande.Parameters.AddWithValue("@namelogin", namedd);
+            maConnexionMysql.Lacommande.Parameters.AddWithValue("@passlogin", password);
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
-            string result;
+            int result;
             MySqlDataReader monReaderMysql = maConnexionMysql.Lacommande.ExecuteReader();
 
-            while (monReaderMysql.Read())
+            if (monReaderMysql.HasRows)
             {
-
-                /*MessageBox.Show("id : " + monReaderMysql.GetInt32(0).ToString());
-                 MessageBox.Show("Name : " + monReaderMysql.GetString(1).ToString());
-                 MessageBox.Show("firstName : " + monReaderMysql.GetString(2).ToString());
-                 MessageBox.Show("Email : " + monReaderMysql.GetString(3).ToString());
-                 MessageBox.Show("PWD : " + monReaderMysql.GetString(4).ToString());*/
-                if (ValueType == "password")
-                {
-                    if (monReaderMysql.GetString(1).ToString() == namedd)
-                    {
-
-                        result = monReaderMysql.GetString(4).ToString();
-                        maConnexionMysql.Laconnexion.Close();
-                        return result;
-                    }
-                }
+                monReaderMysql.Read();
+                result = Convert.ToInt32(monReaderMysql["idUser"]);
 
             }
+            else
+            {
+                result = -1; 
+            }
+            maConnexionMysql.Lacommande.Parameters.Clear();
             maConnexionMysql.Laconnexion.Close();
-            MessageBox.Show("Identifiants incorrects");
-            return "NONE";
-
-
+            return result;
+            //MessageBox.Show("Identifiants incorrects");
+            ///return "NONE";
 
         }
     }

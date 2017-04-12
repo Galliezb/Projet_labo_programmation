@@ -13,7 +13,7 @@ namespace test1 {
     public partial class FormStart : Form {
 
         SQL_Request_Form_Login test = new SQL_Request_Form_Login();
-
+        PlayerClass user = new PlayerClass();
         System.Media.SoundPlayer SP = new System.Media.SoundPlayer( Properties.Resources.Kwouin );
 
         public FormStart () {
@@ -100,9 +100,10 @@ namespace test1 {
             if (tbCreatePwd.Text == tbVerifPwd.Text)
             {
                 
-                test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());
+                int UserID=test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());
+                user.ID = UserID;
                 this.Hide();
-                Form_Page_Accueil page = new Form_Page_Accueil(tbCreateLogin.Text.ToString());
+                Form_Page_Accueil page = new Form_Page_Accueil();
                 page.ShowDialog();
                 this.Close();
             }
@@ -114,10 +115,12 @@ namespace test1 {
 
         private void bIdentification_Click(object sender, EventArgs e)
         {
-            if (tbPwd.Text.ToString() == test.test2(tbLogin.Text.ToString(),"password"))
+            int UserID = test.Identification(tbLogin.Text, tbPwd.Text);
+            if (UserID != -1)
             {
+                user.ID = UserID;
                 this.Hide();
-                Form_Page_Accueil page = new Form_Page_Accueil( tbLogin.Text.ToString() );
+                Form_Page_Accueil page = new Form_Page_Accueil();
                 page.ShowDialog();
                 this.Close();
             }

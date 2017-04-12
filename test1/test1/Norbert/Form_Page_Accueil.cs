@@ -14,19 +14,24 @@ namespace test1.Norbert
     {
         bool PanelGaucheDeploye = true;
 
-        Objet_A_Update o = new Objet_A_Update();
-        string name_;
-        SQL_Request_Form_Accueil test = new SQL_Request_Form_Accueil();
+        PlayerClass o = new PlayerClass();
+        
+        SQL_Request_Form_Accueil databaseRequest = new SQL_Request_Form_Accueil();
 
-        public Form_Page_Accueil(string name)
+        public Form_Page_Accueil()
         {
             InitializeComponent();
-            name_ = name;
-            lbNom.Text = name_;
+            databaseRequest.UpdatePlayerClass(o);
+            
+            lbNom.Text = o.name;
 
         }
 
-        private void btQuit_Click(object sender, EventArgs e)
+
+
+
+
+        private void btQuit_Click(object sender, EventArgs e)   //Ferme l'application
         {
             this.Close();
         }
@@ -36,12 +41,12 @@ namespace test1.Norbert
 
         }
 
-        private void btMenu_Click(object sender, EventArgs e)
+        private void btMenu_Click(object sender, EventArgs e) //Active le timer pour l'animation du menu
         {
             this.tm.Enabled = true;
         }
 
-        private void test1mouseHoverLB1(object sender, EventArgs e)
+        private void test1mouseHoverLB1(object sender, EventArgs e) //Change la couleur du panel quand la souris se trouve par dessus
         {
             
             Label LabelReceive;
@@ -59,7 +64,7 @@ namespace test1.Norbert
             
         }
 
-        private void test1mouseLeaveLB1(object sender, EventArgs e)
+        private void test1mouseLeaveLB1(object sender, EventArgs e) // Change la couleur du panel quand la souris ne se trouve plus dessus
         {
             
             Label LabelReceive;
@@ -80,14 +85,14 @@ namespace test1.Norbert
 
 
 
-        private void tm_Tick(object sender, EventArgs e)
+        private void tm_Tick(object sender, EventArgs e) // Tick du timer 
         {
-            int past = 0;
+            int past = 0; // sert à éviter de rentrer dans la condition de rétrécissement et ainsi pouvoir garder le grand logo
             Point location_ = new Point();
             if (PanelGaucheDeploye == false)
             {
                
-                if (panelGauche.Width >= 275)
+                if (panelGauche.Width >= 275) // si le menu a atteind sa taille maximum, le timer est arrêté , on déplace le bouton Menu à l'endroit voulu 
                 {
                     this.tm.Enabled = false;
                     PanelGaucheDeploye = true;
@@ -102,8 +107,8 @@ namespace test1.Norbert
                     pbLogoBig.Visible = true;
                 }
             }
-
-            if (PanelGaucheDeploye == true && past!=1)
+            // la variable past sert uniquement dans le cas où on aurait agrandit le menu. Puisque le menu est déployé le panneau serait reduit de 5 pixels et le grand logo serait invisible.
+            if (PanelGaucheDeploye == true && past!=1) 
             {
                 if (panelGauche.Width <= 50)
                 {
@@ -111,7 +116,7 @@ namespace test1.Norbert
                     
                     
                     PanelGaucheDeploye = false;
-                    location_.X = 12;
+                    location_.X = 10;
                     location_.Y = 52;
                     btMenu.Location = location_;
                     
@@ -131,24 +136,27 @@ namespace test1.Norbert
 
         }
 
-        private void BtModifyParam_Click(object sender, EventArgs e)
+        private void BtModifyParam_Click(object sender, EventArgs e) // Quand on cliquera sur le bouton "Modify Informations" tous les labels et les textBox associées seront visibles
         {
             lbFirstName.Visible = true;
             lbMail.Visible = true;
             lbName.Visible = true;
             lbPWD1.Visible = true;
             lbPWD2.Visible = true;
+            lbPseudo.Visible = true;
 
+            tbPseudo.Visible = true;
             tbFirstName.Visible = true;
             tbMail.Visible = true;
             tbName.Visible = true;
             tbPwd1.Visible = true;
             tbPwd2.Visible = true;
             btSave.Visible = true;
-            tbMail.Text = test.getMailUser(name_);
-            tbName.Text = name_;
-            tbPwd1.Text = test.getPWDUser(name_);
-            tbFirstName.Text = test.getFirstnameUser(name_);
+            tbMail.Text = o.email;
+            tbName.Text = o.name;
+            tbPwd1.Text = o.password;
+            tbFirstName.Text = o.firstName;
+            tbPseudo.Text = o.pseudo;
         }
 
         private void tbPwd2_TextChanged(object sender, EventArgs e)
@@ -156,7 +164,7 @@ namespace test1.Norbert
 
         }
 
-        private void btSave_Click(object sender, EventArgs e)
+        private void btSave_Click(object sender, EventArgs e) // Fonction servant à mettre à jour la base de données avec les informations présentes dans les textBox
         {
             if (tbPwd1.Text.ToString() == tbPwd2.Text.ToString())
             {
@@ -164,8 +172,9 @@ namespace test1.Norbert
                 o.firstName = tbFirstName.Text.ToString();
                 o.name = tbName.Text.ToString();
                 o.password = tbPwd1.Text.ToString();
+                o.pseudo = tbPseudo.Text.ToString();
 
-                test.updateInfo(o, lbNom.Text.ToString());
+                databaseRequest.updateInfo(o);
                 lbNom.Text = tbName.Text;
             }
         }

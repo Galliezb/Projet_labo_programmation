@@ -73,9 +73,9 @@ namespace test1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FriendsList {
+        internal static System.Drawing.Bitmap config {
             get {
-                object obj = ResourceManager.GetObject("FriendsList", resourceCulture);
+                object obj = ResourceManager.GetObject("config", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace test1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap config {
+        internal static System.Drawing.Bitmap FriendsList {
             get {
-                object obj = ResourceManager.GetObject("config", resourceCulture);
+                object obj = ResourceManager.GetObject("FriendsList", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

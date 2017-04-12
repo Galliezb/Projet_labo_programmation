@@ -13,7 +13,7 @@ namespace test1
     class SQL_Request_Form_Accueil
     {
         DatabaseConnection maConnexionMysql;
-        MySqlParameter param; 
+         
         public SQL_Request_Form_Accueil()
         {
             maConnexionMysql = new DatabaseConnection();
@@ -21,108 +21,38 @@ namespace test1
         }
 
         
+        public void  UpdatePlayerClass(PlayerClass Player)
+        {
+            maConnexionMysql.Laconnexion.Open();
+            string sqlRequest = "SELECT * FROM user where idUser = @PlayerID; ";
+
+            maConnexionMysql.Lacommande.Parameters.AddWithValue("@PlayerID", Player.ID);
+
+            maConnexionMysql.Lacommande.CommandText = sqlRequest;
+
+            MySqlDataReader monReaderMysql = maConnexionMysql.Lacommande.ExecuteReader();
+            monReaderMysql.Read();
+            Player.name = monReaderMysql["name"].ToString();
+            Player.firstName = monReaderMysql["firstName"].ToString();
+            Player.email = monReaderMysql["email"].ToString();
+            Player.password = monReaderMysql["password"].ToString();
+            Player.pseudo = monReaderMysql["pseudo"].ToString();
+            maConnexionMysql.Laconnexion.Close();
+            maConnexionMysql.Lacommande.Parameters.Clear();
+        }
+
         
 
-        public string getMailUser(string name)
-        {
-            //string returnedValue="";
-
-            maConnexionMysql.Laconnexion.Open();
-            
-            // creation requête et ajout à la commande
-            //string sqlRequest = "SELECT email FROM user where name = @nameuser; ";
-            string sqlRequest = "SELECT email FROM user where name = @nameusermail; ";
-            
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@nameusermail", name);
-            
-            maConnexionMysql.Lacommande.CommandText = sqlRequest;
-
-            MySqlDataReader monReaderMysql = maConnexionMysql.Lacommande.ExecuteReader();
-            while (monReaderMysql.Read())
-            {
-                string result = monReaderMysql["email"].ToString();
-                
-                maConnexionMysql.Laconnexion.Close();
-                maConnexionMysql.Lacommande.Parameters.Clear();
-                return result;
-
-            }
-            maConnexionMysql.Lacommande.Parameters.Clear();
-            maConnexionMysql.Laconnexion.Close();
-            return "NONE";
-
-
-        }
-
-        public string getFirstnameUser(string name)
-        {
-            //string returnedValue="";
-
-            maConnexionMysql.Laconnexion.Open();
-
-            // creation requête et ajout à la commande
-            string sqlRequest = "SELECT firstName FROM user where name = @nameuserfn; ";
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@nameuserfn", name);
-            
-            maConnexionMysql.Lacommande.CommandText = sqlRequest;
-
-            MySqlDataReader monReaderMysql = maConnexionMysql.Lacommande.ExecuteReader();
-            while (monReaderMysql.Read())
-            {
-                string result = monReaderMysql["firstName"].ToString();
-                
-                maConnexionMysql.Laconnexion.Close();
-                maConnexionMysql.Lacommande.Parameters.Clear();
-                return result;
-
-            }
-            
-            maConnexionMysql.Laconnexion.Close();
-            maConnexionMysql.Lacommande.Parameters.Clear();
-            return "NONE";
-
-
-        }
-
-        public string getPWDUser(string name)
-        {
-            //string returnedValue="";
-
-            maConnexionMysql.Laconnexion.Open();
-
-            // creation requête et ajout à la commande
-            string sqlRequest = "SELECT password FROM user where name = @nameuserpwd; ";
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@nameuserpwd", name);
-            
-            maConnexionMysql.Lacommande.CommandText = sqlRequest;
-
-            MySqlDataReader monReaderMysql = maConnexionMysql.Lacommande.ExecuteReader();
-            while (monReaderMysql.Read())
-            {
-                string result = monReaderMysql["password"].ToString();
-                
-                maConnexionMysql.Laconnexion.Close();
-                maConnexionMysql.Lacommande.Parameters.Clear();
-                return result;
-
-            }
-            
-            maConnexionMysql.Laconnexion.Close();
-            maConnexionMysql.Lacommande.Parameters.Clear();
-            return "NONE";
-
-
-        }
-
-        public void updateInfo(Objet_A_Update o, string PreviousName)
+        public void updateInfo(PlayerClass o)
         {
             maConnexionMysql.Laconnexion.Open();
-            string sqlRequest = "UPDATE user SET name = @nameupdate, email =@emailupdate, firstName = @firstNameupdate, password= @passwordupdate where name = @nameuserupdate; ";
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@nameuserupdate", PreviousName);
+            string sqlRequest = "UPDATE user SET name = @nameupdate, email =@emailupdate, firstName = @firstNameupdate, password= @passwordupdate,pseudo=@pseudoupdate where idUser = @IdUser; ";
+            maConnexionMysql.Lacommande.Parameters.AddWithValue("@IdUser", o.ID);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@emailupdate", o.email);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@firstNameupdate", o.firstName);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@nameupdate", o.name);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@passwordupdate", o.password);
+            maConnexionMysql.Lacommande.Parameters.AddWithValue("@pseudoupdate", o.pseudo);
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
             maConnexionMysql.Lacommande.ExecuteNonQuery();
             
