@@ -8,12 +8,12 @@ namespace test1
 {
     class PlayerClass
     {
-        static string pass_;
-        static string firstName_;
-        static string name_;
-        static string email_;
-        static string pseudo_;
-        static int IDUser_;
+        string pass_;
+        string firstName_;
+        string name_;
+        string email_;
+        string pseudo_;
+        int IDUser_;
         public PlayerClass()
         {
 

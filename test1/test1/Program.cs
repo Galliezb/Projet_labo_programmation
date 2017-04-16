@@ -16,7 +16,7 @@ namespace test1 {
         static void Main () {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault( false );
-             Application.Run( new FormStart() );
+             Application.Run( new Form_organizer_start() );
             //Application.Run(new Form_Page_Accueil());
         }
     }

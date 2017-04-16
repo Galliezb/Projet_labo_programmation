@@ -7,12 +7,16 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using MySql.Data;
 using System.Data;
+using test1.Bruno;
+
 namespace test1.Norbert
 {
     class SQL_Request_Form_Login
     {
 
         DatabaseConnection maConnexionMysql;
+        // variable de session inter form
+        Session laSession;
 
         public SQL_Request_Form_Login()
         {
@@ -38,7 +42,7 @@ namespace test1.Norbert
 
             maConnexionMysql.Laconnexion.Open();
             // creation requête et ajout à la commande
-            string sqlRequest = "SELECT idUser FROM user where name = @namelogin && password =@passlogin ";
+            string sqlRequest = "SELECT idUser,language,isOrganizer,isAdmin FROM user where name = @namelogin && password =@passlogin ";
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@namelogin", namedd);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@passlogin", password);
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
@@ -57,6 +61,10 @@ namespace test1.Norbert
             }
             maConnexionMysql.Lacommande.Parameters.Clear();
             maConnexionMysql.Laconnexion.Close();
+
+            // mets à jour la session du connecté
+            laSession = new Session( namedd , monReaderMysql["language"].ToString() , result , Convert.ToBoolean( monReaderMysql["isOrganizer"] ) , Convert.ToBoolean( monReaderMysql["isAdmin"] ) );
+
             return result;
             //MessageBox.Show("Identifiants incorrects");
             ///return "NONE";

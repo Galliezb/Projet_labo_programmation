@@ -60,7 +60,9 @@
     <Compile Include="Bruno\Form_organizer_start.Designer.cs">
       <DependentUpon>Form_organizer_start.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bruno\Session.cs" />
     <Compile Include="Bruno\Sql_organizer_start.cs" />
+    <Compile Include="Bruno\Tournament.cs" />
     <Compile Include="Nicolas\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

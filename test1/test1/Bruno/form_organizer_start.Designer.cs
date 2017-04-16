@@ -27,6 +27,7 @@
             this.labelCreationTournoi = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxMenu = new System.Windows.Forms.PictureBox();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMenu)).BeginInit();
@@ -80,6 +81,14 @@
             this.pictureBoxMenu.TabStop = false;
             this.pictureBoxMenu.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // panelContent
+            // 
+            this.panelContent.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelContent.Location = new System.Drawing.Point(204, 0);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1076, 840);
+            this.panelContent.TabIndex = 1;
+            // 
             // Form_organizer_start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -87,6 +96,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1280, 840);
+            this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -108,5 +118,6 @@
         private System.Windows.Forms.PictureBox pictureBoxMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelCreationTournoi;
+        private System.Windows.Forms.Panel panelContent;
     }
 }
