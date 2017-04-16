@@ -14,6 +14,7 @@ namespace test1.Bruno {
         static int idPlayer_;
         static bool isOrganizer_;
         static bool isAdmin_;
+        Traducteur traduction = new Traducteur();
 
         // constructeur
         public Session (string name, string language, int idPlayer, bool isOrganizer, bool isAdmin ) {
@@ -34,13 +35,7 @@ namespace test1.Bruno {
             set {
 
                 if ( value.Length > 50 ) {
-
-                    if ( language_ == "fr" ) {
-                        MessageBox.Show( "Un nom ne peut dépasser 50 caractères" );
-                    } else {
-                        MessageBox.Show( "A name can not exceed 50 characters" );
-                    }
-
+                   MessageBox.Show( traduction.display(0) );
                 } else {
 
                     name_ = value;
@@ -57,13 +52,7 @@ namespace test1.Bruno {
             set {
 
                 if ( value!="fr" || value!="en" ) {
-
-                    if ( language_ == "fr" ) {
-                        MessageBox.Show( "La langue doit être sous forme 'fr' ou 'en'" );
-                    } else {
-                        MessageBox.Show( "The language must be in 'fr' or 'en'" );
-                    }
-
+                   MessageBox.Show( traduction.display(1) );
                 } else {
 
                     language_ = value;
@@ -81,21 +70,9 @@ namespace test1.Bruno {
 
                 // vérifie que c'est un chiffre
                 if ( value.GetType() != typeof(int) ) {
-
-                    if ( language_ == "fr" ) {
-                        MessageBox.Show( "L'id d'un joueur doit être un INT" );
-                    } else {
-                        MessageBox.Show( "The id of a player must be an INT" );
-                    }
-
+                   MessageBox.Show( traduction.display( 2 ) );
                 } else if ( value < 0 ) {
-
-                    if ( language_ == "fr" ) {
-                        MessageBox.Show( "L'id joueur doit être positif" );
-                    } else {
-                        MessageBox.Show( "The player id must be positive" );
-                    }
-
+                   MessageBox.Show( traduction.display( 3 ) );
                 } else {
                     idPlayer_ = value;
                 }

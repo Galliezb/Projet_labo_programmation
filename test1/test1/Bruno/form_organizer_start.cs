@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace test1.Bruno {
     public partial class Form_organizer_start : Form {
+
+        Traducteur traduction = new Traducteur();
+
         public Form_organizer_start () {
             InitializeComponent();
         }
 
         private void form_organisateur_accueil_Load ( object sender , EventArgs e ) {
+
+            labelCreationTournoi.Text = traduction.display( 0 );
+
         }
 
         private void pictureBox1_Click ( object sender , EventArgs e ) {

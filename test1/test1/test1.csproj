@@ -63,6 +63,7 @@
     <Compile Include="Bruno\Session.cs" />
     <Compile Include="Bruno\Sql_organizer_start.cs" />
     <Compile Include="Bruno\Tournament.cs" />
+    <Compile Include="Bruno\Traducteur.cs" />
     <Compile Include="Nicolas\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

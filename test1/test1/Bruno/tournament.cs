@@ -17,6 +17,7 @@ namespace test1.Bruno {
         string type_;
         int maxPlayer_;
         Session laSession = new Session();
+        Traducteur traduction = new Traducteur();
 
         Tournament () { }
 
@@ -33,15 +34,23 @@ namespace test1.Bruno {
 
         }
 
+        public int idTournament {
+
+            get { return idTournament_; }
+
+        }
+
+        public int idOrganizer {
+
+            get { return idOrganizer_; }
+
+        }
+
         public string Name {
             get { return name_;  }
             set {
                 if ( value.Length > 50 ) {
-                    if ( laSession.language == "fr" ) {
-                        MessageBox.Show( "Un nom de tournoi ne peut dépasser 255 caractères" );
-                    } else {
-                        MessageBox.Show( "A tournament name can not exceed 255 characters" );
-                    }
+                    MessageBox.Show( traduction.display( 4 ) );
                 } else {
                     name_ = value;
                 }
@@ -53,17 +62,24 @@ namespace test1.Bruno {
             get { return this.description_; }
             set {
                 if ( value.Length < 10 ) {
-                    if ( laSession.language == "fr" ) {
-                        MessageBox.Show( "La description du tournoi doit avoir plus de 10 caractères" );
-                    } else {
-                        MessageBox.Show( "Tournament description must be more than 10 characters long" );
-                    }
+                    MessageBox.Show( traduction.display( 5 ) );
                 } else {
                     description_ = value;
                 }
                 
             }
         }
+
+        public DateTime startDate {
+            get { return startDate_; }
+            set {
+                if ( DateTime.Compare(value,DateTime.Now) < 0 ) {
+                    MessageBox.Show( traduction.display( 6 ) );
+                }
+                startDate_ = value;
+            }
+        }
+
 
     }
 }

@@ -84,9 +84,9 @@
             // panelContent
             // 
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContent.Location = new System.Drawing.Point(204, 0);
+            this.panelContent.Location = new System.Drawing.Point(467, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1076, 840);
+            this.panelContent.Size = new System.Drawing.Size(813, 840);
             this.panelContent.TabIndex = 1;
             // 
             // Form_organizer_start
