@@ -194,7 +194,7 @@ namespace test1 {
         {
 
         }
-        public void updateInfo(Objet_A_Update o,string PreviousName)
+        public void updateInfo(PlayerClass o,string PreviousName)
         {
             maConnexionMysql.Laconnexion.Open();
             string sqlRequest = "UPDATE user SET name = @nameupdate, email =@emailupdate, firstName = @firstNameupdate, password= @passwordupdate where name = @nameuserupdate; ";
