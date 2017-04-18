@@ -14,9 +14,9 @@ namespace test1.Bruno {
         public Traducteur () {
 
             /**************************** NORBERT ADD TEXT HERE 2000->3000 *****************************/
-            theText[2000] = "";
             theText[2001] = "";
             theText[2002] = "";
+            theText[2003] = "";
 
             /**************************** NICOLAS ADD TEXT HERE 1000->2000 *****************************/
             theText[1001] = "";

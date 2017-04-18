@@ -64,11 +64,11 @@
     <Compile Include="Bruno\Sql_organizer_start.cs" />
     <Compile Include="Bruno\Tournament.cs" />
     <Compile Include="Bruno\Traducteur.cs" />
-    <Compile Include="Nicolas\Form1.cs">
+    <Compile Include="Nicolas\FormStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nicolas\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Nicolas\FormStart.Designer.cs">
+      <DependentUpon>FormStart.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Nicolas\test.cs">
@@ -93,8 +93,8 @@
     <EmbeddedResource Include="Bruno\Form_organizer_start.resx">
       <DependentUpon>Form_organizer_start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nicolas\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Nicolas\FormStart.resx">
+      <DependentUpon>FormStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Norbert\Form_Page_Accueil.resx">
       <DependentUpon>Form_Page_Accueil.cs</DependentUpon>

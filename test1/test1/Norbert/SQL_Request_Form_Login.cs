@@ -59,11 +59,13 @@ namespace test1.Norbert
             {
                 result = -1; 
             }
+            // mets à jour la session du connecté
+            laSession = new Session(namedd, monReaderMysql["language"].ToString(), result, Convert.ToBoolean(monReaderMysql["isOrganizer"]), Convert.ToBoolean(monReaderMysql["isAdmin"]));
+
             maConnexionMysql.Lacommande.Parameters.Clear();
             maConnexionMysql.Laconnexion.Close();
 
-            // mets à jour la session du connecté
-            laSession = new Session( namedd , monReaderMysql["language"].ToString() , result , Convert.ToBoolean( monReaderMysql["isOrganizer"] ) , Convert.ToBoolean( monReaderMysql["isAdmin"] ) );
+
 
             return result;
             //MessageBox.Show("Identifiants incorrects");
