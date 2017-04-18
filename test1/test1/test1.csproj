@@ -33,9 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,25 +54,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="csharp_projectDataSet.cs">
-      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="csharp_projectDataSet.Designer.cs">
-      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Form\Form1.cs">
+    <Compile Include="Bruno\Form_organizer_start.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form1.Designer.cs">
+    <Compile Include="Bruno\Form_organizer_start.Designer.cs">
+      <DependentUpon>Form_organizer_start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bruno\Session.cs" />
+    <Compile Include="Bruno\Sql_organizer_start.cs" />
+    <Compile Include="Bruno\Tournament.cs" />
+    <Compile Include="Bruno\Traducteur.cs" />
+    <Compile Include="Nicolas\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nicolas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Nicolas\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nicolas\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nicolas\test_class.cs" />
+    <Compile Include="Norbert\Form_Page_Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\Form_Page_Accueil.Designer.cs">
+      <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Norbert\PlayerClass.cs" />
+    <Compile Include="Norbert\SQL_Request_Form_Login.cs" />
+    <Compile Include="Norbert\SQL_Request_Form_Accueil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form\Form1.resx">
+    <Compile Include="Sql_non_identifie.cs" />
+    <EmbeddedResource Include="Bruno\Form_organizer_start.resx">
+      <DependentUpon>Form_organizer_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nicolas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\Form_Page_Accueil.resx">
+      <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,16 +109,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="csharp_projectDataSet.xsc">
-      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="csharp_projectDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>csharp_projectDataSet.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="csharp_projectDataSet.xss">
-      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -103,6 +125,89 @@
   <ItemGroup>
     <None Include="Resources\304cae8c141683515667132206_700w_0.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="backup_info.txt" />
+    <None Include="Resources\bruno\airplane.png" />
+    <None Include="Resources\bruno\attachment.png" />
+    <None Include="Resources\bruno\broken-heart.png" />
+    <None Include="Resources\bruno\browser.png" />
+    <None Include="Resources\bruno\cancel.png" />
+    <None Include="Resources\bruno\center-alignment.png" />
+    <None Include="Resources\bruno\clock.png" />
+    <None Include="Resources\bruno\clock-1.png" />
+    <None Include="Resources\bruno\cloud-computing.png" />
+    <None Include="Resources\bruno\compass.png" />
+    <None Include="Resources\bruno\computer.png" />
+    <None Include="Resources\bruno\cursor.png" />
+    <None Include="Resources\bruno\document.png" />
+    <None Include="Resources\bruno\document-1.png" />
+    <None Include="Resources\bruno\document-2.png" />
+    <None Include="Resources\bruno\document-3.png" />
+    <None Include="Resources\bruno\download.png" />
+    <None Include="Resources\bruno\earth-globe.png" />
+    <None Include="Resources\bruno\email.png" />
+    <None Include="Resources\bruno\film.png" />
+    <None Include="Resources\bruno\folder.png" />
+    <None Include="Resources\bruno\gamepad.png" />
+    <None Include="Resources\bruno\group.png" />
+    <None Include="Resources\bruno\heart.png" />
+    <None Include="Resources\bruno\internet.png" />
+    <None Include="Resources\bruno\layers.png" />
+    <None Include="Resources\bruno\left-alignment.png" />
+    <None Include="Resources\bruno\light-bulb.png" />
+    <None Include="Resources\bruno\light-bulb-1.png" />
+    <None Include="Resources\bruno\link.png" />
+    <None Include="Resources\bruno\list.png" />
+    <None Include="Resources\bruno\mail.png" />
+    <None Include="Resources\bruno\microphone.png" />
+    <None Include="Resources\bruno\notification.png" />
+    <None Include="Resources\bruno\padlock.png" />
+    <None Include="Resources\bruno\pencil.png" />
+    <None Include="Resources\bruno\phone-book.png" />
+    <None Include="Resources\bruno\phone-book-1.png" />
+    <None Include="Resources\bruno\picture.png" />
+    <None Include="Resources\bruno\picture-1.png" />
+    <None Include="Resources\bruno\placeholder.png" />
+    <None Include="Resources\bruno\push-pin.png" />
+    <None Include="Resources\bruno\right-alignment.png" />
+    <None Include="Resources\bruno\settings.png" />
+    <None Include="Resources\bruno\share.png" />
+    <None Include="Resources\bruno\shield.png" />
+    <None Include="Resources\bruno\shield-1.png" />
+    <None Include="Resources\bruno\shield-2.png" />
+    <None Include="Resources\bruno\smartphone.png" />
+    <None Include="Resources\bruno\speech-bubble.png" />
+    <None Include="Resources\bruno\speech-bubble-1.png" />
+    <None Include="Resources\bruno\tablet.png" />
+    <None Include="Resources\bruno\unlock.png" />
+    <None Include="Resources\bruno\upload.png" />
+    <None Include="Resources\bruno\user.png" />
+    <None Include="Resources\bruno\user-1.png" />
+    <None Include="Resources\bruno\user-2.png" />
+    <None Include="Resources\bruno\user-3.png" />
+    <None Include="Resources\bruno\volume.png" />
+    <None Include="Resources\bruno\zoom-in.png" />
+    <None Include="Resources\bruno\zoom-out.png" />
+    <None Include="Resources\bruno\config.jpg" />
+    <None Include="Resources\bruno\creer_tournoi01.jpg" />
+    <None Include="Resources\bruno\creer_tournoi02.jpg" />
+    <None Include="Resources\bruno\bouton_config.jpg" />
+    <None Include="Resources\bruno\bouton01.jpg" />
+    <None Include="Resources\bruno\bouton02.jpg" />
+    <None Include="Resources\bruno\creation_tournoi.jpg" />
+    <None Include="Resources\dark-souls.jpg" />
+    <Content Include="Resources\DLL\Bunifu_UI_v1.52.dll" />
+    <Content Include="Resources\DLL\MySql.Data.dll" />
+    <Content Include="Resources\button_news %281%29.png" />
+    <None Include="Resources\Norbert\Settings.png" />
+    <None Include="Resources\Norbert\Team.png" />
+    <None Include="Resources\Norbert\Records.png" />
+    <None Include="Resources\kwouin.bmp" />
+    <None Include="Resources\Norbert\FriendsList.png" />
+    <Content Include="Resources\Kwouin.wav" />
+    <Content Include="Resources\news-red-button-300x300.jpg" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

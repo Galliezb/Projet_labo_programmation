@@ -1,0 +1,6 @@
+﻿***** SQL SERVER *****
+nom du serveur : 5.135.176.126
+loginAdmin : mysqlConnectionK
+pwd : Ho5DOeHdx8b3QFm8
+BDD : gestionTournoi
+Chaine de connection :
