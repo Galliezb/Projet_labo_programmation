@@ -96,6 +96,7 @@ namespace test1 {
 
         private void bCreate_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Ok fonction");
             if (tbCreatePwd.Text == tbVerifPwd.Text)
             {
                 test.ajoutCompte(tbCreateLogin.Text.ToString(), tbVerifPwd.Text.ToString());

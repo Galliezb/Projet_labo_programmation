@@ -103,6 +103,7 @@
             this.bCreate.TabIndex = 8;
             this.bCreate.Text = "Send";
             this.bCreate.UseVisualStyleBackColor = false;
+            this.bCreate.Click += new System.EventHandler(this.bCreate_Click);
             this.bCreate.MouseLeave += new System.EventHandler(this.bCreate_MouseLeave);
             this.bCreate.MouseHover += new System.EventHandler(this.bCreate_MouseHover);
             // 
@@ -286,6 +287,7 @@
             this.bIdentification.TabIndex = 0;
             this.bIdentification.Text = "Send";
             this.bIdentification.UseVisualStyleBackColor = false;
+            this.bIdentification.Click += new System.EventHandler(this.bIdentification_Click);
             this.bIdentification.MouseLeave += new System.EventHandler(this.bIdentification_MouseLeave);
             this.bIdentification.MouseHover += new System.EventHandler(this.bIdentification_MouseHover);
             // 
