@@ -48,6 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="csharp_projectDataSet.cs">
+      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="csharp_projectDataSet.Designer.cs">
+      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +77,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="csharp_projectDataSet.xsc">
+      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="csharp_projectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>csharp_projectDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="csharp_projectDataSet.xss">
+      <DependentUpon>csharp_projectDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
