@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using test1.Bruno;
 
 namespace test1.Norbert
 {
@@ -15,6 +16,7 @@ namespace test1.Norbert
         bool PanelGaucheDeploye = true;
 
         PlayerClass o = new PlayerClass();
+        Traducteur traduction = new Traducteur();
         
         SQL_Request_Form_Accueil databaseRequest = new SQL_Request_Form_Accueil();
 
@@ -176,6 +178,13 @@ namespace test1.Norbert
 
                 databaseRequest.updateInfo(o);
                 lbNom.Text = tbName.Text;
+
+                MessageBox.Show( traduction.display( 2002 ) );
+
+            } else {
+
+                MessageBox.Show( traduction.display( 2001 ) );
+
             }
         }
 

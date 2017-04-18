@@ -59,6 +59,7 @@ namespace test1.Norbert
             {
                 result = -1; 
             }
+
             // mets à jour la session du connecté
             laSession = new Session(namedd, monReaderMysql["language"].ToString(), result, Convert.ToBoolean(monReaderMysql["isOrganizer"]), Convert.ToBoolean(monReaderMysql["isAdmin"]));
 

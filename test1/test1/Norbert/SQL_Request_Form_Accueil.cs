@@ -7,26 +7,30 @@ using MySql.Data.MySqlClient;
 using MySql.Data;
 using System.Data;
 using System.Windows.Forms;
+using test1.Bruno;
 
 namespace test1
 {
     class SQL_Request_Form_Accueil
     {
         DatabaseConnection maConnexionMysql;
+        Session playerSession = new Session();
          
         public SQL_Request_Form_Accueil()
         {
             maConnexionMysql = new DatabaseConnection();
-            
         }
 
         
         public void  UpdatePlayerClass(PlayerClass Player)
         {
+            
+
             maConnexionMysql.Laconnexion.Open();
+
             string sqlRequest = "SELECT * FROM user where idUser = @PlayerID; ";
 
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@PlayerID", Player.ID);
+            maConnexionMysql.Lacommande.Parameters.AddWithValue("@PlayerID", playerSession.idPlayer);
 
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
 
@@ -45,9 +49,10 @@ namespace test1
 
         public void updateInfo(PlayerClass o)
         {
+
             maConnexionMysql.Laconnexion.Open();
             string sqlRequest = "UPDATE user SET name = @nameupdate, email =@emailupdate, firstName = @firstNameupdate, password= @passwordupdate,pseudo=@pseudoupdate where idUser = @IdUser; ";
-            maConnexionMysql.Lacommande.Parameters.AddWithValue("@IdUser", o.ID);
+            maConnexionMysql.Lacommande.Parameters.AddWithValue("@IdUser", playerSession.idPlayer);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@emailupdate", o.email);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@firstNameupdate", o.firstName);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@nameupdate", o.name);
