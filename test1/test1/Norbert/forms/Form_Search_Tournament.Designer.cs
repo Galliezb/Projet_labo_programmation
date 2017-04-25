@@ -1,6 +1,6 @@
 ﻿namespace test1.Norbert.forms
 {
-    partial class Settings
+    partial class Form_Search_Tournament
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Settings";
+            this.Text = "Form_Search_Tournament";
         }
 
         #endregion

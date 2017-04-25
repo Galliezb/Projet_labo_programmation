@@ -17,7 +17,7 @@ namespace test1.Norbert
         bool PanelGaucheDeploye = true;
 
         PlayerClass o = new PlayerClass();
-        Traducteur traduction = new Traducteur();
+        //Traducteur traduction = new Traducteur();
         
         SQL_Request_Form_Accueil databaseRequest = new SQL_Request_Form_Accueil();
 
@@ -187,11 +187,11 @@ namespace test1.Norbert
                 databaseRequest.updateInfo(o);
                 lbNom.Text = tbName.Text;
 
-                MessageBox.Show( traduction.display( 2002 ) );
+                //MessageBox.Show( traduction.display( 2002 ) );
 
             } else {
 
-                MessageBox.Show( traduction.display( 2001 ) );
+                //MessageBox.Show( traduction.display( 2001 ) );
 
             }
         }
@@ -221,9 +221,10 @@ namespace test1.Norbert
                 MyForm.Top = 0;
                 MyForm.Left = 0;
                 MyForm.Size = panelFill.ClientSize;
-                panelFill.AutoScroll = true;
-                MyForm.Dock = DockStyle.Left;
-                MyForm.AutoScroll = true;
+                //panelFill.AutoScroll = true;
+                //  panelFill.AutoScroll = true;
+                MyForm.Dock = DockStyle.Fill;
+                MyForm.AutoScroll = false;
                 MyForm.BringToFront();
                 MyForm.Show();
 
@@ -232,6 +233,7 @@ namespace test1.Norbert
             {
                 BoxReceive = (PictureBox)sender;
                 panelFill.Controls.Clear();
+                //panelFill.AutoScroll = false;
                 MyForm.TopLevel = false;
                 MyForm.FormBorderStyle = FormBorderStyle.None;
                 MyForm.Parent = panelFill;
@@ -259,6 +261,20 @@ namespace test1.Norbert
             Form MyForm_ = new Form_Settings();
             CreateFormInPanel(sender, ref MyForm_);
 
+
+        }
+
+      
+
+        private void PanelTop10_MouseClick(object sender, MouseEventArgs e)
+        {
+            Form_Top10 MyForm = new Form_Top10();
+            Form MyForm_ = new Form_Top10();
+            CreateFormInPanel(sender, ref MyForm_);
+        }
+
+        private void lbTop10_Click(object sender, EventArgs e)
+        {
 
         }
     }
