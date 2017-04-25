@@ -32,14 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Page_Accueil));
             this.Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelGauche = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panelManage = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panelFriends = new System.Windows.Forms.Panel();
-            this.lbFriends = new System.Windows.Forms.Label();
-            this.PanelHistorique = new System.Windows.Forms.Panel();
-            this.lbRecords = new System.Windows.Forms.Label();
+            this.PanelSearchTnm = new System.Windows.Forms.Panel();
+            this.lbSearchTnm = new System.Windows.Forms.Label();
+            this.panelCreateOrg = new System.Windows.Forms.Panel();
+            this.lbCreateOrga = new System.Windows.Forms.Label();
+            this.panelManageTeam = new System.Windows.Forms.Panel();
+            this.lbManageTeam = new System.Windows.Forms.Label();
+            this.PanelTop10 = new System.Windows.Forms.Panel();
+            this.lbTop10 = new System.Windows.Forms.Label();
             this.PanelSettings = new System.Windows.Forms.Panel();
             this.lbSettings = new System.Windows.Forms.Label();
             this.PanelBot = new System.Windows.Forms.Panel();
@@ -48,42 +48,45 @@
             this.panelFill = new System.Windows.Forms.Panel();
             this.lbPWD2 = new System.Windows.Forms.Label();
             this.lbPWD1 = new System.Windows.Forms.Label();
+            this.lbPseudo = new System.Windows.Forms.Label();
             this.lbMail = new System.Windows.Forms.Label();
             this.lbFirstName = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.tbPwd2 = new System.Windows.Forms.TextBox();
+            this.tbPseudo = new System.Windows.Forms.TextBox();
             this.tbPwd1 = new System.Windows.Forms.TextBox();
             this.tbMail = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tm = new System.Windows.Forms.Timer(this.components);
+            this.PanelAdmin = new System.Windows.Forms.Panel();
+            this.lbAdmin = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BoxSettings = new System.Windows.Forms.PictureBox();
-            this.pbLogoBig = new System.Windows.Forms.PictureBox();
             this.btMenu = new Bunifu.Framework.UI.BunifuImageButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.BtModifyParam = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btSave = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btQuit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.tbPseudo = new System.Windows.Forms.TextBox();
-            this.lbPseudo = new System.Windows.Forms.Label();
             this.panelGauche.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panelManage.SuspendLayout();
-            this.panelFriends.SuspendLayout();
-            this.PanelHistorique.SuspendLayout();
+            this.PanelSearchTnm.SuspendLayout();
+            this.panelCreateOrg.SuspendLayout();
+            this.panelManageTeam.SuspendLayout();
+            this.PanelTop10.SuspendLayout();
             this.PanelSettings.SuspendLayout();
             this.PanelTop.SuspendLayout();
             this.panelFill.SuspendLayout();
+            this.PanelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoxSettings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoBig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).BeginInit();
@@ -97,118 +100,121 @@
             // panelGauche
             // 
             this.panelGauche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panelGauche.Controls.Add(this.panel3);
-            this.panelGauche.Controls.Add(this.panelManage);
-            this.panelGauche.Controls.Add(this.panelFriends);
-            this.panelGauche.Controls.Add(this.PanelHistorique);
+            this.panelGauche.Controls.Add(this.PanelSearchTnm);
+            this.panelGauche.Controls.Add(this.PanelAdmin);
+            this.panelGauche.Controls.Add(this.panelCreateOrg);
+            this.panelGauche.Controls.Add(this.panelManageTeam);
+            this.panelGauche.Controls.Add(this.PanelTop10);
             this.panelGauche.Controls.Add(this.PanelSettings);
-            this.panelGauche.Controls.Add(this.pbLogoBig);
             this.panelGauche.Controls.Add(this.btMenu);
             this.panelGauche.Controls.Add(this.pbLogo);
             this.panelGauche.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelGauche.Location = new System.Drawing.Point(0, 39);
             this.panelGauche.Name = "panelGauche";
-            this.panelGauche.Size = new System.Drawing.Size(275, 729);
+            this.panelGauche.Size = new System.Drawing.Size(275, 768);
             this.panelGauche.TabIndex = 0;
             // 
-            // panel3
+            // PanelSearchTnm
             // 
-            this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(0, 353);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 48);
-            this.panel3.TabIndex = 9;
+            this.PanelSearchTnm.Controls.Add(this.pictureBox4);
+            this.PanelSearchTnm.Controls.Add(this.lbSearchTnm);
+            this.PanelSearchTnm.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelSearchTnm.Location = new System.Drawing.Point(0, 310);
+            this.PanelSearchTnm.Name = "PanelSearchTnm";
+            this.PanelSearchTnm.Size = new System.Drawing.Size(275, 48);
+            this.PanelSearchTnm.TabIndex = 9;
             // 
-            // label4
+            // lbSearchTnm
             // 
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(46, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 48);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Records";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.label4.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            this.lbSearchTnm.ForeColor = System.Drawing.Color.White;
+            this.lbSearchTnm.Location = new System.Drawing.Point(46, 0);
+            this.lbSearchTnm.Name = "lbSearchTnm";
+            this.lbSearchTnm.Size = new System.Drawing.Size(229, 48);
+            this.lbSearchTnm.TabIndex = 8;
+            this.lbSearchTnm.Text = "Search Tournament";
+            this.lbSearchTnm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSearchTnm.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.lbSearchTnm.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
-            // panelManage
+            // panelCreateOrg
             // 
-            this.panelManage.Controls.Add(this.pictureBox3);
-            this.panelManage.Controls.Add(this.label3);
-            this.panelManage.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelManage.Location = new System.Drawing.Point(0, 299);
-            this.panelManage.Name = "panelManage";
-            this.panelManage.Size = new System.Drawing.Size(275, 48);
-            this.panelManage.TabIndex = 9;
+            this.panelCreateOrg.Controls.Add(this.pictureBox3);
+            this.panelCreateOrg.Controls.Add(this.lbCreateOrga);
+            this.panelCreateOrg.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelCreateOrg.Location = new System.Drawing.Point(0, 256);
+            this.panelCreateOrg.Name = "panelCreateOrg";
+            this.panelCreateOrg.Size = new System.Drawing.Size(275, 48);
+            this.panelCreateOrg.TabIndex = 9;
             // 
-            // label3
+            // lbCreateOrga
             // 
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 48);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Manage Team";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.label3.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            this.lbCreateOrga.ForeColor = System.Drawing.Color.White;
+            this.lbCreateOrga.Location = new System.Drawing.Point(46, 0);
+            this.lbCreateOrga.Name = "lbCreateOrga";
+            this.lbCreateOrga.Size = new System.Drawing.Size(229, 48);
+            this.lbCreateOrga.TabIndex = 8;
+            this.lbCreateOrga.Text = "Create Organisation";
+            this.lbCreateOrga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCreateOrga.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.lbCreateOrga.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
-            // panelFriends
+            // panelManageTeam
             // 
-            this.panelFriends.Controls.Add(this.pictureBox1);
-            this.panelFriends.Controls.Add(this.lbFriends);
-            this.panelFriends.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelFriends.Location = new System.Drawing.Point(0, 245);
-            this.panelFriends.Name = "panelFriends";
-            this.panelFriends.Size = new System.Drawing.Size(275, 48);
-            this.panelFriends.TabIndex = 9;
+            this.panelManageTeam.Controls.Add(this.pictureBox1);
+            this.panelManageTeam.Controls.Add(this.lbManageTeam);
+            this.panelManageTeam.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelManageTeam.Location = new System.Drawing.Point(0, 202);
+            this.panelManageTeam.Name = "panelManageTeam";
+            this.panelManageTeam.Size = new System.Drawing.Size(275, 48);
+            this.panelManageTeam.TabIndex = 9;
             // 
-            // lbFriends
+            // lbManageTeam
             // 
-            this.lbFriends.ForeColor = System.Drawing.Color.White;
-            this.lbFriends.Location = new System.Drawing.Point(46, 0);
-            this.lbFriends.Name = "lbFriends";
-            this.lbFriends.Size = new System.Drawing.Size(229, 48);
-            this.lbFriends.TabIndex = 8;
-            this.lbFriends.Text = "Friends List";
-            this.lbFriends.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbFriends.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.lbFriends.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            this.lbManageTeam.ForeColor = System.Drawing.Color.White;
+            this.lbManageTeam.Location = new System.Drawing.Point(46, 0);
+            this.lbManageTeam.Name = "lbManageTeam";
+            this.lbManageTeam.Size = new System.Drawing.Size(229, 48);
+            this.lbManageTeam.TabIndex = 8;
+            this.lbManageTeam.Text = "Manage Team";
+            this.lbManageTeam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbManageTeam.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.lbManageTeam.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
-            // PanelHistorique
+            // PanelTop10
             // 
-            this.PanelHistorique.Controls.Add(this.pictureBox2);
-            this.PanelHistorique.Controls.Add(this.lbRecords);
-            this.PanelHistorique.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelHistorique.Location = new System.Drawing.Point(0, 191);
-            this.PanelHistorique.Name = "PanelHistorique";
-            this.PanelHistorique.Size = new System.Drawing.Size(275, 48);
-            this.PanelHistorique.TabIndex = 9;
+            this.PanelTop10.Controls.Add(this.pictureBox2);
+            this.PanelTop10.Controls.Add(this.lbTop10);
+            this.PanelTop10.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelTop10.Location = new System.Drawing.Point(0, 148);
+            this.PanelTop10.Name = "PanelTop10";
+            this.PanelTop10.Size = new System.Drawing.Size(275, 48);
+            this.PanelTop10.TabIndex = 9;
+            this.PanelTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelHistorique_MouseClick);
             // 
-            // lbRecords
+            // lbTop10
             // 
-            this.lbRecords.ForeColor = System.Drawing.Color.White;
-            this.lbRecords.Location = new System.Drawing.Point(46, 0);
-            this.lbRecords.Name = "lbRecords";
-            this.lbRecords.Size = new System.Drawing.Size(229, 48);
-            this.lbRecords.TabIndex = 8;
-            this.lbRecords.Text = "Records";
-            this.lbRecords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbRecords.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.lbRecords.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            this.lbTop10.ForeColor = System.Drawing.Color.White;
+            this.lbTop10.Location = new System.Drawing.Point(46, 0);
+            this.lbTop10.Name = "lbTop10";
+            this.lbTop10.Size = new System.Drawing.Size(229, 48);
+            this.lbTop10.TabIndex = 8;
+            this.lbTop10.Text = "TOP 10";
+            this.lbTop10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelHistorique_MouseClick);
+            this.lbTop10.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.lbTop10.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
             // PanelSettings
             // 
             this.PanelSettings.Controls.Add(this.BoxSettings);
             this.PanelSettings.Controls.Add(this.lbSettings);
             this.PanelSettings.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelSettings.Location = new System.Drawing.Point(0, 137);
+            this.PanelSettings.Location = new System.Drawing.Point(0, 94);
             this.PanelSettings.Name = "PanelSettings";
             this.PanelSettings.Size = new System.Drawing.Size(275, 48);
             this.PanelSettings.TabIndex = 9;
             this.PanelSettings.Click += new System.EventHandler(this.PanelClick);
+            this.PanelSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             // 
             // lbSettings
             // 
@@ -219,6 +225,8 @@
             this.lbSettings.TabIndex = 8;
             this.lbSettings.Text = "Settings";
             this.lbSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSettings.Click += new System.EventHandler(this.lbSettings_Click);
+            this.lbSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             this.lbSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
@@ -226,9 +234,9 @@
             // 
             this.PanelBot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.PanelBot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelBot.Location = new System.Drawing.Point(0, 768);
+            this.PanelBot.Location = new System.Drawing.Point(0, 807);
             this.PanelBot.Name = "PanelBot";
-            this.PanelBot.Size = new System.Drawing.Size(1264, 33);
+            this.PanelBot.Size = new System.Drawing.Size(1280, 33);
             this.PanelBot.TabIndex = 1;
             // 
             // PanelTop
@@ -239,7 +247,7 @@
             this.PanelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTop.Location = new System.Drawing.Point(0, 0);
             this.PanelTop.Name = "PanelTop";
-            this.PanelTop.Size = new System.Drawing.Size(1264, 39);
+            this.PanelTop.Size = new System.Drawing.Size(1280, 39);
             this.PanelTop.TabIndex = 2;
             // 
             // lbNom
@@ -269,18 +277,20 @@
             this.panelFill.Controls.Add(this.tbMail);
             this.panelFill.Controls.Add(this.tbFirstName);
             this.panelFill.Controls.Add(this.tbName);
-            this.panelFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill.Location = new System.Drawing.Point(0, 39);
+            this.panelFill.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelFill.Location = new System.Drawing.Point(275, 39);
+            this.panelFill.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.panelFill.Name = "panelFill";
-            this.panelFill.Size = new System.Drawing.Size(1264, 729);
+            this.panelFill.Size = new System.Drawing.Size(1005, 768);
             this.panelFill.TabIndex = 3;
+            this.panelFill.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFill_Paint);
             // 
             // lbPWD2
             // 
             this.lbPWD2.AutoSize = true;
             this.lbPWD2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPWD2.ForeColor = System.Drawing.Color.White;
-            this.lbPWD2.Location = new System.Drawing.Point(944, 245);
+            this.lbPWD2.Location = new System.Drawing.Point(631, 264);
             this.lbPWD2.Name = "lbPWD2";
             this.lbPWD2.Size = new System.Drawing.Size(100, 20);
             this.lbPWD2.TabIndex = 1;
@@ -292,19 +302,31 @@
             this.lbPWD1.AutoSize = true;
             this.lbPWD1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPWD1.ForeColor = System.Drawing.Color.White;
-            this.lbPWD1.Location = new System.Drawing.Point(944, 219);
+            this.lbPWD1.Location = new System.Drawing.Point(631, 238);
             this.lbPWD1.Name = "lbPWD1";
             this.lbPWD1.Size = new System.Drawing.Size(82, 20);
             this.lbPWD1.TabIndex = 1;
             this.lbPWD1.Text = "Password:";
             this.lbPWD1.Visible = false;
             // 
+            // lbPseudo
+            // 
+            this.lbPseudo.AutoSize = true;
+            this.lbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPseudo.ForeColor = System.Drawing.Color.White;
+            this.lbPseudo.Location = new System.Drawing.Point(632, 94);
+            this.lbPseudo.Name = "lbPseudo";
+            this.lbPseudo.Size = new System.Drawing.Size(66, 20);
+            this.lbPseudo.TabIndex = 1;
+            this.lbPseudo.Text = "Pseudo:";
+            this.lbPseudo.Visible = false;
+            // 
             // lbMail
             // 
             this.lbMail.AutoSize = true;
             this.lbMail.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMail.ForeColor = System.Drawing.Color.White;
-            this.lbMail.Location = new System.Drawing.Point(944, 178);
+            this.lbMail.Location = new System.Drawing.Point(631, 197);
             this.lbMail.Name = "lbMail";
             this.lbMail.Size = new System.Drawing.Size(64, 20);
             this.lbMail.TabIndex = 1;
@@ -316,7 +338,7 @@
             this.lbFirstName.AutoSize = true;
             this.lbFirstName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFirstName.ForeColor = System.Drawing.Color.White;
-            this.lbFirstName.Location = new System.Drawing.Point(944, 144);
+            this.lbFirstName.Location = new System.Drawing.Point(631, 163);
             this.lbFirstName.Name = "lbFirstName";
             this.lbFirstName.Size = new System.Drawing.Size(93, 20);
             this.lbFirstName.TabIndex = 1;
@@ -328,7 +350,7 @@
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
-            this.lbName.Location = new System.Drawing.Point(944, 109);
+            this.lbName.Location = new System.Drawing.Point(631, 128);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(57, 20);
             this.lbName.TabIndex = 1;
@@ -341,12 +363,24 @@
             this.tbPwd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPwd2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPwd2.ForeColor = System.Drawing.Color.White;
-            this.tbPwd2.Location = new System.Drawing.Point(1061, 243);
+            this.tbPwd2.Location = new System.Drawing.Point(748, 262);
             this.tbPwd2.Name = "tbPwd2";
             this.tbPwd2.Size = new System.Drawing.Size(191, 20);
             this.tbPwd2.TabIndex = 0;
             this.tbPwd2.Visible = false;
             this.tbPwd2.TextChanged += new System.EventHandler(this.tbPwd2_TextChanged);
+            // 
+            // tbPseudo
+            // 
+            this.tbPseudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.tbPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPseudo.ForeColor = System.Drawing.Color.White;
+            this.tbPseudo.Location = new System.Drawing.Point(749, 92);
+            this.tbPseudo.Name = "tbPseudo";
+            this.tbPseudo.Size = new System.Drawing.Size(191, 20);
+            this.tbPseudo.TabIndex = 0;
+            this.tbPseudo.Visible = false;
             // 
             // tbPwd1
             // 
@@ -354,7 +388,7 @@
             this.tbPwd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPwd1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPwd1.ForeColor = System.Drawing.Color.White;
-            this.tbPwd1.Location = new System.Drawing.Point(1061, 217);
+            this.tbPwd1.Location = new System.Drawing.Point(748, 236);
             this.tbPwd1.Name = "tbPwd1";
             this.tbPwd1.Size = new System.Drawing.Size(191, 20);
             this.tbPwd1.TabIndex = 0;
@@ -366,7 +400,7 @@
             this.tbMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMail.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMail.ForeColor = System.Drawing.Color.White;
-            this.tbMail.Location = new System.Drawing.Point(1061, 176);
+            this.tbMail.Location = new System.Drawing.Point(748, 195);
             this.tbMail.Name = "tbMail";
             this.tbMail.Size = new System.Drawing.Size(191, 20);
             this.tbMail.TabIndex = 0;
@@ -378,7 +412,7 @@
             this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFirstName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFirstName.ForeColor = System.Drawing.Color.White;
-            this.tbFirstName.Location = new System.Drawing.Point(1061, 142);
+            this.tbFirstName.Location = new System.Drawing.Point(748, 161);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(191, 20);
             this.tbFirstName.TabIndex = 0;
@@ -390,7 +424,7 @@
             this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.ForeColor = System.Drawing.Color.White;
-            this.tbName.Location = new System.Drawing.Point(1061, 107);
+            this.tbName.Location = new System.Drawing.Point(748, 126);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(191, 20);
             this.tbName.TabIndex = 0;
@@ -401,9 +435,31 @@
             this.tm.Interval = 1;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
+            // PanelAdmin
+            // 
+            this.PanelAdmin.Controls.Add(this.pictureBox5);
+            this.PanelAdmin.Controls.Add(this.lbAdmin);
+            this.PanelAdmin.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelAdmin.Location = new System.Drawing.Point(0, 364);
+            this.PanelAdmin.Name = "PanelAdmin";
+            this.PanelAdmin.Size = new System.Drawing.Size(275, 48);
+            this.PanelAdmin.TabIndex = 9;
+            // 
+            // lbAdmin
+            // 
+            this.lbAdmin.ForeColor = System.Drawing.Color.White;
+            this.lbAdmin.Location = new System.Drawing.Point(46, 0);
+            this.lbAdmin.Name = "lbAdmin";
+            this.lbAdmin.Size = new System.Drawing.Size(229, 48);
+            this.lbAdmin.TabIndex = 8;
+            this.lbAdmin.Text = "Administration";
+            this.lbAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAdmin.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.lbAdmin.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::test1.Properties.Resources.Records;
+            this.pictureBox4.Image = global::test1.Properties.Resources.calendar;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(48, 48);
@@ -412,6 +468,18 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.pictureBox4.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::test1.Properties.Resources.Admin;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox5.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
             // pictureBox3
             // 
@@ -446,6 +514,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelHistorique_MouseClick);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.pictureBox2.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
@@ -458,18 +527,9 @@
             this.BoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BoxSettings.TabIndex = 7;
             this.BoxSettings.TabStop = false;
+            this.BoxSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             this.BoxSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.BoxSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pbLogoBig
-            // 
-            this.pbLogoBig.Image = ((System.Drawing.Image)(resources.GetObject("pbLogoBig.Image")));
-            this.pbLogoBig.Location = new System.Drawing.Point(49, 6);
-            this.pbLogoBig.Name = "pbLogoBig";
-            this.pbLogoBig.Size = new System.Drawing.Size(185, 98);
-            this.pbLogoBig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogoBig.TabIndex = 6;
-            this.pbLogoBig.TabStop = false;
             // 
             // btMenu
             // 
@@ -513,7 +573,7 @@
             this.BtModifyParam.IdleFillColor = System.Drawing.Color.White;
             this.BtModifyParam.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.BtModifyParam.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.BtModifyParam.Location = new System.Drawing.Point(1061, 11);
+            this.BtModifyParam.Location = new System.Drawing.Point(692, 11);
             this.BtModifyParam.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.BtModifyParam.Name = "BtModifyParam";
             this.BtModifyParam.Size = new System.Drawing.Size(191, 35);
@@ -539,7 +599,7 @@
             this.btSave.IdleFillColor = System.Drawing.Color.White;
             this.btSave.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btSave.Location = new System.Drawing.Point(1061, 285);
+            this.btSave.Location = new System.Drawing.Point(748, 304);
             this.btSave.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(191, 35);
@@ -553,7 +613,7 @@
             this.btQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btQuit.Image = ((System.Drawing.Image)(resources.GetObject("btQuit.Image")));
             this.btQuit.ImageActive = null;
-            this.btQuit.Location = new System.Drawing.Point(1227, 6);
+            this.btQuit.Location = new System.Drawing.Point(1243, 8);
             this.btQuit.Name = "btQuit";
             this.btQuit.Size = new System.Drawing.Size(25, 25);
             this.btQuit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -562,36 +622,12 @@
             this.btQuit.Zoom = 20;
             this.btQuit.Click += new System.EventHandler(this.btQuit_Click);
             // 
-            // tbPseudo
-            // 
-            this.tbPseudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPseudo.ForeColor = System.Drawing.Color.White;
-            this.tbPseudo.Location = new System.Drawing.Point(1062, 73);
-            this.tbPseudo.Name = "tbPseudo";
-            this.tbPseudo.Size = new System.Drawing.Size(191, 20);
-            this.tbPseudo.TabIndex = 0;
-            this.tbPseudo.Visible = false;
-            // 
-            // lbPseudo
-            // 
-            this.lbPseudo.AutoSize = true;
-            this.lbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPseudo.ForeColor = System.Drawing.Color.White;
-            this.lbPseudo.Location = new System.Drawing.Point(945, 75);
-            this.lbPseudo.Name = "lbPseudo";
-            this.lbPseudo.Size = new System.Drawing.Size(66, 20);
-            this.lbPseudo.TabIndex = 1;
-            this.lbPseudo.Text = "Pseudo:";
-            this.lbPseudo.Visible = false;
-            // 
             // Form_Page_Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(1264, 801);
+            this.ClientSize = new System.Drawing.Size(1280, 840);
             this.Controls.Add(this.panelGauche);
             this.Controls.Add(this.panelFill);
             this.Controls.Add(this.PanelBot);
@@ -604,21 +640,22 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Page_Accueil";
             this.panelGauche.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panelManage.ResumeLayout(false);
-            this.panelFriends.ResumeLayout(false);
-            this.PanelHistorique.ResumeLayout(false);
+            this.PanelSearchTnm.ResumeLayout(false);
+            this.panelCreateOrg.ResumeLayout(false);
+            this.panelManageTeam.ResumeLayout(false);
+            this.PanelTop10.ResumeLayout(false);
             this.PanelSettings.ResumeLayout(false);
             this.PanelTop.ResumeLayout(false);
             this.PanelTop.PerformLayout();
             this.panelFill.ResumeLayout(false);
             this.panelFill.PerformLayout();
+            this.PanelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BoxSettings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoBig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).EndInit();
@@ -637,22 +674,21 @@
         private Bunifu.Framework.UI.BunifuImageButton btQuit;
         private Bunifu.Framework.UI.BunifuCustomLabel lbNom;
         private System.Windows.Forms.Panel panelFill;
-        private System.Windows.Forms.PictureBox pbLogoBig;
         private System.Windows.Forms.Label lbSettings;
         private System.Windows.Forms.PictureBox BoxSettings;
         private System.Windows.Forms.Panel PanelSettings;
-        private System.Windows.Forms.Panel PanelHistorique;
+        private System.Windows.Forms.Panel PanelTop10;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lbRecords;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lbTop10;
+        private System.Windows.Forms.Panel PanelSearchTnm;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panelManage;
+        private System.Windows.Forms.Label lbSearchTnm;
+        private System.Windows.Forms.Panel panelCreateOrg;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panelFriends;
+        private System.Windows.Forms.Label lbCreateOrga;
+        private System.Windows.Forms.Panel panelManageTeam;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbFriends;
+        private System.Windows.Forms.Label lbManageTeam;
         private System.Windows.Forms.Timer tm;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbPwd2;
@@ -668,5 +704,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 BtModifyParam;
         private System.Windows.Forms.Label lbPseudo;
         private System.Windows.Forms.TextBox tbPseudo;
+        private System.Windows.Forms.Panel PanelAdmin;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lbAdmin;
     }
 }

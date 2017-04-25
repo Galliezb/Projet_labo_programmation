@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using test1.Bruno;
+using test1.Norbert.forms;
 
 namespace test1.Norbert
 {
@@ -68,21 +69,23 @@ namespace test1.Norbert
 
         private void test1mouseLeaveLB1(object sender, EventArgs e) // Change la couleur du panel quand la souris ne se trouve plus dessus
         {
-            
+
             Label LabelReceive;
             PictureBox BoxReceive;
             if (sender.GetType().Name == "Label")
             {
                 LabelReceive = (Label)sender;
-                
+
                 LabelReceive.Parent.BackColor = Color.FromArgb(0, 122, 204);
             }
             else
             {
                 BoxReceive = (PictureBox)sender;
-               
+
                 BoxReceive.Parent.BackColor = Color.FromArgb(0, 122, 204);
             }
+
+
         }
 
 
@@ -102,12 +105,16 @@ namespace test1.Norbert
                     location_.Y = 6;
                     btMenu.Location= location_;
                     past = 1;
+                    
                 }
                 else
                 {
                     panelGauche.Width += 5;
-                    pbLogoBig.Visible = true;
+                    panelFill.Width -= 5;
+
                 }
+                
+
             }
             // la variable past sert uniquement dans le cas où on aurait agrandit le menu. Puisque le menu est déployé le panneau serait reduit de 5 pixels et le grand logo serait invisible.
             if (PanelGaucheDeploye == true && past!=1) 
@@ -126,8 +133,9 @@ namespace test1.Norbert
                 else
                 {
                     panelGauche.Width -= 5;
-                    pbLogoBig.Visible = false;
+                    panelFill.Width += 5;
                 }
+               
             }
             past = 0;
 
@@ -188,6 +196,70 @@ namespace test1.Norbert
             }
         }
 
+        private void panelFill_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void lbSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void CreateFormInPanel(object sender,ref Form MyForm)
+        {
+
+            Label LabelReceive;
+            PictureBox BoxReceive;
+            if (sender.GetType().Name == "Label")
+            {
+                LabelReceive = (Label)sender;
+                panelFill.Controls.Clear();
+                MyForm.TopLevel = false;
+                MyForm.FormBorderStyle = FormBorderStyle.None;
+                MyForm.Parent = panelFill;
+                MyForm.Top = 0;
+                MyForm.Left = 0;
+                MyForm.Size = panelFill.ClientSize;
+                panelFill.AutoScroll = true;
+                MyForm.Dock = DockStyle.Left;
+                MyForm.AutoScroll = true;
+                MyForm.BringToFront();
+                MyForm.Show();
+
+            }
+            else
+            {
+                BoxReceive = (PictureBox)sender;
+                panelFill.Controls.Clear();
+                MyForm.TopLevel = false;
+                MyForm.FormBorderStyle = FormBorderStyle.None;
+                MyForm.Parent = panelFill;
+                MyForm.Top = 0;
+                MyForm.Left = 0;
+                MyForm.Size = panelFill.ClientSize;
+                MyForm.Dock = DockStyle.Fill;
+                MyForm.BringToFront();
+                MyForm.Show();
+
+            }
+        }
+
+        private void PanelHistorique_MouseClick(object sender, MouseEventArgs e)
+        {
+          
+
+
+        }
+
+        private void PanelSettings_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            Form_Settings MyForm = new Form_Settings();
+            Form MyForm_ = new Form_Settings();
+            CreateFormInPanel(sender, ref MyForm_);
+
+
+        }
     }
 }

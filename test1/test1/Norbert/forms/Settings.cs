@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test1.Norbert
+namespace test1.Norbert.forms
 {
-    public partial class Form_Accueil : Form
+    public partial class Settings : Form
     {
-        public Form_Accueil()
+        public Settings()
         {
             InitializeComponent();
         }

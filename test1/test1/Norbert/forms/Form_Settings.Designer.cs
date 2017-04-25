@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Language");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("User Parameters");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Language");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("User Parameters");
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.panelSettings = new System.Windows.Forms.Panel();
+            this.panelUserParam = new System.Windows.Forms.Panel();
             this.btSave = new System.Windows.Forms.Button();
             this.lbPWD2 = new System.Windows.Forms.Label();
             this.lbPWD1 = new System.Windows.Forms.Label();
@@ -45,45 +45,50 @@
             this.tbMail = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
-            this.panelSettings.SuspendLayout();
+            this.panelLanguage = new System.Windows.Forms.Panel();
+            this.cbLanguage = new System.Windows.Forms.ComboBox();
+            this.panelUserParam.SuspendLayout();
+            this.panelLanguage.SuspendLayout();
             this.SuspendLayout();
             // 
             // treeView1
             // 
+            this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Language";
-            treeNode1.Text = "Language";
-            treeNode2.Name = "UserParam";
-            treeNode2.Text = "User Parameters";
+            treeNode3.Name = "Language";
+            treeNode3.Text = "Language";
+            treeNode4.Name = "UserParam";
+            treeNode4.Text = "User Parameters";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(98, 401);
+            treeNode3,
+            treeNode4});
+            this.treeView1.Size = new System.Drawing.Size(206, 729);
             this.treeView1.TabIndex = 15;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // panelSettings
+            // panelUserParam
             // 
-            this.panelSettings.Controls.Add(this.btSave);
-            this.panelSettings.Controls.Add(this.lbPWD2);
-            this.panelSettings.Controls.Add(this.lbPWD1);
-            this.panelSettings.Controls.Add(this.lbPseudo);
-            this.panelSettings.Controls.Add(this.lbMail);
-            this.panelSettings.Controls.Add(this.lbFirstName);
-            this.panelSettings.Controls.Add(this.lbName);
-            this.panelSettings.Controls.Add(this.tbPwd2);
-            this.panelSettings.Controls.Add(this.tbPseudo);
-            this.panelSettings.Controls.Add(this.tbPwd1);
-            this.panelSettings.Controls.Add(this.tbMail);
-            this.panelSettings.Controls.Add(this.tbFirstName);
-            this.panelSettings.Controls.Add(this.tbName);
-            this.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSettings.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelSettings.Location = new System.Drawing.Point(98, 0);
-            this.panelSettings.Name = "panelSettings";
-            this.panelSettings.Size = new System.Drawing.Size(236, 401);
-            this.panelSettings.TabIndex = 16;
+            this.panelUserParam.Controls.Add(this.btSave);
+            this.panelUserParam.Controls.Add(this.lbPWD2);
+            this.panelUserParam.Controls.Add(this.lbPWD1);
+            this.panelUserParam.Controls.Add(this.lbPseudo);
+            this.panelUserParam.Controls.Add(this.lbMail);
+            this.panelUserParam.Controls.Add(this.lbFirstName);
+            this.panelUserParam.Controls.Add(this.lbName);
+            this.panelUserParam.Controls.Add(this.tbPwd2);
+            this.panelUserParam.Controls.Add(this.tbPseudo);
+            this.panelUserParam.Controls.Add(this.tbPwd1);
+            this.panelUserParam.Controls.Add(this.tbMail);
+            this.panelUserParam.Controls.Add(this.tbFirstName);
+            this.panelUserParam.Controls.Add(this.tbName);
+            this.panelUserParam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUserParam.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelUserParam.Location = new System.Drawing.Point(206, 0);
+            this.panelUserParam.Name = "panelUserParam";
+            this.panelUserParam.Size = new System.Drawing.Size(783, 729);
+            this.panelUserParam.TabIndex = 16;
             // 
             // btSave
             // 
@@ -104,7 +109,6 @@
             this.lbPWD2.Size = new System.Drawing.Size(108, 18);
             this.lbPWD2.TabIndex = 21;
             this.lbPWD2.Text = "Vérification:";
-            this.lbPWD2.Visible = false;
             // 
             // lbPWD1
             // 
@@ -116,7 +120,6 @@
             this.lbPWD1.Size = new System.Drawing.Size(92, 18);
             this.lbPWD1.TabIndex = 22;
             this.lbPWD1.Text = "Password:";
-            this.lbPWD1.Visible = false;
             // 
             // lbPseudo
             // 
@@ -128,7 +131,6 @@
             this.lbPseudo.Size = new System.Drawing.Size(74, 18);
             this.lbPseudo.TabIndex = 23;
             this.lbPseudo.Text = "Pseudo:";
-            this.lbPseudo.Visible = false;
             // 
             // lbMail
             // 
@@ -140,7 +142,6 @@
             this.lbMail.Size = new System.Drawing.Size(65, 18);
             this.lbMail.TabIndex = 24;
             this.lbMail.Text = "E-Mail:";
-            this.lbMail.Visible = false;
             // 
             // lbFirstName
             // 
@@ -152,7 +153,6 @@
             this.lbFirstName.Size = new System.Drawing.Size(98, 18);
             this.lbFirstName.TabIndex = 25;
             this.lbFirstName.Text = "FirstName:";
-            this.lbFirstName.Visible = false;
             // 
             // lbName
             // 
@@ -164,7 +164,6 @@
             this.lbName.Size = new System.Drawing.Size(62, 18);
             this.lbName.TabIndex = 26;
             this.lbName.Text = "Name:";
-            this.lbName.Visible = false;
             // 
             // tbPwd2
             // 
@@ -176,7 +175,6 @@
             this.tbPwd2.Name = "tbPwd2";
             this.tbPwd2.Size = new System.Drawing.Size(118, 20);
             this.tbPwd2.TabIndex = 15;
-            this.tbPwd2.Visible = false;
             // 
             // tbPseudo
             // 
@@ -188,7 +186,6 @@
             this.tbPseudo.Name = "tbPseudo";
             this.tbPseudo.Size = new System.Drawing.Size(118, 20);
             this.tbPseudo.TabIndex = 16;
-            this.tbPseudo.Visible = false;
             // 
             // tbPwd1
             // 
@@ -200,7 +197,6 @@
             this.tbPwd1.Name = "tbPwd1";
             this.tbPwd1.Size = new System.Drawing.Size(118, 20);
             this.tbPwd1.TabIndex = 17;
-            this.tbPwd1.Visible = false;
             // 
             // tbMail
             // 
@@ -212,7 +208,6 @@
             this.tbMail.Name = "tbMail";
             this.tbMail.Size = new System.Drawing.Size(118, 20);
             this.tbMail.TabIndex = 18;
-            this.tbMail.Visible = false;
             // 
             // tbFirstName
             // 
@@ -224,7 +219,6 @@
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(118, 20);
             this.tbFirstName.TabIndex = 19;
-            this.tbFirstName.Visible = false;
             // 
             // tbName
             // 
@@ -236,19 +230,42 @@
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(118, 20);
             this.tbName.TabIndex = 20;
-            this.tbName.Visible = false;
+            // 
+            // panelLanguage
+            // 
+            this.panelLanguage.Controls.Add(this.cbLanguage);
+            this.panelLanguage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLanguage.Location = new System.Drawing.Point(206, 0);
+            this.panelLanguage.Name = "panelLanguage";
+            this.panelLanguage.Size = new System.Drawing.Size(783, 729);
+            this.panelLanguage.TabIndex = 17;
+            // 
+            // cbLanguage
+            // 
+            this.cbLanguage.FormattingEnabled = true;
+            this.cbLanguage.Items.AddRange(new object[] {
+            "Français",
+            "English"});
+            this.cbLanguage.Location = new System.Drawing.Point(48, 47);
+            this.cbLanguage.Name = "cbLanguage";
+            this.cbLanguage.Size = new System.Drawing.Size(121, 21);
+            this.cbLanguage.TabIndex = 0;
             // 
             // Form_Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 401);
-            this.Controls.Add(this.panelSettings);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.ClientSize = new System.Drawing.Size(989, 729);
+            this.Controls.Add(this.panelLanguage);
+            this.Controls.Add(this.panelUserParam);
             this.Controls.Add(this.treeView1);
             this.Name = "Form_Settings";
             this.Text = "Form_Settings";
-            this.panelSettings.ResumeLayout(false);
-            this.panelSettings.PerformLayout();
+            this.Load += new System.EventHandler(this.Form_Settings_Load);
+            this.panelUserParam.ResumeLayout(false);
+            this.panelUserParam.PerformLayout();
+            this.panelLanguage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -256,7 +273,7 @@
         #endregion
 
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Panel panelSettings;
+        private System.Windows.Forms.Panel panelUserParam;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Label lbPWD2;
         private System.Windows.Forms.Label lbPWD1;
@@ -270,5 +287,7 @@
         private System.Windows.Forms.TextBox tbMail;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Panel panelLanguage;
+        private System.Windows.Forms.ComboBox cbLanguage;
     }
 }
