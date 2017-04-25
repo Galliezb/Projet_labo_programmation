@@ -14,7 +14,6 @@ namespace test1.Bruno {
         static int idPlayer_;
         static bool isOrganizer_;
         static bool isAdmin_;
-        Traducteur traduction = new Traducteur();
 
         // constructeur
         public Session (string name, string language, int idPlayer, bool isOrganizer, bool isAdmin ) {
@@ -35,7 +34,11 @@ namespace test1.Bruno {
             set {
 
                 if ( value.Length > 50 ) {
-                   MessageBox.Show( traduction.display(0) );
+                    if ( language_ == "fr" ) {
+                        MessageBox.Show( "Le nom ne peut dépasser 50 caractères" );
+                    } else {
+                        MessageBox.Show( "The name can not exceed 50 characters" );
+                    }
                 } else {
 
                     name_ = value;
@@ -52,7 +55,11 @@ namespace test1.Bruno {
             set {
 
                 if ( value!="fr" || value!="en" ) {
-                   MessageBox.Show( traduction.display(1) );
+                    if ( language_ == "fr" ) {
+                        MessageBox.Show( "La valeur de langue ne peut être que 'fr' ou 'en'" );
+                    } else {
+                        MessageBox.Show( "The language value can only be 'fr' or 'en'" );
+                    }
                 } else {
 
                     language_ = value;
@@ -70,9 +77,17 @@ namespace test1.Bruno {
 
                 // vérifie que c'est un chiffre
                 if ( value.GetType() != typeof(int) ) {
-                   MessageBox.Show( traduction.display( 2 ) );
+                    if ( language_ == "fr" ) {
+                        MessageBox.Show( "La valeur ne peut être qu'un int" );
+                    } else {
+                        MessageBox.Show( "The value can only be an int" );
+                    }
                 } else if ( value < 0 ) {
-                   MessageBox.Show( traduction.display( 3 ) );
+                    if ( language_ == "fr" ) {
+                        MessageBox.Show( "La valeur ne peut être négative" );
+                    } else {
+                        MessageBox.Show( "The value can not be negative" );
+                    }
                 } else {
                     idPlayer_ = value;
                 }
