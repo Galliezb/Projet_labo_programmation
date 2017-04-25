@@ -78,6 +78,18 @@
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="Nicolas\test_class.cs" />
+    <Compile Include="Norbert\forms\Form_Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Accueil.Designer.cs">
+      <DependentUpon>Form_Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Settings.Designer.cs">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Norbert\Form_Page_Accueil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nicolas\FormStart.resx">
       <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\forms\Form_Accueil.resx">
+      <DependentUpon>Form_Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\forms\Form_Settings.resx">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Norbert\Form_Page_Accueil.resx">
       <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
