@@ -33,19 +33,32 @@
             this.Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelGauche = new System.Windows.Forms.Panel();
             this.PanelSearchTnm = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbSearchTnm = new System.Windows.Forms.Label();
+            this.PanelAdmin = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lbAdmin = new System.Windows.Forms.Label();
             this.panelCreateOrg = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbCreateOrga = new System.Windows.Forms.Label();
             this.panelManageTeam = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbManageTeam = new System.Windows.Forms.Label();
             this.PanelTop10 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbTop10 = new System.Windows.Forms.Label();
             this.PanelSettings = new System.Windows.Forms.Panel();
+            this.BoxSettings = new System.Windows.Forms.PictureBox();
             this.lbSettings = new System.Windows.Forms.Label();
+            this.btMenu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.PanelBot = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
+            this.btQuit = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbNom = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelFill = new System.Windows.Forms.Panel();
+            this.BtModifyParam = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btSave = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lbPWD2 = new System.Windows.Forms.Label();
             this.lbPWD1 = new System.Windows.Forms.Label();
             this.lbPseudo = new System.Windows.Forms.Label();
@@ -59,37 +72,24 @@
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tm = new System.Windows.Forms.Timer(this.components);
-            this.PanelAdmin = new System.Windows.Forms.Panel();
-            this.lbAdmin = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BoxSettings = new System.Windows.Forms.PictureBox();
-            this.btMenu = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.BtModifyParam = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btSave = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btQuit = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelGauche.SuspendLayout();
             this.PanelSearchTnm.SuspendLayout();
-            this.panelCreateOrg.SuspendLayout();
-            this.panelManageTeam.SuspendLayout();
-            this.PanelTop10.SuspendLayout();
-            this.PanelSettings.SuspendLayout();
-            this.PanelTop.SuspendLayout();
-            this.panelFill.SuspendLayout();
-            this.PanelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.PanelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panelCreateOrg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelManageTeam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelTop10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.PanelSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BoxSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).BeginInit();
+            this.panelFill.SuspendLayout();
             this.SuspendLayout();
             // 
             // Elipse
@@ -124,6 +124,18 @@
             this.PanelSearchTnm.Size = new System.Drawing.Size(275, 48);
             this.PanelSearchTnm.TabIndex = 9;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::test1.Properties.Resources.calendar;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox4.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // lbSearchTnm
             // 
             this.lbSearchTnm.ForeColor = System.Drawing.Color.White;
@@ -136,6 +148,40 @@
             this.lbSearchTnm.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbSearchTnm.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
+            // PanelAdmin
+            // 
+            this.PanelAdmin.Controls.Add(this.pictureBox5);
+            this.PanelAdmin.Controls.Add(this.lbAdmin);
+            this.PanelAdmin.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelAdmin.Location = new System.Drawing.Point(0, 364);
+            this.PanelAdmin.Name = "PanelAdmin";
+            this.PanelAdmin.Size = new System.Drawing.Size(275, 48);
+            this.PanelAdmin.TabIndex = 9;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::test1.Properties.Resources.Admin;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox5.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
+            // lbAdmin
+            // 
+            this.lbAdmin.ForeColor = System.Drawing.Color.White;
+            this.lbAdmin.Location = new System.Drawing.Point(46, 0);
+            this.lbAdmin.Name = "lbAdmin";
+            this.lbAdmin.Size = new System.Drawing.Size(229, 48);
+            this.lbAdmin.TabIndex = 8;
+            this.lbAdmin.Text = "Administration";
+            this.lbAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbAdmin.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.lbAdmin.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // panelCreateOrg
             // 
             this.panelCreateOrg.Controls.Add(this.pictureBox3);
@@ -145,6 +191,18 @@
             this.panelCreateOrg.Name = "panelCreateOrg";
             this.panelCreateOrg.Size = new System.Drawing.Size(275, 48);
             this.panelCreateOrg.TabIndex = 9;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::test1.Properties.Resources.Team;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
             // lbCreateOrga
             // 
@@ -168,6 +226,18 @@
             this.panelManageTeam.Size = new System.Drawing.Size(275, 48);
             this.panelManageTeam.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::test1.Properties.Resources.FriendsList;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // lbManageTeam
             // 
             this.lbManageTeam.ForeColor = System.Drawing.Color.White;
@@ -189,7 +259,20 @@
             this.PanelTop10.Name = "PanelTop10";
             this.PanelTop10.Size = new System.Drawing.Size(275, 48);
             this.PanelTop10.TabIndex = 9;
-            this.PanelTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelHistorique_MouseClick);
+            this.PanelTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::test1.Properties.Resources.Records;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
             // lbTop10
             // 
@@ -200,7 +283,8 @@
             this.lbTop10.TabIndex = 8;
             this.lbTop10.Text = "TOP 10";
             this.lbTop10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelHistorique_MouseClick);
+            this.lbTop10.Click += new System.EventHandler(this.lbTop10_Click);
+            this.lbTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
             this.lbTop10.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbTop10.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
@@ -216,6 +300,19 @@
             this.PanelSettings.Click += new System.EventHandler(this.PanelClick);
             this.PanelSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             // 
+            // BoxSettings
+            // 
+            this.BoxSettings.Image = global::test1.Properties.Resources.Settings;
+            this.BoxSettings.Location = new System.Drawing.Point(0, 0);
+            this.BoxSettings.Name = "BoxSettings";
+            this.BoxSettings.Size = new System.Drawing.Size(48, 48);
+            this.BoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BoxSettings.TabIndex = 7;
+            this.BoxSettings.TabStop = false;
+            this.BoxSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
+            this.BoxSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.BoxSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // lbSettings
             // 
             this.lbSettings.ForeColor = System.Drawing.Color.White;
@@ -229,6 +326,30 @@
             this.lbSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             this.lbSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
+            // btMenu
+            // 
+            this.btMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btMenu.Image = ((System.Drawing.Image)(resources.GetObject("btMenu.Image")));
+            this.btMenu.ImageActive = null;
+            this.btMenu.Location = new System.Drawing.Point(240, 6);
+            this.btMenu.Name = "btMenu";
+            this.btMenu.Size = new System.Drawing.Size(30, 30);
+            this.btMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btMenu.TabIndex = 3;
+            this.btMenu.TabStop = false;
+            this.btMenu.Zoom = 20;
+            this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(43, 46);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // PanelBot
             // 
@@ -249,6 +370,20 @@
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(1280, 39);
             this.PanelTop.TabIndex = 2;
+            // 
+            // btQuit
+            // 
+            this.btQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btQuit.Image = ((System.Drawing.Image)(resources.GetObject("btQuit.Image")));
+            this.btQuit.ImageActive = null;
+            this.btQuit.Location = new System.Drawing.Point(1243, 8);
+            this.btQuit.Name = "btQuit";
+            this.btQuit.Size = new System.Drawing.Size(25, 25);
+            this.btQuit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btQuit.TabIndex = 4;
+            this.btQuit.TabStop = false;
+            this.btQuit.Zoom = 20;
+            this.btQuit.Click += new System.EventHandler(this.btQuit_Click);
             // 
             // lbNom
             // 
@@ -284,6 +419,59 @@
             this.panelFill.Size = new System.Drawing.Size(1005, 768);
             this.panelFill.TabIndex = 3;
             this.panelFill.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFill_Paint);
+            // 
+            // BtModifyParam
+            // 
+            this.BtModifyParam.ActiveBorderThickness = 1;
+            this.BtModifyParam.ActiveCornerRadius = 20;
+            this.BtModifyParam.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtModifyParam.ActiveForecolor = System.Drawing.SystemColors.Window;
+            this.BtModifyParam.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtModifyParam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.BtModifyParam.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtModifyParam.BackgroundImage")));
+            this.BtModifyParam.ButtonText = "Modify Informations";
+            this.BtModifyParam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtModifyParam.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtModifyParam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtModifyParam.IdleBorderThickness = 1;
+            this.BtModifyParam.IdleCornerRadius = 20;
+            this.BtModifyParam.IdleFillColor = System.Drawing.Color.White;
+            this.BtModifyParam.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtModifyParam.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.BtModifyParam.Location = new System.Drawing.Point(692, 11);
+            this.BtModifyParam.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.BtModifyParam.Name = "BtModifyParam";
+            this.BtModifyParam.Size = new System.Drawing.Size(191, 35);
+            this.BtModifyParam.TabIndex = 2;
+            this.BtModifyParam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BtModifyParam.Click += new System.EventHandler(this.BtModifyParam_Click);
+            // 
+            // btSave
+            // 
+            this.btSave.ActiveBorderThickness = 1;
+            this.btSave.ActiveCornerRadius = 20;
+            this.btSave.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btSave.ActiveForecolor = System.Drawing.SystemColors.Window;
+            this.btSave.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.btSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSave.BackgroundImage")));
+            this.btSave.ButtonText = "Save";
+            this.btSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSave.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btSave.IdleBorderThickness = 1;
+            this.btSave.IdleCornerRadius = 20;
+            this.btSave.IdleFillColor = System.Drawing.Color.White;
+            this.btSave.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btSave.Location = new System.Drawing.Point(748, 304);
+            this.btSave.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(191, 35);
+            this.btSave.TabIndex = 2;
+            this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btSave.Visible = false;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // lbPWD2
             // 
@@ -435,193 +623,6 @@
             this.tm.Interval = 1;
             this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
-            // PanelAdmin
-            // 
-            this.PanelAdmin.Controls.Add(this.pictureBox5);
-            this.PanelAdmin.Controls.Add(this.lbAdmin);
-            this.PanelAdmin.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelAdmin.Location = new System.Drawing.Point(0, 364);
-            this.PanelAdmin.Name = "PanelAdmin";
-            this.PanelAdmin.Size = new System.Drawing.Size(275, 48);
-            this.PanelAdmin.TabIndex = 9;
-            // 
-            // lbAdmin
-            // 
-            this.lbAdmin.ForeColor = System.Drawing.Color.White;
-            this.lbAdmin.Location = new System.Drawing.Point(46, 0);
-            this.lbAdmin.Name = "lbAdmin";
-            this.lbAdmin.Size = new System.Drawing.Size(229, 48);
-            this.lbAdmin.TabIndex = 8;
-            this.lbAdmin.Text = "Administration";
-            this.lbAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbAdmin.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.lbAdmin.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::test1.Properties.Resources.calendar;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox4.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::test1.Properties.Resources.Admin;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox5.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::test1.Properties.Resources.Team;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::test1.Properties.Resources.FriendsList;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::test1.Properties.Resources.Records;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelHistorique_MouseClick);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // BoxSettings
-            // 
-            this.BoxSettings.Image = global::test1.Properties.Resources.Settings;
-            this.BoxSettings.Location = new System.Drawing.Point(0, 0);
-            this.BoxSettings.Name = "BoxSettings";
-            this.BoxSettings.Size = new System.Drawing.Size(48, 48);
-            this.BoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BoxSettings.TabIndex = 7;
-            this.BoxSettings.TabStop = false;
-            this.BoxSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
-            this.BoxSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.BoxSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // btMenu
-            // 
-            this.btMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btMenu.Image = ((System.Drawing.Image)(resources.GetObject("btMenu.Image")));
-            this.btMenu.ImageActive = null;
-            this.btMenu.Location = new System.Drawing.Point(240, 6);
-            this.btMenu.Name = "btMenu";
-            this.btMenu.Size = new System.Drawing.Size(30, 30);
-            this.btMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btMenu.TabIndex = 3;
-            this.btMenu.TabStop = false;
-            this.btMenu.Zoom = 20;
-            this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(43, 46);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
-            // 
-            // BtModifyParam
-            // 
-            this.BtModifyParam.ActiveBorderThickness = 1;
-            this.BtModifyParam.ActiveCornerRadius = 20;
-            this.BtModifyParam.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.BtModifyParam.ActiveForecolor = System.Drawing.SystemColors.Window;
-            this.BtModifyParam.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.BtModifyParam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.BtModifyParam.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtModifyParam.BackgroundImage")));
-            this.BtModifyParam.ButtonText = "Modify Informations";
-            this.BtModifyParam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtModifyParam.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtModifyParam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.BtModifyParam.IdleBorderThickness = 1;
-            this.BtModifyParam.IdleCornerRadius = 20;
-            this.BtModifyParam.IdleFillColor = System.Drawing.Color.White;
-            this.BtModifyParam.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.BtModifyParam.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.BtModifyParam.Location = new System.Drawing.Point(692, 11);
-            this.BtModifyParam.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.BtModifyParam.Name = "BtModifyParam";
-            this.BtModifyParam.Size = new System.Drawing.Size(191, 35);
-            this.BtModifyParam.TabIndex = 2;
-            this.BtModifyParam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BtModifyParam.Click += new System.EventHandler(this.BtModifyParam_Click);
-            // 
-            // btSave
-            // 
-            this.btSave.ActiveBorderThickness = 1;
-            this.btSave.ActiveCornerRadius = 20;
-            this.btSave.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btSave.ActiveForecolor = System.Drawing.SystemColors.Window;
-            this.btSave.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.btSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btSave.BackgroundImage")));
-            this.btSave.ButtonText = "Save";
-            this.btSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSave.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btSave.IdleBorderThickness = 1;
-            this.btSave.IdleCornerRadius = 20;
-            this.btSave.IdleFillColor = System.Drawing.Color.White;
-            this.btSave.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btSave.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btSave.Location = new System.Drawing.Point(748, 304);
-            this.btSave.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(191, 35);
-            this.btSave.TabIndex = 2;
-            this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btSave.Visible = false;
-            this.btSave.Click += new System.EventHandler(this.btSave_Click);
-            // 
-            // btQuit
-            // 
-            this.btQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btQuit.Image = ((System.Drawing.Image)(resources.GetObject("btQuit.Image")));
-            this.btQuit.ImageActive = null;
-            this.btQuit.Location = new System.Drawing.Point(1243, 8);
-            this.btQuit.Name = "btQuit";
-            this.btQuit.Size = new System.Drawing.Size(25, 25);
-            this.btQuit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btQuit.TabIndex = 4;
-            this.btQuit.TabStop = false;
-            this.btQuit.Zoom = 20;
-            this.btQuit.Click += new System.EventHandler(this.btQuit_Click);
-            // 
             // Form_Page_Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -641,24 +642,24 @@
             this.Text = "Form_Page_Accueil";
             this.panelGauche.ResumeLayout(false);
             this.PanelSearchTnm.ResumeLayout(false);
-            this.panelCreateOrg.ResumeLayout(false);
-            this.panelManageTeam.ResumeLayout(false);
-            this.PanelTop10.ResumeLayout(false);
-            this.PanelSettings.ResumeLayout(false);
-            this.PanelTop.ResumeLayout(false);
-            this.PanelTop.PerformLayout();
-            this.panelFill.ResumeLayout(false);
-            this.panelFill.PerformLayout();
-            this.PanelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.PanelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panelCreateOrg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelManageTeam.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelTop10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.PanelSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BoxSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.PanelTop.ResumeLayout(false);
+            this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).EndInit();
+            this.panelFill.ResumeLayout(false);
+            this.panelFill.PerformLayout();
             this.ResumeLayout(false);
 
         }

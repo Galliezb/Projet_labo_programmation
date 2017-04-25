@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace test1.Norbert.forms
 {
-    public partial class Settings : Form
+    public partial class Form_Create_Organization : Form
     {
-        public Settings()
+        public Form_Create_Organization()
         {
             InitializeComponent();
         }

@@ -70,17 +70,41 @@
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="Nicolas\test_class.cs" />
+    <Compile Include="Norbert\forms\Form_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Admin.Designer.cs">
+      <DependentUpon>Form_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Top10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Top10.Designer.cs">
+      <DependentUpon>Form_Top10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Manage_Team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Manage_Team.Designer.cs">
+      <DependentUpon>Form_Manage_Team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Search_Tournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Search_Tournament.Designer.cs">
+      <DependentUpon>Form_Search_Tournament.cs</DependentUpon>
+    </Compile>
     <Compile Include="Norbert\forms\Form_Settings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Norbert\forms\Form_Settings.Designer.cs">
       <DependentUpon>Form_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Norbert\forms\Settings.cs">
+    <Compile Include="Norbert\forms\Form_Create_Organization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Norbert\forms\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Norbert\forms\Form_Create_Organization.Designer.cs">
+      <DependentUpon>Form_Create_Organization.cs</DependentUpon>
     </Compile>
     <Compile Include="Norbert\Form_Page_Accueil.cs">
       <SubType>Form</SubType>
@@ -96,6 +120,9 @@
     <Compile Include="Sql_non_identifie.cs" />
     <EmbeddedResource Include="Nicolas\FormStart.resx">
       <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\forms\Form_Top10.resx">
+      <DependentUpon>Form_Top10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Norbert\forms\Form_Settings.resx">
       <DependentUpon>Form_Settings.cs</DependentUpon>
@@ -213,7 +240,42 @@
     <Content Include="Resources\Kwouin.wav" />
     <Content Include="Resources\news-red-button-300x300.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
