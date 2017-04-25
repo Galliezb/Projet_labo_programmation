@@ -17,7 +17,6 @@ namespace test1.Bruno {
         string type_;
         int maxPlayer_;
         Session laSession = new Session();
-        Traducteur traduction = new Traducteur();
 
         Tournament () { }
 
@@ -50,7 +49,13 @@ namespace test1.Bruno {
             get { return name_;  }
             set {
                 if ( value.Length > 50 ) {
-                    MessageBox.Show( traduction.display( 4 ) );
+
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le nom ne peut dépasser 50 caractères" );
+                    } else {
+                        MessageBox.Show( "The name can not exceed 50 characters" );
+                    }
+
                 } else {
                     name_ = value;
                 }
@@ -62,7 +67,11 @@ namespace test1.Bruno {
             get { return this.description_; }
             set {
                 if ( value.Length < 10 ) {
-                    MessageBox.Show( traduction.display( 5 ) );
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "La description doit faire plus de 10 caractères" );
+                    } else {
+                        MessageBox.Show( "The description must be more than 10 characters long" );
+                    }
                 } else {
                     description_ = value;
                 }
@@ -74,7 +83,11 @@ namespace test1.Bruno {
             get { return startDate_; }
             set {
                 if ( DateTime.Compare(value,DateTime.Now) < 0 ) {
-                    MessageBox.Show( traduction.display( 6 ) );
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "La date ne peut être passée" );
+                    } else {
+                        MessageBox.Show( "Date can not be placed" );
+                    }
                 }
                 startDate_ = value;
             }
