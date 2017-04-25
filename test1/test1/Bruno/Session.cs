@@ -77,9 +77,17 @@ namespace test1.Bruno {
 
                 // vérifie que c'est un chiffre
                 if ( value.GetType() != typeof(int) ) {
-                   MessageBox.Show( traduction.display( 2 ) );
+                    if ( language_ == "fr" ) {
+                        MessageBox.Show( "La valeur ne peut être qu'un int" );
+                    } else {
+                        MessageBox.Show( "The value can only be an int" );
+                    }
                 } else if ( value < 0 ) {
-                   MessageBox.Show( traduction.display( 3 ) );
+                    if ( language_ == "fr" ) {
+                        MessageBox.Show( "La valeur ne peut être négative" );
+                    } else {
+                        MessageBox.Show( "The value can not be negative" );
+                    }
                 } else {
                     idPlayer_ = value;
                 }
