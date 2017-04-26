@@ -16,5 +16,10 @@ namespace test1.Norbert.forms
         {
             InitializeComponent();
         }
+
+        private void cbbSelectType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
