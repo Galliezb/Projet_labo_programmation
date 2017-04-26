@@ -257,8 +257,8 @@ namespace test1.Norbert
         private void PanelSettings_MouseClick(object sender, MouseEventArgs e)
         {
 
-            Form_Settings MyForm = new Form_Settings();
-            Form MyForm_ = new Form_Settings();
+            //Form_Settings MyForm = new Form_Settings();
+            Form MyForm_ = new Form_Settings(o);
             CreateFormInPanel(sender, ref MyForm_);
 
 
@@ -268,7 +268,7 @@ namespace test1.Norbert
 
         private void PanelTop10_MouseClick(object sender, MouseEventArgs e)
         {
-            Form_Top10 MyForm = new Form_Top10();
+            //Form_Top10 MyForm = new Form_Top10();
             Form MyForm_ = new Form_Top10();
             CreateFormInPanel(sender, ref MyForm_);
         }
@@ -276,6 +276,13 @@ namespace test1.Norbert
         private void lbTop10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void PanelSearchTnm_MouseClick(object sender, MouseEventArgs e)
+        {
+            //Form_Top10 MyForm = new Form_Top10();
+            Form MyForm_ = new Form_Search_Tournament();
+            CreateFormInPanel(sender, ref MyForm_);
         }
     }
 }

@@ -123,6 +123,7 @@
             this.PanelSearchTnm.Name = "PanelSearchTnm";
             this.PanelSearchTnm.Size = new System.Drawing.Size(275, 48);
             this.PanelSearchTnm.TabIndex = 9;
+            this.PanelSearchTnm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSearchTnm_MouseClick);
             // 
             // pictureBox4
             // 
@@ -133,6 +134,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSearchTnm_MouseClick);
             this.pictureBox4.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.pictureBox4.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
@@ -145,6 +147,7 @@
             this.lbSearchTnm.TabIndex = 8;
             this.lbSearchTnm.Text = "Search Tournament";
             this.lbSearchTnm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSearchTnm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSearchTnm_MouseClick);
             this.lbSearchTnm.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbSearchTnm.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
@@ -390,7 +393,7 @@
             this.lbNom.AutoSize = true;
             this.lbNom.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNom.ForeColor = System.Drawing.Color.White;
-            this.lbNom.Location = new System.Drawing.Point(29, 13);
+            this.lbNom.Location = new System.Drawing.Point(7, 9);
             this.lbNom.Name = "lbNom";
             this.lbNom.Size = new System.Drawing.Size(41, 20);
             this.lbNom.TabIndex = 0;
