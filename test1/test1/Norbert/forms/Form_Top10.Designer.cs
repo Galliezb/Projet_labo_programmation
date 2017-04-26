@@ -32,7 +32,7 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("League of Legends");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Counter Strike GO");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Dota2");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("OverWatch");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Overwatch");
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Heavy Metal Machine");
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Paladin");
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Hearthstone");
@@ -42,6 +42,7 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.axShockwaveFlash1 = new AxShockwaveFlashObjects.AxShockwaveFlash();
+            this.tbDescription = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).BeginInit();
             this.SuspendLayout();
@@ -51,8 +52,9 @@
             this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.treeView1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeView1.ForeColor = System.Drawing.Color.White;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(5);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Battlerite";
             treeNode1.Text = "Battlerite";
@@ -62,8 +64,8 @@
             treeNode3.Text = "Counter Strike GO";
             treeNode4.Name = "Dota2";
             treeNode4.Text = "Dota2";
-            treeNode5.Name = "OverWatch";
-            treeNode5.Text = "OverWatch";
+            treeNode5.Name = "Overwatch";
+            treeNode5.Text = "Overwatch";
             treeNode6.Name = "Heavy Metal Machine";
             treeNode6.Text = "Heavy Metal Machine";
             treeNode7.Name = "Paladin";
@@ -91,10 +93,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tbDescription);
             this.panel1.Controls.Add(this.axShockwaveFlash1);
             this.panel1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(245, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(761, 768);
             this.panel1.TabIndex = 1;
@@ -103,11 +106,23 @@
             // 
             this.axShockwaveFlash1.Enabled = true;
             this.axShockwaveFlash1.Location = new System.Drawing.Point(15, 42);
-            this.axShockwaveFlash1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.axShockwaveFlash1.Margin = new System.Windows.Forms.Padding(5);
             this.axShockwaveFlash1.Name = "axShockwaveFlash1";
             this.axShockwaveFlash1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlash1.OcxState")));
             this.axShockwaveFlash1.Size = new System.Drawing.Size(731, 466);
             this.axShockwaveFlash1.TabIndex = 0;
+            this.axShockwaveFlash1.Visible = false;
+            // 
+            // tbDescription
+            // 
+            this.tbDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.tbDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescription.ForeColor = System.Drawing.Color.White;
+            this.tbDescription.Location = new System.Drawing.Point(15, 582);
+            this.tbDescription.Multiline = true;
+            this.tbDescription.Name = "tbDescription";
+            this.tbDescription.Size = new System.Drawing.Size(731, 155);
+            this.tbDescription.TabIndex = 1;
             // 
             // Form_Top10
             // 
@@ -118,11 +133,13 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.treeView1);
             this.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form_Top10";
             this.Text = "Form_Create_Organization";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).EndInit();
             this.ResumeLayout(false);
 
@@ -133,5 +150,6 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Panel panel1;
         private AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlash1;
+        private System.Windows.Forms.TextBox tbDescription;
     }
 }

@@ -11,7 +11,7 @@ using MySql.Data;
 
 namespace test1
 {
-    class PlayerClass
+    public class PlayerClass
     {
         int IDUser_;
         string name_;

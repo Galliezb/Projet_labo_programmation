@@ -148,6 +148,9 @@
     <EmbeddedResource Include="Norbert\forms\Form_ManageTeam.resx">
       <DependentUpon>Form_ManageTeam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\forms\Form_Search_Tournament.resx">
+      <DependentUpon>Form_Search_Tournament.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Norbert\forms\Form_Top10.resx">
       <DependentUpon>Form_Top10.cs</DependentUpon>
     </EmbeddedResource>

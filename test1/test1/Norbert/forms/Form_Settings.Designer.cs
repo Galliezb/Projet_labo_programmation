@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Language");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("User Parameters");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Language");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("User Parameters");
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panelUserParam = new System.Windows.Forms.Panel();
             this.btSave = new System.Windows.Forms.Button();
@@ -59,13 +59,13 @@
             this.treeView1.ForeColor = System.Drawing.Color.White;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode5.Name = "Language";
-            treeNode5.Text = "Language";
-            treeNode6.Name = "UserParam";
-            treeNode6.Text = "User Parameters";
+            treeNode3.Name = "Language";
+            treeNode3.Text = "Language";
+            treeNode4.Name = "UserParam";
+            treeNode4.Text = "User Parameters";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6});
+            treeNode3,
+            treeNode4});
             this.treeView1.Size = new System.Drawing.Size(206, 729);
             this.treeView1.TabIndex = 15;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -100,6 +100,7 @@
             this.btSave.TabIndex = 27;
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // lbPWD2
             // 
@@ -240,6 +241,7 @@
             this.panelLanguage.Name = "panelLanguage";
             this.panelLanguage.Size = new System.Drawing.Size(783, 729);
             this.panelLanguage.TabIndex = 17;
+            this.panelLanguage.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLanguage_Paint);
             // 
             // cbLanguage
             // 
