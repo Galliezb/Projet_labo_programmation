@@ -284,5 +284,26 @@ namespace test1.Norbert
             Form MyForm_ = new Form_Search_Tournament();
             CreateFormInPanel(sender, ref MyForm_);
         }
+
+        private void lbManageTeam_MouseClick(object sender, MouseEventArgs e)
+        {
+            Form_ManageTeam MyForm = new Form_ManageTeam();
+            Form MyForm_ = new Form_ManageTeam();
+            CreateFormInPanel(sender, ref MyForm_);
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            Form_CreateOrg MyForm = new Form_CreateOrg();
+            Form MyForm_ = new Form_CreateOrg();
+            CreateFormInPanel(sender, ref MyForm_);
+        }
+
+        private void lbAdmin_MouseClick(object sender, MouseEventArgs e)
+        {
+            Form_Administration MyForm = new Form_Administration();
+            Form MyForm_ = new Form_Administration();
+            CreateFormInPanel(sender, ref MyForm_);
+        }
     }
 }

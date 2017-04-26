@@ -76,6 +76,24 @@
     <Compile Include="Norbert\forms\Form_Admin.Designer.cs">
       <DependentUpon>Form_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Norbert\forms\Form_Administration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_Administration.Designer.cs">
+      <DependentUpon>Form_Administration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_CreateOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_CreateOrg.Designer.cs">
+      <DependentUpon>Form_CreateOrg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_ManageTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Norbert\forms\Form_ManageTeam.Designer.cs">
+      <DependentUpon>Form_ManageTeam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Norbert\forms\Form_Top10.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +138,15 @@
     <Compile Include="Sql_non_identifie.cs" />
     <EmbeddedResource Include="Nicolas\FormStart.resx">
       <DependentUpon>FormStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\forms\Form_Administration.resx">
+      <DependentUpon>Form_Administration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\forms\Form_CreateOrg.resx">
+      <DependentUpon>Form_CreateOrg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Norbert\forms\Form_ManageTeam.resx">
+      <DependentUpon>Form_ManageTeam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Norbert\forms\Form_Search_Tournament.resx">
       <DependentUpon>Form_Search_Tournament.cs</DependentUpon>
