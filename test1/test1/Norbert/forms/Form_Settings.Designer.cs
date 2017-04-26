@@ -93,7 +93,9 @@
             // 
             // btSave
             // 
+            this.btSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSave.Font = new System.Drawing.Font("Century Schoolbook", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSave.ForeColor = System.Drawing.Color.White;
             this.btSave.Location = new System.Drawing.Point(48, 308);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(169, 48);
@@ -245,13 +247,17 @@
             // 
             // cbLanguage
             // 
+            this.cbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.cbLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLanguage.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLanguage.ForeColor = System.Drawing.Color.White;
             this.cbLanguage.FormattingEnabled = true;
             this.cbLanguage.Items.AddRange(new object[] {
             "Français",
             "English"});
             this.cbLanguage.Location = new System.Drawing.Point(48, 47);
             this.cbLanguage.Name = "cbLanguage";
-            this.cbLanguage.Size = new System.Drawing.Size(121, 21);
+            this.cbLanguage.Size = new System.Drawing.Size(194, 28);
             this.cbLanguage.TabIndex = 0;
             // 
             // Form_Settings
