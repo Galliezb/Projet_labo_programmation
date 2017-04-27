@@ -273,11 +273,6 @@ namespace test1.Norbert
             CreateFormInPanel(sender, ref MyForm_);
         }
 
-        private void lbTop10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PanelSearchTnm_MouseClick(object sender, MouseEventArgs e)
         {
             //Form_Top10 MyForm = new Form_Top10();

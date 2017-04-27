@@ -20,7 +20,7 @@ namespace test1.Bruno {
 
         Tournament () { }
 
-        Tournament (int idTournament, int idOrganizer, string name, string description, DateTime startDate, DateTime endDate, string type, int maxPlayer) {
+        Tournament (int idTournament = -1, int idOrganizer = -1, string name ="indéfini", string description="indéfini", DateTime startDate = new DateTime(), DateTime endDate = new DateTime() , string type ="indéfini", int maxPlayer = -1) {
 
             idTournament_ = idTournament;
             idOrganizer_ = idOrganizer;
@@ -60,6 +60,22 @@ namespace test1.Bruno {
                     name_ = value;
                 }
                 
+            }
+        }
+
+        public string name {
+            get { return this.name_; }
+            set {
+                if ( value.Length > 50 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le nom est trop long ( 50 charactères maximum )" );
+                    } else {
+                        MessageBox.Show( "The name is too long (50 characters maximum)" );
+                    }
+                } else {
+                    name_ = value;
+                }
+
             }
         }
 
