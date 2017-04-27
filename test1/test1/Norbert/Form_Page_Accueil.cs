@@ -15,7 +15,7 @@ namespace test1.Norbert
     public partial class Form_Page_Accueil : Form
     {
         bool PanelGaucheDeploye = true;
-
+        Form MyForm_;
         PlayerClass o = new PlayerClass();
         //Traducteur traduction = new Traducteur();
         
@@ -200,11 +200,6 @@ namespace test1.Norbert
         {
 
         }
-
-        private void lbSettings_Click(object sender, EventArgs e)
-        {
-
-        }
         
         private void CreateFormInPanel(object sender,ref Form MyForm)
         {
@@ -256,12 +251,10 @@ namespace test1.Norbert
 
         private void PanelSettings_MouseClick(object sender, MouseEventArgs e)
         {
-
+            MessageBox.Show( panelFill.GetChildAtPoint( new Point( 0 , 0 ) ).Controls.Find("axShockwaveFlash1",true).ToString()  );
             //Form_Settings MyForm = new Form_Settings();
-            Form MyForm_ = new Form_Settings(o);
+            MyForm_ = new Form_Settings(o);
             CreateFormInPanel(sender, ref MyForm_);
-
-
         }
 
       
@@ -269,40 +262,36 @@ namespace test1.Norbert
         private void PanelTop10_MouseClick(object sender, MouseEventArgs e)
         {
             //Form_Top10 MyForm = new Form_Top10();
-            Form MyForm_ = new Form_Top10();
+            MyForm_ = new Form_Top10();
             CreateFormInPanel(sender, ref MyForm_);
-        }
-
-        private void lbTop10_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void PanelSearchTnm_MouseClick(object sender, MouseEventArgs e)
         {
             //Form_Top10 MyForm = new Form_Top10();
-            Form MyForm_ = new Form_Search_Tournament();
+            MyForm_ = new Form_Search_Tournament();
             CreateFormInPanel(sender, ref MyForm_);
         }
 
         private void lbManageTeam_MouseClick(object sender, MouseEventArgs e)
         {
             Form_ManageTeam MyForm = new Form_ManageTeam();
-            Form MyForm_ = new Form_ManageTeam();
+            MyForm_ = new Form_ManageTeam();
             CreateFormInPanel(sender, ref MyForm_);
         }
 
         private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
         {
             Form_CreateOrg MyForm = new Form_CreateOrg();
-            Form MyForm_ = new Form_CreateOrg();
+            MyForm_ = new Form_CreateOrg();
             CreateFormInPanel(sender, ref MyForm_);
         }
 
         private void lbAdmin_MouseClick(object sender, MouseEventArgs e)
         {
             Form_Administration MyForm = new Form_Administration();
-            Form MyForm_ = new Form_Administration();
+            MyForm_ = new Form_Administration();
             CreateFormInPanel(sender, ref MyForm_);
         }
     }
