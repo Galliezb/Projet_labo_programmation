@@ -16,7 +16,8 @@ namespace test1.Norbert
     {
         bool PanelGaucheDeploye = true;
 
-        PlayerClass o = new PlayerClass();
+        Session laSession = new Session();
+        PlayerClass o;
         //Traducteur traduction = new Traducteur();
         
         SQL_Request_Form_Accueil databaseRequest = new SQL_Request_Form_Accueil();
@@ -24,7 +25,10 @@ namespace test1.Norbert
         public Form_Page_Accueil()
         {
             InitializeComponent();
-            databaseRequest.UpdatePlayerClass(o);
+            o = new PlayerClass();
+            o.ID = laSession.idPlayer;
+
+            databaseRequest.UpdatePlayerClass(ref o);
             
             lbNom.Text = o.name;
 
@@ -174,27 +178,7 @@ namespace test1.Norbert
 
         }
 
-        private void btSave_Click(object sender, EventArgs e) // Fonction servant à mettre à jour la base de données avec les informations présentes dans les textBox
-        {
-            if (tbPwd1.Text.ToString() == tbPwd2.Text.ToString())
-            {
-                o.email = tbMail.Text.ToString();
-                o.firstName = tbFirstName.Text.ToString();
-                o.name = tbName.Text.ToString();
-                o.password = tbPwd1.Text.ToString();
-                o.pseudo = tbPseudo.Text.ToString();
-
-                databaseRequest.updateInfo(o);
-                lbNom.Text = tbName.Text;
-
-                //MessageBox.Show( traduction.display( 2002 ) );
-
-            } else {
-
-                //MessageBox.Show( traduction.display( 2001 ) );
-
-            }
-        }
+        
 
         private void panelFill_Paint(object sender, PaintEventArgs e)
         {
@@ -270,11 +254,6 @@ namespace test1.Norbert
             //Form_Top10 MyForm = new Form_Top10();
             Form MyForm_ = new Form_Top10();
             CreateFormInPanel(sender, ref MyForm_);
-        }
-
-        private void lbTop10_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void PanelSearchTnm_MouseClick(object sender, MouseEventArgs e)

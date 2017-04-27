@@ -22,7 +22,7 @@ namespace test1
         }
 
         
-        public void  UpdatePlayerClass(PlayerClass Player)
+        public void  UpdatePlayerClass( ref PlayerClass Player)
         {
             
 
@@ -41,6 +41,7 @@ namespace test1
             Player.email = monReaderMysql["email"].ToString();
             Player.password = monReaderMysql["password"].ToString();
             Player.pseudo = monReaderMysql["pseudo"].ToString();
+            Player.language = monReaderMysql["language"].ToString();
             maConnexionMysql.Laconnexion.Close();
             maConnexionMysql.Lacommande.Parameters.Clear();
         }

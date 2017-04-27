@@ -73,10 +73,11 @@ namespace test1
         public string language {
             get { return language_; }
             set {
-                if ( value == "fr" || value == "en" ) {
+
+                if ( value.ToString() == "fr" || value.ToString() == "en" ) {
                     language_ = value;
                 } else {
-                    MessageBox.Show( "La langue ne peut être que 'fr' ou 'en'" );
+                    MessageBox.Show( "PLAYERCLASS : La langue ne peut être que 'fr' ou 'en'" );
                 }
             }
         }
@@ -111,7 +112,7 @@ namespace test1
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
-                string sqlRequest = "UPDATE user SET name=@_name , firstName=@_firstName , email=@_email , pass = @_pass , pseudo = @_pseudo , language=@_language , isOrganizer=@_isOrganizer , isAdmin = @_isAdmin WHERE idUser = @_idUser ";
+                string sqlRequest = "UPDATE user SET name=@_name , firstName=@_firstName , email=@_email , password = @_pass , pseudo = @_pseudo , language=@_language , isOrganizer=@_isOrganizer , isAdmin = @_isAdmin WHERE idUser = @_idUser ";
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_name" , name_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_firstName" , firstName_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_email" , email );
@@ -144,7 +145,7 @@ namespace test1
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
-                string sqlRequest = "INSERT INTO user SET name=@_name , firstName=@_firstName , email=@_email , pass = @_pass , pseudo = @_pseudo , language=@_language , isOrganizer=@_isOrganizer , isAdmin = @_isAdmin WHERE idUser = @_idUser ";
+                string sqlRequest = "INSERT INTO user SET name=@_name , firstName=@_firstName , email=@_email , password = @_pass , pseudo = @_pseudo , language=@_language , isOrganizer=@_isOrganizer , isAdmin = @_isAdmin";
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_name" , name_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_firstName" , firstName_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_email" , email );
@@ -152,7 +153,7 @@ namespace test1
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_pseudo" , pseudo_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_language" , language_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_isOrganizer" , isOrganizer_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_isAdmin" , isAdmin );
+                dbConnect.Lacommande.Parameters.AddWithValue( "@_isAdmin" , isAdmin_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_idUser" , IDUser_ );
                 dbConnect.Lacommande.CommandText = sqlRequest;
 

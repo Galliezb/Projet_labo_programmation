@@ -33,21 +33,32 @@
             this.Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelGauche = new System.Windows.Forms.Panel();
             this.PanelSearchTnm = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lbSearchTnm = new System.Windows.Forms.Label();
             this.PanelAdmin = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lbAdmin = new System.Windows.Forms.Label();
             this.panelCreateOrg = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbCreateOrga = new System.Windows.Forms.Label();
             this.panelManageTeam = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbManageTeam = new System.Windows.Forms.Label();
             this.PanelTop10 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbTop10 = new System.Windows.Forms.Label();
             this.PanelSettings = new System.Windows.Forms.Panel();
+            this.BoxSettings = new System.Windows.Forms.PictureBox();
             this.lbSettings = new System.Windows.Forms.Label();
+            this.btMenu = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this.PanelBot = new System.Windows.Forms.Panel();
             this.PanelTop = new System.Windows.Forms.Panel();
+            this.btQuit = new Bunifu.Framework.UI.BunifuImageButton();
             this.lbNom = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panelFill = new System.Windows.Forms.Panel();
+            this.BtModifyParam = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btSave = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lbPWD2 = new System.Windows.Forms.Label();
             this.lbPWD1 = new System.Windows.Forms.Label();
             this.lbPseudo = new System.Windows.Forms.Label();
@@ -61,35 +72,24 @@
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tm = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.BoxSettings = new System.Windows.Forms.PictureBox();
-            this.btMenu = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.BtModifyParam = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btSave = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btQuit = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelGauche.SuspendLayout();
             this.PanelSearchTnm.SuspendLayout();
-            this.PanelAdmin.SuspendLayout();
-            this.panelCreateOrg.SuspendLayout();
-            this.panelManageTeam.SuspendLayout();
-            this.PanelTop10.SuspendLayout();
-            this.PanelSettings.SuspendLayout();
-            this.PanelTop.SuspendLayout();
-            this.panelFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.PanelAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panelCreateOrg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelManageTeam.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelTop10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.PanelSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BoxSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
+            this.PanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).BeginInit();
+            this.panelFill.SuspendLayout();
             this.SuspendLayout();
             // 
             // Elipse
@@ -161,6 +161,19 @@
             this.PanelAdmin.Size = new System.Drawing.Size(275, 48);
             this.PanelAdmin.TabIndex = 9;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::test1.Properties.Resources.Admin;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbAdmin_MouseClick);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox5.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // lbAdmin
             // 
             this.lbAdmin.ForeColor = System.Drawing.Color.White;
@@ -184,6 +197,19 @@
             this.panelCreateOrg.Size = new System.Drawing.Size(275, 48);
             this.panelCreateOrg.TabIndex = 9;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::test1.Properties.Resources.Team;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // lbCreateOrga
             // 
             this.lbCreateOrga.ForeColor = System.Drawing.Color.White;
@@ -206,6 +232,19 @@
             this.panelManageTeam.Name = "panelManageTeam";
             this.panelManageTeam.Size = new System.Drawing.Size(275, 48);
             this.panelManageTeam.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::test1.Properties.Resources.FriendsList;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbManageTeam_MouseClick);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
             // lbManageTeam
             // 
@@ -231,6 +270,19 @@
             this.PanelTop10.TabIndex = 9;
             this.PanelTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::test1.Properties.Resources.Records;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // lbTop10
             // 
             this.lbTop10.ForeColor = System.Drawing.Color.White;
@@ -240,8 +292,6 @@
             this.lbTop10.TabIndex = 8;
             this.lbTop10.Text = "TOP 10";
             this.lbTop10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbTop10.Click += new System.EventHandler(this.lbTop10_Click);
-            this.lbTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
             this.lbTop10.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbTop10.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
@@ -257,6 +307,19 @@
             this.PanelSettings.Click += new System.EventHandler(this.PanelClick);
             this.PanelSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             // 
+            // BoxSettings
+            // 
+            this.BoxSettings.Image = global::test1.Properties.Resources.Settings;
+            this.BoxSettings.Location = new System.Drawing.Point(0, 0);
+            this.BoxSettings.Name = "BoxSettings";
+            this.BoxSettings.Size = new System.Drawing.Size(48, 48);
+            this.BoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BoxSettings.TabIndex = 7;
+            this.BoxSettings.TabStop = false;
+            this.BoxSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
+            this.BoxSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
+            this.BoxSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
             // lbSettings
             // 
             this.lbSettings.ForeColor = System.Drawing.Color.White;
@@ -270,6 +333,30 @@
             this.lbSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             this.lbSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
+            // 
+            // btMenu
+            // 
+            this.btMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btMenu.Image = ((System.Drawing.Image)(resources.GetObject("btMenu.Image")));
+            this.btMenu.ImageActive = null;
+            this.btMenu.Location = new System.Drawing.Point(240, 6);
+            this.btMenu.Name = "btMenu";
+            this.btMenu.Size = new System.Drawing.Size(30, 30);
+            this.btMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btMenu.TabIndex = 3;
+            this.btMenu.TabStop = false;
+            this.btMenu.Zoom = 20;
+            this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(43, 46);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // PanelBot
             // 
@@ -291,6 +378,20 @@
             this.PanelTop.Size = new System.Drawing.Size(1280, 39);
             this.PanelTop.TabIndex = 2;
             // 
+            // btQuit
+            // 
+            this.btQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btQuit.Image = ((System.Drawing.Image)(resources.GetObject("btQuit.Image")));
+            this.btQuit.ImageActive = null;
+            this.btQuit.Location = new System.Drawing.Point(1243, 8);
+            this.btQuit.Name = "btQuit";
+            this.btQuit.Size = new System.Drawing.Size(25, 25);
+            this.btQuit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btQuit.TabIndex = 4;
+            this.btQuit.TabStop = false;
+            this.btQuit.Zoom = 20;
+            this.btQuit.Click += new System.EventHandler(this.btQuit_Click);
+            // 
             // lbNom
             // 
             this.lbNom.AutoSize = true;
@@ -298,7 +399,7 @@
             this.lbNom.ForeColor = System.Drawing.Color.White;
             this.lbNom.Location = new System.Drawing.Point(7, 9);
             this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(41, 20);
+            this.lbNom.Size = new System.Drawing.Size(50, 23);
             this.lbNom.TabIndex = 0;
             this.lbNom.Text = "Test";
             // 
@@ -325,257 +426,6 @@
             this.panelFill.Size = new System.Drawing.Size(1005, 768);
             this.panelFill.TabIndex = 3;
             this.panelFill.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFill_Paint);
-            // 
-            // lbPWD2
-            // 
-            this.lbPWD2.AutoSize = true;
-            this.lbPWD2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPWD2.ForeColor = System.Drawing.Color.White;
-            this.lbPWD2.Location = new System.Drawing.Point(631, 264);
-            this.lbPWD2.Name = "lbPWD2";
-            this.lbPWD2.Size = new System.Drawing.Size(100, 20);
-            this.lbPWD2.TabIndex = 1;
-            this.lbPWD2.Text = "Vérification:";
-            this.lbPWD2.Visible = false;
-            // 
-            // lbPWD1
-            // 
-            this.lbPWD1.AutoSize = true;
-            this.lbPWD1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPWD1.ForeColor = System.Drawing.Color.White;
-            this.lbPWD1.Location = new System.Drawing.Point(631, 238);
-            this.lbPWD1.Name = "lbPWD1";
-            this.lbPWD1.Size = new System.Drawing.Size(82, 20);
-            this.lbPWD1.TabIndex = 1;
-            this.lbPWD1.Text = "Password:";
-            this.lbPWD1.Visible = false;
-            // 
-            // lbPseudo
-            // 
-            this.lbPseudo.AutoSize = true;
-            this.lbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPseudo.ForeColor = System.Drawing.Color.White;
-            this.lbPseudo.Location = new System.Drawing.Point(632, 94);
-            this.lbPseudo.Name = "lbPseudo";
-            this.lbPseudo.Size = new System.Drawing.Size(66, 20);
-            this.lbPseudo.TabIndex = 1;
-            this.lbPseudo.Text = "Pseudo:";
-            this.lbPseudo.Visible = false;
-            // 
-            // lbMail
-            // 
-            this.lbMail.AutoSize = true;
-            this.lbMail.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMail.ForeColor = System.Drawing.Color.White;
-            this.lbMail.Location = new System.Drawing.Point(631, 197);
-            this.lbMail.Name = "lbMail";
-            this.lbMail.Size = new System.Drawing.Size(64, 20);
-            this.lbMail.TabIndex = 1;
-            this.lbMail.Text = "E-Mail:";
-            this.lbMail.Visible = false;
-            // 
-            // lbFirstName
-            // 
-            this.lbFirstName.AutoSize = true;
-            this.lbFirstName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFirstName.ForeColor = System.Drawing.Color.White;
-            this.lbFirstName.Location = new System.Drawing.Point(631, 163);
-            this.lbFirstName.Name = "lbFirstName";
-            this.lbFirstName.Size = new System.Drawing.Size(93, 20);
-            this.lbFirstName.TabIndex = 1;
-            this.lbFirstName.Text = "FirstName:";
-            this.lbFirstName.Visible = false;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.ForeColor = System.Drawing.Color.White;
-            this.lbName.Location = new System.Drawing.Point(631, 128);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(57, 20);
-            this.lbName.TabIndex = 1;
-            this.lbName.Text = "Name:";
-            this.lbName.Visible = false;
-            // 
-            // tbPwd2
-            // 
-            this.tbPwd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbPwd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPwd2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPwd2.ForeColor = System.Drawing.Color.White;
-            this.tbPwd2.Location = new System.Drawing.Point(748, 262);
-            this.tbPwd2.Name = "tbPwd2";
-            this.tbPwd2.Size = new System.Drawing.Size(191, 20);
-            this.tbPwd2.TabIndex = 0;
-            this.tbPwd2.Visible = false;
-            this.tbPwd2.TextChanged += new System.EventHandler(this.tbPwd2_TextChanged);
-            // 
-            // tbPseudo
-            // 
-            this.tbPseudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPseudo.ForeColor = System.Drawing.Color.White;
-            this.tbPseudo.Location = new System.Drawing.Point(749, 92);
-            this.tbPseudo.Name = "tbPseudo";
-            this.tbPseudo.Size = new System.Drawing.Size(191, 20);
-            this.tbPseudo.TabIndex = 0;
-            this.tbPseudo.Visible = false;
-            // 
-            // tbPwd1
-            // 
-            this.tbPwd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbPwd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPwd1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPwd1.ForeColor = System.Drawing.Color.White;
-            this.tbPwd1.Location = new System.Drawing.Point(748, 236);
-            this.tbPwd1.Name = "tbPwd1";
-            this.tbPwd1.Size = new System.Drawing.Size(191, 20);
-            this.tbPwd1.TabIndex = 0;
-            this.tbPwd1.Visible = false;
-            // 
-            // tbMail
-            // 
-            this.tbMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMail.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMail.ForeColor = System.Drawing.Color.White;
-            this.tbMail.Location = new System.Drawing.Point(748, 195);
-            this.tbMail.Name = "tbMail";
-            this.tbMail.Size = new System.Drawing.Size(191, 20);
-            this.tbMail.TabIndex = 0;
-            this.tbMail.Visible = false;
-            // 
-            // tbFirstName
-            // 
-            this.tbFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbFirstName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.ForeColor = System.Drawing.Color.White;
-            this.tbFirstName.Location = new System.Drawing.Point(748, 161);
-            this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(191, 20);
-            this.tbFirstName.TabIndex = 0;
-            this.tbFirstName.Visible = false;
-            // 
-            // tbName
-            // 
-            this.tbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.ForeColor = System.Drawing.Color.White;
-            this.tbName.Location = new System.Drawing.Point(748, 126);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(191, 20);
-            this.tbName.TabIndex = 0;
-            this.tbName.Visible = false;
-            // 
-            // tm
-            // 
-            this.tm.Interval = 1;
-            this.tm.Tick += new System.EventHandler(this.tm_Tick);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::test1.Properties.Resources.calendar;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox4.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::test1.Properties.Resources.Admin;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbAdmin_MouseClick);
-            this.pictureBox5.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox5.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::test1.Properties.Resources.Team;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::test1.Properties.Resources.FriendsList;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbManageTeam_MouseClick);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::test1.Properties.Resources.Records;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // BoxSettings
-            // 
-            this.BoxSettings.Image = global::test1.Properties.Resources.Settings;
-            this.BoxSettings.Location = new System.Drawing.Point(0, 0);
-            this.BoxSettings.Name = "BoxSettings";
-            this.BoxSettings.Size = new System.Drawing.Size(48, 48);
-            this.BoxSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BoxSettings.TabIndex = 7;
-            this.BoxSettings.TabStop = false;
-            this.BoxSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
-            this.BoxSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
-            this.BoxSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
-            // 
-            // btMenu
-            // 
-            this.btMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btMenu.Image = ((System.Drawing.Image)(resources.GetObject("btMenu.Image")));
-            this.btMenu.ImageActive = null;
-            this.btMenu.Location = new System.Drawing.Point(240, 6);
-            this.btMenu.Name = "btMenu";
-            this.btMenu.Size = new System.Drawing.Size(30, 30);
-            this.btMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btMenu.TabIndex = 3;
-            this.btMenu.TabStop = false;
-            this.btMenu.Zoom = 20;
-            this.btMenu.Click += new System.EventHandler(this.btMenu_Click);
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(43, 46);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
             // 
             // BtModifyParam
             // 
@@ -628,25 +478,160 @@
             this.btSave.TabIndex = 2;
             this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btSave.Visible = false;
-            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
-            // btQuit
+            // lbPWD2
             // 
-            this.btQuit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btQuit.Image = ((System.Drawing.Image)(resources.GetObject("btQuit.Image")));
-            this.btQuit.ImageActive = null;
-            this.btQuit.Location = new System.Drawing.Point(1243, 8);
-            this.btQuit.Name = "btQuit";
-            this.btQuit.Size = new System.Drawing.Size(25, 25);
-            this.btQuit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btQuit.TabIndex = 4;
-            this.btQuit.TabStop = false;
-            this.btQuit.Zoom = 20;
-            this.btQuit.Click += new System.EventHandler(this.btQuit_Click);
+            this.lbPWD2.AutoSize = true;
+            this.lbPWD2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPWD2.ForeColor = System.Drawing.Color.White;
+            this.lbPWD2.Location = new System.Drawing.Point(631, 264);
+            this.lbPWD2.Name = "lbPWD2";
+            this.lbPWD2.Size = new System.Drawing.Size(124, 23);
+            this.lbPWD2.TabIndex = 1;
+            this.lbPWD2.Text = "Vérification:";
+            this.lbPWD2.Visible = false;
+            // 
+            // lbPWD1
+            // 
+            this.lbPWD1.AutoSize = true;
+            this.lbPWD1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPWD1.ForeColor = System.Drawing.Color.White;
+            this.lbPWD1.Location = new System.Drawing.Point(631, 238);
+            this.lbPWD1.Name = "lbPWD1";
+            this.lbPWD1.Size = new System.Drawing.Size(104, 23);
+            this.lbPWD1.TabIndex = 1;
+            this.lbPWD1.Text = "Password:";
+            this.lbPWD1.Visible = false;
+            // 
+            // lbPseudo
+            // 
+            this.lbPseudo.AutoSize = true;
+            this.lbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPseudo.ForeColor = System.Drawing.Color.White;
+            this.lbPseudo.Location = new System.Drawing.Point(632, 94);
+            this.lbPseudo.Name = "lbPseudo";
+            this.lbPseudo.Size = new System.Drawing.Size(81, 23);
+            this.lbPseudo.TabIndex = 1;
+            this.lbPseudo.Text = "Pseudo:";
+            this.lbPseudo.Visible = false;
+            // 
+            // lbMail
+            // 
+            this.lbMail.AutoSize = true;
+            this.lbMail.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMail.ForeColor = System.Drawing.Color.White;
+            this.lbMail.Location = new System.Drawing.Point(631, 197);
+            this.lbMail.Name = "lbMail";
+            this.lbMail.Size = new System.Drawing.Size(79, 23);
+            this.lbMail.TabIndex = 1;
+            this.lbMail.Text = "E-Mail:";
+            this.lbMail.Visible = false;
+            // 
+            // lbFirstName
+            // 
+            this.lbFirstName.AutoSize = true;
+            this.lbFirstName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFirstName.ForeColor = System.Drawing.Color.White;
+            this.lbFirstName.Location = new System.Drawing.Point(631, 163);
+            this.lbFirstName.Name = "lbFirstName";
+            this.lbFirstName.Size = new System.Drawing.Size(116, 23);
+            this.lbFirstName.TabIndex = 1;
+            this.lbFirstName.Text = "FirstName:";
+            this.lbFirstName.Visible = false;
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.White;
+            this.lbName.Location = new System.Drawing.Point(631, 128);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(71, 23);
+            this.lbName.TabIndex = 1;
+            this.lbName.Text = "Name:";
+            this.lbName.Visible = false;
+            // 
+            // tbPwd2
+            // 
+            this.tbPwd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.tbPwd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPwd2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPwd2.ForeColor = System.Drawing.Color.White;
+            this.tbPwd2.Location = new System.Drawing.Point(748, 262);
+            this.tbPwd2.Name = "tbPwd2";
+            this.tbPwd2.Size = new System.Drawing.Size(191, 25);
+            this.tbPwd2.TabIndex = 0;
+            this.tbPwd2.Visible = false;
+            this.tbPwd2.TextChanged += new System.EventHandler(this.tbPwd2_TextChanged);
+            // 
+            // tbPseudo
+            // 
+            this.tbPseudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.tbPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPseudo.ForeColor = System.Drawing.Color.White;
+            this.tbPseudo.Location = new System.Drawing.Point(749, 92);
+            this.tbPseudo.Name = "tbPseudo";
+            this.tbPseudo.Size = new System.Drawing.Size(191, 25);
+            this.tbPseudo.TabIndex = 0;
+            this.tbPseudo.Visible = false;
+            // 
+            // tbPwd1
+            // 
+            this.tbPwd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.tbPwd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPwd1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPwd1.ForeColor = System.Drawing.Color.White;
+            this.tbPwd1.Location = new System.Drawing.Point(748, 236);
+            this.tbPwd1.Name = "tbPwd1";
+            this.tbPwd1.Size = new System.Drawing.Size(191, 25);
+            this.tbPwd1.TabIndex = 0;
+            this.tbPwd1.Visible = false;
+            // 
+            // tbMail
+            // 
+            this.tbMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.tbMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMail.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMail.ForeColor = System.Drawing.Color.White;
+            this.tbMail.Location = new System.Drawing.Point(748, 195);
+            this.tbMail.Name = "tbMail";
+            this.tbMail.Size = new System.Drawing.Size(191, 25);
+            this.tbMail.TabIndex = 0;
+            this.tbMail.Visible = false;
+            // 
+            // tbFirstName
+            // 
+            this.tbFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbFirstName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFirstName.ForeColor = System.Drawing.Color.White;
+            this.tbFirstName.Location = new System.Drawing.Point(748, 161);
+            this.tbFirstName.Name = "tbFirstName";
+            this.tbFirstName.Size = new System.Drawing.Size(191, 25);
+            this.tbFirstName.TabIndex = 0;
+            this.tbFirstName.Visible = false;
+            // 
+            // tbName
+            // 
+            this.tbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.ForeColor = System.Drawing.Color.White;
+            this.tbName.Location = new System.Drawing.Point(748, 126);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(191, 25);
+            this.tbName.TabIndex = 0;
+            this.tbName.Visible = false;
+            // 
+            // tm
+            // 
+            this.tm.Interval = 1;
+            this.tm.Tick += new System.EventHandler(this.tm_Tick);
             // 
             // Form_Page_Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1280, 840);
@@ -663,24 +648,24 @@
             this.Text = "Form_Page_Accueil";
             this.panelGauche.ResumeLayout(false);
             this.PanelSearchTnm.ResumeLayout(false);
-            this.PanelAdmin.ResumeLayout(false);
-            this.panelCreateOrg.ResumeLayout(false);
-            this.panelManageTeam.ResumeLayout(false);
-            this.PanelTop10.ResumeLayout(false);
-            this.PanelSettings.ResumeLayout(false);
-            this.PanelTop.ResumeLayout(false);
-            this.PanelTop.PerformLayout();
-            this.panelFill.ResumeLayout(false);
-            this.panelFill.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.PanelAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panelCreateOrg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelManageTeam.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelTop10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.PanelSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BoxSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
+            this.PanelTop.ResumeLayout(false);
+            this.PanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btQuit)).EndInit();
+            this.panelFill.ResumeLayout(false);
+            this.panelFill.PerformLayout();
             this.ResumeLayout(false);
 
         }
