@@ -23,7 +23,7 @@ namespace test1.Norbert.forms
 
         private void Form_CreateOrg_Load ( object sender , EventArgs e ) {
 
-            /*
+            
             // traduit en français si nécessaire
             if ( laSession.language == "fr" ) {
 
@@ -35,18 +35,20 @@ namespace test1.Norbert.forms
                 lbMaxPlayerTnm.Text = "Nombre max de joueurs : ";
                 btSubmissionTnm.Text = "Soumettre";
 
-                comboType.Items.Clear();
-                comboType.Items.Add( "Championnat toute ronde" );
-                comboType.Items.Add( "Elimination directe" );
-                comboType.Items.Add( "Phase de groupe" );
+                comboBoxType.Items.Clear();
+                comboBoxType.Items.Add( "Championnat toute ronde" );
+                comboBoxType.Items.Add( "Elimination directe" );
+                comboBoxType.Items.Add( "Phase de groupe" );
 
 
             }
 
+            comboBoxType.SelectedIndex = 0;
+
             // mets à jour les dates préselectionnés
             dateTimePickerStartDate.Value = DateTime.Now.AddDays( 1 );
             dateTimePickerEndDate.Value = DateTime.Now.AddDays( 4 );
-            */
+            
 
 
             // nico
@@ -56,11 +58,11 @@ namespace test1.Norbert.forms
         }
 
         private void btSubmissionTnm_Click ( object sender , EventArgs e ) {
-            /*
+            
             Tournament tournoi = new Tournament();
 
             tournoi.name = tnNameTnm.Text;
-            tournoi.typeTournoi = comboType.SelectedText;
+            tournoi.typeTournoi = comboBoxType.SelectedText;
             tournoi.startDate = dateTimePickerStartDate.Value;
             tournoi.endDate = dateTimePickerEndDate.Value;
             tournoi.maxPlayer = Convert.ToInt32(tbMaxpPlayerTnm.Text);
@@ -69,7 +71,7 @@ namespace test1.Norbert.forms
             tournoi.insertInDataBase();
 
             this.Refresh();
-            */
+            
         }
 
         private void btCreateTnm_Click(object sender, EventArgs e)
