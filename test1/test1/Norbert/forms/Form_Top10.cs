@@ -94,7 +94,17 @@ namespace test1.Norbert.forms
 
         }
 
-        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        private void panel1_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Leave(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Leave(object sender, FormClosedEventArgs e)
         {
 
         }

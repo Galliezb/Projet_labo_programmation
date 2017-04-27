@@ -101,6 +101,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(761, 768);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Leave);
+            this.panel1.Leave += new System.EventHandler(this.panel1_Leave);
             // 
             // tbDescription
             // 
@@ -138,6 +140,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form_Top10";
             this.Text = "Form_Create_Organization";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.panel1_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).EndInit();

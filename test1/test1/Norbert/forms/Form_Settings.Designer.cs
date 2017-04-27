@@ -66,7 +66,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode3,
             treeNode4});
-            this.treeView1.Size = new System.Drawing.Size(206, 729);
+            this.treeView1.Size = new System.Drawing.Size(206, 703);
             this.treeView1.TabIndex = 15;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -172,68 +172,68 @@
             // 
             // tbPwd2
             // 
-            this.tbPwd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbPwd2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPwd2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPwd2.ForeColor = System.Drawing.Color.Black;
+            this.tbPwd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.tbPwd2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPwd2.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPwd2.ForeColor = System.Drawing.Color.White;
             this.tbPwd2.Location = new System.Drawing.Point(114, 214);
             this.tbPwd2.Name = "tbPwd2";
-            this.tbPwd2.Size = new System.Drawing.Size(118, 20);
+            this.tbPwd2.Size = new System.Drawing.Size(118, 27);
             this.tbPwd2.TabIndex = 15;
             // 
             // tbPseudo
             // 
-            this.tbPseudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbPseudo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPseudo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPseudo.ForeColor = System.Drawing.Color.Black;
+            this.tbPseudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.tbPseudo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPseudo.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPseudo.ForeColor = System.Drawing.Color.White;
             this.tbPseudo.Location = new System.Drawing.Point(115, 44);
             this.tbPseudo.Name = "tbPseudo";
-            this.tbPseudo.Size = new System.Drawing.Size(118, 20);
+            this.tbPseudo.Size = new System.Drawing.Size(118, 27);
             this.tbPseudo.TabIndex = 16;
             // 
             // tbPwd1
             // 
-            this.tbPwd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbPwd1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPwd1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPwd1.ForeColor = System.Drawing.Color.Black;
+            this.tbPwd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.tbPwd1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPwd1.Font = new System.Drawing.Font("Century Schoolbook", 12F);
+            this.tbPwd1.ForeColor = System.Drawing.Color.White;
             this.tbPwd1.Location = new System.Drawing.Point(114, 188);
             this.tbPwd1.Name = "tbPwd1";
-            this.tbPwd1.Size = new System.Drawing.Size(118, 20);
+            this.tbPwd1.Size = new System.Drawing.Size(118, 27);
             this.tbPwd1.TabIndex = 17;
             // 
             // tbMail
             // 
-            this.tbMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMail.ForeColor = System.Drawing.Color.Black;
+            this.tbMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.tbMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbMail.Font = new System.Drawing.Font("Century Schoolbook", 12F);
+            this.tbMail.ForeColor = System.Drawing.Color.White;
             this.tbMail.Location = new System.Drawing.Point(114, 147);
             this.tbMail.Name = "tbMail";
-            this.tbMail.Size = new System.Drawing.Size(118, 20);
+            this.tbMail.Size = new System.Drawing.Size(118, 27);
             this.tbMail.TabIndex = 18;
             // 
             // tbFirstName
             // 
-            this.tbFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.ForeColor = System.Drawing.Color.Black;
+            this.tbFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.tbFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbFirstName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFirstName.ForeColor = System.Drawing.Color.White;
             this.tbFirstName.Location = new System.Drawing.Point(114, 113);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(118, 20);
+            this.tbFirstName.Size = new System.Drawing.Size(118, 27);
             this.tbFirstName.TabIndex = 19;
             // 
             // tbName
             // 
-            this.tbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.ForeColor = System.Drawing.Color.Black;
+            this.tbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.tbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbName.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.ForeColor = System.Drawing.Color.White;
             this.tbName.Location = new System.Drawing.Point(114, 78);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(118, 20);
+            this.tbName.Size = new System.Drawing.Size(118, 27);
             this.tbName.TabIndex = 20;
             // 
             // panelLanguage
@@ -265,12 +265,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(989, 729);
+            this.ClientSize = new System.Drawing.Size(989, 703);
             this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.panelLanguage);
             this.Controls.Add(this.panelUserParam);
+            this.Controls.Add(this.panelLanguage);
             this.Name = "Form_Settings";
-            this.Text = "Form_Settings";
             this.Load += new System.EventHandler(this.Form_Settings_Load);
             this.panelUserParam.ResumeLayout(false);
             this.panelUserParam.PerformLayout();

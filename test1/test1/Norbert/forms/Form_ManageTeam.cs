@@ -12,9 +12,12 @@ namespace test1.Norbert.forms
 {
     public partial class Form_ManageTeam : Form
     {
+        Team team = new Team();
         public Form_ManageTeam()
         {
             InitializeComponent();
+            btUpdate_Team.Visible = false;
+            btCreate_Team.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,6 +29,8 @@ namespace test1.Norbert.forms
         {
             PanelRightCT.Visible = true;
             PanelModifyTeam.Visible = false;
+            btCreate_Team.Visible = true;
+            btUpdate_Team.Visible = false;
         }
 
         private void lb_Click(object sender, EventArgs e)
@@ -35,12 +40,21 @@ namespace test1.Norbert.forms
 
         private void cbbChooseTeam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tbNameCT.Text = "Chicken Kick Chicks";
+            btUpdate_Team.Visible = true;
+            btCreate_Team.Visible = false;
+            
             tbTagCT.Text = "CKC";
             tbAddGameCT.Text = "";
-            tbAddPlayerCT.Text = "";
+            tbDescriptionCT.Text = "";
             PanelRightCT.Visible = true;
             PanelModifyTeam.Visible = true;
+        }
+
+        private void btCreate_Team_Click(object sender, EventArgs e)
+        {
+            team.name = tbNameCT.Text;
+            team.description = lbDescriptionCT.Text;
+            team.createToDataBase();
         }
     }
 }

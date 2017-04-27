@@ -39,7 +39,7 @@ namespace test1.Norbert
 
         public int Identification(string namedd, string password)
         {
-
+            
             maConnexionMysql.Laconnexion.Open();
             // creation requête et ajout à la commande
             string sqlRequest = "SELECT idUser,language,isOrganizer,isAdmin FROM user where name = @namelogin && password =@passlogin ";
@@ -53,15 +53,14 @@ namespace test1.Norbert
             {
                 monReaderMysql.Read();
                 result = Convert.ToInt32(monReaderMysql["idUser"]);
+                // mets à jour la session du connecté
+                laSession = new Session( namedd , monReaderMysql["language"].ToString() , result , Convert.ToBoolean( monReaderMysql["isOrganizer"] ) , Convert.ToBoolean( monReaderMysql["isAdmin"] ) );
 
-            }
-            else
+            } else
             {
                 result = -1; 
             }
 
-            // mets à jour la session du connecté
-            laSession = new Session(namedd, monReaderMysql["language"].ToString(), result, Convert.ToBoolean(monReaderMysql["isOrganizer"]), Convert.ToBoolean(monReaderMysql["isAdmin"]));
 
             maConnexionMysql.Lacommande.Parameters.Clear();
             maConnexionMysql.Laconnexion.Close();
