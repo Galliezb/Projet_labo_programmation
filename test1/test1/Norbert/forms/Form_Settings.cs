@@ -79,13 +79,13 @@ namespace test1.Norbert.forms
 
                 //lbNom
                 this.ParentForm.Controls["PanelTop"].Controls["lbNom"].Text = Player.name;
-
+                
                 //MessageBox.Show( traduction.display( 2002 ) );
 
             } else
             {
 
-                //MessageBox.Show( traduction.display( 2001 ) );
+                MessageBox.Show( "Mots de passe differents" );
 
             }
         }

@@ -106,6 +106,7 @@
     <Compile Include="Norbert\forms\Form_Settings.Designer.cs">
       <DependentUpon>Form_Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Norbert\Team.cs" />
     <Compile Include="Norbert\Form_Page_Accueil.cs">
       <SubType>Form</SubType>
     </Compile>
