@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Language");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("User Parameters");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Language");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("User Parameters");
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panelUserParam = new System.Windows.Forms.Panel();
             this.btSave = new System.Windows.Forms.Button();
@@ -59,13 +59,13 @@
             this.treeView1.ForeColor = System.Drawing.Color.White;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode3.Name = "Language";
-            treeNode3.Text = "Language";
-            treeNode4.Name = "UserParam";
-            treeNode4.Text = "User Parameters";
+            treeNode1.Name = "Language";
+            treeNode1.Text = "Language";
+            treeNode2.Name = "UserParam";
+            treeNode2.Text = "User Parameters";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4});
+            treeNode1,
+            treeNode2});
             this.treeView1.Size = new System.Drawing.Size(206, 729);
             this.treeView1.TabIndex = 15;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -263,6 +263,7 @@
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.panelLanguage);
             this.Controls.Add(this.panelUserParam);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Settings";
             this.Text = "Form_Settings";
             this.Load += new System.EventHandler(this.Form_Settings_Load);

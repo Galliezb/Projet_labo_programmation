@@ -41,8 +41,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Top10));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.axShockwaveFlash1 = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.tbDescription = new System.Windows.Forms.TextBox();
+            this.axShockwaveFlash1 = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).BeginInit();
             this.SuspendLayout();
@@ -101,17 +101,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(761, 768);
             this.panel1.TabIndex = 1;
-            // 
-            // axShockwaveFlash1
-            // 
-            this.axShockwaveFlash1.Enabled = true;
-            this.axShockwaveFlash1.Location = new System.Drawing.Point(15, 42);
-            this.axShockwaveFlash1.Margin = new System.Windows.Forms.Padding(5);
-            this.axShockwaveFlash1.Name = "axShockwaveFlash1";
-            this.axShockwaveFlash1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlash1.OcxState")));
-            this.axShockwaveFlash1.Size = new System.Drawing.Size(731, 466);
-            this.axShockwaveFlash1.TabIndex = 0;
-            this.axShockwaveFlash1.Visible = false;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Leave);
+            this.panel1.Leave += new System.EventHandler(this.panel1_Leave);
             // 
             // tbDescription
             // 
@@ -123,6 +114,17 @@
             this.tbDescription.Name = "tbDescription";
             this.tbDescription.Size = new System.Drawing.Size(731, 155);
             this.tbDescription.TabIndex = 1;
+            // 
+            // axShockwaveFlash1
+            // 
+            this.axShockwaveFlash1.Enabled = true;
+            this.axShockwaveFlash1.Location = new System.Drawing.Point(15, 42);
+            this.axShockwaveFlash1.Margin = new System.Windows.Forms.Padding(5);
+            this.axShockwaveFlash1.Name = "axShockwaveFlash1";
+            this.axShockwaveFlash1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlash1.OcxState")));
+            this.axShockwaveFlash1.Size = new System.Drawing.Size(731, 466);
+            this.axShockwaveFlash1.TabIndex = 0;
+            this.axShockwaveFlash1.Visible = false;
             // 
             // Form_Top10
             // 
@@ -138,6 +140,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form_Top10";
             this.Text = "Form_Create_Organization";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.panel1_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).EndInit();

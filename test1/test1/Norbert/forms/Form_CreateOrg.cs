@@ -16,5 +16,24 @@ namespace test1.Norbert.forms
         {
             InitializeComponent();
         }
+
+        private void btCreateTnm_Click(object sender, EventArgs e)
+        {
+            panelCreateTnm.Visible = true;
+            panelCreateOrga.Visible = false;
+        }
+
+        private void btCreateOrga_Click(object sender, EventArgs e)
+        {
+            panelCreateTnm.Visible = false;
+            panelCreateOrga.Visible = true;
+        }
+
+        private void Form_CreateOrg_Load(object sender, EventArgs e)
+        {
+            panelCreateOrga.Parent = this;
+            panelCreateTnm.Parent = this; 
+
+        }
     }
 }

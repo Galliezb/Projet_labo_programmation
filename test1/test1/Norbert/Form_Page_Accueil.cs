@@ -198,7 +198,7 @@ namespace test1.Norbert
 
         private void panelFill_Paint(object sender, PaintEventArgs e)
         {
-
+ 
         }
 
         private void lbSettings_Click(object sender, EventArgs e)
@@ -208,7 +208,7 @@ namespace test1.Norbert
         
         private void CreateFormInPanel(object sender,ref Form MyForm)
         {
-
+            
             Label LabelReceive;
             PictureBox BoxReceive;
             if (sender.GetType().Name == "Label")
@@ -256,7 +256,6 @@ namespace test1.Norbert
 
         private void PanelSettings_MouseClick(object sender, MouseEventArgs e)
         {
-
             //Form_Settings MyForm = new Form_Settings();
             Form MyForm_ = new Form_Settings(o);
             CreateFormInPanel(sender, ref MyForm_);
