@@ -330,6 +330,7 @@
             this.lbSettings.TabIndex = 8;
             this.lbSettings.Text = "Settings";
             this.lbSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbSettings.Click += new System.EventHandler(this.lbSettings_Click);
             this.lbSettings.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelSettings_MouseClick);
             this.lbSettings.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbSettings.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
@@ -478,7 +479,6 @@
             this.btSave.TabIndex = 2;
             this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btSave.Visible = false;
-            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // lbPWD2
             // 

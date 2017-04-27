@@ -63,19 +63,7 @@
       <DependentUpon>FormStart.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseConnection.cs" />
-    <Compile Include="Nicolas\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Nicolas\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Nicolas\test_class.cs" />
-    <Compile Include="Norbert\forms\Form_Admin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Norbert\forms\Form_Admin.Designer.cs">
-      <DependentUpon>Form_Admin.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Nicolas\Organisation.cs" />
     <Compile Include="Norbert\forms\Form_Administration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +88,6 @@
     <Compile Include="Norbert\forms\Form_Top10.Designer.cs">
       <DependentUpon>Form_Top10.cs</DependentUpon>
     </Compile>
-    <Compile Include="Norbert\forms\Form_Manage_Team.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Norbert\forms\Form_Manage_Team.Designer.cs">
-      <DependentUpon>Form_Manage_Team.cs</DependentUpon>
-    </Compile>
     <Compile Include="Norbert\forms\Form_Search_Tournament.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,18 +100,14 @@
     <Compile Include="Norbert\forms\Form_Settings.Designer.cs">
       <DependentUpon>Form_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Norbert\forms\Form_Create_Organization.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Norbert\forms\Form_Create_Organization.Designer.cs">
-      <DependentUpon>Form_Create_Organization.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Norbert\Team.cs" />
     <Compile Include="Norbert\Form_Page_Accueil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Norbert\Form_Page_Accueil.Designer.cs">
       <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Norbert\Organization.cs" />
     <Compile Include="Norbert\PlayerClass.cs" />
     <Compile Include="Norbert\SQL_Request_Form_Login.cs" />
     <Compile Include="Norbert\SQL_Request_Form_Accueil.cs" />

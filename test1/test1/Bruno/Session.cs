@@ -54,16 +54,10 @@ namespace test1.Bruno {
             get { return language_; }
             set {
 
-                if ( value!="fr" || value!="en" ) {
-                    if ( language_ == "fr" ) {
-                        MessageBox.Show( "La valeur de langue ne peut être que 'fr' ou 'en'" );
-                    } else {
-                        MessageBox.Show( "The language value can only be 'fr' or 'en'" );
-                    }
-                } else {
-
+                if ( value =="fr" || value == "en" ) {
                     language_ = value;
-
+                } else {
+                    MessageBox.Show( "SESSION : La valeur de langue ne peut être que 'fr' ou 'en'" );
                 }
 
             }

@@ -15,8 +15,9 @@ namespace test1.Norbert
     public partial class Form_Page_Accueil : Form
     {
         bool PanelGaucheDeploye = true;
-        Form MyForm_;
-        PlayerClass o = new PlayerClass();
+
+        Session laSession = new Session();
+        PlayerClass o;
         //Traducteur traduction = new Traducteur();
         
         SQL_Request_Form_Accueil databaseRequest = new SQL_Request_Form_Accueil();
@@ -24,7 +25,10 @@ namespace test1.Norbert
         public Form_Page_Accueil()
         {
             InitializeComponent();
-            databaseRequest.UpdatePlayerClass(o);
+            o = new PlayerClass();
+            o.ID = laSession.idPlayer;
+
+            databaseRequest.UpdatePlayerClass(ref o);
             
             lbNom.Text = o.name;
 
@@ -174,36 +178,21 @@ namespace test1.Norbert
 
         }
 
-        private void btSave_Click(object sender, EventArgs e) // Fonction servant à mettre à jour la base de données avec les informations présentes dans les textBox
-        {
-            if (tbPwd1.Text.ToString() == tbPwd2.Text.ToString())
-            {
-                o.email = tbMail.Text.ToString();
-                o.firstName = tbFirstName.Text.ToString();
-                o.name = tbName.Text.ToString();
-                o.password = tbPwd1.Text.ToString();
-                o.pseudo = tbPseudo.Text.ToString();
-
-                databaseRequest.updateInfo(o);
-                lbNom.Text = tbName.Text;
-
-                //MessageBox.Show( traduction.display( 2002 ) );
-
-            } else {
-
-                //MessageBox.Show( traduction.display( 2001 ) );
-
-            }
-        }
+        
 
         private void panelFill_Paint(object sender, PaintEventArgs e)
+        {
+ 
+        }
+
+        private void lbSettings_Click(object sender, EventArgs e)
         {
 
         }
         
         private void CreateFormInPanel(object sender,ref Form MyForm)
         {
-
+            
             Label LabelReceive;
             PictureBox BoxReceive;
             if (sender.GetType().Name == "Label")
@@ -251,10 +240,11 @@ namespace test1.Norbert
 
         private void PanelSettings_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show( panelFill.GetChildAtPoint( new Point( 0 , 0 ) ).Controls.Find("axShockwaveFlash1",true).ToString()  );
             //Form_Settings MyForm = new Form_Settings();
-            MyForm_ = new Form_Settings(o);
+            Form MyForm_ = new Form_Settings(o);
             CreateFormInPanel(sender, ref MyForm_);
+
+
         }
 
       
@@ -262,36 +252,35 @@ namespace test1.Norbert
         private void PanelTop10_MouseClick(object sender, MouseEventArgs e)
         {
             //Form_Top10 MyForm = new Form_Top10();
-            MyForm_ = new Form_Top10();
+            Form MyForm_ = new Form_Top10();
             CreateFormInPanel(sender, ref MyForm_);
-            
         }
 
         private void PanelSearchTnm_MouseClick(object sender, MouseEventArgs e)
         {
             //Form_Top10 MyForm = new Form_Top10();
-            MyForm_ = new Form_Search_Tournament();
+            Form MyForm_ = new Form_Search_Tournament();
             CreateFormInPanel(sender, ref MyForm_);
         }
 
         private void lbManageTeam_MouseClick(object sender, MouseEventArgs e)
         {
             Form_ManageTeam MyForm = new Form_ManageTeam();
-            MyForm_ = new Form_ManageTeam();
+            Form MyForm_ = new Form_ManageTeam();
             CreateFormInPanel(sender, ref MyForm_);
         }
 
         private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
         {
             Form_CreateOrg MyForm = new Form_CreateOrg();
-            MyForm_ = new Form_CreateOrg();
+            Form MyForm_ = new Form_CreateOrg();
             CreateFormInPanel(sender, ref MyForm_);
         }
 
         private void lbAdmin_MouseClick(object sender, MouseEventArgs e)
         {
             Form_Administration MyForm = new Form_Administration();
-            MyForm_ = new Form_Administration();
+            Form MyForm_ = new Form_Administration();
             CreateFormInPanel(sender, ref MyForm_);
         }
     }
