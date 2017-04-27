@@ -317,6 +317,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_ManageTeam";
             this.Text = "Form_ManageTeam";
+            this.Load += new System.EventHandler(this.Form_ManageTeam_Load);
             this.PanelChooseTeam.ResumeLayout(false);
             this.PanelChooseTeam.PerformLayout();
             this.PanelRightCT.ResumeLayout(false);

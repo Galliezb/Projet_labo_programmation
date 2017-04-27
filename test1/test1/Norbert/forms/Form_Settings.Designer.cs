@@ -86,9 +86,9 @@
             this.panelUserParam.Controls.Add(this.tbFirstName);
             this.panelUserParam.Controls.Add(this.tbName);
             this.panelUserParam.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelUserParam.Location = new System.Drawing.Point(206, 0);
+            this.panelUserParam.Location = new System.Drawing.Point(206, 3);
             this.panelUserParam.Name = "panelUserParam";
-            this.panelUserParam.Size = new System.Drawing.Size(783, 729);
+            this.panelUserParam.Size = new System.Drawing.Size(783, 726);
             this.panelUserParam.TabIndex = 16;
             // 
             // btSave
@@ -266,8 +266,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(989, 703);
-            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.panelUserParam);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.panelLanguage);
             this.Name = "Form_Settings";
             this.Load += new System.EventHandler(this.Form_Settings_Load);

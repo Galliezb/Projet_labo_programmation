@@ -135,7 +135,7 @@ namespace test1.Bruno {
                         MessageBox.Show( "Tournaments must be at least 3 days apart from start to finish" );
                     }
                 } else {
-                    startDate_ = value;
+                    endDate_ = value;
                 }
             }
         }

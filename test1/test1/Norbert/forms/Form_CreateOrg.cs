@@ -22,7 +22,6 @@ namespace test1.Norbert.forms
         }
 
         private void Form_CreateOrg_Load ( object sender , EventArgs e ) {
-
             
             // traduit en français si nécessaire
             if ( laSession.language == "fr" ) {
@@ -52,8 +51,8 @@ namespace test1.Norbert.forms
 
 
             // nico
-            panelCreateOrga.Parent = this;
-            panelCreateTnm.Parent = this;
+            //panelCreateOrga.Parent = this;
+            //panelCreateTnm.Parent = this;
 
         }
 
@@ -86,5 +85,8 @@ namespace test1.Norbert.forms
             panelCreateOrga.Visible = true;
         }
 
+        private void panelCreateTnm_Paint ( object sender , PaintEventArgs e ) {
+
+        }
     }
 }

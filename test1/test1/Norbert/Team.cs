@@ -16,9 +16,7 @@ namespace test1.Norbert.forms
         DatabaseConnection dbConnect = new DatabaseConnection();
         Session laSession = new Session();
         string description_;
-        public Team() { }
-
-
+        
         public Team(int idTeam=-1,string name="....",string description="")
         {
             idTeam_ = idTeam;
@@ -58,18 +56,18 @@ namespace test1.Norbert.forms
         {
             
             get { return creationDate_; }
-            set { 
-                if (DateTime.Compare(value, DateTime.Now) < 0)
-                {
-                    if (laSession.language == "fr")
-                    {
-                        MessageBox.Show("La date ne peut être passée");
-                        
+            set {
+                if ( DateTime.Compare( value , DateTime.Now ) < 0 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "La date ne peut être passée" );
+
+                    } else {
+                        MessageBox.Show( "Date can not be past" );
                     }
-                    else
-                    {
-                        MessageBox.Show("Date can not be past");
-                    }
+                } else {
+
+                    creationDate_ = value;
+
                 }
 
 
@@ -105,8 +103,7 @@ namespace test1.Norbert.forms
 
         public void createToDataBase()
         {
-            if (idTeam_ == -1)
-            {
+
             dbConnect.Laconnexion.Open();
             string sqlRequest = "INSERT INTO team SET name= @_name , description=@_description , captain =@_captain , dateCreation = @_dateCreation;";
             dbConnect.Lacommande.Parameters.AddWithValue("@_idTeam", idTeam_);
@@ -125,6 +122,7 @@ namespace test1.Norbert.forms
             if (idReturn > 0)
             {
                 idTeam_ = Convert.ToInt32(idReturn);
+                MessageBox.Show( "idTeam reçu : " + idTeam_ );
             }
 
             else
@@ -136,10 +134,6 @@ namespace test1.Norbert.forms
             dbConnect.Lacommande.Parameters.Clear();
             dbConnect.Laconnexion.Close();
 
-            }
-            else {
-                MessageBox.Show( "Impossible to create a team with an id who is present in the DBB" );
-            }
 
         }
         public void deleteTournament(int idTeam)

@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using test1.Bruno;
 
 namespace test1.Norbert.forms
 {
     public partial class Form_ManageTeam : Form
     {
         Team team = new Team();
+        Session laSession = new Session();
+
         public Form_ManageTeam()
         {
             InitializeComponent();
@@ -54,7 +57,18 @@ namespace test1.Norbert.forms
         {
             team.name = tbNameCT.Text;
             team.description = lbDescriptionCT.Text;
+            MessageBox.Show(team.creationDate.ToString("yyyy-MM-dd"));
             team.createToDataBase();
+        }
+
+        private void Form_ManageTeam_Load ( object sender , EventArgs e ) {
+
+            if ( laSession.language == "fr" ) {
+
+                btCreateTeam.Text = "Créer une équipe";
+                lbChooseTeam.Text = "Choisir une team";
+            }
+
         }
     }
 }
