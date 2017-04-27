@@ -47,6 +47,16 @@
             this.lbTypeTnm = new System.Windows.Forms.Label();
             this.btCreateOrga = new System.Windows.Forms.Button();
             this.btCreateTnm = new System.Windows.Forms.Button();
+            this.tbNameOrga = new System.Windows.Forms.TextBox();
+            this.lbManagerName = new System.Windows.Forms.Label();
+            this.tbManagerName = new System.Windows.Forms.TextBox();
+            this.lbMail = new System.Windows.Forms.Label();
+            this.tbMail = new System.Windows.Forms.TextBox();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbDesc = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btSubmitOrga = new System.Windows.Forms.Button();
             this.panelCreateTnm.SuspendLayout();
             this.panelCreateOrga.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +73,7 @@
             // 
             // panelCreateTnm
             // 
+            this.panelCreateTnm.Controls.Add(this.panelCreateOrga);
             this.panelCreateTnm.Controls.Add(this.lbNameTnm);
             this.panelCreateTnm.Controls.Add(this.tnNameTnm);
             this.panelCreateTnm.Controls.Add(this.btSubmissionTnm);
@@ -76,7 +87,6 @@
             this.panelCreateTnm.Controls.Add(this.lbDateDebutTnm);
             this.panelCreateTnm.Controls.Add(this.tbTypeTnm);
             this.panelCreateTnm.Controls.Add(this.lbTypeTnm);
-            this.panelCreateTnm.Controls.Add(this.panelCreateOrga);
             this.panelCreateTnm.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelCreateTnm.Location = new System.Drawing.Point(0, 190);
             this.panelCreateTnm.Name = "panelCreateTnm";
@@ -86,7 +96,17 @@
             // 
             // panelCreateOrga
             // 
+            this.panelCreateOrga.Controls.Add(this.btSubmitOrga);
+            this.panelCreateOrga.Controls.Add(this.richTextBox1);
+            this.panelCreateOrga.Controls.Add(this.lbDesc);
+            this.panelCreateOrga.Controls.Add(this.dateTimePicker1);
+            this.panelCreateOrga.Controls.Add(this.lbDate);
+            this.panelCreateOrga.Controls.Add(this.tbMail);
+            this.panelCreateOrga.Controls.Add(this.lbMail);
+            this.panelCreateOrga.Controls.Add(this.tbManagerName);
+            this.panelCreateOrga.Controls.Add(this.tbNameOrga);
             this.panelCreateOrga.Controls.Add(this.lbNameOrg);
+            this.panelCreateOrga.Controls.Add(this.lbManagerName);
             this.panelCreateOrga.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelCreateOrga.Location = new System.Drawing.Point(0, 0);
             this.panelCreateOrga.Name = "panelCreateOrga";
@@ -232,6 +252,88 @@
             this.btCreateTnm.UseVisualStyleBackColor = true;
             this.btCreateTnm.Click += new System.EventHandler(this.btCreateTnm_Click);
             // 
+            // tbNameOrga
+            // 
+            this.tbNameOrga.Location = new System.Drawing.Point(643, 11);
+            this.tbNameOrga.Name = "tbNameOrga";
+            this.tbNameOrga.Size = new System.Drawing.Size(222, 27);
+            this.tbNameOrga.TabIndex = 1;
+            // 
+            // lbManagerName
+            // 
+            this.lbManagerName.AutoSize = true;
+            this.lbManagerName.Location = new System.Drawing.Point(155, 64);
+            this.lbManagerName.Name = "lbManagerName";
+            this.lbManagerName.Size = new System.Drawing.Size(132, 20);
+            this.lbManagerName.TabIndex = 2;
+            this.lbManagerName.Text = "Manager Name :";
+            // 
+            // tbManagerName
+            // 
+            this.tbManagerName.Location = new System.Drawing.Point(643, 61);
+            this.tbManagerName.Name = "tbManagerName";
+            this.tbManagerName.Size = new System.Drawing.Size(222, 27);
+            this.tbManagerName.TabIndex = 3;
+            // 
+            // lbMail
+            // 
+            this.lbMail.AutoSize = true;
+            this.lbMail.Location = new System.Drawing.Point(155, 111);
+            this.lbMail.Name = "lbMail";
+            this.lbMail.Size = new System.Drawing.Size(51, 20);
+            this.lbMail.TabIndex = 4;
+            this.lbMail.Text = "Mail :";
+            // 
+            // tbMail
+            // 
+            this.tbMail.Location = new System.Drawing.Point(643, 111);
+            this.tbMail.Name = "tbMail";
+            this.tbMail.Size = new System.Drawing.Size(222, 27);
+            this.tbMail.TabIndex = 5;
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Location = new System.Drawing.Point(155, 161);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(52, 20);
+            this.lbDate.TabIndex = 6;
+            this.lbDate.Text = "Date :";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(643, 161);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(222, 27);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
+            // lbDesc
+            // 
+            this.lbDesc.AutoSize = true;
+            this.lbDesc.Location = new System.Drawing.Point(155, 214);
+            this.lbDesc.Name = "lbDesc";
+            this.lbDesc.Size = new System.Drawing.Size(105, 20);
+            this.lbDesc.TabIndex = 8;
+            this.lbDesc.Text = "Description  :";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(643, 211);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(222, 147);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
+            // 
+            // btSubmitOrga
+            // 
+            this.btSubmitOrga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSubmitOrga.Location = new System.Drawing.Point(390, 423);
+            this.btSubmitOrga.Name = "btSubmitOrga";
+            this.btSubmitOrga.Size = new System.Drawing.Size(180, 53);
+            this.btSubmitOrga.TabIndex = 10;
+            this.btSubmitOrga.Text = "SUBMIT";
+            this.btSubmitOrga.UseVisualStyleBackColor = true;
+            // 
             // Form_CreateOrg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -279,5 +381,15 @@
         private System.Windows.Forms.Button btCreateTnm;
         private System.Windows.Forms.Panel panelCreateOrga;
         private System.Windows.Forms.Label lbNameOrg;
+        private System.Windows.Forms.TextBox tbNameOrga;
+        private System.Windows.Forms.Label lbManagerName;
+        private System.Windows.Forms.TextBox tbManagerName;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.TextBox tbMail;
+        private System.Windows.Forms.Label lbMail;
+        private System.Windows.Forms.Button btSubmitOrga;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label lbDesc;
     }
 }
