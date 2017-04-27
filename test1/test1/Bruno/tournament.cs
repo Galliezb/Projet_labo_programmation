@@ -19,9 +19,9 @@ namespace test1.Bruno {
         Session laSession = new Session();
         DatabaseConnection dbConnect = new DatabaseConnection();
 
-        Tournament () { }
+        public Tournament () { }
 
-        Tournament (int idTournament = -1, int idOrganizer = -1, string name ="indéfini", string description="indéfini", DateTime startDate = new DateTime(), DateTime endDate = new DateTime() , string type ="indéfini", int maxPlayer = -1) {
+        public Tournament ( int idTournament = -1, int idOrganizer = -1, string name ="indéfini", string description="indéfini", DateTime startDate = new DateTime(), DateTime endDate = new DateTime() , string type ="indéfini", int maxPlayer = -1) {
 
             idTournament_ = idTournament;
             idOrganizer_ = idOrganizer;
@@ -34,7 +34,7 @@ namespace test1.Bruno {
 
         }
 
-        Tournament ( Tournament tournoi ) {
+        public Tournament ( Tournament tournoi ) {
 
             idTournament_ = tournoi.idTournament;
             idOrganizer_ = tournoi.idOrganizer;
@@ -193,7 +193,7 @@ namespace test1.Bruno {
         }
 
 
-        public void createToDataBase () {
+        public void insertInDataBase () {
 
             if ( idTournament_ == -1 ) {
 
