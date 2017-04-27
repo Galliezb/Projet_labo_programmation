@@ -292,6 +292,7 @@
             this.lbTop10.TabIndex = 8;
             this.lbTop10.Text = "TOP 10";
             this.lbTop10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTop10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelTop10_MouseClick);
             this.lbTop10.MouseLeave += new System.EventHandler(this.test1mouseLeaveLB1);
             this.lbTop10.MouseHover += new System.EventHandler(this.test1mouseHoverLB1);
             // 
@@ -399,7 +400,7 @@
             this.lbNom.ForeColor = System.Drawing.Color.White;
             this.lbNom.Location = new System.Drawing.Point(7, 9);
             this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(50, 23);
+            this.lbNom.Size = new System.Drawing.Size(41, 20);
             this.lbNom.TabIndex = 0;
             this.lbNom.Text = "Test";
             // 
@@ -486,7 +487,7 @@
             this.lbPWD2.ForeColor = System.Drawing.Color.White;
             this.lbPWD2.Location = new System.Drawing.Point(631, 264);
             this.lbPWD2.Name = "lbPWD2";
-            this.lbPWD2.Size = new System.Drawing.Size(124, 23);
+            this.lbPWD2.Size = new System.Drawing.Size(100, 20);
             this.lbPWD2.TabIndex = 1;
             this.lbPWD2.Text = "Vérification:";
             this.lbPWD2.Visible = false;
@@ -498,7 +499,7 @@
             this.lbPWD1.ForeColor = System.Drawing.Color.White;
             this.lbPWD1.Location = new System.Drawing.Point(631, 238);
             this.lbPWD1.Name = "lbPWD1";
-            this.lbPWD1.Size = new System.Drawing.Size(104, 23);
+            this.lbPWD1.Size = new System.Drawing.Size(82, 20);
             this.lbPWD1.TabIndex = 1;
             this.lbPWD1.Text = "Password:";
             this.lbPWD1.Visible = false;
@@ -510,7 +511,7 @@
             this.lbPseudo.ForeColor = System.Drawing.Color.White;
             this.lbPseudo.Location = new System.Drawing.Point(632, 94);
             this.lbPseudo.Name = "lbPseudo";
-            this.lbPseudo.Size = new System.Drawing.Size(81, 23);
+            this.lbPseudo.Size = new System.Drawing.Size(66, 20);
             this.lbPseudo.TabIndex = 1;
             this.lbPseudo.Text = "Pseudo:";
             this.lbPseudo.Visible = false;
@@ -522,7 +523,7 @@
             this.lbMail.ForeColor = System.Drawing.Color.White;
             this.lbMail.Location = new System.Drawing.Point(631, 197);
             this.lbMail.Name = "lbMail";
-            this.lbMail.Size = new System.Drawing.Size(79, 23);
+            this.lbMail.Size = new System.Drawing.Size(64, 20);
             this.lbMail.TabIndex = 1;
             this.lbMail.Text = "E-Mail:";
             this.lbMail.Visible = false;
@@ -534,7 +535,7 @@
             this.lbFirstName.ForeColor = System.Drawing.Color.White;
             this.lbFirstName.Location = new System.Drawing.Point(631, 163);
             this.lbFirstName.Name = "lbFirstName";
-            this.lbFirstName.Size = new System.Drawing.Size(116, 23);
+            this.lbFirstName.Size = new System.Drawing.Size(93, 20);
             this.lbFirstName.TabIndex = 1;
             this.lbFirstName.Text = "FirstName:";
             this.lbFirstName.Visible = false;
@@ -546,7 +547,7 @@
             this.lbName.ForeColor = System.Drawing.Color.White;
             this.lbName.Location = new System.Drawing.Point(631, 128);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(71, 23);
+            this.lbName.Size = new System.Drawing.Size(57, 20);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Name:";
             this.lbName.Visible = false;
@@ -559,7 +560,7 @@
             this.tbPwd2.ForeColor = System.Drawing.Color.White;
             this.tbPwd2.Location = new System.Drawing.Point(748, 262);
             this.tbPwd2.Name = "tbPwd2";
-            this.tbPwd2.Size = new System.Drawing.Size(191, 25);
+            this.tbPwd2.Size = new System.Drawing.Size(191, 20);
             this.tbPwd2.TabIndex = 0;
             this.tbPwd2.Visible = false;
             this.tbPwd2.TextChanged += new System.EventHandler(this.tbPwd2_TextChanged);
@@ -572,7 +573,7 @@
             this.tbPseudo.ForeColor = System.Drawing.Color.White;
             this.tbPseudo.Location = new System.Drawing.Point(749, 92);
             this.tbPseudo.Name = "tbPseudo";
-            this.tbPseudo.Size = new System.Drawing.Size(191, 25);
+            this.tbPseudo.Size = new System.Drawing.Size(191, 20);
             this.tbPseudo.TabIndex = 0;
             this.tbPseudo.Visible = false;
             // 
@@ -584,7 +585,7 @@
             this.tbPwd1.ForeColor = System.Drawing.Color.White;
             this.tbPwd1.Location = new System.Drawing.Point(748, 236);
             this.tbPwd1.Name = "tbPwd1";
-            this.tbPwd1.Size = new System.Drawing.Size(191, 25);
+            this.tbPwd1.Size = new System.Drawing.Size(191, 20);
             this.tbPwd1.TabIndex = 0;
             this.tbPwd1.Visible = false;
             // 
@@ -596,7 +597,7 @@
             this.tbMail.ForeColor = System.Drawing.Color.White;
             this.tbMail.Location = new System.Drawing.Point(748, 195);
             this.tbMail.Name = "tbMail";
-            this.tbMail.Size = new System.Drawing.Size(191, 25);
+            this.tbMail.Size = new System.Drawing.Size(191, 20);
             this.tbMail.TabIndex = 0;
             this.tbMail.Visible = false;
             // 
@@ -608,7 +609,7 @@
             this.tbFirstName.ForeColor = System.Drawing.Color.White;
             this.tbFirstName.Location = new System.Drawing.Point(748, 161);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(191, 25);
+            this.tbFirstName.Size = new System.Drawing.Size(191, 20);
             this.tbFirstName.TabIndex = 0;
             this.tbFirstName.Visible = false;
             // 
@@ -620,7 +621,7 @@
             this.tbName.ForeColor = System.Drawing.Color.White;
             this.tbName.Location = new System.Drawing.Point(748, 126);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(191, 25);
+            this.tbName.Size = new System.Drawing.Size(191, 20);
             this.tbName.TabIndex = 0;
             this.tbName.Visible = false;
             // 
@@ -631,7 +632,7 @@
             // 
             // Form_Page_Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1280, 840);

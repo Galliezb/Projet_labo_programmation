@@ -39,7 +39,7 @@ namespace test1.Norbert
 
         public int Identification(string namedd, string password)
         {
-
+            
             maConnexionMysql.Laconnexion.Open();
             // creation requête et ajout à la commande
             string sqlRequest = "SELECT idUser,language,isOrganizer,isAdmin FROM user where name = @namelogin && password =@passlogin ";
