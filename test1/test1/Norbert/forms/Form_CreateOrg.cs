@@ -23,6 +23,7 @@ namespace test1.Norbert.forms
 
         private void Form_CreateOrg_Load ( object sender , EventArgs e ) {
 
+            /*
             // traduit en français si nécessaire
             if ( laSession.language == "fr" ) {
 
@@ -45,11 +46,17 @@ namespace test1.Norbert.forms
             // mets à jour les dates préselectionnés
             dateTimePickerStartDate.Value = DateTime.Now.AddDays( 1 );
             dateTimePickerEndDate.Value = DateTime.Now.AddDays( 4 );
-            
+            */
+
+
+            // nico
+            panelCreateOrga.Parent = this;
+            panelCreateTnm.Parent = this;
+
         }
 
         private void btSubmissionTnm_Click ( object sender , EventArgs e ) {
-
+            /*
             Tournament tournoi = new Tournament();
 
             tournoi.name = tnNameTnm.Text;
@@ -62,7 +69,7 @@ namespace test1.Norbert.forms
             tournoi.insertInDataBase();
 
             this.Refresh();
-
+            */
         }
 
         private void btCreateTnm_Click(object sender, EventArgs e)
@@ -77,11 +84,5 @@ namespace test1.Norbert.forms
             panelCreateOrga.Visible = true;
         }
 
-        private void Form_CreateOrg_Load(object sender, EventArgs e)
-        {
-            panelCreateOrga.Parent = this;
-            panelCreateTnm.Parent = this; 
-
-        }
     }
 }
