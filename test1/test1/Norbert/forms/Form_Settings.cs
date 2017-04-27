@@ -73,7 +73,8 @@ namespace test1.Norbert.forms
                 Player.password = tbPwd1.Text.ToString();
                 Player.pseudo = tbPseudo.Text.ToString();
 
-                databaseRequest.updateInfo(Player);
+               // databaseRequest.updateInfo(Player);
+                Player.updateToDataBase();
                 //lbNom.Text = tbName.Text; petit soucis pratique
                 
                 //MessageBox.Show( traduction.display( 2002 ) );
