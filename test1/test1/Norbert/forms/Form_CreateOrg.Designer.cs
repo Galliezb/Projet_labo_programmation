@@ -30,6 +30,10 @@
         {
             this.lbCreateTnm = new System.Windows.Forms.Label();
             this.panelCreateTnm = new System.Windows.Forms.Panel();
+            this.panelCreateOrga = new System.Windows.Forms.Panel();
+            this.lbNameOrg = new System.Windows.Forms.Label();
+            this.lbNameTnm = new System.Windows.Forms.Label();
+            this.tnNameTnm = new System.Windows.Forms.TextBox();
             this.btSubmissionTnm = new System.Windows.Forms.Button();
             this.rtbDescTnm = new System.Windows.Forms.RichTextBox();
             this.lbDescTnm = new System.Windows.Forms.Label();
@@ -40,13 +44,9 @@
             this.tbDateTnm = new System.Windows.Forms.TextBox();
             this.lbDateDebutTnm = new System.Windows.Forms.Label();
             this.tbTypeTnm = new System.Windows.Forms.TextBox();
-            this.lbGameTnm = new System.Windows.Forms.Label();
-            this.tnNameTnm = new System.Windows.Forms.TextBox();
-            this.lbNameTnm = new System.Windows.Forms.Label();
+            this.lbTypeTnm = new System.Windows.Forms.Label();
             this.btCreateOrga = new System.Windows.Forms.Button();
             this.btCreateTnm = new System.Windows.Forms.Button();
-            this.panelCreateOrga = new System.Windows.Forms.Panel();
-            this.lbNameOrg = new System.Windows.Forms.Label();
             this.panelCreateTnm.SuspendLayout();
             this.panelCreateOrga.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +63,6 @@
             // 
             // panelCreateTnm
             // 
-            this.panelCreateTnm.Controls.Add(this.panelCreateOrga);
             this.panelCreateTnm.Controls.Add(this.lbNameTnm);
             this.panelCreateTnm.Controls.Add(this.tnNameTnm);
             this.panelCreateTnm.Controls.Add(this.btSubmissionTnm);
@@ -76,13 +75,49 @@
             this.panelCreateTnm.Controls.Add(this.tbDateTnm);
             this.panelCreateTnm.Controls.Add(this.lbDateDebutTnm);
             this.panelCreateTnm.Controls.Add(this.tbTypeTnm);
-            this.panelCreateTnm.Controls.Add(this.lbGameTnm);
+            this.panelCreateTnm.Controls.Add(this.lbTypeTnm);
+            this.panelCreateTnm.Controls.Add(this.panelCreateOrga);
             this.panelCreateTnm.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelCreateTnm.Location = new System.Drawing.Point(0, 190);
             this.panelCreateTnm.Name = "panelCreateTnm";
             this.panelCreateTnm.Size = new System.Drawing.Size(1005, 578);
             this.panelCreateTnm.TabIndex = 1;
             this.panelCreateTnm.Visible = false;
+            // 
+            // panelCreateOrga
+            // 
+            this.panelCreateOrga.Controls.Add(this.lbNameOrg);
+            this.panelCreateOrga.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelCreateOrga.Location = new System.Drawing.Point(0, 0);
+            this.panelCreateOrga.Name = "panelCreateOrga";
+            this.panelCreateOrga.Size = new System.Drawing.Size(1005, 578);
+            this.panelCreateOrga.TabIndex = 31;
+            this.panelCreateOrga.Visible = false;
+            // 
+            // lbNameOrg
+            // 
+            this.lbNameOrg.AutoSize = true;
+            this.lbNameOrg.Location = new System.Drawing.Point(155, 11);
+            this.lbNameOrg.Name = "lbNameOrg";
+            this.lbNameOrg.Size = new System.Drawing.Size(61, 20);
+            this.lbNameOrg.TabIndex = 0;
+            this.lbNameOrg.Text = "Name :";
+            // 
+            // lbNameTnm
+            // 
+            this.lbNameTnm.AutoSize = true;
+            this.lbNameTnm.Location = new System.Drawing.Point(155, 11);
+            this.lbNameTnm.Name = "lbNameTnm";
+            this.lbNameTnm.Size = new System.Drawing.Size(61, 20);
+            this.lbNameTnm.TabIndex = 16;
+            this.lbNameTnm.Text = "Name :";
+            // 
+            // tnNameTnm
+            // 
+            this.tnNameTnm.Location = new System.Drawing.Point(643, 11);
+            this.tnNameTnm.Name = "tnNameTnm";
+            this.tnNameTnm.Size = new System.Drawing.Size(222, 27);
+            this.tnNameTnm.TabIndex = 17;
             // 
             // btSubmissionTnm
             // 
@@ -166,30 +201,14 @@
             this.tbTypeTnm.Size = new System.Drawing.Size(222, 27);
             this.tbTypeTnm.TabIndex = 21;
             // 
-            // lbGameTnm
+            // lbTypeTnm
             // 
-            this.lbGameTnm.AutoSize = true;
-            this.lbGameTnm.Location = new System.Drawing.Point(155, 61);
-            this.lbGameTnm.Name = "lbGameTnm";
-            this.lbGameTnm.Size = new System.Drawing.Size(64, 20);
-            this.lbGameTnm.TabIndex = 20;
-            this.lbGameTnm.Text = "Game : ";
-            // 
-            // tnNameTnm
-            // 
-            this.tnNameTnm.Location = new System.Drawing.Point(643, 11);
-            this.tnNameTnm.Name = "tnNameTnm";
-            this.tnNameTnm.Size = new System.Drawing.Size(222, 27);
-            this.tnNameTnm.TabIndex = 17;
-            // 
-            // lbNameTnm
-            // 
-            this.lbNameTnm.AutoSize = true;
-            this.lbNameTnm.Location = new System.Drawing.Point(155, 11);
-            this.lbNameTnm.Name = "lbNameTnm";
-            this.lbNameTnm.Size = new System.Drawing.Size(61, 20);
-            this.lbNameTnm.TabIndex = 16;
-            this.lbNameTnm.Text = "Name :";
+            this.lbTypeTnm.AutoSize = true;
+            this.lbTypeTnm.Location = new System.Drawing.Point(155, 61);
+            this.lbTypeTnm.Name = "lbTypeTnm";
+            this.lbTypeTnm.Size = new System.Drawing.Size(58, 20);
+            this.lbTypeTnm.TabIndex = 20;
+            this.lbTypeTnm.Text = "Type : ";
             // 
             // btCreateOrga
             // 
@@ -212,25 +231,6 @@
             this.btCreateTnm.Text = "Tournament";
             this.btCreateTnm.UseVisualStyleBackColor = true;
             this.btCreateTnm.Click += new System.EventHandler(this.btCreateTnm_Click);
-            // 
-            // panelCreateOrga
-            // 
-            this.panelCreateOrga.Controls.Add(this.lbNameOrg);
-            this.panelCreateOrga.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelCreateOrga.Location = new System.Drawing.Point(0, 0);
-            this.panelCreateOrga.Name = "panelCreateOrga";
-            this.panelCreateOrga.Size = new System.Drawing.Size(1005, 578);
-            this.panelCreateOrga.TabIndex = 31;
-            this.panelCreateOrga.Visible = false;
-            // 
-            // lbNameOrg
-            // 
-            this.lbNameOrg.AutoSize = true;
-            this.lbNameOrg.Location = new System.Drawing.Point(155, 11);
-            this.lbNameOrg.Name = "lbNameOrg";
-            this.lbNameOrg.Size = new System.Drawing.Size(61, 20);
-            this.lbNameOrg.TabIndex = 0;
-            this.lbNameOrg.Text = "Name :";
             // 
             // Form_CreateOrg
             // 
@@ -272,7 +272,7 @@
         private System.Windows.Forms.TextBox tbDateTnm;
         private System.Windows.Forms.Label lbDateDebutTnm;
         private System.Windows.Forms.TextBox tbTypeTnm;
-        private System.Windows.Forms.Label lbGameTnm;
+        private System.Windows.Forms.Label lbTypeTnm;
         private System.Windows.Forms.TextBox tnNameTnm;
         private System.Windows.Forms.Label lbNameTnm;
         private System.Windows.Forms.Button btCreateOrga;

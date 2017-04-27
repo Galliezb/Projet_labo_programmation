@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Add User to DB");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Update Informations");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Change Your Informations");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Show Informations");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Promote an User");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Add an Administrator");
+            System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Add User to DB");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Update Informations");
+            System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Change Your Informations");
+            System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Show Informations");
+            System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Promote an User");
+            System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Add an Administrator");
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panelAddUser = new System.Windows.Forms.Panel();
+            this.panelUpdateInfo = new System.Windows.Forms.Panel();
             this.tbRecDate = new System.Windows.Forms.TextBox();
             this.rtbDesc = new System.Windows.Forms.RichTextBox();
             this.lbDesc = new System.Windows.Forms.Label();
@@ -58,7 +59,7 @@
             this.tbNameUser = new System.Windows.Forms.TextBox();
             this.lbNameUser = new System.Windows.Forms.Label();
             this.btSubmit = new System.Windows.Forms.Button();
-            this.panelUpdateInfo = new System.Windows.Forms.Panel();
+            this.panelChangeInfo = new System.Windows.Forms.Panel();
             this.lbChooseItem = new System.Windows.Forms.Label();
             this.cbbItems = new System.Windows.Forms.ComboBox();
             this.panelAddUser.SuspendLayout();
@@ -71,25 +72,25 @@
             this.treeView1.ForeColor = System.Drawing.Color.White;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "AddUser";
-            treeNode1.Text = "Add User to DB";
-            treeNode2.Name = "UpdateInfo";
-            treeNode2.Text = "Update Informations";
-            treeNode3.Name = "ChangeSelfInfo";
-            treeNode3.Text = "Change Your Informations";
-            treeNode4.Name = "ShowInfo";
-            treeNode4.Text = "Show Informations";
-            treeNode5.Name = "PromUser";
-            treeNode5.Text = "Promote an User";
-            treeNode6.Name = "AddAdmin";
-            treeNode6.Text = "Add an Administrator";
+            treeNode37.Name = "AddUser";
+            treeNode37.Text = "Add User to DB";
+            treeNode38.Name = "UpdateInfo";
+            treeNode38.Text = "Update Informations";
+            treeNode39.Name = "ChangeSelfInfo";
+            treeNode39.Text = "Change Your Informations";
+            treeNode40.Name = "ShowInfo";
+            treeNode40.Text = "Show Informations";
+            treeNode41.Name = "PromUser";
+            treeNode41.Text = "Promote an User";
+            treeNode42.Name = "AddAdmin";
+            treeNode42.Text = "Add an Administrator";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6});
+            treeNode37,
+            treeNode38,
+            treeNode39,
+            treeNode40,
+            treeNode41,
+            treeNode42});
             this.treeView1.Size = new System.Drawing.Size(258, 768);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -125,6 +126,18 @@
             this.panelAddUser.Size = new System.Drawing.Size(741, 768);
             this.panelAddUser.TabIndex = 4;
             this.panelAddUser.Visible = false;
+            // 
+            // panelUpdateInfo
+            // 
+            this.panelUpdateInfo.Controls.Add(this.panelChangeInfo);
+            this.panelUpdateInfo.Controls.Add(this.cbbItems);
+            this.panelUpdateInfo.Controls.Add(this.lbChooseItem);
+            this.panelUpdateInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelUpdateInfo.Location = new System.Drawing.Point(0, 0);
+            this.panelUpdateInfo.Name = "panelUpdateInfo";
+            this.panelUpdateInfo.Size = new System.Drawing.Size(741, 768);
+            this.panelUpdateInfo.TabIndex = 44;
+            this.panelUpdateInfo.Visible = false;
             // 
             // tbRecDate
             // 
@@ -318,16 +331,14 @@
             this.btSubmit.Text = "SUBMIT";
             this.btSubmit.UseVisualStyleBackColor = true;
             // 
-            // panelUpdateInfo
+            // panelChangeInfo
             // 
-            this.panelUpdateInfo.Controls.Add(this.cbbItems);
-            this.panelUpdateInfo.Controls.Add(this.lbChooseItem);
-            this.panelUpdateInfo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelUpdateInfo.Location = new System.Drawing.Point(0, 0);
-            this.panelUpdateInfo.Name = "panelUpdateInfo";
-            this.panelUpdateInfo.Size = new System.Drawing.Size(741, 768);
-            this.panelUpdateInfo.TabIndex = 44;
-            this.panelUpdateInfo.Visible = false;
+            this.panelChangeInfo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelChangeInfo.Location = new System.Drawing.Point(0, 0);
+            this.panelChangeInfo.Name = "panelChangeInfo";
+            this.panelChangeInfo.Size = new System.Drawing.Size(741, 768);
+            this.panelChangeInfo.TabIndex = 2;
+            this.panelChangeInfo.Visible = false;
             // 
             // lbChooseItem
             // 
@@ -358,8 +369,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1005, 768);
-            this.Controls.Add(this.panelAddUser);
             this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.panelAddUser);
             this.Font = new System.Drawing.Font("Century Schoolbook", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -401,7 +412,8 @@
         private System.Windows.Forms.Label lbNameUser;
         private System.Windows.Forms.Button btSubmit;
         private System.Windows.Forms.Panel panelUpdateInfo;
-        private System.Windows.Forms.Label lbChooseItem;
+        private System.Windows.Forms.Panel panelChangeInfo;
         private System.Windows.Forms.ComboBox cbbItems;
+        private System.Windows.Forms.Label lbChooseItem;
     }
 }

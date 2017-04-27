@@ -26,15 +26,21 @@ namespace test1.Norbert.forms
         {
             if(treeView1.SelectedNode.Text == "Add User to DB")
             {
-              //  panelChangeInfo.Visible = false;
+                panelChangeInfo.Visible = false;
                 panelUpdateInfo.Visible = false;
                 panelAddUser.Visible = true;
             }
             if(treeView1.SelectedNode.Text == "Update Informations")
             {
-               //panelChangeInfo.Visible = false;
+               panelChangeInfo.Visible = false;
                panelUpdateInfo.Visible = true;
                panelAddUser.Visible = false;
+            }
+            if(treeView1.SelectedNode.Text == "Change Your Informations")
+            {
+                panelAddUser.Visible = false;
+                panelUpdateInfo.Visible = false;
+                panelChangeInfo.Visible = true;
             }
         }
 
@@ -42,7 +48,7 @@ namespace test1.Norbert.forms
         {
             panelAddUser.Parent = this;
             panelUpdateInfo.Parent = this;
-            //panelUpdateInfo.Parent = this;
+            panelChangeInfo.Parent = this;
             
         }
     }
