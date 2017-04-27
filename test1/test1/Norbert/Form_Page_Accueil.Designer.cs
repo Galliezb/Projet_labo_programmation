@@ -478,7 +478,6 @@
             this.btSave.TabIndex = 2;
             this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btSave.Visible = false;
-            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // lbPWD2
             // 
