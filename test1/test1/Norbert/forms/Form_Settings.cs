@@ -76,11 +76,13 @@ namespace test1.Norbert.forms
                // databaseRequest.updateInfo(Player);
                 Player.updateToDataBase();
                 //lbNom.Text = tbName.Text; petit soucis pratique
-                
+
+                //lbNom
+                this.ParentForm.Controls["PanelTop"].Controls["lbNom"].Text = Player.name;
+
                 //MessageBox.Show( traduction.display( 2002 ) );
 
-            }
-            else
+            } else
             {
 
                 //MessageBox.Show( traduction.display( 2001 ) );
