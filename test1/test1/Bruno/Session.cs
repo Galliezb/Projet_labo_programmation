@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using test1.Norbert;
 
 namespace test1.Bruno {
 
@@ -23,6 +24,16 @@ namespace test1.Bruno {
             idPlayer_ = idPlayer;
             isOrganizer_ = isOrganizer;
             isAdmin_ = isAdmin;
+
+        }
+
+        public Session(PlayerClass player ) {
+
+            name_ = player.name;
+            language_ = player.language;
+            idPlayer_ = player.ID;
+            isOrganizer_ = player.isOrganizer;
+            isAdmin_ = player.isAdmin;
 
         }
 

@@ -30,6 +30,10 @@
         {
             this.lbCreateTnm = new System.Windows.Forms.Label();
             this.panelCreateTnm = new System.Windows.Forms.Panel();
+            this.rtbDescTnm = new System.Windows.Forms.RichTextBox();
+            this.dateTimePickerEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerStartDate = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.lbNameTnm = new System.Windows.Forms.Label();
             this.tnNameTnm = new System.Windows.Forms.TextBox();
             this.btSubmissionTnm = new System.Windows.Forms.Button();
@@ -41,9 +45,6 @@
             this.lbTypeTnm = new System.Windows.Forms.Label();
             this.btCreateOrga = new System.Windows.Forms.Button();
             this.btCreateTnm = new System.Windows.Forms.Button();
-            this.comboBoxType = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerStartDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerEndDate = new System.Windows.Forms.DateTimePicker();
             this.panelCreateOrga = new System.Windows.Forms.Panel();
             this.btSubmitOrga = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -56,7 +57,6 @@
             this.tbNameOrga = new System.Windows.Forms.TextBox();
             this.lbNameOrg = new System.Windows.Forms.Label();
             this.lbManagerName = new System.Windows.Forms.Label();
-            this.rtbDescTnm = new System.Windows.Forms.RichTextBox();
             this.panelCreateTnm.SuspendLayout();
             this.panelCreateOrga.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,42 @@
             this.panelCreateTnm.Size = new System.Drawing.Size(1003, 570);
             this.panelCreateTnm.TabIndex = 0;
             this.panelCreateTnm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCreateTnm_Paint);
+            // 
+            // rtbDescTnm
+            // 
+            this.rtbDescTnm.Location = new System.Drawing.Point(643, 261);
+            this.rtbDescTnm.Name = "rtbDescTnm";
+            this.rtbDescTnm.Size = new System.Drawing.Size(222, 85);
+            this.rtbDescTnm.TabIndex = 35;
+            this.rtbDescTnm.Text = "";
+            // 
+            // dateTimePickerEndDate
+            // 
+            this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerEndDate.Location = new System.Drawing.Point(643, 161);
+            this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
+            this.dateTimePickerEndDate.Size = new System.Drawing.Size(222, 27);
+            this.dateTimePickerEndDate.TabIndex = 34;
+            // 
+            // dateTimePickerStartDate
+            // 
+            this.dateTimePickerStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerStartDate.Location = new System.Drawing.Point(643, 111);
+            this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
+            this.dateTimePickerStartDate.Size = new System.Drawing.Size(222, 27);
+            this.dateTimePickerStartDate.TabIndex = 33;
+            // 
+            // comboBoxType
+            // 
+            this.comboBoxType.FormattingEnabled = true;
+            this.comboBoxType.Items.AddRange(new object[] {
+            "All-play-all",
+            "Deathmatch",
+            "Pool phase"});
+            this.comboBoxType.Location = new System.Drawing.Point(643, 61);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxType.TabIndex = 32;
             // 
             // lbNameTnm
             // 
@@ -192,34 +228,6 @@
             this.btCreateTnm.Text = "Tournament";
             this.btCreateTnm.UseVisualStyleBackColor = true;
             this.btCreateTnm.Click += new System.EventHandler(this.btCreateTnm_Click);
-            // 
-            // comboBoxType
-            // 
-            this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Items.AddRange(new object[] {
-            "All-play-all",
-            "Deathmatch",
-            "Pool phase"});
-            this.comboBoxType.Location = new System.Drawing.Point(643, 61);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(222, 28);
-            this.comboBoxType.TabIndex = 32;
-            // 
-            // dateTimePickerStartDate
-            // 
-            this.dateTimePickerStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerStartDate.Location = new System.Drawing.Point(643, 111);
-            this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
-            this.dateTimePickerStartDate.Size = new System.Drawing.Size(222, 27);
-            this.dateTimePickerStartDate.TabIndex = 33;
-            // 
-            // dateTimePickerEndDate
-            // 
-            this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerEndDate.Location = new System.Drawing.Point(643, 161);
-            this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
-            this.dateTimePickerEndDate.Size = new System.Drawing.Size(222, 27);
-            this.dateTimePickerEndDate.TabIndex = 34;
             // 
             // panelCreateOrga
             // 
@@ -329,14 +337,6 @@
             this.lbManagerName.Size = new System.Drawing.Size(132, 20);
             this.lbManagerName.TabIndex = 2;
             this.lbManagerName.Text = "Manager Name :";
-            // 
-            // rtbDescTnm
-            // 
-            this.rtbDescTnm.Location = new System.Drawing.Point(643, 261);
-            this.rtbDescTnm.Name = "rtbDescTnm";
-            this.rtbDescTnm.Size = new System.Drawing.Size(222, 85);
-            this.rtbDescTnm.TabIndex = 35;
-            this.rtbDescTnm.Text = "";
             // 
             // Form_CreateOrg
             // 
