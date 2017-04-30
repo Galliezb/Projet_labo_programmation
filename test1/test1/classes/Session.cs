@@ -11,15 +11,17 @@ namespace test1.Bruno {
     class Session {
 
         static string name_;
+        static string email_;
         static string language_;
         static int idPlayer_;
         static bool isOrganizer_;
         static bool isAdmin_;
 
         // constructeur
-        public Session (string name, string language, int idPlayer, bool isOrganizer, bool isAdmin ) {
+        public Session (string name, string email, string language, int idPlayer, bool isOrganizer, bool isAdmin ) {
 
             name_ = name;
+            email_ = email;
             language_ = language;
             idPlayer_ = idPlayer;
             isOrganizer_ = isOrganizer;
@@ -30,6 +32,7 @@ namespace test1.Bruno {
         public Session(PlayerClass player ) {
 
             name_ = player.name;
+            email_ = player.email;
             language_ = player.language;
             idPlayer_ = player.ID;
             isOrganizer_ = player.isOrganizer;
@@ -58,6 +61,36 @@ namespace test1.Bruno {
 
             }
 
+        }
+
+        public string email {
+
+            get { return email_; }
+            set {
+
+                if ( IsValidEmail(value) ) {
+                    if ( language_ == "fr" ) {
+                        MessageBox.Show( "L'email n'est pas au format xxxxx@domaine.ext" );
+                    } else {
+                        MessageBox.Show( "The email is not in format xxxxx@domaine.ext" );
+                    }
+                } else {
+
+                    name_ = value;
+
+                }
+
+            }
+
+        }
+
+        private bool IsValidEmail ( string email ) {
+            try {
+                var addr = new System.Net.Mail.MailAddress( email );
+                return true;
+            } catch {
+                return false;
+            }
         }
 
         public string language {

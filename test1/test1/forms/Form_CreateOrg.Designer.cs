@@ -49,8 +49,6 @@
             this.btSubmitOrga = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.lbDesc = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lbDate = new System.Windows.Forms.Label();
             this.tbMail = new System.Windows.Forms.TextBox();
             this.lbMail = new System.Windows.Forms.Label();
             this.tbManagerName = new System.Windows.Forms.TextBox();
@@ -234,8 +232,6 @@
             this.panelCreateOrga.Controls.Add(this.btSubmitOrga);
             this.panelCreateOrga.Controls.Add(this.richTextBox1);
             this.panelCreateOrga.Controls.Add(this.lbDesc);
-            this.panelCreateOrga.Controls.Add(this.dateTimePicker1);
-            this.panelCreateOrga.Controls.Add(this.lbDate);
             this.panelCreateOrga.Controls.Add(this.tbMail);
             this.panelCreateOrga.Controls.Add(this.lbMail);
             this.panelCreateOrga.Controls.Add(this.tbManagerName);
@@ -250,16 +246,17 @@
             // btSubmitOrga
             // 
             this.btSubmitOrga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSubmitOrga.Location = new System.Drawing.Point(390, 423);
+            this.btSubmitOrga.Location = new System.Drawing.Point(390, 372);
             this.btSubmitOrga.Name = "btSubmitOrga";
             this.btSubmitOrga.Size = new System.Drawing.Size(180, 53);
             this.btSubmitOrga.TabIndex = 10;
             this.btSubmitOrga.Text = "SUBMIT";
             this.btSubmitOrga.UseVisualStyleBackColor = true;
+            this.btSubmitOrga.Click += new System.EventHandler(this.btSubmitOrga_Click);
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(643, 214);
+            this.richTextBox1.Location = new System.Drawing.Point(643, 163);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(222, 147);
             this.richTextBox1.TabIndex = 9;
@@ -268,30 +265,15 @@
             // lbDesc
             // 
             this.lbDesc.AutoSize = true;
-            this.lbDesc.Location = new System.Drawing.Point(155, 214);
+            this.lbDesc.Location = new System.Drawing.Point(155, 163);
             this.lbDesc.Name = "lbDesc";
             this.lbDesc.Size = new System.Drawing.Size(105, 20);
             this.lbDesc.TabIndex = 8;
             this.lbDesc.Text = "Description  :";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(643, 161);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(222, 27);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
-            // lbDate
-            // 
-            this.lbDate.AutoSize = true;
-            this.lbDate.Location = new System.Drawing.Point(155, 161);
-            this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(52, 20);
-            this.lbDate.TabIndex = 6;
-            this.lbDate.Text = "Date :";
-            // 
             // tbMail
             // 
+            this.tbMail.Enabled = false;
             this.tbMail.Location = new System.Drawing.Point(643, 111);
             this.tbMail.Name = "tbMail";
             this.tbMail.Size = new System.Drawing.Size(222, 27);
@@ -308,6 +290,7 @@
             // 
             // tbManagerName
             // 
+            this.tbManagerName.Enabled = false;
             this.tbManagerName.Location = new System.Drawing.Point(643, 61);
             this.tbManagerName.Name = "tbManagerName";
             this.tbManagerName.Size = new System.Drawing.Size(222, 27);
@@ -387,8 +370,6 @@
         private System.Windows.Forms.Button btSubmitOrga;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label lbDesc;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.TextBox tbMail;
         private System.Windows.Forms.Label lbMail;
         private System.Windows.Forms.TextBox tbManagerName;

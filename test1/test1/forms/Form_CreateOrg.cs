@@ -47,8 +47,10 @@ namespace test1.Norbert.forms
             // mets à jour les dates préselectionnés
             dateTimePickerStartDate.Value = DateTime.Now.AddDays( 1 );
             dateTimePickerEndDate.Value = DateTime.Now.AddDays( 4 );
-            
 
+
+            // renseigne les valeurs non modifiable dans le nom manager et le mail
+            tbManagerName.Text = laSession.name;
 
             // nico
             //panelCreateOrga.Parent = this;
@@ -57,20 +59,31 @@ namespace test1.Norbert.forms
         }
 
         private void btSubmissionTnm_Click ( object sender , EventArgs e ) {
-            
+
             Tournament tournoi = new Tournament();
 
             tournoi.name = tnNameTnm.Text;
             tournoi.typeTournoi = comboBoxType.SelectedText;
             tournoi.startDate = dateTimePickerStartDate.Value;
             tournoi.endDate = dateTimePickerEndDate.Value;
-            tournoi.maxPlayer = Convert.ToInt32(tbMaxpPlayerTnm.Text);
+            tournoi.maxPlayer = Convert.ToInt32( tbMaxpPlayerTnm.Text );
             tournoi.Description = rtbDescTnm.Text;
 
             tournoi.insertInDataBase();
 
             this.Refresh();
-            
+
+
+        }
+
+        private bool isNullOrEmpty( string str ) {
+
+            if ( str == "" || str == null ) {
+                return true;
+            } else {
+                return false;
+            }
+
         }
 
         private void btCreateTnm_Click(object sender, EventArgs e)
@@ -86,6 +99,12 @@ namespace test1.Norbert.forms
         }
 
         private void panelCreateTnm_Paint ( object sender , PaintEventArgs e ) {
+
+        }
+
+        private void btSubmitOrga_Click ( object sender , EventArgs e ) {
+
+            // create organization
 
         }
     }
