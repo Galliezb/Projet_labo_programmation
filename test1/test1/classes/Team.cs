@@ -15,7 +15,7 @@ namespace test1 {
         Session laSession = new Session();
         string description_;
 
-        public Team ( int idTeam = -1 , string name = "...." , string description = "" ) {
+        public Team ( int idTeam = -1 , string name = "non défini" , string description = "" ) {
             idTeam_ = idTeam;
             creationDate_ = DateTime.Now;
             name_ = name;
@@ -28,22 +28,76 @@ namespace test1 {
             creationDate_ = team.creationDate_;
             description_ = team.description_;
         }
+
+
         public string name {
             get { return name_; }
-            set { name_ = value; }
+            set {
+                if ( value.Length > 50 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le nom ne peut dépasser 50 caractères" );
+                    } else {
+                        MessageBox.Show( "The name can not exceed 50 characters" );
+                    }
+                } else {
+                    name_ = value;
+                }
+            }
         }
+
+
         public int idCaptain {
             get { return idCaptain_; }
-            set { idCaptain_ = value; }
+            set {
+                if ( value < 0 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "L'id du capitaine ne peut-être négatif" );
+                    } else {
+                        MessageBox.Show( "The captain's id may not be negative" );
+                    }
+
+                } else {
+                    idCaptain_ = value;
+                }
+            }
         }
+
+
         public int idTeam {
             get { return idTeam_; }
-            set { idTeam_ = value; }
+            set {
+                if ( value < 0 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "L'id de la team ne peut-être négatif" );
+                    } else {
+                        MessageBox.Show( "The team's id may not be negative" );
+                    }
+
+                } else {
+                    idTeam_ = value;
+                }
+            }
         }
+
+
         public string description {
             get { return description_; }
-            set { description_ = value; }
+            set {
+                if ( value.Length > 255 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "La description ne peut dépasser 255 caractères" );
+                    } else {
+                        MessageBox.Show( "Description can not exceed 255 characters" );
+                    }
+                } else {
+
+                    description_ = value;
+
+                }
+            }
         }
+
+
         public DateTime creationDate {
 
             get { return creationDate_; }
@@ -51,7 +105,6 @@ namespace test1 {
                 if ( DateTime.Compare( value , DateTime.Now ) < 0 ) {
                     if ( laSession.language == "fr" ) {
                         MessageBox.Show( "La date ne peut être passée" );
-
                     } else {
                         MessageBox.Show( "Date can not be past" );
                     }
@@ -85,7 +138,13 @@ namespace test1 {
                 dbConnect.Lacommande.Parameters.Clear();
                 dbConnect.Laconnexion.Close();
             } else {
-                MessageBox.Show( "It's impossible to update the database " );
+
+                if ( laSession.language == "fr" ) {
+                    MessageBox.Show( "ID incorrect pour update de la BDD" );
+                } else {
+                    MessageBox.Show( "Incorrect ID for BDD update" );
+                }
+
             }
         }
 
@@ -109,7 +168,12 @@ namespace test1 {
             if ( idReturn > 0 ) {
                 idTeam_ = Convert.ToInt32( idReturn );
             } else {
-                MessageBox.Show( "The DataBase didn't return the Team Identifier and the Team id hasn't been updated. Please Contact the administrator " );
+
+                if ( laSession.language == "fr" ) {
+                    MessageBox.Show( "Retour d'id incorrect après insertion" );
+                } else {
+                    MessageBox.Show( "Incorrect id return after insertion" );
+                }
             }
 
             // clear commande et ferme la connection

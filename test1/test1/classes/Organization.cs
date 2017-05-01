@@ -30,9 +30,6 @@ namespace test1 {
 
         public int ID {
             get { return idOrganization_; }
-            set {
-                idOrganization_ = value;
-            }
         }
 
         public string Name {
@@ -45,9 +42,7 @@ namespace test1 {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
                 } else {
-
                     nameOrganization_ = value;
-
                 }
             }
         }
@@ -177,7 +172,11 @@ namespace test1 {
             if ( idReturn > 0 ) {
                 idOrganization_ = Convert.ToInt32( idReturn );
             } else {
-                MessageBox.Show( "The DataBase didn't return the Team Identifier and the Team id hasn't been updated. Please Contact the administrator " );
+                if ( laSession.language == "fr" ) {
+                    MessageBox.Show( "Erreur de retour d'ID après insertion en BDD" );
+                } else {
+                    MessageBox.Show( "Error returning ID after insertion in BDD" );
+                }
             }
 
             // clear commande et ferme la connection
@@ -207,9 +206,9 @@ namespace test1 {
                 // exécute la requête
                 dbConnect.Lacommande.ExecuteNonQuery();
                 if ( laSession.language == "fr" ) {
-                    MessageBox.Show( "Tournoi surpprimé" );
+                    MessageBox.Show( "Organisation surpprimé" );
                 } else {
-                    MessageBox.Show( "Tournament delete" );
+                    MessageBox.Show( "Organization delete" );
                 }
 
                 // clear commande et ferme la connection
