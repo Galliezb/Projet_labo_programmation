@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using test1.Bruno;
 using System.Windows.Forms;
-namespace test1.Norbert.forms
+
+namespace test1
 {
     public  class Team
     {

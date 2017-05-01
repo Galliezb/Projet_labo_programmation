@@ -7,9 +7,8 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using MySql.Data;
 using System.Data;
-using test1.Bruno;
 
-namespace test1.Norbert
+namespace test1
 {
     class SQL_Request_Form_Login
     {

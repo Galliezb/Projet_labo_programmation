@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using test1.Norbert;
 
-namespace test1.Bruno {
+namespace test1 {
 
     class Session {
 

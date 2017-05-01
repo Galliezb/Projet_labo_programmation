@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using test1.Norbert;
-using test1.Nicolas;
-namespace test1.Norbert.forms
+
+namespace test1
 {
     public partial class Form_Settings : Form
     {

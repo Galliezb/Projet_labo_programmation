@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test1.Bruno {
+namespace test1 {
     class Tournament {
 
         int idTournament_;

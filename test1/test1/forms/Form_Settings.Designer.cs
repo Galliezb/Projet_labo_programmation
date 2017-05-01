@@ -1,4 +1,4 @@
-﻿namespace test1.Norbert.forms
+﻿namespace test1
 {
     partial class Form_Settings
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
-using test1.Norbert;
+
 namespace test1 {
     public partial class FormStart : Form {
 

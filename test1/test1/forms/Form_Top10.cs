@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test1.Norbert.forms
+namespace test1
 {
     public partial class Form_Top10 : Form
     {

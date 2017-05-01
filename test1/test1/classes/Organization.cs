@@ -3,55 +3,64 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
-namespace test1.Norbert
-{
-    public class Organization
-    {
-        string name_;
-        int id_;
-        string description_;
-        string mail_;
-        string password_;
-        string website_;
+namespace test1 {
+    public class Organisation {
+        int IdOrga_;
+        string Name_;
+        string NameResp_;
+        string Mail_;
+        DateTime DateCreation_;
+        string Description_;
+        DatabaseConnection dbConnect = new DatabaseConnection();
+        Session laSession = new Session();
 
-        public Organization()
-        {
+        public Organisation ( int IdOrga = -1 , string Name = "non défini" , string NameResp = "non défini" , string Mail = "non défini" , DateTime DateCreation = new DateTime() , string Description = "non défini" ) {
+            IdOrga_ = IdOrga;
+            Name_ = Name;
+            NameResp_ = NameResp;
+            Mail_ = Mail;
+            DateCreation_ = DateCreation;
+            Description_ = Description;
 
-        }
-
-        public string name
-        {
-            get { return name_; }
-            set { name_ = value; }
-        }
-        public int id
-        {
-            get { return id_; }
-            set { id_ = value; }
-        }
-        public string website
-        {
-            get { return website_; }
-            set { website_ = value; }
-        }
-        public string description
-        {
-            get { return description_; }
-            set { description_ = value; }
         }
 
-        public string mail
-        {
-            get { return mail_; }
-            set { mail_ = value; }
-        }
-        public string password
-        {
-            get { return password_; }
-            set { password_ = value; }
+        public int ID {
+            get { return IdOrga_; }
+            set {
+                IdOrga_ = value;
+            }
         }
 
+        public string Name {
+            get { return Name_; }
+            set { Name_ = value; }
+        }
+
+
+
+
+        public string Nameresp {
+            get { return NameResp_; }
+            set { NameResp_ = value; }
+        }
+
+        public string Mail {
+            get { return Mail_; }
+            set { Mail_ = value; }
+        }
+
+        public DateTime DateCreation {
+            get { return DateCreation_; }
+            set { DateCreation_ = value; }
+        }
+
+        public string Description {
+            get { return Description_; }
+            set { Description_ = value; }
+        }
 
 
     }

@@ -63,7 +63,6 @@
       <DependentUpon>FormStart.cs</DependentUpon>
     </Compile>
     <Compile Include="classes\DatabaseConnection.cs" />
-    <Compile Include="classes\Organisation.cs" />
     <Compile Include="forms\Form_Administration.cs">
       <SubType>Form</SubType>
     </Compile>
