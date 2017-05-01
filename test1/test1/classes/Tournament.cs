@@ -59,24 +59,6 @@ namespace test1 {
 
         }
 
-        public string Name {
-            get { return name_;  }
-            set {
-                if ( value.Length > 50 ) {
-
-                    if ( laSession.language == "fr" ) {
-                        MessageBox.Show( "Le nom ne peut dépasser 50 caractères" );
-                    } else {
-                        MessageBox.Show( "The name can not exceed 50 characters" );
-                    }
-
-                } else {
-                    name_ = value;
-                }
-                
-            }
-        }
-
         public string name {
             get { return this.name_; }
             set {

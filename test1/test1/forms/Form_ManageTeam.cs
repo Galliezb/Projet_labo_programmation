@@ -57,7 +57,7 @@ namespace test1
             team.name = tbNameCT.Text;
             team.description = lbDescriptionCT.Text;
             MessageBox.Show(team.creationDate.ToString("yyyy-MM-dd"));
-            team.createToDataBase();
+            team.insert();
         }
 
         private void Form_ManageTeam_Load ( object sender , EventArgs e ) {
