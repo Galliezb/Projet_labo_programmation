@@ -13,12 +13,12 @@ namespace test1
     public partial class Form_Settings : Form
     {
         SQL_Request_Form_Accueil databaseRequest = new SQL_Request_Form_Accueil();
-        PlayerClass Player = new PlayerClass();
+        Users Player = new Users();
         public Form_Settings()
         {
             InitializeComponent();
         }
-        public  Form_Settings(PlayerClass o)
+        public  Form_Settings(Users o)
         {
             InitializeComponent();
             Player = o;

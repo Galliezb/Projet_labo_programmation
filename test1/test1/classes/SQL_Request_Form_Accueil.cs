@@ -21,7 +21,7 @@ namespace test1
         }
 
         
-        public void  UpdatePlayerClass( ref PlayerClass Player)
+        public void  UpdateUsers( ref Users Player)
         {
             
 
@@ -47,7 +47,7 @@ namespace test1
 
         
 
-        public void updateInfo(PlayerClass o)
+        public void updateInfo(Users o)
         {
 
             maConnexionMysql.Laconnexion.Open();

@@ -13,7 +13,7 @@ namespace test1 {
     public partial class FormStart : Form {
 
         SQL_Request_Form_Login test = new SQL_Request_Form_Login();
-        PlayerClass user = new PlayerClass();
+        Users user = new Users();
         System.Media.SoundPlayer SP = new System.Media.SoundPlayer( Properties.Resources.Kwouin );
 
         public FormStart () {

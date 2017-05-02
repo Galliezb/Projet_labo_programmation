@@ -28,7 +28,7 @@ namespace test1 {
 
         }
 
-        public Session(PlayerClass player ) {
+        public Session(Users player ) {
 
             name_ = player.name;
             email_ = player.email;

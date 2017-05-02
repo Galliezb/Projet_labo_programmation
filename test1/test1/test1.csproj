@@ -124,7 +124,7 @@
       <DependentUpon>Form_Page_Accueil.cs</DependentUpon>
     </Compile>
     <Compile Include="classes\Organization.cs" />
-    <Compile Include="classes\PlayerClass.cs" />
+    <Compile Include="classes\Users.cs" />
     <Compile Include="classes\SQL_Request_Form_Login.cs" />
     <Compile Include="classes\SQL_Request_Form_Accueil.cs" />
     <Compile Include="Program.cs" />

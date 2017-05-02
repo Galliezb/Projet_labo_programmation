@@ -10,7 +10,7 @@ using MySql.Data;
 
 namespace test1
 {
-    public class PlayerClass
+    public class Users
     {
         int IDUser_;
         string name_;
@@ -30,13 +30,13 @@ namespace test1
         /// <param name="idUser">L'id de l'utilisateur ( chiffre uniquement )</param>
         /// <param name="name">Le nom de l'utilisateur ( max 50 caractères )</param>
         /// <param name="firstName">le prénom de l'utilisateur ( max 50 caractères )</param>
-        /// <param name="email">L'email de l'utilisateur ( mx 255 caractères )</param>
+        /// <param name="email">L'email de l'utilisateur ( max 255 caractères )</param>
         /// <param name="password">le mot de passe non crypté de l'utilisateur ( max 50 caractères )</param>
         /// <param name="pseudo">le pseudonyme de l'utilisateur ( visible par les autres personnes )</param>
         /// <param name="language">La langue par défaut de l'utilisation ( 'fr' ou 'en' uniquement )</param>
         /// <param name="isOrganizer">L'utilisateur est-il Organisateur de tournoi ( booléen uniquement )</param>
         /// <param name="isAdmin">L'utilisateur est-il administrateur du logiciel  ( booléen uniquement )</param>
-        public PlayerClass(int idUser = -1, string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer=false, bool isAdmin=false){
+        public Users(int idUser = -1, string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer=false, bool isAdmin=false){
 
             IDUser_ = idUser;
             name_ = name;
@@ -313,13 +313,13 @@ namespace test1
         /// Mets à jours la BDD depuis une liste d'instance PLayerlcass
         /// </summary>
         /// <param name="listPlayer"></param>
-        public void updateToDataBase ( List<PlayerClass> listPlayer ) {
+        public void updateToDataBase ( List<Users> listPlayer ) {
 
             if ( listPlayer.Count < 1 ) {
                 MessageBox.Show( "Impossible d'update depuis une liste vide" );
             } else {
 
-                foreach ( PlayerClass player in listPlayer ) {
+                foreach ( Users player in listPlayer ) {
                     player.updateToDataBase();
                 }
 
@@ -368,10 +368,10 @@ namespace test1
 
 
         /// <summary>
-        ///  Supprime de la BDD depuis une liste d'instance de playerclass
+        ///  Supprime de la BDD depuis une liste d'instance de Users
         /// </summary>
         /// <param name="listPlayer"></param>
-        public void deleteFromDataBase ( List<PlayerClass> listPlayer ) {
+        public void deleteFromDataBase ( List<Users> listPlayer ) {
 
             if ( listPlayer.Count < 1 ) {
                 MessageBox.Show( "Impossible de supprimer depuis une liste vide" );
@@ -379,7 +379,7 @@ namespace test1
 
                 string sqlRequest = "DELETE FROM user WHERE idUser IN(";
 
-                foreach ( PlayerClass player in listPlayer ) {
+                foreach ( Users player in listPlayer ) {
 
                     if ( player.ID != -1 ) {
                         sqlRequest += player.ID + ",";

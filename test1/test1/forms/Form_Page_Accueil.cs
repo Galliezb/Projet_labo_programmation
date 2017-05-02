@@ -15,7 +15,7 @@ namespace test1
         bool PanelGaucheDeploye = true;
 
         Session laSession = new Session();
-        PlayerClass o;
+        Users o;
         //Traducteur traduction = new Traducteur();
         
         SQL_Request_Form_Accueil databaseRequest = new SQL_Request_Form_Accueil();
@@ -23,10 +23,10 @@ namespace test1
         public Form_Page_Accueil()
         {
             InitializeComponent();
-            o = new PlayerClass();
+            o = new Users();
             o.ID = laSession.idPlayer;
 
-            databaseRequest.UpdatePlayerClass(ref o);
+            databaseRequest.UpdateUsers(ref o);
             
             lbNom.Text = o.name;
 
