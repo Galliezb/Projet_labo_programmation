@@ -22,7 +22,7 @@ namespace test1
         }
 
         private void Form_CreateOrg_Load ( object sender , EventArgs e ) {
-            
+
             // traduit en français si nécessaire
             if ( laSession.language == "fr" ) {
 

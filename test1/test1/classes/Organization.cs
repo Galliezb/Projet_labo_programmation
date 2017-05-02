@@ -27,11 +27,15 @@ namespace test1 {
             description_ = Description;
 
         }
-
+        /// <summary>
+        /// Récupère l'ID de l'organisation
+        /// </summary>
         public int ID {
             get { return idOrganization_; }
         }
-
+        /// <summary>
+        /// Récupère ou modifie le nom de l'organisation
+        /// </summary>
         public string Name {
             get { return nameOrganization_; }
             set {
@@ -49,7 +53,9 @@ namespace test1 {
 
 
 
-
+        /// <summary>
+        /// Récupère ou modifie le nom du responsable de l'organisation
+        /// </summary>
         public string Nameresp {
             get { return nameResponsable_; }
             set {
@@ -67,7 +73,9 @@ namespace test1 {
 
             }
         }
-
+        /// <summary>
+        /// récupère ou modifie le mail du responsable de l'organisation
+        /// </summary>
         public string Mail {
             get { return mailResponsable_; }
             set {
@@ -84,7 +92,9 @@ namespace test1 {
                 }
             }
         }
-
+        /// <summary>
+        /// récupère ou modifie la date de création de l'organisation
+        /// </summary>
         public DateTime DateCreation {
             get { return dateCreation_; }
             set {
@@ -103,6 +113,10 @@ namespace test1 {
             }
         }
 
+
+        /// <summary>
+        /// récupère ou modifie la description de l'organisation
+        /// </summary>
         public string Description {
             get { return description_; }
             set {
@@ -120,6 +134,10 @@ namespace test1 {
             }
         }
 
+
+        /// <summary>
+        /// mets à jours cette organisation en BDD
+        /// </summary>
         public void update () {
             if ( idOrganization_ != -1 ) {
                 dbConnect.Laconnexion.Open();
@@ -151,6 +169,9 @@ namespace test1 {
             }
         }
 
+        /// <summary>
+        /// insert cette organisation dans la BDD
+        /// </summary>
         public void insert () {
 
             dbConnect.Laconnexion.Open();
@@ -185,6 +206,11 @@ namespace test1 {
 
 
         }
+
+
+        /// <summary>
+        /// supprime cette organisation de la BDD
+        /// </summary>
         public void delete () {
 
             if ( idOrganization_ < 0 ) {
