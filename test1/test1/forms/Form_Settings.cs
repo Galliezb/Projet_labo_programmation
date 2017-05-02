@@ -88,5 +88,9 @@ namespace test1
 
             }
         }
+
+        private void panelUserParam_Paint ( object sender , PaintEventArgs e ) {
+
+        }
     }
 }

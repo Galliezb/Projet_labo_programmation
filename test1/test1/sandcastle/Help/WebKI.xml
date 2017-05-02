@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="creationDate property" Url="html/3233bb62-6736-9b13-ca41-cb99e01020ed.htm" />
+  <HelpKINode Title="DateCreation property" Url="html/e793df04-4a8c-32a0-5bd2-020bd9fef612.htm" />
+  <HelpKINode Title="delete method">
+    <HelpKINode Title="Organisation.delete Method " Url="html/199b9c03-fc97-554c-d8ac-23cdeb22f3be.htm" />
+    <HelpKINode Title="Team.delete Method " Url="html/0d7cf76f-5328-7ac3-f898-98bf9c59d36b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="deleteFromDataBase method" Url="html/aa561353-ccde-4032-7a10-3e6e2e2d2c67.htm" />
+  <HelpKINode Title="Description property" Url="html/95bde6bc-98d4-c387-7b82-2179a69f8010.htm" />
+  <HelpKINode Title="description property" Url="html/4315b0ea-0ad0-c587-bdf6-3722cb4ccdfd.htm" />
+  <HelpKINode Title="Dispose method">
+    <HelpKINode Title="FormStart.Dispose Method " Url="html/cf23e7b9-7acc-c1ac-d852-29e35d3a1df6.htm" />
+    <HelpKINode Title="Form_Administration.Dispose Method " Url="html/67613018-4b88-b38c-bb45-64aea68a6ea0.htm" />
+    <HelpKINode Title="Form_CreateOrg.Dispose Method " Url="html/92d2447f-e5db-584b-5f92-9b5fc69444ed.htm" />
+    <HelpKINode Title="Form_ManageTeam.Dispose Method " Url="html/876419e5-36c4-58db-3a54-175ddbe338a9.htm" />
+    <HelpKINode Title="Form_Page_Accueil.Dispose Method " Url="html/a2320796-d9a6-1c9b-50ba-5d1835f16f9d.htm" />
+    <HelpKINode Title="Form_Search_Tournament.Dispose Method " Url="html/02cb214b-9491-2c51-84fa-19b33484956f.htm" />
+    <HelpKINode Title="Form_Settings.Dispose Method " Url="html/654c9e48-fa29-8871-2398-b2de3f77dd06.htm" />
+    <HelpKINode Title="Form_Top10.Dispose Method " Url="html/e6d9d28a-14bd-f688-3893-506cba424915.htm" />
+  </HelpKINode>
+  <HelpKINode Title="email property" Url="html/50df4b91-14e1-b575-47d2-7d20509b08b9.htm" />
+  <HelpKINode Title="firstName property" Url="html/04ef2357-7286-60be-eeae-ffeddc41d3d1.htm" />
+  <HelpKINode Title="FormStart class">
+    <HelpKINode Title="FormStart Class" Url="html/6f91b2df-7722-5e3c-ebdd-3c7b83ac4200.htm" />
+    <HelpKINode Title="about FormStart class" Url="html/6f91b2df-7722-5e3c-ebdd-3c7b83ac4200.htm" />
+    <HelpKINode Title="constructor" Url="html/81aa0752-6387-564d-4d1a-93c8bcebae56.htm" />
+    <HelpKINode Title="methods" Url="html/02544dc6-8423-5b09-b64f-b730cb177754.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FormStart.Dispose method" Url="html/cf23e7b9-7acc-c1ac-d852-29e35d3a1df6.htm" />
+  <HelpKINode Title="FormStart.FormStart constructor" Url="html/81aa0752-6387-564d-4d1a-93c8bcebae56.htm" />
+  <HelpKINode Title="Form_Administration class">
+    <HelpKINode Title="Form_Administration Class" Url="html/6bad76f4-052f-14e6-c6b4-a2ac282ec2be.htm" />
+    <HelpKINode Title="about Form_Administration class" Url="html/6bad76f4-052f-14e6-c6b4-a2ac282ec2be.htm" />
+    <HelpKINode Title="constructor" Url="html/0e1ddd05-3ec7-63eb-c3bf-0dfadac74246.htm" />
+    <HelpKINode Title="methods" Url="html/0c016e5e-4ed3-209e-b9cf-b15aa0b99370.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form_Administration.Dispose method" Url="html/67613018-4b88-b38c-bb45-64aea68a6ea0.htm" />
+  <HelpKINode Title="Form_Administration.Form_Administration constructor" Url="html/0e1ddd05-3ec7-63eb-c3bf-0dfadac74246.htm" />
+  <HelpKINode Title="Form_CreateOrg class">
+    <HelpKINode Title="Form_CreateOrg Class" Url="html/7e011abc-3897-5117-af5c-bb7279bcf899.htm" />
+    <HelpKINode Title="about Form_CreateOrg class" Url="html/7e011abc-3897-5117-af5c-bb7279bcf899.htm" />
+    <HelpKINode Title="constructor" Url="html/4c60d5f7-f4ae-4dee-c83f-e63add05f224.htm" />
+    <HelpKINode Title="methods" Url="html/fc3d1e9e-8ecf-9e36-573a-6188174a5fb0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form_CreateOrg.Dispose method" Url="html/92d2447f-e5db-584b-5f92-9b5fc69444ed.htm" />
+  <HelpKINode Title="Form_CreateOrg.Form_CreateOrg constructor" Url="html/4c60d5f7-f4ae-4dee-c83f-e63add05f224.htm" />
+  <HelpKINode Title="Form_ManageTeam class">
+    <HelpKINode Title="Form_ManageTeam Class" Url="html/409b68e5-8fec-555b-0590-35661ed1679c.htm" />
+    <HelpKINode Title="about Form_ManageTeam class" Url="html/409b68e5-8fec-555b-0590-35661ed1679c.htm" />
+    <HelpKINode Title="constructor" Url="html/20c91c00-ea0d-25b2-d0ba-b5644f4f2ef1.htm" />
+    <HelpKINode Title="methods" Url="html/f5a40693-f5f6-7aab-b217-53cb13bf51b1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form_ManageTeam.Dispose method" Url="html/876419e5-36c4-58db-3a54-175ddbe338a9.htm" />
+  <HelpKINode Title="Form_ManageTeam.Form_ManageTeam constructor" Url="html/20c91c00-ea0d-25b2-d0ba-b5644f4f2ef1.htm" />
+  <HelpKINode Title="Form_Page_Accueil class">
+    <HelpKINode Title="Form_Page_Accueil Class" Url="html/d73e9822-0533-b8bb-7bff-009cdc5b1664.htm" />
+    <HelpKINode Title="about Form_Page_Accueil class" Url="html/d73e9822-0533-b8bb-7bff-009cdc5b1664.htm" />
+    <HelpKINode Title="constructor" Url="html/a291bf4c-d3ad-8d71-2869-59ea0100e7a3.htm" />
+    <HelpKINode Title="methods" Url="html/7294f89c-f6e5-954f-62e0-cb794bd00e83.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form_Page_Accueil.Dispose method" Url="html/a2320796-d9a6-1c9b-50ba-5d1835f16f9d.htm" />
+  <HelpKINode Title="Form_Page_Accueil.Form_Page_Accueil constructor" Url="html/a291bf4c-d3ad-8d71-2869-59ea0100e7a3.htm" />
+  <HelpKINode Title="Form_Search_Tournament class">
+    <HelpKINode Title="Form_Search_Tournament Class" Url="html/d37a6de0-2d3c-256b-a6ac-327b9b0c8241.htm" />
+    <HelpKINode Title="about Form_Search_Tournament class" Url="html/d37a6de0-2d3c-256b-a6ac-327b9b0c8241.htm" />
+    <HelpKINode Title="constructor" Url="html/44e21643-21c9-13f7-8fe7-9e865d5fbcf8.htm" />
+    <HelpKINode Title="methods" Url="html/1ed9451b-7545-6b5a-a210-bfa6c03ac6ba.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form_Search_Tournament.Dispose method" Url="html/02cb214b-9491-2c51-84fa-19b33484956f.htm" />
+  <HelpKINode Title="Form_Search_Tournament.Form_Search_Tournament constructor" Url="html/44e21643-21c9-13f7-8fe7-9e865d5fbcf8.htm" />
+  <HelpKINode Title="Form_Settings class">
+    <HelpKINode Title="Form_Settings Class" Url="html/9ed0e2fb-0548-83ed-6058-e8a4fea98059.htm" />
+    <HelpKINode Title="about Form_Settings class" Url="html/9ed0e2fb-0548-83ed-6058-e8a4fea98059.htm" />
+    <HelpKINode Title="constructor" Url="html/932a2ce2-4ad0-2055-967c-ed0d3400172a.htm" />
+    <HelpKINode Title="methods" Url="html/f656737b-e1e5-1662-2032-759262818821.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form_Settings.Dispose method" Url="html/654c9e48-fa29-8871-2398-b2de3f77dd06.htm" />
+  <HelpKINode Title="Form_Settings.Form_Settings constructor" Url="html/932a2ce2-4ad0-2055-967c-ed0d3400172a.htm" />
+  <HelpKINode Title="Form_Top10 class">
+    <HelpKINode Title="Form_Top10 Class" Url="html/f93051c0-ad54-8356-8496-4a5d1a14583d.htm" />
+    <HelpKINode Title="about Form_Top10 class" Url="html/f93051c0-ad54-8356-8496-4a5d1a14583d.htm" />
+    <HelpKINode Title="constructor" Url="html/753b6516-df4b-c66b-f827-0110a627731e.htm" />
+    <HelpKINode Title="methods" Url="html/dae8851a-3761-119d-c4a3-4e8fea90da52.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form_Top10.Dispose method" Url="html/e6d9d28a-14bd-f688-3893-506cba424915.htm" />
+  <HelpKINode Title="Form_Top10.Form_Top10 constructor" Url="html/753b6516-df4b-c66b-f827-0110a627731e.htm" />
+  <HelpKINode Title="ID property">
+    <HelpKINode Title="Organisation.ID Property " Url="html/8f6367f3-ccd1-0118-9550-5075b24a9e39.htm" />
+    <HelpKINode Title="PlayerClass.ID Property " Url="html/6616e6f7-70c4-71d1-c3cd-bf6414634af3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="idCaptain property" Url="html/f6719a2b-04de-ffe0-4797-3f02d7556dfb.htm" />
+  <HelpKINode Title="idTeam property" Url="html/0d7db2da-b8c4-ba60-b71b-a5a25978edf0.htm" />
+  <HelpKINode Title="insert method">
+    <HelpKINode Title="Organisation.insert Method " Url="html/76c17207-a4d4-4402-f839-5008918d0a6e.htm" />
+    <HelpKINode Title="Team.insert Method " Url="html/ddeee093-cf73-8389-4e39-c98f11483505.htm" />
+  </HelpKINode>
+  <HelpKINode Title="isAdmin property" Url="html/6e9e6eb2-bb6d-694e-eca9-6d5525bb4af8.htm" />
+  <HelpKINode Title="isOrganizer property" Url="html/71129b2d-2dd9-8501-ca64-fb1951762c55.htm" />
+  <HelpKINode Title="language property" Url="html/659b1b71-12c9-4dda-24f8-e642064d071f.htm" />
+  <HelpKINode Title="Mail property" Url="html/44359efd-e1a4-0aa4-dcdd-c386fbcdb012.htm" />
+  <HelpKINode Title="name property">
+    <HelpKINode Title="Team.name Property " Url="html/0bf2b269-7d19-0d04-eb1c-c11727d8d020.htm" />
+    <HelpKINode Title="PlayerClass.name Property " Url="html/dba51872-377f-0b41-0272-ba33f6cce8d6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Name property" Url="html/3d97af5e-9456-90e7-c384-2cc057f5ca43.htm" />
+  <HelpKINode Title="Nameresp property" Url="html/38c6b1b4-2d15-42a9-d09a-03e529c05042.htm" />
+  <HelpKINode Title="Organisation class">
+    <HelpKINode Title="Organisation Class" Url="html/684bba77-907f-bcfe-17c1-0a1cae432852.htm" />
+    <HelpKINode Title="about Organisation class" Url="html/684bba77-907f-bcfe-17c1-0a1cae432852.htm" />
+    <HelpKINode Title="constructor" Url="html/3be12af4-1e38-4d00-0154-2900e99433ff.htm" />
+    <HelpKINode Title="methods" Url="html/2f8c828d-f1a4-7cff-1199-3030c1b0fb26.htm" />
+    <HelpKINode Title="properties" Url="html/73b4f4ff-20ac-cc04-c32e-bf0d9f0bd8aa.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Organisation.DateCreation property" Url="html/e793df04-4a8c-32a0-5bd2-020bd9fef612.htm" />
+  <HelpKINode Title="Organisation.delete method" Url="html/199b9c03-fc97-554c-d8ac-23cdeb22f3be.htm" />
+  <HelpKINode Title="Organisation.Description property" Url="html/95bde6bc-98d4-c387-7b82-2179a69f8010.htm" />
+  <HelpKINode Title="Organisation.ID property" Url="html/8f6367f3-ccd1-0118-9550-5075b24a9e39.htm" />
+  <HelpKINode Title="Organisation.insert method" Url="html/76c17207-a4d4-4402-f839-5008918d0a6e.htm" />
+  <HelpKINode Title="Organisation.Mail property" Url="html/44359efd-e1a4-0aa4-dcdd-c386fbcdb012.htm" />
+  <HelpKINode Title="Organisation.Name property" Url="html/3d97af5e-9456-90e7-c384-2cc057f5ca43.htm" />
+  <HelpKINode Title="Organisation.Nameresp property" Url="html/38c6b1b4-2d15-42a9-d09a-03e529c05042.htm" />
+  <HelpKINode Title="Organisation.Organisation constructor" Url="html/3be12af4-1e38-4d00-0154-2900e99433ff.htm" />
+  <HelpKINode Title="Organisation.update method" Url="html/20c8e37f-eac9-e3eb-11f3-80009442c651.htm" />
+  <HelpKINode Title="password property" Url="html/383ca77d-007d-4dcc-f64b-6cdc18bf4cc5.htm" />
+  <HelpKINode Title="PlayerClass class">
+    <HelpKINode Title="PlayerClass Class" Url="html/9f874551-9d26-6528-ec89-49b44945d7a0.htm" />
+    <HelpKINode Title="about PlayerClass class" Url="html/9f874551-9d26-6528-ec89-49b44945d7a0.htm" />
+    <HelpKINode Title="constructor" Url="html/4f67f4b4-3996-69a5-2225-2bc5473c527c.htm" />
+    <HelpKINode Title="methods" Url="html/9b17d29a-0ddb-6c12-59f7-aaf54ffcebc6.htm" />
+    <HelpKINode Title="properties" Url="html/f0c0f395-f18e-c7e4-a08b-62adcaba8afc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PlayerClass.deleteFromDataBase method" Url="html/aa561353-ccde-4032-7a10-3e6e2e2d2c67.htm" />
+  <HelpKINode Title="PlayerClass.email property" Url="html/50df4b91-14e1-b575-47d2-7d20509b08b9.htm" />
+  <HelpKINode Title="PlayerClass.firstName property" Url="html/04ef2357-7286-60be-eeae-ffeddc41d3d1.htm" />
+  <HelpKINode Title="PlayerClass.ID property" Url="html/6616e6f7-70c4-71d1-c3cd-bf6414634af3.htm" />
+  <HelpKINode Title="PlayerClass.isAdmin property" Url="html/6e9e6eb2-bb6d-694e-eca9-6d5525bb4af8.htm" />
+  <HelpKINode Title="PlayerClass.isOrganizer property" Url="html/71129b2d-2dd9-8501-ca64-fb1951762c55.htm" />
+  <HelpKINode Title="PlayerClass.language property" Url="html/659b1b71-12c9-4dda-24f8-e642064d071f.htm" />
+  <HelpKINode Title="PlayerClass.name property" Url="html/dba51872-377f-0b41-0272-ba33f6cce8d6.htm" />
+  <HelpKINode Title="PlayerClass.password property" Url="html/383ca77d-007d-4dcc-f64b-6cdc18bf4cc5.htm" />
+  <HelpKINode Title="PlayerClass.PlayerClass constructor" Url="html/4f67f4b4-3996-69a5-2225-2bc5473c527c.htm" />
+  <HelpKINode Title="PlayerClass.pseudo property" Url="html/28e68e17-914a-f2a1-d7f3-116102ea11af.htm" />
+  <HelpKINode Title="PlayerClass.updateToDataBase method" Url="html/1151e057-0c33-7825-2443-c2c3552acda7.htm" />
+  <HelpKINode Title="pseudo property" Url="html/28e68e17-914a-f2a1-d7f3-116102ea11af.htm" />
+  <HelpKINode Title="Team class">
+    <HelpKINode Title="Team Class" Url="html/b0bec895-00af-ec55-167b-5e915df9793e.htm" />
+    <HelpKINode Title="about Team class" Url="html/b0bec895-00af-ec55-167b-5e915df9793e.htm" />
+    <HelpKINode Title="constructor" Url="html/c0ac4ce8-232a-d3c4-4ce5-651dd7ff5ca9.htm" />
+    <HelpKINode Title="methods" Url="html/cf106951-48e4-0182-7365-60facfe2cd28.htm" />
+    <HelpKINode Title="properties" Url="html/aa52032e-ade9-253b-1e0c-83cbe53d22ff.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Team.creationDate property" Url="html/3233bb62-6736-9b13-ca41-cb99e01020ed.htm" />
+  <HelpKINode Title="Team.delete method" Url="html/0d7cf76f-5328-7ac3-f898-98bf9c59d36b.htm" />
+  <HelpKINode Title="Team.description property" Url="html/4315b0ea-0ad0-c587-bdf6-3722cb4ccdfd.htm" />
+  <HelpKINode Title="Team.idCaptain property" Url="html/f6719a2b-04de-ffe0-4797-3f02d7556dfb.htm" />
+  <HelpKINode Title="Team.idTeam property" Url="html/0d7db2da-b8c4-ba60-b71b-a5a25978edf0.htm" />
+  <HelpKINode Title="Team.insert method" Url="html/ddeee093-cf73-8389-4e39-c98f11483505.htm" />
+  <HelpKINode Title="Team.name property" Url="html/0bf2b269-7d19-0d04-eb1c-c11727d8d020.htm" />
+  <HelpKINode Title="Team.Team constructor" Url="html/c0ac4ce8-232a-d3c4-4ce5-651dd7ff5ca9.htm" />
+  <HelpKINode Title="Team.update method" Url="html/49b0d39e-f04c-32a2-8e56-1bdc744d3f1d.htm" />
+  <HelpKINode Title="test1 namespace" Url="html/ae0df2d3-66df-0d7a-13c0-1e988ad4af4b.htm" />
+  <HelpKINode Title="test1.FormStart class" Url="html/6f91b2df-7722-5e3c-ebdd-3c7b83ac4200.htm" />
+  <HelpKINode Title="test1.Form_Administration class" Url="html/6bad76f4-052f-14e6-c6b4-a2ac282ec2be.htm" />
+  <HelpKINode Title="test1.Form_CreateOrg class" Url="html/7e011abc-3897-5117-af5c-bb7279bcf899.htm" />
+  <HelpKINode Title="test1.Form_ManageTeam class" Url="html/409b68e5-8fec-555b-0590-35661ed1679c.htm" />
+  <HelpKINode Title="test1.Form_Page_Accueil class" Url="html/d73e9822-0533-b8bb-7bff-009cdc5b1664.htm" />
+  <HelpKINode Title="test1.Form_Search_Tournament class" Url="html/d37a6de0-2d3c-256b-a6ac-327b9b0c8241.htm" />
+  <HelpKINode Title="test1.Form_Settings class" Url="html/9ed0e2fb-0548-83ed-6058-e8a4fea98059.htm" />
+  <HelpKINode Title="test1.Form_Top10 class" Url="html/f93051c0-ad54-8356-8496-4a5d1a14583d.htm" />
+  <HelpKINode Title="test1.Organisation class" Url="html/684bba77-907f-bcfe-17c1-0a1cae432852.htm" />
+  <HelpKINode Title="test1.PlayerClass class" Url="html/9f874551-9d26-6528-ec89-49b44945d7a0.htm" />
+  <HelpKINode Title="test1.Team class" Url="html/b0bec895-00af-ec55-167b-5e915df9793e.htm" />
+  <HelpKINode Title="update method">
+    <HelpKINode Title="Organisation.update Method " Url="html/20c8e37f-eac9-e3eb-11f3-80009442c651.htm" />
+    <HelpKINode Title="Team.update Method " Url="html/49b0d39e-f04c-32a2-8e56-1bdc744d3f1d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="updateToDataBase method" Url="html/1151e057-0c33-7825-2443-c2c3552acda7.htm" />
+</HelpKI>

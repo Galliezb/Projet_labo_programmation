@@ -24,6 +24,18 @@ namespace test1
         DatabaseConnection dbConnect = new DatabaseConnection();
         Session laSession = new Session();
 
+        /// <summary>
+        /// Constructeur d'instance de Player
+        /// </summary>
+        /// <param name="idUser">L'id de l'utilisateur ( chiffre uniquement )</param>
+        /// <param name="name">Le nom de l'utilisateur ( max 50 caractères )</param>
+        /// <param name="firstName">le prénom de l'utilisateur ( max 50 caractères )</param>
+        /// <param name="email">L'email de l'utilisateur ( mx 255 caractères )</param>
+        /// <param name="password">le mot de passe non crypté de l'utilisateur ( max 50 caractères )</param>
+        /// <param name="pseudo">le pseudonyme de l'utilisateur ( visible par les autres personnes )</param>
+        /// <param name="language">La langue par défaut de l'utilisation ( 'fr' ou 'en' uniquement )</param>
+        /// <param name="isOrganizer">L'utilisateur est-il Organisateur de tournoi ( booléen uniquement )</param>
+        /// <param name="isAdmin">L'utilisateur est-il administrateur du logiciel  ( booléen uniquement )</param>
         public PlayerClass(int idUser = -1, string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer=false, bool isAdmin=false){
 
             IDUser_ = idUser;
@@ -38,37 +50,130 @@ namespace test1
 
         }
 
+
+        /// <summary>
+        /// Récupère ou définit l'ID de l'utilisateur ( chiffre > 1 uniquement )
+        /// </summary>
         public int ID {
             get { return IDUser_; }
-            set { IDUser_ = value; }
+            set {
+                if ( value < 1 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "L'ID est incorrect" );
+                    } else {
+                        MessageBox.Show( "the ID is incorrect" );
+                    }
+                } else {
+                    IDUser_ = value;
+                }
+            }
         }
 
+
+        /// <summary>
+        /// récupèrer ou modifier le nom de l'utilisateur ( max 50 caractères )
+        /// </summary>
         public string name
         {
             get { return name_; }
-            set { name_ = value; }
+            set {
+
+                if ( value.Length > 50 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le nom ne peut dépasser 50 caractères" );
+                    } else {
+                        MessageBox.Show( "The name can not exceed 50 characters" );
+                    }
+                } else {
+                    name_ = value;
+                }
+
+            }
         }
 
+
+        /// <summary>
+        /// Récupèrer ou modifier le prénom de l'utilisateur ( max 50 caractères )
+        /// </summary>
         public string firstName {
             get { return firstName_; }
-            set { firstName_ = value; }
+            set {
+                if ( value.Length > 50 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le prenom ne peut dépasser 50 caractères" );
+                    } else {
+                        MessageBox.Show( "The first name can not exceed 50 characters" );
+                    }
+                } else {
+                    firstName_ = value;
+                }
+
+            }
         }
 
+        /// <summary>
+        /// Récupère ou modifie l'email de l'utlisateur ( max 255 caractères )
+        /// </summary>
         public string email {
             get { return email_; }
-            set { email_ = value; }
-        }
-        public string password {
-            get { return pass_; }
-            set { pass_ = value; }
+            set {
+
+                if ( value.Length > 255 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "L'email ne peut dépasser 255 caractères" );
+                    } else {
+                        MessageBox.Show( "The mail can not exceed 255 characters" );
+                    }
+                } else {
+                    email_ = value;
+                }
+
+            }
         }
 
+
+        /// <summary>
+        /// récupère ou modifie le mot de passe non crypté de l'utilisateur ( max 50 caractères )
+        /// </summary>
+        public string password {
+            get { return pass_; }
+            set {
+                if ( value.Length > 255 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le mot de passe ne peut dépasser 255 caractères" );
+                    } else {
+                        MessageBox.Show( "The password can not exceed 255 characters" );
+                    }
+                } else {
+                    pass_ = value;
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Récupère ou défini le pseudo de l'utilisateur ( max 50 caractères )
+        /// </summary>
         public string pseudo
         {
             get { return pseudo_; }
-            set { pseudo_ = value; }
+            set {
+                if ( value.Length > 50 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le pseudo ne peut dépasser 50 caractères" );
+                    } else {
+                        MessageBox.Show( "The pseudonym can not exceed 50 characters" );
+                    }
+                } else {
+                    pseudo_ = value;
+                }
+            }
         }
 
+
+        /// <summary>
+        /// récupère ou défini la langue utilisateur ( 'fr' ou 'en' uniquement )
+        /// </summary>
         public string language {
             get { return language_; }
             set {
@@ -76,34 +181,61 @@ namespace test1
                 if ( value.ToString() == "fr" || value.ToString() == "en" ) {
                     language_ = value;
                 } else {
-                    MessageBox.Show( "PLAYERCLASS : La langue ne peut être que 'fr' ou 'en'" );
+
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "La langue ne peut être que 'fr' ou 'en'" );
+                    } else {
+                        MessageBox.Show( "the language can only be 'fr' or 'en'" );
+                    }
+
                 }
             }
         }
 
+
+        /// <summary>
+        /// récupère ou Défini sur l'utilisateur est un organisateur ou non ( booléen )
+        /// </summary>
         public bool isOrganizer {
             get { return isOrganizer_; }
             set {
                 if ( value == true || value == false ) {
                     isOrganizer_ = value;
                 } else {
-                    MessageBox.Show( "isOrganizer nécessite un booléen" );
+
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "isOrganizer nécessite un booléen" );
+                    } else {
+                        MessageBox.Show( "isOrganizer is bool only" );
+                    }
                 }
             }
         }
 
+
+        /// <summary>
+        /// Récupère ou défini si l'utilisateur est administrateur ou non ( booléen )
+        /// </summary>
         public bool isAdmin {
             get { return isAdmin_; }
             set {
                 if ( value == true || value == false ) {
                     isAdmin = value;
                 } else {
-                    MessageBox.Show( "isAdmin nécessite un booléen" );
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "isAdmin nécessite un booléen" );
+                    } else {
+                        MessageBox.Show( "isAdmin is bool only" );
+                    }
                 }
             }
         }
 
-        // Mets à jours les information en base de donnée
+
+
+        /// <summary>
+        /// Mets à jours les informations de l'instance dans la BDD ou insert si nécessaire
+        /// </summary>
         public void updateToDataBase () {
 
             // si l'idUser est défini alors on update
@@ -176,6 +308,11 @@ namespace test1
 
         }
 
+
+        /// <summary>
+        /// Mets à jours la BDD depuis une liste d'instance PLayerlcass
+        /// </summary>
+        /// <param name="listPlayer"></param>
         public void updateToDataBase ( List<PlayerClass> listPlayer ) {
 
             if ( listPlayer.Count < 1 ) {
@@ -188,6 +325,11 @@ namespace test1
 
             }
         }
+
+
+        /// <summary>
+        /// Supprime l'instance de la BDD ( ID doit être différent de -1 )
+        /// </summary>
         public void deleteFromDataBase () {
 
             // si l'id existe on supprime
@@ -224,6 +366,11 @@ namespace test1
 
         }
 
+
+        /// <summary>
+        ///  Supprime de la BDD depuis une liste d'instance de playerclass
+        /// </summary>
+        /// <param name="listPlayer"></param>
         public void deleteFromDataBase ( List<PlayerClass> listPlayer ) {
 
             if ( listPlayer.Count < 1 ) {
