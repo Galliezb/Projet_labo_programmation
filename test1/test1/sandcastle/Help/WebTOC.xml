@@ -1,93 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="cc271440-e162-4b52-983d-fb3a66785b71" Title="test1" Url="html/ae0df2d3-66df-0d7a-13c0-1e988ad4af4b.htm">
-    <HelpTOCNode Id="f7296c63-cb6b-416e-bd49-51c803d6f429" Title="Form_Administration Class" Url="html/6bad76f4-052f-14e6-c6b4-a2ac282ec2be.htm">
+  <HelpTOCNode Id="02dd1e85-d5d0-4930-a63e-371d109b7b16" Title="test1" Url="html/ae0df2d3-66df-0d7a-13c0-1e988ad4af4b.htm">
+    <HelpTOCNode Id="045b308b-0769-4c93-9595-56f635afec0b" Title="Form_Administration Class" Url="html/6bad76f4-052f-14e6-c6b4-a2ac282ec2be.htm">
       <HelpTOCNode Title="Form_Administration Constructor " Url="html/0e1ddd05-3ec7-63eb-c3bf-0dfadac74246.htm" />
-      <HelpTOCNode Title="Form_Administration Properties" Url="html/26252e34-318f-2c68-dfd6-513380558306.htm" />
-      <HelpTOCNode Id="6e99afa4-471b-44f6-b5fa-b5a9bd2a245d" Title="Form_Administration Methods" Url="html/0c016e5e-4ed3-209e-b9cf-b15aa0b99370.htm">
-        <HelpTOCNode Id="28517616-a860-44ce-ae0d-27eb61615ea2" Title="Dispose Method " Url="html/dfcc125b-fe25-f1e8-7b00-c50ec19e8217.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/67613018-4b88-b38c-bb45-64aea68a6ea0.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="08ed188c-a099-4f0a-8105-87090f112fa5" Title="Form_Administration Methods" Url="html/0c016e5e-4ed3-209e-b9cf-b15aa0b99370.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/67613018-4b88-b38c-bb45-64aea68a6ea0.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_Administration Events" Url="html/b3205155-b2e7-9817-43ee-032277aa4fc5.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="19e7e05b-2a48-4ea0-902d-a1af284d39d4" Title="Form_CreateOrg Class" Url="html/7e011abc-3897-5117-af5c-bb7279bcf899.htm">
+    <HelpTOCNode Id="ac849793-73bf-47ea-b50b-9da48c710b9d" Title="Form_CreateOrg Class" Url="html/7e011abc-3897-5117-af5c-bb7279bcf899.htm">
       <HelpTOCNode Title="Form_CreateOrg Constructor " Url="html/4c60d5f7-f4ae-4dee-c83f-e63add05f224.htm" />
-      <HelpTOCNode Title="Form_CreateOrg Properties" Url="html/97b2f2e8-f639-dc2b-1e5b-bfb4db00507c.htm" />
-      <HelpTOCNode Id="5ca093fb-2fc0-4184-bb57-1bd89952d5da" Title="Form_CreateOrg Methods" Url="html/fc3d1e9e-8ecf-9e36-573a-6188174a5fb0.htm">
-        <HelpTOCNode Id="81aa71b7-5efa-4b2d-992b-3d211268579d" Title="Dispose Method " Url="html/dacb98d7-4519-4ba1-b86e-1aedccb471a5.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/92d2447f-e5db-584b-5f92-9b5fc69444ed.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="bd326779-b012-4609-b73e-9aaca5c716cc" Title="Form_CreateOrg Methods" Url="html/fc3d1e9e-8ecf-9e36-573a-6188174a5fb0.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/92d2447f-e5db-584b-5f92-9b5fc69444ed.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_CreateOrg Events" Url="html/55522985-a85f-deed-8390-a72e70566e55.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="6c84b62f-69f4-4b8c-ab78-d96175ff131a" Title="Form_ManageTeam Class" Url="html/409b68e5-8fec-555b-0590-35661ed1679c.htm">
+    <HelpTOCNode Id="451f03a8-a270-469f-8336-a6c4df127b86" Title="Form_ManageTeam Class" Url="html/409b68e5-8fec-555b-0590-35661ed1679c.htm">
       <HelpTOCNode Title="Form_ManageTeam Constructor " Url="html/20c91c00-ea0d-25b2-d0ba-b5644f4f2ef1.htm" />
-      <HelpTOCNode Title="Form_ManageTeam Properties" Url="html/f005a5de-b128-baf6-62a2-76325f6435d8.htm" />
-      <HelpTOCNode Id="081c3e1e-4f5a-40e9-bffb-17763961709f" Title="Form_ManageTeam Methods" Url="html/f5a40693-f5f6-7aab-b217-53cb13bf51b1.htm">
-        <HelpTOCNode Id="0c00179c-0975-4693-933a-c59144437497" Title="Dispose Method " Url="html/96631516-4363-86b1-b62b-5b78a3b5c085.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/876419e5-36c4-58db-3a54-175ddbe338a9.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="31937036-34a9-4494-b481-ddc92fd7f72b" Title="Form_ManageTeam Methods" Url="html/f5a40693-f5f6-7aab-b217-53cb13bf51b1.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/876419e5-36c4-58db-3a54-175ddbe338a9.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_ManageTeam Events" Url="html/c2f5b682-efda-0e37-3e17-31f9462a8d59.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="5c167f19-3d99-4300-8223-dc42d998eff1" Title="Form_Page_Accueil Class" Url="html/d73e9822-0533-b8bb-7bff-009cdc5b1664.htm">
+    <HelpTOCNode Id="8bf679d3-d1e1-432b-a603-60fb107c0473" Title="Form_Page_Accueil Class" Url="html/d73e9822-0533-b8bb-7bff-009cdc5b1664.htm">
       <HelpTOCNode Title="Form_Page_Accueil Constructor " Url="html/a291bf4c-d3ad-8d71-2869-59ea0100e7a3.htm" />
-      <HelpTOCNode Title="Form_Page_Accueil Properties" Url="html/654733db-2cbb-a363-20d4-db4e920f6a6d.htm" />
-      <HelpTOCNode Id="1ee1606d-fcd9-4357-af07-0f45c07d363b" Title="Form_Page_Accueil Methods" Url="html/7294f89c-f6e5-954f-62e0-cb794bd00e83.htm">
-        <HelpTOCNode Id="c90db9dd-1905-4e9f-b64a-2827bb53bda7" Title="Dispose Method " Url="html/e647ed49-bc48-b606-f150-34c32acef401.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/a2320796-d9a6-1c9b-50ba-5d1835f16f9d.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="88df690f-edfe-445f-abc9-cc7dc42f3c9d" Title="Form_Page_Accueil Methods" Url="html/7294f89c-f6e5-954f-62e0-cb794bd00e83.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/a2320796-d9a6-1c9b-50ba-5d1835f16f9d.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_Page_Accueil Events" Url="html/c3204fd2-1d73-6bd8-e1d7-1a76071af4f6.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="aaa7368c-8dbc-45c9-b917-f3c506e6170d" Title="Form_Search_Tournament Class" Url="html/d37a6de0-2d3c-256b-a6ac-327b9b0c8241.htm">
+    <HelpTOCNode Id="6bad1c41-ee84-43f1-b1b7-5908e6099a69" Title="Form_Search_Tournament Class" Url="html/d37a6de0-2d3c-256b-a6ac-327b9b0c8241.htm">
       <HelpTOCNode Title="Form_Search_Tournament Constructor " Url="html/44e21643-21c9-13f7-8fe7-9e865d5fbcf8.htm" />
-      <HelpTOCNode Title="Form_Search_Tournament Properties" Url="html/168fc4d7-8d70-0d67-4874-82f92c28ae3a.htm" />
-      <HelpTOCNode Id="e648f440-6514-43f2-a309-3df477846b9b" Title="Form_Search_Tournament Methods" Url="html/1ed9451b-7545-6b5a-a210-bfa6c03ac6ba.htm">
-        <HelpTOCNode Id="2a47f519-948b-41d5-8871-3d71ed4299e9" Title="Dispose Method " Url="html/14b78b52-17e3-c6bc-044c-cae0f15544ad.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/02cb214b-9491-2c51-84fa-19b33484956f.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="dbfefcfe-ddef-4495-a179-9eab48644d6a" Title="Form_Search_Tournament Methods" Url="html/1ed9451b-7545-6b5a-a210-bfa6c03ac6ba.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/02cb214b-9491-2c51-84fa-19b33484956f.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_Search_Tournament Events" Url="html/405300f0-9248-6670-1588-b7507d1dade0.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="e5cd396a-efe0-4964-a5ef-278dab5df71b" Title="Form_Settings Class" Url="html/9ed0e2fb-0548-83ed-6058-e8a4fea98059.htm">
-      <HelpTOCNode Id="500a70fa-d4cd-458a-a401-1b28f80611e9" Title="Form_Settings Constructor " Url="html/932a2ce2-4ad0-2055-967c-ed0d3400172a.htm">
+    <HelpTOCNode Id="843b426b-fa11-4d5e-aebd-d80e0237a24a" Title="Form_Settings Class" Url="html/9ed0e2fb-0548-83ed-6058-e8a4fea98059.htm">
+      <HelpTOCNode Id="0deb5b88-a0d3-467d-bcdc-86c910af863d" Title="Form_Settings Constructor " Url="html/932a2ce2-4ad0-2055-967c-ed0d3400172a.htm">
         <HelpTOCNode Title="Form_Settings Constructor " Url="html/c92d17bd-166d-e2bf-6156-08fb7c7ac2ed.htm" />
         <HelpTOCNode Title="Form_Settings Constructor (PlayerClass)" Url="html/534986be-34a2-5be4-dc1e-27df597d6936.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_Settings Properties" Url="html/92240705-399b-5813-3aeb-24f861ab189b.htm" />
-      <HelpTOCNode Id="dae9ead2-a786-47ff-ad3c-fe2b31f01523" Title="Form_Settings Methods" Url="html/f656737b-e1e5-1662-2032-759262818821.htm">
-        <HelpTOCNode Id="f7fa74c5-ddbb-435a-b10e-687879936efc" Title="Dispose Method " Url="html/c06357e5-f479-80d3-16d6-0fef87be7b25.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/654c9e48-fa29-8871-2398-b2de3f77dd06.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="d6ce5121-579d-4ad1-bf2d-8a4f434f482b" Title="Form_Settings Methods" Url="html/f656737b-e1e5-1662-2032-759262818821.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/654c9e48-fa29-8871-2398-b2de3f77dd06.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_Settings Events" Url="html/8c6909a4-46f8-78ef-e6a0-a583dda08e76.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="f0bd9af9-f1cd-4474-b512-34b7b51ed184" Title="Form_Top10 Class" Url="html/f93051c0-ad54-8356-8496-4a5d1a14583d.htm">
+    <HelpTOCNode Id="6f45972e-444a-49e8-9aa3-8869f8e93cf1" Title="Form_Top10 Class" Url="html/f93051c0-ad54-8356-8496-4a5d1a14583d.htm">
       <HelpTOCNode Title="Form_Top10 Constructor " Url="html/753b6516-df4b-c66b-f827-0110a627731e.htm" />
-      <HelpTOCNode Title="Form_Top10 Properties" Url="html/ea25e544-d533-3ac3-c355-eca418b79077.htm" />
-      <HelpTOCNode Id="06e68629-4a25-41ce-ab9b-d3ad6ace5c06" Title="Form_Top10 Methods" Url="html/dae8851a-3761-119d-c4a3-4e8fea90da52.htm">
-        <HelpTOCNode Id="fa7d695a-6f74-462d-a94c-92f4b8a0fe73" Title="Dispose Method " Url="html/8b3d5a95-c258-cc40-2e50-f8bdeb37f1a9.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/e6d9d28a-14bd-f688-3893-506cba424915.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="5c1ca7ec-27d0-45f5-8d76-ba8ee3f2e5ac" Title="Form_Top10 Methods" Url="html/dae8851a-3761-119d-c4a3-4e8fea90da52.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/e6d9d28a-14bd-f688-3893-506cba424915.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="Form_Top10 Events" Url="html/aaafc3d5-8333-0b75-3ec5-a6a6ea51df05.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="76361337-0818-43d9-aef0-1faf0208019a" Title="FormStart Class" Url="html/6f91b2df-7722-5e3c-ebdd-3c7b83ac4200.htm">
+    <HelpTOCNode Id="66ca393a-62e9-4d76-afb7-b499972aa71d" Title="FormStart Class" Url="html/6f91b2df-7722-5e3c-ebdd-3c7b83ac4200.htm">
       <HelpTOCNode Title="FormStart Constructor " Url="html/81aa0752-6387-564d-4d1a-93c8bcebae56.htm" />
-      <HelpTOCNode Title="FormStart Properties" Url="html/d312c0bf-f9d8-381c-eb32-9262089797dd.htm" />
-      <HelpTOCNode Id="c812fca3-f4d5-4fef-b791-41d9c95d1a9f" Title="FormStart Methods" Url="html/02544dc6-8423-5b09-b64f-b730cb177754.htm">
-        <HelpTOCNode Id="9b0d1925-5cd4-49cd-89b7-88eeae97c16d" Title="Dispose Method " Url="html/3a0cf837-6250-58fa-35e4-3280dc440f94.htm">
-          <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/cf23e7b9-7acc-c1ac-d852-29e35d3a1df6.htm" />
-        </HelpTOCNode>
+      <HelpTOCNode Id="3ea727d0-c8f6-46e4-b0b9-b3ebc8ad4766" Title="FormStart Methods" Url="html/02544dc6-8423-5b09-b64f-b730cb177754.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/cf23e7b9-7acc-c1ac-d852-29e35d3a1df6.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Title="FormStart Events" Url="html/bd035b2a-fc40-b2b7-b031-7b0205df61d6.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="bcdf12ff-c223-4593-8e08-2281ec6030a3" Title="Organisation Class" Url="html/684bba77-907f-bcfe-17c1-0a1cae432852.htm">
+    <HelpTOCNode Id="a5c6e304-0691-4387-ad51-6cc506b4c4da" Title="Organisation Class" Url="html/684bba77-907f-bcfe-17c1-0a1cae432852.htm">
       <HelpTOCNode Title="Organisation Constructor " Url="html/3be12af4-1e38-4d00-0154-2900e99433ff.htm" />
-      <HelpTOCNode Id="b8d4c61e-b920-4381-90c6-038d20b2d2e1" Title="Organisation Properties" Url="html/73b4f4ff-20ac-cc04-c32e-bf0d9f0bd8aa.htm">
+      <HelpTOCNode Id="d25d9406-7dfa-46bc-9a5f-be0d5e9740ef" Title="Organisation Properties" Url="html/73b4f4ff-20ac-cc04-c32e-bf0d9f0bd8aa.htm">
         <HelpTOCNode Title="DateCreation Property " Url="html/e793df04-4a8c-32a0-5bd2-020bd9fef612.htm" />
         <HelpTOCNode Title="Description Property " Url="html/95bde6bc-98d4-c387-7b82-2179a69f8010.htm" />
         <HelpTOCNode Title="ID Property " Url="html/8f6367f3-ccd1-0118-9550-5075b24a9e39.htm" />
@@ -95,15 +63,15 @@
         <HelpTOCNode Title="Name Property " Url="html/3d97af5e-9456-90e7-c384-2cc057f5ca43.htm" />
         <HelpTOCNode Title="Nameresp Property " Url="html/38c6b1b4-2d15-42a9-d09a-03e529c05042.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="00ae0adb-dfd0-4c15-9bd6-fb7b708523e7" Title="Organisation Methods" Url="html/2f8c828d-f1a4-7cff-1199-3030c1b0fb26.htm">
+      <HelpTOCNode Id="4934de70-b7b0-41f7-a312-557477651180" Title="Organisation Methods" Url="html/2f8c828d-f1a4-7cff-1199-3030c1b0fb26.htm">
         <HelpTOCNode Title="delete Method " Url="html/199b9c03-fc97-554c-d8ac-23cdeb22f3be.htm" />
         <HelpTOCNode Title="insert Method " Url="html/76c17207-a4d4-4402-f839-5008918d0a6e.htm" />
         <HelpTOCNode Title="update Method " Url="html/20c8e37f-eac9-e3eb-11f3-80009442c651.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="b8944026-81d8-4b80-ae37-118ccfaf3e8b" Title="PlayerClass Class" Url="html/9f874551-9d26-6528-ec89-49b44945d7a0.htm">
+    <HelpTOCNode Id="8c00d80b-8705-4164-bfd1-be353b8736e0" Title="PlayerClass Class" Url="html/9f874551-9d26-6528-ec89-49b44945d7a0.htm">
       <HelpTOCNode Title="PlayerClass Constructor " Url="html/4f67f4b4-3996-69a5-2225-2bc5473c527c.htm" />
-      <HelpTOCNode Id="5ff95238-876e-4daf-a9fd-5eca994981f3" Title="PlayerClass Properties" Url="html/f0c0f395-f18e-c7e4-a08b-62adcaba8afc.htm">
+      <HelpTOCNode Id="a9cd2ebb-b71c-4c74-a0ee-f6f11be73218" Title="PlayerClass Properties" Url="html/f0c0f395-f18e-c7e4-a08b-62adcaba8afc.htm">
         <HelpTOCNode Title="email Property " Url="html/50df4b91-14e1-b575-47d2-7d20509b08b9.htm" />
         <HelpTOCNode Title="firstName Property " Url="html/04ef2357-7286-60be-eeae-ffeddc41d3d1.htm" />
         <HelpTOCNode Title="ID Property " Url="html/6616e6f7-70c4-71d1-c3cd-bf6414634af3.htm" />
@@ -114,30 +82,30 @@
         <HelpTOCNode Title="password Property " Url="html/383ca77d-007d-4dcc-f64b-6cdc18bf4cc5.htm" />
         <HelpTOCNode Title="pseudo Property " Url="html/28e68e17-914a-f2a1-d7f3-116102ea11af.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="6959a9d0-ffd8-4be9-97d6-d88b62bbd5ba" Title="PlayerClass Methods" Url="html/9b17d29a-0ddb-6c12-59f7-aaf54ffcebc6.htm">
-        <HelpTOCNode Id="23043f51-ba0d-4a86-8788-a5ab858424f5" Title="deleteFromDataBase Method " Url="html/aa561353-ccde-4032-7a10-3e6e2e2d2c67.htm">
+      <HelpTOCNode Id="6a90549f-e0e2-4e08-87b7-d8b34d0df24d" Title="PlayerClass Methods" Url="html/9b17d29a-0ddb-6c12-59f7-aaf54ffcebc6.htm">
+        <HelpTOCNode Id="a255b495-e65b-4233-9c6d-6ec19e361114" Title="deleteFromDataBase Method " Url="html/aa561353-ccde-4032-7a10-3e6e2e2d2c67.htm">
           <HelpTOCNode Title="deleteFromDataBase Method " Url="html/80570503-1bf6-1d5a-a52a-8b88742a2364.htm" />
           <HelpTOCNode Title="deleteFromDataBase Method (List(PlayerClass))" Url="html/e9a99527-a377-a96c-d189-691ab19eb7e1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="647958ea-7a0a-47d5-8fbf-60247dbe5b6c" Title="updateToDataBase Method " Url="html/1151e057-0c33-7825-2443-c2c3552acda7.htm">
+        <HelpTOCNode Id="a7501697-3611-480e-b97b-156b075f19f5" Title="updateToDataBase Method " Url="html/1151e057-0c33-7825-2443-c2c3552acda7.htm">
           <HelpTOCNode Title="updateToDataBase Method " Url="html/42e54a66-4900-425e-5dc1-7c70a7625f18.htm" />
           <HelpTOCNode Title="updateToDataBase Method (List(PlayerClass))" Url="html/8c737041-9ec4-ac4f-59ee-34345ca1caf3.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="512e06eb-e58a-4613-9f89-f5f1216b0bbd" Title="Team Class" Url="html/b0bec895-00af-ec55-167b-5e915df9793e.htm">
-      <HelpTOCNode Id="7696333a-8f91-4b43-8f50-342474f5c462" Title="Team Constructor " Url="html/c0ac4ce8-232a-d3c4-4ce5-651dd7ff5ca9.htm">
+    <HelpTOCNode Id="bb1aa8ed-fd49-4bf1-922e-8d0649f5b54d" Title="Team Class" Url="html/b0bec895-00af-ec55-167b-5e915df9793e.htm">
+      <HelpTOCNode Id="8e7fc70f-d3f3-4f20-8f08-1cc3ff7265de" Title="Team Constructor " Url="html/c0ac4ce8-232a-d3c4-4ce5-651dd7ff5ca9.htm">
         <HelpTOCNode Title="Team Constructor (Team)" Url="html/f6ca71ef-8cc1-dfcc-a733-1758054d5b8b.htm" />
         <HelpTOCNode Title="Team Constructor (Int32, String, String)" Url="html/dc3c16ae-a284-97d4-4e3b-e51ee7f92080.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="95e53c92-f609-4cb7-a300-9c497d4375e5" Title="Team Properties" Url="html/aa52032e-ade9-253b-1e0c-83cbe53d22ff.htm">
+      <HelpTOCNode Id="ee24f08e-2e3a-4c25-8802-a0d2adc88750" Title="Team Properties" Url="html/aa52032e-ade9-253b-1e0c-83cbe53d22ff.htm">
         <HelpTOCNode Title="creationDate Property " Url="html/3233bb62-6736-9b13-ca41-cb99e01020ed.htm" />
         <HelpTOCNode Title="description Property " Url="html/4315b0ea-0ad0-c587-bdf6-3722cb4ccdfd.htm" />
         <HelpTOCNode Title="idCaptain Property " Url="html/f6719a2b-04de-ffe0-4797-3f02d7556dfb.htm" />
         <HelpTOCNode Title="idTeam Property " Url="html/0d7db2da-b8c4-ba60-b71b-a5a25978edf0.htm" />
         <HelpTOCNode Title="name Property " Url="html/0bf2b269-7d19-0d04-eb1c-c11727d8d020.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="2a6953f0-b8e7-4509-8528-a69c7aca6ad6" Title="Team Methods" Url="html/cf106951-48e4-0182-7365-60facfe2cd28.htm">
+      <HelpTOCNode Id="3336af58-6267-49d6-98f2-75ac6c5b317e" Title="Team Methods" Url="html/cf106951-48e4-0182-7365-60facfe2cd28.htm">
         <HelpTOCNode Title="delete Method " Url="html/0d7cf76f-5328-7ac3-f898-98bf9c59d36b.htm" />
         <HelpTOCNode Title="insert Method " Url="html/ddeee093-cf73-8389-4e39-c98f11483505.htm" />
         <HelpTOCNode Title="update Method " Url="html/49b0d39e-f04c-32a2-8e56-1bdc744d3f1d.htm" />

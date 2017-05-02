@@ -52,10 +52,21 @@ namespace test1
 
 
         /// <summary>
-        /// Récupère l'ID de l'utilisateur
+        /// Récupère ou définit l'ID de l'utilisateur ( chiffre > 1 uniquement )
         /// </summary>
         public int ID {
             get { return IDUser_; }
+            set {
+                if ( value < 1 ) {
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "L'ID est incorrect" );
+                    } else {
+                        MessageBox.Show( "the ID is incorrect" );
+                    }
+                } else {
+                    IDUser_ = value;
+                }
+            }
         }
 
 
