@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test1.Norbert.forms
+namespace test1
 {
     public partial class Form_ManageTeam : Form
     {
+        Team team = new Team();
+        Session laSession = new Session();
+
         public Form_ManageTeam()
         {
             InitializeComponent();
+            btUpdate_Team.Visible = false;
+            btCreate_Team.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,6 +31,8 @@ namespace test1.Norbert.forms
         {
             PanelRightCT.Visible = true;
             PanelModifyTeam.Visible = false;
+            btCreate_Team.Visible = true;
+            btUpdate_Team.Visible = false;
         }
 
         private void lb_Click(object sender, EventArgs e)
@@ -35,12 +42,32 @@ namespace test1.Norbert.forms
 
         private void cbbChooseTeam_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tbNameCT.Text = "Chicken Kick Chicks";
+            btUpdate_Team.Visible = true;
+            btCreate_Team.Visible = false;
+            
             tbTagCT.Text = "CKC";
             tbAddGameCT.Text = "";
-            tbAddPlayerCT.Text = "";
+            tbDescriptionCT.Text = "";
             PanelRightCT.Visible = true;
             PanelModifyTeam.Visible = true;
+        }
+
+        private void btCreate_Team_Click(object sender, EventArgs e)
+        {
+            team.name = tbNameCT.Text;
+            team.description = lbDescriptionCT.Text;
+            MessageBox.Show(team.creationDate.ToString("yyyy-MM-dd"));
+            team.insert();
+        }
+
+        private void Form_ManageTeam_Load ( object sender , EventArgs e ) {
+
+            if ( laSession.language == "fr" ) {
+
+                btCreateTeam.Text = "Créer une équipe";
+                lbChooseTeam.Text = "Choisir une team";
+            }
+
         }
     }
 }

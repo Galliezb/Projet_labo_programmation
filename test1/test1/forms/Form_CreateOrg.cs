@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using test1.Bruno;
 
-namespace test1.Norbert.forms
+
+namespace test1
 {
     public partial class Form_CreateOrg : Form
     {
@@ -22,8 +22,7 @@ namespace test1.Norbert.forms
         }
 
         private void Form_CreateOrg_Load ( object sender , EventArgs e ) {
-
-            /*
+            
             // traduit en français si nécessaire
             if ( laSession.language == "fr" ) {
 
@@ -35,41 +34,56 @@ namespace test1.Norbert.forms
                 lbMaxPlayerTnm.Text = "Nombre max de joueurs : ";
                 btSubmissionTnm.Text = "Soumettre";
 
-                comboType.Items.Clear();
-                comboType.Items.Add( "Championnat toute ronde" );
-                comboType.Items.Add( "Elimination directe" );
-                comboType.Items.Add( "Phase de groupe" );
+                comboBoxType.Items.Clear();
+                comboBoxType.Items.Add( "Championnat toute ronde" );
+                comboBoxType.Items.Add( "Elimination directe" );
+                comboBoxType.Items.Add( "Phase de groupe" );
 
 
             }
 
+            comboBoxType.SelectedIndex = 0;
+
             // mets à jour les dates préselectionnés
             dateTimePickerStartDate.Value = DateTime.Now.AddDays( 1 );
             dateTimePickerEndDate.Value = DateTime.Now.AddDays( 4 );
-            */
 
+
+            // renseigne les valeurs non modifiable dans le nom manager et le mail
+            tbManagerName.Text = laSession.name;
 
             // nico
-            panelCreateOrga.Parent = this;
-            panelCreateTnm.Parent = this;
+            //panelCreateOrga.Parent = this;
+            //panelCreateTnm.Parent = this;
 
         }
 
         private void btSubmissionTnm_Click ( object sender , EventArgs e ) {
-            /*
+
             Tournament tournoi = new Tournament();
 
             tournoi.name = tnNameTnm.Text;
-            tournoi.typeTournoi = comboType.SelectedText;
+            tournoi.typeTournoi = comboBoxType.SelectedText;
             tournoi.startDate = dateTimePickerStartDate.Value;
             tournoi.endDate = dateTimePickerEndDate.Value;
-            tournoi.maxPlayer = Convert.ToInt32(tbMaxpPlayerTnm.Text);
+            tournoi.maxPlayer = Convert.ToInt32( tbMaxpPlayerTnm.Text );
             tournoi.Description = rtbDescTnm.Text;
 
             tournoi.insertInDataBase();
 
             this.Refresh();
-            */
+
+
+        }
+
+        private bool isNullOrEmpty( string str ) {
+
+            if ( str == "" || str == null ) {
+                return true;
+            } else {
+                return false;
+            }
+
         }
 
         private void btCreateTnm_Click(object sender, EventArgs e)
@@ -84,5 +98,14 @@ namespace test1.Norbert.forms
             panelCreateOrga.Visible = true;
         }
 
+        private void panelCreateTnm_Paint ( object sender , PaintEventArgs e ) {
+
+        }
+
+        private void btSubmitOrga_Click ( object sender , EventArgs e ) {
+
+            // create organization
+
+        }
     }
 }

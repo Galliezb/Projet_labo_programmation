@@ -11,8 +11,8 @@ namespace test1 {
     class DatabaseConnection {
 
         // connector Mysql
-        MySqlConnection laConnexion_;
-        MySqlCommand laCommande_;
+        static MySqlConnection laConnexion_;
+        static MySqlCommand laCommande_;
 
         public DatabaseConnection () {
 

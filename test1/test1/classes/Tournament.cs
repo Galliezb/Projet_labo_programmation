@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test1.Bruno {
+namespace test1 {
     class Tournament {
 
         int idTournament_;
@@ -57,24 +57,6 @@ namespace test1.Bruno {
 
             get { return idOrganizer_; }
 
-        }
-
-        public string Name {
-            get { return name_;  }
-            set {
-                if ( value.Length > 50 ) {
-
-                    if ( laSession.language == "fr" ) {
-                        MessageBox.Show( "Le nom ne peut dépasser 50 caractères" );
-                    } else {    
-                        MessageBox.Show( "The name can not exceed 50 characters" );
-                    }
-
-                } else {
-                    name_ = value;
-                }
-                
-            }
         }
 
         public string name {
@@ -135,7 +117,7 @@ namespace test1.Bruno {
                         MessageBox.Show( "Tournaments must be at least 3 days apart from start to finish" );
                     }
                 } else {
-                    startDate_ = value;
+                    endDate_ = value;
                 }
             }
         }

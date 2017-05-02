@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test1.Norbert.forms
+namespace test1
 {
     public partial class Form_Search_Tournament : Form
     {
         public Form_Search_Tournament()
         {
             InitializeComponent();
+        }
+
+        private void Form_Search_Tournament_Load ( object sender , EventArgs e ) {
+
         }
     }
 }

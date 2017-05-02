@@ -7,9 +7,8 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using MySql.Data;
 using System.Data;
-using test1.Bruno;
 
-namespace test1.Norbert
+namespace test1
 {
     class SQL_Request_Form_Login
     {
@@ -42,7 +41,7 @@ namespace test1.Norbert
             
             maConnexionMysql.Laconnexion.Open();
             // creation requête et ajout à la commande
-            string sqlRequest = "SELECT idUser,language,isOrganizer,isAdmin FROM user where name = @namelogin && password =@passlogin ";
+            string sqlRequest = "SELECT idUser,email,language,isOrganizer,isAdmin FROM user where name = @namelogin && password =@passlogin ";
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@namelogin", namedd);
             maConnexionMysql.Lacommande.Parameters.AddWithValue("@passlogin", password);
             maConnexionMysql.Lacommande.CommandText = sqlRequest;
@@ -54,7 +53,7 @@ namespace test1.Norbert
                 monReaderMysql.Read();
                 result = Convert.ToInt32(monReaderMysql["idUser"]);
                 // mets à jour la session du connecté
-                laSession = new Session( namedd , monReaderMysql["language"].ToString() , result , Convert.ToBoolean( monReaderMysql["isOrganizer"] ) , Convert.ToBoolean( monReaderMysql["isAdmin"] ) );
+                laSession = new Session( namedd , monReaderMysql["email"].ToString(), monReaderMysql["language"].ToString() , result , Convert.ToBoolean( monReaderMysql["isOrganizer"] ) , Convert.ToBoolean( monReaderMysql["isAdmin"] ) );
 
             } else
             {

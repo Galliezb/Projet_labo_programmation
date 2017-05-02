@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test1.Norbert.forms
+namespace test1
 {
     public partial class Form_Top10 : Form
     {
@@ -30,7 +30,7 @@ namespace test1.Norbert.forms
             {
                 axShockwaveFlash1.Visible = true;
                 axShockwaveFlash1.Movie = "https://www.youtube.com/v/f5Q041c0Sis";
-                axShockwaveFlash1.Play();
+                //axShockwaveFlash1.Play();
                 tbDescription.Text = "Battlerite is an action-packed Team Arena Brawler focused on competitive PvP combat. Fight side by side with teammates to the sound of the roaring crowd in vibrant, colosseum-style surroundings. Welcome to a world where champions dedicate their lives to the arena.";
 
             }
@@ -38,14 +38,14 @@ namespace test1.Norbert.forms
             {
                 axShockwaveFlash1.Visible = true;
                 axShockwaveFlash1.Movie = "https://www.youtube.com/v/7G4jIm5Dj8Y";
-                axShockwaveFlash1.Play();
+                //axShockwaveFlash1.Play();
                 tbDescription.Text = "Une bande de héros survitaminés aux pouvoirs extraordinaires lutte pour la protection de la dernière étoile de l'univers, menacée par un mal mystérieux. Pour vous battre, vous pourrez compter sur des personnages et des armes d'une variété inimaginable : cyborgs hommes-oiseaux, vampires samouraïs, montagnes de muscles équipées de sulfateuses.";
             }
             if (treeView1.SelectedNode.Text == "Counter Strike GO")
             {
                 axShockwaveFlash1.Visible = true;
                 axShockwaveFlash1.Movie = "https://www.youtube.com/v/edYCtaNueQY";
-                axShockwaveFlash1.Play();
+                //axShockwaveFlash1.Play();
                 tbDescription.Text = "Counter-Strike: Global Offensive (CS:GO) expands upon the team-based action gameplay that the franchise pioneered when it was launched 12 years ago.CS:GO features new maps, characters, and weapons and delivers updated versions of the classic CS content (de_dust, etc.). In addition, CS:GO introduces new gameplay modes, matchmaking, leader boards, and more.  ";
             }
             if (treeView1.SelectedNode.Text == "Dota2")
