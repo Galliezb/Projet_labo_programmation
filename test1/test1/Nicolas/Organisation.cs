@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using test1.Bruno;
+using System.Windows.Forms;
 
 namespace test1.Nicolas
 {
@@ -39,8 +40,27 @@ public class Organisation
 
         public string Name
         {
-            get { return Name_; }
-            set { Name_ = value; }
+            get { return this.Name_; }
+            set
+            {
+                if (value.Length > 50)
+                {
+
+                    if (laSession.language == "fr")
+                    {
+                        MessageBox.Show("Le nom ne peut dépasser 50 caractères");
+                    }
+                    else
+                    {
+                        MessageBox.Show("The name can not exceed 50 characters");
+                    }
+
+                }
+                else
+                {
+                    Name_ = value;
+                }
+            }
         }
 
 

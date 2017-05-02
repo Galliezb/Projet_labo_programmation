@@ -66,7 +66,7 @@ namespace test1.Bruno {
 
                     if ( laSession.language == "fr" ) {
                         MessageBox.Show( "Le nom ne peut dépasser 50 caractères" );
-                    } else {
+                    } else {    
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
 
