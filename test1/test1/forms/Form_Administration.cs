@@ -25,18 +25,28 @@ namespace test1{
         {
             if(treeView1.SelectedNode.Text == "Add User to DB")
             {
+                foreach (Control c in panelAddUser.Controls) {
+                    if (c is TextBox)
+                        c.Text = String.Empty;
+                }
+                panelAddUser.Controls["cbbSelectType"].Text = String.Empty;
+
+
                 panelChangeInfo.Visible = false;
                 panelUpdateInfo.Visible = false;
                 panelAddUser.Visible = true;
+                //panelAddUser.
             }
             if(treeView1.SelectedNode.Text == "Update Informations")
             {
                panelChangeInfo.Visible = false;
                panelUpdateInfo.Visible = true;
                panelAddUser.Visible = false;
+               
             }
             if(treeView1.SelectedNode.Text == "Change Your Informations")
             {
+
                 panelAddUser.Visible = false;
                 panelUpdateInfo.Visible = false;
                 panelChangeInfo.Visible = true;
@@ -49,6 +59,13 @@ namespace test1{
             panelUpdateInfo.Parent = this;
             panelChangeInfo.Parent = this;
             
+        }
+
+        private void btSubmit_Click(object sender, EventArgs e)
+        {
+           // Users newUser = new Users(-1,tbNameUser.Text,tbFirstName.Text,tbMail.Text,tbPwd.Text,tbPseudo.Text,;
+            //newUser.email = tbMail.Text;
+          //  newUser.
         }
     }
 }
