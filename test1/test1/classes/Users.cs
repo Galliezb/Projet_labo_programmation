@@ -49,7 +49,7 @@ namespace test1
             isOrganizer_ = isOrganizer;
             isAdmin_ = isAdmin;
 
-            checkVariable.Add( "idUser" , false );
+            checkVariable.Add( "idUser" , true );
             checkVariable.Add( "name" , false );
             checkVariable.Add( "firstName" , false );
             checkVariable.Add( "email" , false );
