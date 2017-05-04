@@ -23,12 +23,16 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent () {
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Add User to DB");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Update Informations");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Change Your Informations");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Show Informations");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Promote an User");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Add an Administrator");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Add User to DB");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Update Informations");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Change Your Informations");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Show Informations");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Promote an User");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Add an Administrator");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panelAddUser = new System.Windows.Forms.Panel();
             this.panelUpdateInfo = new System.Windows.Forms.Panel();
@@ -55,36 +59,39 @@
             this.btSubmit = new System.Windows.Forms.Button();
             this.panelChangeInfo = new System.Windows.Forms.Panel();
             this.cbLanguage = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelAddUser.SuspendLayout();
             this.panelUpdateInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
             // 
             this.treeView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeView1.ForeColor = System.Drawing.Color.White;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode7.Name = "AddUser";
-            treeNode7.Text = "Add User to DB";
-            treeNode8.Name = "UpdateInfo";
-            treeNode8.Text = "Update Informations";
-            treeNode9.Name = "ChangeSelfInfo";
-            treeNode9.Text = "Change Your Informations";
-            treeNode10.Name = "ShowInfo";
-            treeNode10.Text = "Show Informations";
-            treeNode11.Name = "PromUser";
-            treeNode11.Text = "Promote an User";
-            treeNode12.Name = "AddAdmin";
-            treeNode12.Text = "Add an Administrator";
+            treeNode1.Name = "AddUser";
+            treeNode1.Text = "Add User to DB";
+            treeNode2.Name = "UpdateInfo";
+            treeNode2.Text = "Update Informations";
+            treeNode3.Name = "ChangeSelfInfo";
+            treeNode3.Text = "Change Your Informations";
+            treeNode4.Name = "ShowInfo";
+            treeNode4.Text = "Show Informations";
+            treeNode5.Name = "PromUser";
+            treeNode5.Text = "Promote an User";
+            treeNode6.Name = "AddAdmin";
+            treeNode6.Text = "Add an Administrator";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12});
-            this.treeView1.Size = new System.Drawing.Size(258, 768);
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6});
+            this.treeView1.Size = new System.Drawing.Size(153, 768);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -110,40 +117,44 @@
             this.panelAddUser.Controls.Add(this.tbNameUser);
             this.panelAddUser.Controls.Add(this.lbNameUser);
             this.panelAddUser.Controls.Add(this.btSubmit);
-            this.panelAddUser.Location = new System.Drawing.Point(255, 0);
+            this.panelAddUser.Location = new System.Drawing.Point(177, 0);
             this.panelAddUser.Name = "panelAddUser";
-            this.panelAddUser.Size = new System.Drawing.Size(751, 795);
+            this.panelAddUser.Size = new System.Drawing.Size(829, 795);
             this.panelAddUser.TabIndex = 4;
             this.panelAddUser.Visible = false;
             // 
             // panelUpdateInfo
             // 
+            this.panelUpdateInfo.Controls.Add(this.dataGridView1);
             this.panelUpdateInfo.Controls.Add(this.cbbItems);
             this.panelUpdateInfo.Controls.Add(this.lbChooseItem);
-            this.panelUpdateInfo.Location = new System.Drawing.Point(258, 0);
+            this.panelUpdateInfo.Location = new System.Drawing.Point(177, 0);
             this.panelUpdateInfo.Name = "panelUpdateInfo";
-            this.panelUpdateInfo.Size = new System.Drawing.Size(748, 795);
+            this.panelUpdateInfo.Size = new System.Drawing.Size(829, 795);
             this.panelUpdateInfo.TabIndex = 44;
             this.panelUpdateInfo.Visible = false;
             // 
             // cbbItems
             // 
+            this.cbbItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.cbbItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbItems.ForeColor = System.Drawing.Color.White;
             this.cbbItems.FormattingEnabled = true;
             this.cbbItems.Items.AddRange(new object[] {
-            "Player",
-            "Organiser",
-            "Administrator",
+            "User",
             "Tournament",
-            "Organisation"});
-            this.cbbItems.Location = new System.Drawing.Point(383, 36);
+            "Organization",
+            "Team"});
+            this.cbbItems.Location = new System.Drawing.Point(380, 82);
             this.cbbItems.Name = "cbbItems";
             this.cbbItems.Size = new System.Drawing.Size(232, 28);
             this.cbbItems.TabIndex = 1;
+            this.cbbItems.SelectedIndexChanged += new System.EventHandler(this.cbbItems_SelectedIndexChanged);
             // 
             // lbChooseItem
             // 
             this.lbChooseItem.AutoSize = true;
-            this.lbChooseItem.Location = new System.Drawing.Point(48, 39);
+            this.lbChooseItem.Location = new System.Drawing.Point(126, 85);
             this.lbChooseItem.Name = "lbChooseItem";
             this.lbChooseItem.Size = new System.Drawing.Size(134, 20);
             this.lbChooseItem.TabIndex = 0;
@@ -352,6 +363,49 @@
             this.cbLanguage.Size = new System.Drawing.Size(232, 28);
             this.cbLanguage.TabIndex = 44;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Schoolbook", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.dataGridView1.Location = new System.Drawing.Point(18, 135);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.Size = new System.Drawing.Size(798, 582);
+            this.dataGridView1.TabIndex = 2;
+            // 
             // Form_Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -359,9 +413,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1005, 768);
             this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.panelUpdateInfo);
             this.Controls.Add(this.panelAddUser);
             this.Controls.Add(this.panelChangeInfo);
-            this.Controls.Add(this.panelUpdateInfo);
             this.Font = new System.Drawing.Font("Century Schoolbook", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -373,6 +427,7 @@
             this.panelAddUser.PerformLayout();
             this.panelUpdateInfo.ResumeLayout(false);
             this.panelUpdateInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -404,5 +459,6 @@
         private System.Windows.Forms.Label lbChooseItem;
         private System.Windows.Forms.Panel panelChangeInfo;
         private System.Windows.Forms.ComboBox cbLanguage;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
