@@ -17,6 +17,7 @@ namespace test1 {
         string description_;
         DatabaseConnection dbConnect = new DatabaseConnection();
         Session laSession = new Session();
+        Dictionary<string , bool> checkVariable = new Dictionary<string , bool>();
 
         public Organisation ( int IdOrga = -1 , string Name = "non défini" , string NameResp = "non défini" , string Mail = "non défini" , DateTime DateCreation = new DateTime() , string Description = "non défini" ) {
             idOrganization_ = IdOrga;
@@ -25,6 +26,14 @@ namespace test1 {
             mailResponsable_ = Mail;
             dateCreation_ = DateCreation;
             description_ = Description;
+
+            checkVariable.Add( "idOrganization" , true );
+            checkVariable.Add( "nameOrganization" , false );
+            checkVariable.Add( "nameResponsable" , false );
+            checkVariable.Add( "mailResponsable" , false );
+            checkVariable.Add( "dateCreation" , false );
+            checkVariable.Add( "description" , false );
+
 
         }
         /// <summary>
@@ -45,8 +54,12 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
+                    checkVariable["nameOrganization"] = false;
+
                 } else {
                     nameOrganization_ = value;
+                    checkVariable["nameOrganization"] = true;
+
                 }
             }
         }
@@ -65,9 +78,11 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
+                    checkVariable["nameResponsable"] = true;
                 } else {
 
                     nameResponsable_ = value;
+                    checkVariable["nameResponsable"] = true;
 
                 }
 
@@ -85,8 +100,12 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
+
+                    checkVariable["mailResponsable"] = true;
+
                 } else {
 
+                    checkVariable["mailResponsable"] = true;
                     mailResponsable_ = value;
 
                 }
@@ -105,8 +124,9 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Date can not be past" );
                     }
+                    checkVariable["dateCreation"] = true;
                 } else {
-
+                    checkVariable["dateCreation"] = false;
                     dateCreation_ = value;
 
                 }
@@ -126,9 +146,11 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Description can not exceed 255 characters" );
                     }
+                    checkVariable["description"] = true;
                 } else {
 
                     mailResponsable_ = value;
+                    checkVariable["description"] = false;
 
                 }
             }
@@ -139,7 +161,9 @@ namespace test1 {
         /// mets à jours cette organisation en BDD
         /// </summary>
         public void update () {
-            if ( idOrganization_ != -1 ) {
+
+            if ( idOrganization_ != -1 && !checkVariable.Any( p => p.Value == false ) ) {
+
                 dbConnect.Laconnexion.Open();
                 string sqlRequest = "UPDATE team SET name= @_idOrganization , 	nameOrganization=@_nameOrganization , description =@_description , NameResponsable = @_NameResponsable , mailResponsable = @_mailResponsable , creatingDate = @_creatingDate;";
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_idOrganization" , idOrganization_ );
@@ -174,36 +198,39 @@ namespace test1 {
         /// </summary>
         public void insert () {
 
-            dbConnect.Laconnexion.Open();
-            string sqlRequest = "INSERT INTO team SET name= @_idOrganization , 	nameOrganization=@_nameOrganization , description =@_description , NameResponsable = @_NameResponsable , mailResponsable = @_mailResponsable , creatingDate=@_creatingDate;";
-            dbConnect.Lacommande.Parameters.AddWithValue( "@_idOrganization" , idOrganization_ );
-            dbConnect.Lacommande.Parameters.AddWithValue( "@_nameOrganization" , nameOrganization_ );
-            dbConnect.Lacommande.Parameters.AddWithValue( "@_description" , description_ );
-            dbConnect.Lacommande.Parameters.AddWithValue( "@_NameResponsable" , nameResponsable_ );
-            dbConnect.Lacommande.Parameters.AddWithValue( "@_mailResponsable" , mailResponsable_ );
-            dbConnect.Lacommande.Parameters.AddWithValue( "@_creatingDate" , dateCreation_.ToString( "yyyy-MM-dd" ) );
+            if ( !checkVariable.Any( p => p.Value == false ) ) {
 
-            dbConnect.Lacommande.CommandText = sqlRequest;
+                dbConnect.Laconnexion.Open();
+                string sqlRequest = "INSERT INTO team SET name= @_idOrganization , 	nameOrganization=@_nameOrganization , description =@_description , NameResponsable = @_NameResponsable , mailResponsable = @_mailResponsable , creatingDate=@_creatingDate;";
+                dbConnect.Lacommande.Parameters.AddWithValue( "@_idOrganization" , idOrganization_ );
+                dbConnect.Lacommande.Parameters.AddWithValue( "@_nameOrganization" , nameOrganization_ );
+                dbConnect.Lacommande.Parameters.AddWithValue( "@_description" , description_ );
+                dbConnect.Lacommande.Parameters.AddWithValue( "@_NameResponsable" , nameResponsable_ );
+                dbConnect.Lacommande.Parameters.AddWithValue( "@_mailResponsable" , mailResponsable_ );
+                dbConnect.Lacommande.Parameters.AddWithValue( "@_creatingDate" , dateCreation_.ToString( "yyyy-MM-dd" ) );
 
-            // exécute la requête
-            dbConnect.Lacommande.ExecuteNonQuery();
+                dbConnect.Lacommande.CommandText = sqlRequest;
 
-            long idReturn = dbConnect.Lacommande.LastInsertedId;
+                // exécute la requête
+                dbConnect.Lacommande.ExecuteNonQuery();
 
-            if ( idReturn > 0 ) {
-                idOrganization_ = Convert.ToInt32( idReturn );
-            } else {
-                if ( laSession.language == "fr" ) {
-                    MessageBox.Show( "Erreur de retour d'ID après insertion en BDD" );
+                long idReturn = dbConnect.Lacommande.LastInsertedId;
+
+                if ( idReturn > 0 ) {
+                    idOrganization_ = Convert.ToInt32( idReturn );
                 } else {
-                    MessageBox.Show( "Error returning ID after insertion in BDD" );
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Erreur de retour d'ID après insertion en BDD" );
+                    } else {
+                        MessageBox.Show( "Error returning ID after insertion in BDD" );
+                    }
                 }
+
+                // clear commande et ferme la connection
+                dbConnect.Lacommande.Parameters.Clear();
+                dbConnect.Laconnexion.Close();
+
             }
-
-            // clear commande et ferme la connection
-            dbConnect.Lacommande.Parameters.Clear();
-            dbConnect.Laconnexion.Close();
-
 
         }
 
@@ -221,7 +248,7 @@ namespace test1 {
                     MessageBox.Show( "Incorrect organization ID for a BDD delete" );
                 }
 
-            } else {
+            } else if ( !checkVariable.Any( p => p.Value == false ) ) {
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
                 string sqlRequest = "DELETE FROM team WHERE idOrganization=@_idOrganization";
@@ -232,7 +259,7 @@ namespace test1 {
                 // exécute la requête
                 dbConnect.Lacommande.ExecuteNonQuery();
                 if ( laSession.language == "fr" ) {
-                    MessageBox.Show( "Organisation surpprimé" );
+                    MessageBox.Show( "Organisation surpprimée" );
                 } else {
                     MessageBox.Show( "Organization delete" );
                 }

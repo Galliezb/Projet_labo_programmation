@@ -142,7 +142,7 @@ namespace test1 {
             }
         }
 
-        public void updateToDataBase () {
+        public void update () {
 
             if ( idTournament_ != -1 ) {
 
@@ -169,13 +169,19 @@ namespace test1 {
                 dbConnect.Laconnexion.Close();
 
             } else {
-                MessageBox.Show( "Impossible de mettre à jour un tournoi ne possédant pas d'idTournament" );
+
+                if ( laSession.language == "fr" ) {
+                    MessageBox.Show( "Minimum 12 joueurs nécessaire pour un tournoi" );
+                } else {
+                    MessageBox.Show( "Unable to update tournament without idTournament" );
+                }
+
             }
 
         }
 
 
-        public void insertInDataBase () {
+        public void insert () {
 
             if ( idTournament_ == -1 ) {
 
@@ -208,15 +214,25 @@ namespace test1 {
                 dbConnect.Laconnexion.Close();
 
             } else {
-                MessageBox.Show( "Impossible de créée un tournoi possédant un idTournament déjà présent en BDD" );
+                if ( laSession.language == "fr" ) {
+                    MessageBox.Show( "Impossible de créée un tournoi possédant un idTournament déjà présent en BDD" );
+                } else {
+                    MessageBox.Show( "Unable to create a tournament with an idTournament already present in BDD" );
+                }
             }
 
 
         }
 
-        public void deleteTournament( int idTournoi ) {
+        public void delete( ) {
 
             if ( idTournament_ < 0 ) {
+
+                if ( laSession.language == "fr" ) {
+                    MessageBox.Show( "Impossible de créée un tournoi possédant un idTournament déjà présent en BDD" );
+                } else {
+                    MessageBox.Show( "Unable to create a tournament with an idTournament already present in BDD" );
+                }
 
             } else {
                 dbConnect.Laconnexion.Open();

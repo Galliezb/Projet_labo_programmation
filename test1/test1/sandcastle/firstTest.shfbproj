@@ -17,6 +17,43 @@
     <OutputPath>.\Help\</OutputPath>
     <HtmlHelpName>Documentation</HtmlHelpName>
     <Language>en-US</Language>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\bin\Debug\test1.XML" />
+<DocumentationSource sourceFile="..\bin\Debug\test1.exe" /></DocumentationSources>
+    <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
+    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <HelpFileFormat>HtmlHelp1, Website</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CleanIntermediates>True</CleanIntermediates>
+    <HelpFileVersion>1.0.0.0</HelpFileVersion>
+    <MaximumGroupParts>2</MaximumGroupParts>
+    <NamespaceGrouping>False</NamespaceGrouping>
+    <SyntaxFilters>C#</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceTitle>test1</RootNamespaceTitle>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>A Sandcastle Documented Class Library</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ApiFilter>
+      <Filter entryType="Namespace" fullName="System" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="System.MarshalByRefObject" filterName="MarshalByRefObject" isExposed="False" />
+  <Filter entryType="Class" fullName="System.Object" filterName="Object" isExposed="False" />
+</Filter>
+<Filter entryType="Namespace" fullName="System.ComponentModel" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="System.ComponentModel.Component" filterName="Component" isExposed="False" />
+</Filter>
+<Filter entryType="Namespace" fullName="System.Windows.Forms" isExposed="True" xmlns="">
+  <Filter entryType="Class" fullName="System.Windows.Forms.ContainerControl" filterName="ContainerControl" isExposed="False" />
+  <Filter entryType="Class" fullName="System.Windows.Forms.Control" filterName="Control" isExposed="False" />
+  <Filter entryType="Class" fullName="System.Windows.Forms.Form" filterName="Form" isExposed="False" />
+  <Filter entryType="Class" fullName="System.Windows.Forms.ScrollableControl" filterName="ScrollableControl" isExposed="False" />
+</Filter></ApiFilter>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, ProtectedInternalAsProtected</VisibleItems>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

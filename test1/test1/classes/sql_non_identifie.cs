@@ -7,7 +7,6 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySql.Data;
 using System.Data;
-//using System.Data.SqlClient;
 
 namespace test1 {
     class Sql_non_identifie
@@ -16,7 +15,7 @@ namespace test1 {
         DataSet ds = new DataSet();
         //int Identifianttotaux = 2;
         DatabaseConnection maConnexionMysql;
-        MySqlDataAdapter maConnexionAdapteur;//=new MySqlDataAdapter();
+        //MySqlDataAdapter maConnexionAdapteur;//=new MySqlDataAdapter();
 
         public Sql_non_identifie()
         {

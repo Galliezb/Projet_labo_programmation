@@ -69,7 +69,7 @@ namespace test1
             tournoi.maxPlayer = Convert.ToInt32( tbMaxpPlayerTnm.Text );
             tournoi.Description = rtbDescTnm.Text;
 
-            tournoi.insertInDataBase();
+            tournoi.insert();
 
             this.Refresh();
 
