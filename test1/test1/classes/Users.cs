@@ -8,10 +8,8 @@ using MySql.Data.MySqlClient;
 using MySql.Data;
 
 
-namespace test1
-{
-    public class Users
-    {
+namespace test1 {
+    public class Users {
         int IDUser_;
         string name_;
         string firstName_;
@@ -23,7 +21,6 @@ namespace test1
         bool isAdmin_;
         DatabaseConnection dbConnect = new DatabaseConnection();
         Session laSession = new Session();
-        Dictionary<string , bool> checkVariable = new Dictionary<string , bool>();
 
         /// <summary>
         /// Constructeur d'instance de Player
@@ -37,28 +34,17 @@ namespace test1
         /// <param name="language">La langue par défaut de l'utilisation ( 'fr' ou 'en' uniquement )</param>
         /// <param name="isOrganizer">L'utilisateur est-il Organisateur de tournoi ( booléen uniquement )</param>
         /// <param name="isAdmin">L'utilisateur est-il administrateur du logiciel  ( booléen uniquement )</param>
-        public Users (int idUser = -1, string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer=false, bool isAdmin=false){
+        public Users ( int idUser = -1 , string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer = false , bool isAdmin = false ) {
 
             IDUser_ = idUser;
-            name_ = name;
-            firstName_ = firstName;
-            email_ = email;
-            pass_ = password;
-            pseudo_ = pseudo;
-            language_ = language;
-            isOrganizer_ = isOrganizer;
-            isAdmin_ = isAdmin;
-
-            checkVariable.Add( "idUser" , true );
-            checkVariable.Add( "name" , true );
-            checkVariable.Add( "firstName" , true );
-            checkVariable.Add( "email" , true );
-            checkVariable.Add( "password" , true );
-            checkVariable.Add( "language" , true );
-            checkVariable.Add( "idOrganization" , true );
-            checkVariable.Add( "isOrganizer" , true );
-            checkVariable.Add( "isAdmin" , true );
-
+            this.name = name;
+            this.firstName = firstName;
+            this.email = email;
+            this.password = password;
+            this.pseudo = pseudo;
+            this.language = language;
+            this.isOrganizer = isOrganizer;
+            this.isAdmin = isAdmin;
 
         }
 
@@ -75,10 +61,8 @@ namespace test1
                     } else {
                         MessageBox.Show( "the ID is incorrect" );
                     }
-                    checkVariable["IDUser"] = false;
                 } else {
                     IDUser_ = value;
-                    checkVariable["IDUser"] = true;
                 }
             }
         }
@@ -87,8 +71,7 @@ namespace test1
         /// <summary>
         /// récupèrer ou modifier le nom de l'utilisateur ( max 50 caractères )
         /// </summary>
-        public string name
-        {
+        public string name {
             get { return name_; }
             set {
 
@@ -98,10 +81,8 @@ namespace test1
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
-                    checkVariable["name"] = false;
                 } else {
                     name_ = value;
-                    checkVariable["name"] = true;
                 }
 
             }
@@ -120,10 +101,8 @@ namespace test1
                     } else {
                         MessageBox.Show( "The first name can not exceed 50 characters" );
                     }
-                    checkVariable["firstName"] = false;
                 } else {
                     firstName_ = value;
-                    checkVariable["firstName"] = true;
                 }
 
             }
@@ -142,10 +121,8 @@ namespace test1
                     } else {
                         MessageBox.Show( "The mail can not exceed 255 characters" );
                     }
-                    checkVariable["email"] = false;
                 } else {
                     email_ = value;
-                    checkVariable["email"] = true;
                 }
 
             }
@@ -164,10 +141,8 @@ namespace test1
                     } else {
                         MessageBox.Show( "The password can not exceed 255 characters" );
                     }
-                    checkVariable["pass"] = false;
                 } else {
                     pass_ = value;
-                    checkVariable["pass"] = true;
                 }
             }
         }
@@ -176,8 +151,7 @@ namespace test1
         /// <summary>
         /// Récupère ou défini le pseudo de l'utilisateur ( max 50 caractères )
         /// </summary>
-        public string pseudo
-        {
+        public string pseudo {
             get { return pseudo_; }
             set {
                 if ( value.Length > 50 ) {
@@ -186,10 +160,8 @@ namespace test1
                     } else {
                         MessageBox.Show( "The pseudonym can not exceed 50 characters" );
                     }
-                    checkVariable["pseudo"] = false;
                 } else {
                     pseudo_ = value;
-                    checkVariable["pseudo"] = true;
                 }
             }
         }
@@ -204,7 +176,6 @@ namespace test1
 
                 if ( value.ToString() == "fr" || value.ToString() == "en" ) {
                     language_ = value;
-                    checkVariable["language"] = true;
                 } else {
 
                     if ( laSession.language == "fr" ) {
@@ -212,7 +183,6 @@ namespace test1
                     } else {
                         MessageBox.Show( "the language can only be 'fr' or 'en'" );
                     }
-                    checkVariable["language"] = false;
 
                 }
             }
@@ -227,7 +197,6 @@ namespace test1
             set {
                 if ( value == true || value == false ) {
                     isOrganizer_ = value;
-                    checkVariable["isOrganizer"] = true;
                 } else {
 
                     if ( laSession.language == "fr" ) {
@@ -235,7 +204,6 @@ namespace test1
                     } else {
                         MessageBox.Show( "isOrganizer is bool only" );
                     }
-                    checkVariable["isOrganizer"] = false;
                 }
             }
         }
@@ -249,14 +217,12 @@ namespace test1
             set {
                 if ( value == true || value == false ) {
                     isAdmin = value;
-                    checkVariable["isAdmin"] = true;
                 } else {
                     if ( laSession.language == "fr" ) {
                         MessageBox.Show( "isAdmin nécessite un booléen" );
                     } else {
                         MessageBox.Show( "isAdmin is bool only" );
                     }
-                    checkVariable["isAdmin"] = false;
                 }
             }
         }
@@ -269,7 +235,7 @@ namespace test1
         public void update () {
 
             // si l'idUser est défini alors on update et toutes les données sont correctes
-            if ( IDUser_ != -1 && !checkVariable.Any( p => p.Value == false ) ) {
+            if ( IDUser_ != -1 ) {
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
@@ -312,37 +278,34 @@ namespace test1
         /// </summary>
         public void insert () {
 
-            if ( !checkVariable.Any( p => p.Value == false ) ) {
+            dbConnect.Laconnexion.Open();
+            // creation requête et ajout à la commande
+            string sqlRequest = "INSERT INTO user SET name=@_name , firstName=@_firstName , email=@_email , password = @_pass , pseudo = @_pseudo , language=@_language , isOrganizer=@_isOrganizer , isAdmin = @_isAdmin";
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_name" , name_ );
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_firstName" , firstName_ );
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_email" , email );
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_pass" , pass_ );
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_pseudo" , pseudo_ );
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_language" , language_ );
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_isOrganizer" , isOrganizer_ );
+            dbConnect.Lacommande.Parameters.AddWithValue( "@_isAdmin" , isAdmin_ );
+            dbConnect.Lacommande.CommandText = sqlRequest;
 
-                dbConnect.Laconnexion.Open();
-                // creation requête et ajout à la commande
-                string sqlRequest = "INSERT INTO user SET name=@_name , firstName=@_firstName , email=@_email , password = @_pass , pseudo = @_pseudo , language=@_language , isOrganizer=@_isOrganizer , isAdmin = @_isAdmin";
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_name" , name_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_firstName" , firstName_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_email" , email );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_pass" , pass_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_pseudo" , pseudo_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_language" , language_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_isOrganizer" , isOrganizer_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_isAdmin" , isAdmin_ );
-                dbConnect.Lacommande.CommandText = sqlRequest;
-
-                // exécute la requête
-                dbConnect.Lacommande.ExecuteNonQuery();
+            // exécute la requête
+            dbConnect.Lacommande.ExecuteNonQuery();
 
 
-                // mets à jour la session du connecté si c'est lui
-                if ( IDUser_ == laSession.idPlayer ) {
-                    laSession.name = name_;
-                    laSession.language = language_;
-                    laSession.isAdmin = isAdmin_;
-                    laSession.isOrganizer = isOrganizer_;
-                }
-
-                // clear commande et ferme la connection
-                dbConnect.Lacommande.Parameters.Clear();
-                dbConnect.Laconnexion.Close();
+            // mets à jour la session du connecté si c'est lui
+            if ( IDUser_ == laSession.idPlayer ) {
+                laSession.name = name_;
+                laSession.language = language_;
+                laSession.isAdmin = isAdmin_;
+                laSession.isOrganizer = isOrganizer_;
             }
+
+            // clear commande et ferme la connection
+            dbConnect.Lacommande.Parameters.Clear();
+            dbConnect.Laconnexion.Close();
         }
 
 
@@ -370,7 +333,7 @@ namespace test1
         public void delete () {
 
             // si l'id existe on supprime
-            if ( IDUser_ != -1) {
+            if ( IDUser_ != -1 ) {
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
@@ -398,7 +361,7 @@ namespace test1
 
                 // sinon on préviens de l'erreur
             } else {
-                MessageBox.Show( "Impossible de supprimer un utilisateur sans IDuser défini ( nom : "+ name_ + " " + firstName );
+                MessageBox.Show( "Impossible de supprimer un utilisateur sans IDuser défini ( nom : " + name_ + " " + firstName );
             }
 
         }

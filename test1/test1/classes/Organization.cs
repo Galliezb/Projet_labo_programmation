@@ -17,22 +17,15 @@ namespace test1 {
         string description_;
         DatabaseConnection dbConnect = new DatabaseConnection();
         Session laSession = new Session();
-        Dictionary<string , bool> checkVariable = new Dictionary<string , bool>();
 
         public Organisation ( int IdOrga = -1 , string Name = "non défini" , string NameResp = "non défini" , string Mail = "non défini" , DateTime DateCreation = new DateTime() , string Description = "non défini" ) {
-            idOrganization_ = IdOrga;
-            nameOrganization_ = Name;
-            nameResponsable_ = NameResp;
-            mailResponsable_ = Mail;
-            dateCreation_ = DateCreation;
-            description_ = Description;
 
-            checkVariable.Add( "idOrganization" , true );
-            checkVariable.Add( "nameOrganization" , true );
-            checkVariable.Add( "nameResponsable" , true );
-            checkVariable.Add( "mailResponsable" , true );
-            checkVariable.Add( "dateCreation" , true );
-            checkVariable.Add( "description" , true );
+            idOrganization_ = IdOrga;
+            this.Name = Name;
+            this.Nameresp = NameResp;
+            this.Mail = Mail;
+            this.DateCreation = DateCreation;
+            this.Description = Description;
 
 
         }
@@ -54,11 +47,9 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
-                    checkVariable["nameOrganization"] = false;
 
                 } else {
                     nameOrganization_ = value;
-                    checkVariable["nameOrganization"] = true;
 
                 }
             }
@@ -78,11 +69,9 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
-                    checkVariable["nameResponsable"] = false;
                 } else {
 
                     nameResponsable_ = value;
-                    checkVariable["nameResponsable"] = true;
 
                 }
 
@@ -101,11 +90,9 @@ namespace test1 {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
 
-                    checkVariable["mailResponsable"] = false;
 
                 } else {
 
-                    checkVariable["mailResponsable"] = true;
                     mailResponsable_ = value;
 
                 }
@@ -124,9 +111,7 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Date can not be past" );
                     }
-                    checkVariable["dateCreation"] = false;
                 } else {
-                    checkVariable["dateCreation"] = true;
                     dateCreation_ = value;
 
                 }
@@ -146,11 +131,9 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Description can not exceed 255 characters" );
                     }
-                    checkVariable["description"] = false;
                 } else {
 
                     mailResponsable_ = value;
-                    checkVariable["description"] = true;
 
                 }
             }
@@ -163,8 +146,6 @@ namespace test1 {
         public void update () {
 
             if ( idOrganization_ != -1 ) {
-
-                if ( !checkVariable.Any( p => p.Value == false ) ) {
 
                     dbConnect.Laconnexion.Open();
                     string sqlRequest = "UPDATE team SET name= @_idOrganization , 	nameOrganization=@_nameOrganization , description =@_description , NameResponsable = @_NameResponsable , mailResponsable = @_mailResponsable , creatingDate = @_creatingDate;";
@@ -185,7 +166,6 @@ namespace test1 {
                     dbConnect.Lacommande.Parameters.Clear();
                     dbConnect.Laconnexion.Close();
 
-                }
                 
             } else {
 
@@ -202,8 +182,6 @@ namespace test1 {
         /// insert cette organisation dans la BDD
         /// </summary>
         public void insert () {
-
-            if ( !checkVariable.Any( p => p.Value == false ) ) {
 
                 dbConnect.Laconnexion.Open();
                 string sqlRequest = "INSERT INTO team SET name= @_idOrganization , 	nameOrganization=@_nameOrganization , description =@_description , NameResponsable = @_NameResponsable , mailResponsable = @_mailResponsable , creatingDate=@_creatingDate;";
@@ -235,8 +213,6 @@ namespace test1 {
                 dbConnect.Lacommande.Parameters.Clear();
                 dbConnect.Laconnexion.Close();
 
-            }
-
         }
 
 
@@ -253,7 +229,7 @@ namespace test1 {
                     MessageBox.Show( "Incorrect organization ID for a BDD delete" );
                 }
 
-            } else if ( !checkVariable.Any( p => p.Value == false ) ) {
+            } else {
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
                 string sqlRequest = "DELETE FROM team WHERE idOrganization=@_idOrganization";
