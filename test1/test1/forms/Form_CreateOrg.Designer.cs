@@ -60,7 +60,7 @@
             this.lbCreateTnm.Font = new System.Drawing.Font("Century Schoolbook", 20F, System.Drawing.FontStyle.Underline);
             this.lbCreateTnm.Location = new System.Drawing.Point(43, 45);
             this.lbCreateTnm.Name = "lbCreateTnm";
-            this.lbCreateTnm.Size = new System.Drawing.Size(484, 33);
+            this.lbCreateTnm.Size = new System.Drawing.Size(593, 40);
             this.lbCreateTnm.TabIndex = 0;
             this.lbCreateTnm.Text = "> Create Organisation / Tournament";
             // 
@@ -99,7 +99,7 @@
             this.dateTimePickerEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerEndDate.Location = new System.Drawing.Point(643, 161);
             this.dateTimePickerEndDate.Name = "dateTimePickerEndDate";
-            this.dateTimePickerEndDate.Size = new System.Drawing.Size(222, 27);
+            this.dateTimePickerEndDate.Size = new System.Drawing.Size(222, 32);
             this.dateTimePickerEndDate.TabIndex = 34;
             // 
             // dateTimePickerStartDate
@@ -107,7 +107,7 @@
             this.dateTimePickerStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerStartDate.Location = new System.Drawing.Point(643, 111);
             this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
-            this.dateTimePickerStartDate.Size = new System.Drawing.Size(222, 27);
+            this.dateTimePickerStartDate.Size = new System.Drawing.Size(222, 32);
             this.dateTimePickerStartDate.TabIndex = 33;
             // 
             // comboBoxType
@@ -119,7 +119,7 @@
             "Pool phase"});
             this.comboBoxType.Location = new System.Drawing.Point(643, 61);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxType.Size = new System.Drawing.Size(222, 31);
             this.comboBoxType.TabIndex = 32;
             // 
             // lbNameTnm
@@ -127,7 +127,7 @@
             this.lbNameTnm.AutoSize = true;
             this.lbNameTnm.Location = new System.Drawing.Point(155, 11);
             this.lbNameTnm.Name = "lbNameTnm";
-            this.lbNameTnm.Size = new System.Drawing.Size(61, 20);
+            this.lbNameTnm.Size = new System.Drawing.Size(77, 23);
             this.lbNameTnm.TabIndex = 16;
             this.lbNameTnm.Text = "Name :";
             // 
@@ -135,7 +135,7 @@
             // 
             this.tnNameTnm.Location = new System.Drawing.Point(643, 11);
             this.tnNameTnm.Name = "tnNameTnm";
-            this.tnNameTnm.Size = new System.Drawing.Size(222, 27);
+            this.tnNameTnm.Size = new System.Drawing.Size(222, 32);
             this.tnNameTnm.TabIndex = 17;
             // 
             // btSubmissionTnm
@@ -153,7 +153,7 @@
             this.lbDescTnm.AutoSize = true;
             this.lbDescTnm.Location = new System.Drawing.Point(155, 261);
             this.lbDescTnm.Name = "lbDescTnm";
-            this.lbDescTnm.Size = new System.Drawing.Size(101, 20);
+            this.lbDescTnm.Size = new System.Drawing.Size(128, 23);
             this.lbDescTnm.TabIndex = 28;
             this.lbDescTnm.Text = "Description :";
             // 
@@ -161,7 +161,7 @@
             // 
             this.tbMaxpPlayerTnm.Location = new System.Drawing.Point(643, 211);
             this.tbMaxpPlayerTnm.Name = "tbMaxpPlayerTnm";
-            this.tbMaxpPlayerTnm.Size = new System.Drawing.Size(222, 27);
+            this.tbMaxpPlayerTnm.Size = new System.Drawing.Size(222, 32);
             this.tbMaxpPlayerTnm.TabIndex = 27;
             // 
             // lbMaxPlayerTnm
@@ -169,7 +169,7 @@
             this.lbMaxPlayerTnm.AutoSize = true;
             this.lbMaxPlayerTnm.Location = new System.Drawing.Point(155, 211);
             this.lbMaxPlayerTnm.Name = "lbMaxPlayerTnm";
-            this.lbMaxPlayerTnm.Size = new System.Drawing.Size(167, 20);
+            this.lbMaxPlayerTnm.Size = new System.Drawing.Size(211, 23);
             this.lbMaxPlayerTnm.TabIndex = 26;
             this.lbMaxPlayerTnm.Text = "Max. Players/Teams :";
             // 
@@ -178,7 +178,7 @@
             this.lbDateFinTnm.AutoSize = true;
             this.lbDateFinTnm.Location = new System.Drawing.Point(155, 161);
             this.lbDateFinTnm.Name = "lbDateFinTnm";
-            this.lbDateFinTnm.Size = new System.Drawing.Size(70, 20);
+            this.lbDateFinTnm.Size = new System.Drawing.Size(87, 23);
             this.lbDateFinTnm.TabIndex = 24;
             this.lbDateFinTnm.Text = "End on :";
             // 
@@ -187,7 +187,7 @@
             this.lbDateDebutTnm.AutoSize = true;
             this.lbDateDebutTnm.Location = new System.Drawing.Point(155, 111);
             this.lbDateDebutTnm.Name = "lbDateDebutTnm";
-            this.lbDateDebutTnm.Size = new System.Drawing.Size(56, 20);
+            this.lbDateDebutTnm.Size = new System.Drawing.Size(73, 23);
             this.lbDateDebutTnm.TabIndex = 22;
             this.lbDateDebutTnm.Text = "Date : ";
             // 
@@ -196,7 +196,7 @@
             this.lbTypeTnm.AutoSize = true;
             this.lbTypeTnm.Location = new System.Drawing.Point(155, 61);
             this.lbTypeTnm.Name = "lbTypeTnm";
-            this.lbTypeTnm.Size = new System.Drawing.Size(58, 20);
+            this.lbTypeTnm.Size = new System.Drawing.Size(73, 23);
             this.lbTypeTnm.TabIndex = 20;
             this.lbTypeTnm.Text = "Type : ";
             // 
@@ -262,7 +262,7 @@
             this.lbDesc.AutoSize = true;
             this.lbDesc.Location = new System.Drawing.Point(155, 163);
             this.lbDesc.Name = "lbDesc";
-            this.lbDesc.Size = new System.Drawing.Size(105, 20);
+            this.lbDesc.Size = new System.Drawing.Size(134, 23);
             this.lbDesc.TabIndex = 8;
             this.lbDesc.Text = "Description  :";
             // 
@@ -271,7 +271,7 @@
             this.tbMail.Enabled = false;
             this.tbMail.Location = new System.Drawing.Point(643, 111);
             this.tbMail.Name = "tbMail";
-            this.tbMail.Size = new System.Drawing.Size(222, 27);
+            this.tbMail.Size = new System.Drawing.Size(222, 32);
             this.tbMail.TabIndex = 5;
             // 
             // lbMail
@@ -279,7 +279,7 @@
             this.lbMail.AutoSize = true;
             this.lbMail.Location = new System.Drawing.Point(155, 111);
             this.lbMail.Name = "lbMail";
-            this.lbMail.Size = new System.Drawing.Size(51, 20);
+            this.lbMail.Size = new System.Drawing.Size(64, 23);
             this.lbMail.TabIndex = 4;
             this.lbMail.Text = "Mail :";
             // 
@@ -288,14 +288,14 @@
             this.tbManagerName.Enabled = false;
             this.tbManagerName.Location = new System.Drawing.Point(643, 61);
             this.tbManagerName.Name = "tbManagerName";
-            this.tbManagerName.Size = new System.Drawing.Size(222, 27);
+            this.tbManagerName.Size = new System.Drawing.Size(222, 32);
             this.tbManagerName.TabIndex = 3;
             // 
             // tbNameOrga
             // 
             this.tbNameOrga.Location = new System.Drawing.Point(643, 11);
             this.tbNameOrga.Name = "tbNameOrga";
-            this.tbNameOrga.Size = new System.Drawing.Size(222, 27);
+            this.tbNameOrga.Size = new System.Drawing.Size(222, 32);
             this.tbNameOrga.TabIndex = 1;
             // 
             // lbNameOrg
@@ -303,7 +303,7 @@
             this.lbNameOrg.AutoSize = true;
             this.lbNameOrg.Location = new System.Drawing.Point(155, 11);
             this.lbNameOrg.Name = "lbNameOrg";
-            this.lbNameOrg.Size = new System.Drawing.Size(61, 20);
+            this.lbNameOrg.Size = new System.Drawing.Size(77, 23);
             this.lbNameOrg.TabIndex = 0;
             this.lbNameOrg.Text = "Name :";
             // 
@@ -312,13 +312,13 @@
             this.lbManagerName.AutoSize = true;
             this.lbManagerName.Location = new System.Drawing.Point(155, 64);
             this.lbManagerName.Name = "lbManagerName";
-            this.lbManagerName.Size = new System.Drawing.Size(132, 20);
+            this.lbManagerName.Size = new System.Drawing.Size(166, 23);
             this.lbManagerName.TabIndex = 2;
             this.lbManagerName.Text = "Manager Name :";
             // 
             // Form_CreateOrg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1005, 768);

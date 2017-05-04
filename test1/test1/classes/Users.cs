@@ -75,8 +75,10 @@ namespace test1
                     } else {
                         MessageBox.Show( "the ID is incorrect" );
                     }
+                    checkVariable["IDUser"] = false;
                 } else {
                     IDUser_ = value;
+                    checkVariable["IDUser"] = true;
                 }
             }
         }
@@ -96,8 +98,10 @@ namespace test1
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
+                    checkVariable["name"] = false;
                 } else {
                     name_ = value;
+                    checkVariable["name"] = true;
                 }
 
             }
@@ -116,8 +120,10 @@ namespace test1
                     } else {
                         MessageBox.Show( "The first name can not exceed 50 characters" );
                     }
+                    checkVariable["firstName"] = false;
                 } else {
                     firstName_ = value;
+                    checkVariable["firstName"] = true;
                 }
 
             }
@@ -136,8 +142,10 @@ namespace test1
                     } else {
                         MessageBox.Show( "The mail can not exceed 255 characters" );
                     }
+                    checkVariable["email"] = false;
                 } else {
                     email_ = value;
+                    checkVariable["email"] = true;
                 }
 
             }
@@ -156,8 +164,10 @@ namespace test1
                     } else {
                         MessageBox.Show( "The password can not exceed 255 characters" );
                     }
+                    checkVariable["pass"] = false;
                 } else {
                     pass_ = value;
+                    checkVariable["pass"] = true;
                 }
             }
         }
@@ -176,8 +186,10 @@ namespace test1
                     } else {
                         MessageBox.Show( "The pseudonym can not exceed 50 characters" );
                     }
+                    checkVariable["pseudo"] = false;
                 } else {
                     pseudo_ = value;
+                    checkVariable["pseudo"] = true;
                 }
             }
         }
@@ -192,6 +204,7 @@ namespace test1
 
                 if ( value.ToString() == "fr" || value.ToString() == "en" ) {
                     language_ = value;
+                    checkVariable["language"] = true;
                 } else {
 
                     if ( laSession.language == "fr" ) {
@@ -199,6 +212,7 @@ namespace test1
                     } else {
                         MessageBox.Show( "the language can only be 'fr' or 'en'" );
                     }
+                    checkVariable["language"] = false;
 
                 }
             }
@@ -213,6 +227,7 @@ namespace test1
             set {
                 if ( value == true || value == false ) {
                     isOrganizer_ = value;
+                    checkVariable["isOrganizer"] = true;
                 } else {
 
                     if ( laSession.language == "fr" ) {
@@ -220,6 +235,7 @@ namespace test1
                     } else {
                         MessageBox.Show( "isOrganizer is bool only" );
                     }
+                    checkVariable["isOrganizer"] = false;
                 }
             }
         }
@@ -233,12 +249,14 @@ namespace test1
             set {
                 if ( value == true || value == false ) {
                     isAdmin = value;
+                    checkVariable["isAdmin"] = true;
                 } else {
                     if ( laSession.language == "fr" ) {
                         MessageBox.Show( "isAdmin nécessite un booléen" );
                     } else {
                         MessageBox.Show( "isAdmin is bool only" );
                     }
+                    checkVariable["isAdmin"] = false;
                 }
             }
         }
