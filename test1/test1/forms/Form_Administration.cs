@@ -63,9 +63,23 @@ namespace test1{
 
         private void btSubmit_Click(object sender, EventArgs e)
         {
-           // Users newUser = new Users(-1,tbNameUser.Text,tbFirstName.Text,tbMail.Text,tbPwd.Text,tbPseudo.Text,;
-            //newUser.email = tbMail.Text;
-          //  newUser.
+            Users newUser;
+            if(cbbSelectType.SelectedText== "Administrator") {
+                newUser = new Users(-1, tbNameUser.Text, tbFirstName.Text, tbMail.Text, tbPwd.Text, tbPseudo.Text, cbLanguage.Text,false,true);
+                newUser.insert();
+            }
+            if (cbbSelectType.SelectedText == "Organizer")
+            {
+                newUser = new Users(-1, tbNameUser.Text, tbFirstName.Text, tbMail.Text, tbPwd.Text, tbPseudo.Text, cbLanguage.Text, true, false);
+                newUser.insert();
+            }
+            if (cbbSelectType.SelectedText == "User")
+            {
+                newUser = new Users(-1, tbNameUser.Text, tbFirstName.Text, tbMail.Text, tbPwd.Text, tbPseudo.Text, cbLanguage.Text, false, false);
+                newUser.insert();
+            }
+            
+            
         }
     }
 }

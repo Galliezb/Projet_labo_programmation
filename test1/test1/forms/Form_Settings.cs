@@ -73,7 +73,7 @@ namespace test1
                 Player.pseudo = tbPseudo.Text.ToString();
 
                 // databaseRequest.updateInfo(Player);
-                Player.updateToDataBase();
+                Player.insert();
                 //lbNom.Text = tbName.Text; petit soucis pratique
 
                 //lbNom

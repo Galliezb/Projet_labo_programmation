@@ -23,12 +23,12 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent () {
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Add User to DB");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Update Informations");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Change Your Informations");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Show Informations");
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Promote an User");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Add an Administrator");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Add User to DB");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Update Informations");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Change Your Informations");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Show Informations");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Promote an User");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Add an Administrator");
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panelAddUser = new System.Windows.Forms.Panel();
             this.panelUpdateInfo = new System.Windows.Forms.Panel();
@@ -54,7 +54,7 @@
             this.lbNameUser = new System.Windows.Forms.Label();
             this.btSubmit = new System.Windows.Forms.Button();
             this.panelChangeInfo = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbLanguage = new System.Windows.Forms.ComboBox();
             this.panelAddUser.SuspendLayout();
             this.panelUpdateInfo.SuspendLayout();
             this.SuspendLayout();
@@ -65,32 +65,32 @@
             this.treeView1.ForeColor = System.Drawing.Color.White;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode31.Name = "AddUser";
-            treeNode31.Text = "Add User to DB";
-            treeNode32.Name = "UpdateInfo";
-            treeNode32.Text = "Update Informations";
-            treeNode33.Name = "ChangeSelfInfo";
-            treeNode33.Text = "Change Your Informations";
-            treeNode34.Name = "ShowInfo";
-            treeNode34.Text = "Show Informations";
-            treeNode35.Name = "PromUser";
-            treeNode35.Text = "Promote an User";
-            treeNode36.Name = "AddAdmin";
-            treeNode36.Text = "Add an Administrator";
+            treeNode7.Name = "AddUser";
+            treeNode7.Text = "Add User to DB";
+            treeNode8.Name = "UpdateInfo";
+            treeNode8.Text = "Update Informations";
+            treeNode9.Name = "ChangeSelfInfo";
+            treeNode9.Text = "Change Your Informations";
+            treeNode10.Name = "ShowInfo";
+            treeNode10.Text = "Show Informations";
+            treeNode11.Name = "PromUser";
+            treeNode11.Text = "Promote an User";
+            treeNode12.Name = "AddAdmin";
+            treeNode12.Text = "Add an Administrator";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode31,
-            treeNode32,
-            treeNode33,
-            treeNode34,
-            treeNode35,
-            treeNode36});
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(258, 768);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // panelAddUser
             // 
-            this.panelAddUser.Controls.Add(this.comboBox1);
+            this.panelAddUser.Controls.Add(this.cbLanguage);
             this.panelAddUser.Controls.Add(this.tbFirstName);
             this.panelAddUser.Controls.Add(this.rtbDesc);
             this.panelAddUser.Controls.Add(this.lbDesc);
@@ -243,7 +243,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 281);
+            this.label1.Location = new System.Drawing.Point(86, 281);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 29;
@@ -337,20 +337,20 @@
             this.panelChangeInfo.Size = new System.Drawing.Size(748, 780);
             this.panelChangeInfo.TabIndex = 45;
             // 
-            // comboBox1
+            // cbLanguage
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Français",
-            "English"});
-            this.comboBox1.Location = new System.Drawing.Point(383, 424);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 28);
-            this.comboBox1.TabIndex = 44;
+            this.cbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.cbLanguage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLanguage.ForeColor = System.Drawing.Color.White;
+            this.cbLanguage.FormattingEnabled = true;
+            this.cbLanguage.Items.AddRange(new object[] {
+            "fr",
+            "en"});
+            this.cbLanguage.Location = new System.Drawing.Point(383, 424);
+            this.cbLanguage.Name = "cbLanguage";
+            this.cbLanguage.Size = new System.Drawing.Size(232, 28);
+            this.cbLanguage.TabIndex = 44;
             // 
             // Form_Administration
             // 
@@ -403,6 +403,6 @@
         private System.Windows.Forms.ComboBox cbbItems;
         private System.Windows.Forms.Label lbChooseItem;
         private System.Windows.Forms.Panel panelChangeInfo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbLanguage;
     }
 }
