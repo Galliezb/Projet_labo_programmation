@@ -281,5 +281,11 @@ namespace test1
             Form MyForm_ = new Form_Administration();
             CreateFormInPanel(sender, ref MyForm_);
         }
+
+        private void sizeAdapter ( object sender , EventArgs e ) {
+
+            //MessageBox.Show( PanelAdmin.Size.Width.ToString() );
+            panelFill.Size = new Size( this.Size.Width-panelGauche.Size.Width , panelFill.Size.Height);
+        }
     }
 }

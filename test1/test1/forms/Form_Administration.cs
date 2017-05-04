@@ -81,5 +81,9 @@ namespace test1{
             
             
         }
+
+        private void sizeAdapter ( object sender , EventArgs e ) {
+            MessageBox.Show( ( this.Size.Width - treeView1.Size.Width ).ToString() );
+        }
     }
 }
