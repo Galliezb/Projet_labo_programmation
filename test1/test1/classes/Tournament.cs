@@ -18,6 +18,8 @@ namespace test1 {
         int maxPlayer_;
         Session laSession = new Session();
         DatabaseConnection dbConnect = new DatabaseConnection();
+        Dictionary<string , bool> checkVariable = new Dictionary<string , bool>();
+
 
         public Tournament () { }
 
@@ -31,6 +33,14 @@ namespace test1 {
             endDate_ = endDate;
             type_ = type;
             maxPlayer_ = maxPlayer;
+
+            checkVariable.Add( "idTournament" , false );
+            checkVariable.Add( "idOrganizer" , false );
+            checkVariable.Add( "name" , false );
+            checkVariable.Add( "description" , false );
+            checkVariable.Add( "endDate" , false );
+            checkVariable.Add( "type" , false );
+            checkVariable.Add( "maxPlayer" , false );
 
         }
 
@@ -68,8 +78,10 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The name is too long (50 characters maximum)" );
                     }
+                    checkVariable["name"] = false;
                 } else {
                     name_ = value;
+                    checkVariable["name"] = true;
                 }
 
             }
@@ -84,8 +96,10 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The description must be more than 10 characters long" );
                     }
+                    checkVariable["description"] = false;
                 } else {
                     description_ = value;
+                    checkVariable["description"] = true;
                 }
                 
             }
@@ -100,14 +114,19 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Date can not be past" );
                     }
+                    checkVariable["startDate"] = true;
+                } else {
+                    startDate_ = value;
+                    checkVariable["startDate"] = true;
                 }
-                startDate_ = value;
+                
             }
         }
 
         public DateTime endDate {
             get { return endDate_; }
             set {
+                checkVariable["startDate"] = false;
                 if ( DateTime.Compare( startDate_ , DateTime.Now ) < 0 ) {
                     MessageBox.Show( "Il faut d'abord enregistré la startDate de start avant la endDate" );
                 } else if ( DateTime.Compare( value , startDate_.AddDays(3) ) < 0 ) {
@@ -118,13 +137,44 @@ namespace test1 {
                     }
                 } else {
                     endDate_ = value;
+                    checkVariable["startDate"] = true;
                 }
             }
         }
 
         public string typeTournoi {
             get { return type_;  }
-            set { type_ = value; }
+            set {
+                // All - play - all
+                //Deathmatch
+                //Pool phase
+                //comboBoxType.Items.Add( "Championnat toute ronde" );
+                //comboBoxType.Items.Add( "Elimination directe" );
+                //comboBoxType.Items.Add( "Phase de groupe" );
+                
+
+                if ( value == "All - play - all" ||
+                     value == "Deathmatch" ||
+                     value == "Pool phase" ||
+                     value == "Championnat toute ronde" ||
+                     value == "Elimination directe" ||
+                     value == "Phase de groupe"
+                    ) {
+
+                    type_ = value;
+                    checkVariable["type"] = true;
+
+                } else {
+
+                    if ( laSession.language == "fr" ) {
+                        MessageBox.Show( "Le type de tournoi est incorrect" );
+                    } else {
+                        MessageBox.Show( "Tournament type is incorrect" );
+                    }
+
+                    checkVariable["type"] = false;
+                }
+            }
         }
 
         public int maxPlayer {
@@ -136,8 +186,10 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Minimum 12 players required for a tournament" );
                     }
+                    checkVariable["maxPlayer"] = false;
                 } else {
                     maxPlayer_ = value;
+                    checkVariable["type"] = true;
                 }
             }
         }
@@ -146,27 +198,29 @@ namespace test1 {
 
             if ( idTournament_ != -1 ) {
 
-                dbConnect.Laconnexion.Open();
-                // creation requête et ajout à la commande
-                string sqlRequest = "UPDATE tournament SET idOrganizer=@_idOrganizer , name=@_name , description=@_description , startDate = @_startDate , endDate = @_endDate , type=@_type , maxPlayer=@_maxPlayer WHERE idTournament = @_idTournament ";
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_idOrganizer" , idOrganizer_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_name" , name_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_description" , description_ );
-                // format date requis pour la BDD : YYYY-MM-JJ
-                dbConnect.Lacommande.Parameters.AddWithValue( "@startDate" , startDate_.ToString("yyyy-MM-dd") );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_endDate" , endDate_.ToString( "yyyy-MM-dd" ) );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_type" , type_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_maxPlayer" , maxPlayer_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_idTournament" , idTournament_ );
+                if ( !checkVariable.Any( p => p.Value == false ) ) {
+                    dbConnect.Laconnexion.Open();
+                    // creation requête et ajout à la commande
+                    string sqlRequest = "UPDATE tournament SET idOrganizer=@_idOrganizer , name=@_name , description=@_description , startDate = @_startDate , endDate = @_endDate , type=@_type , maxPlayer=@_maxPlayer WHERE idTournament = @_idTournament ";
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_idOrganizer" , idOrganizer_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_name" , name_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_description" , description_ );
+                    // format date requis pour la BDD : YYYY-MM-JJ
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@startDate" , startDate_.ToString( "yyyy-MM-dd" ) );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_endDate" , endDate_.ToString( "yyyy-MM-dd" ) );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_type" , type_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_maxPlayer" , maxPlayer_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_idTournament" , idTournament_ );
 
-                dbConnect.Lacommande.CommandText = sqlRequest;
+                    dbConnect.Lacommande.CommandText = sqlRequest;
 
-                // exécute la requête
-                dbConnect.Lacommande.ExecuteNonQuery();
+                    // exécute la requête
+                    dbConnect.Lacommande.ExecuteNonQuery();
 
-                // clear commande et ferme la connection
-                dbConnect.Lacommande.Parameters.Clear();
-                dbConnect.Laconnexion.Close();
+                    // clear commande et ferme la connection
+                    dbConnect.Lacommande.Parameters.Clear();
+                    dbConnect.Laconnexion.Close();
+                }
 
             } else {
 
@@ -183,7 +237,7 @@ namespace test1 {
 
         public void insert () {
 
-            if ( idTournament_ == -1 ) {
+            if ( !checkVariable.Any( p => p.Value == false ) ) {
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
@@ -213,12 +267,6 @@ namespace test1 {
                 dbConnect.Lacommande.Parameters.Clear();
                 dbConnect.Laconnexion.Close();
 
-            } else {
-                if ( laSession.language == "fr" ) {
-                    MessageBox.Show( "Impossible de créée un tournoi possédant un idTournament déjà présent en BDD" );
-                } else {
-                    MessageBox.Show( "Unable to create a tournament with an idTournament already present in BDD" );
-                }
             }
 
 

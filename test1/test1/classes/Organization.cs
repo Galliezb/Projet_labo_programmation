@@ -78,7 +78,7 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
-                    checkVariable["nameResponsable"] = true;
+                    checkVariable["nameResponsable"] = false;
                 } else {
 
                     nameResponsable_ = value;
@@ -101,7 +101,7 @@ namespace test1 {
                         MessageBox.Show( "The name can not exceed 50 characters" );
                     }
 
-                    checkVariable["mailResponsable"] = true;
+                    checkVariable["mailResponsable"] = false;
 
                 } else {
 
@@ -124,9 +124,9 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Date can not be past" );
                     }
-                    checkVariable["dateCreation"] = true;
-                } else {
                     checkVariable["dateCreation"] = false;
+                } else {
+                    checkVariable["dateCreation"] = true;
                     dateCreation_ = value;
 
                 }
@@ -146,11 +146,11 @@ namespace test1 {
                     } else {
                         MessageBox.Show( "Description can not exceed 255 characters" );
                     }
-                    checkVariable["description"] = true;
+                    checkVariable["description"] = false;
                 } else {
 
                     mailResponsable_ = value;
-                    checkVariable["description"] = false;
+                    checkVariable["description"] = true;
 
                 }
             }
@@ -162,26 +162,31 @@ namespace test1 {
         /// </summary>
         public void update () {
 
-            if ( idOrganization_ != -1 && !checkVariable.Any( p => p.Value == false ) ) {
+            if ( idOrganization_ != -1 ) {
 
-                dbConnect.Laconnexion.Open();
-                string sqlRequest = "UPDATE team SET name= @_idOrganization , 	nameOrganization=@_nameOrganization , description =@_description , NameResponsable = @_NameResponsable , mailResponsable = @_mailResponsable , creatingDate = @_creatingDate;";
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_idOrganization" , idOrganization_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_nameOrganization" , nameOrganization_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_description" , description_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_NameResponsable" , nameResponsable_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_mailResponsable" , mailResponsable_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_creatingDate" , dateCreation_.ToString( "yyyy-MM-dd" ) );
+                if ( !checkVariable.Any( p => p.Value == false ) ) {
+
+                    dbConnect.Laconnexion.Open();
+                    string sqlRequest = "UPDATE team SET name= @_idOrganization , 	nameOrganization=@_nameOrganization , description =@_description , NameResponsable = @_NameResponsable , mailResponsable = @_mailResponsable , creatingDate = @_creatingDate;";
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_idOrganization" , idOrganization_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_nameOrganization" , nameOrganization_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_description" , description_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_NameResponsable" , nameResponsable_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_mailResponsable" , mailResponsable_ );
+                    dbConnect.Lacommande.Parameters.AddWithValue( "@_creatingDate" , dateCreation_.ToString( "yyyy-MM-dd" ) );
 
 
 
-                dbConnect.Lacommande.CommandText = sqlRequest;
+                    dbConnect.Lacommande.CommandText = sqlRequest;
 
-                //éxécution de la requête
-                dbConnect.Lacommande.ExecuteNonQuery();
+                    //éxécution de la requête
+                    dbConnect.Lacommande.ExecuteNonQuery();
 
-                dbConnect.Lacommande.Parameters.Clear();
-                dbConnect.Laconnexion.Close();
+                    dbConnect.Lacommande.Parameters.Clear();
+                    dbConnect.Laconnexion.Close();
+
+                }
+                
             } else {
 
                 if ( laSession.language == "fr" ) {
