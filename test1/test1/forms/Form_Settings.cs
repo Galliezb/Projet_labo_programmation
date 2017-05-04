@@ -72,7 +72,7 @@ namespace test1
                 Player.password = tbPwd1.Text.ToString();
                 Player.pseudo = tbPseudo.Text.ToString();
 
-               // databaseRequest.updateInfo(Player);
+                // databaseRequest.updateInfo(Player);
                 Player.updateToDataBase();
                 //lbNom.Text = tbName.Text; petit soucis pratique
 
