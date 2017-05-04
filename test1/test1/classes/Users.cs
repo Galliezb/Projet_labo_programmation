@@ -23,6 +23,7 @@ namespace test1
         bool isAdmin_;
         DatabaseConnection dbConnect = new DatabaseConnection();
         Session laSession = new Session();
+        Dictionary<string , bool> checkVariable = new Dictionary<string , bool>();
 
         /// <summary>
         /// Constructeur d'instance de Player
@@ -36,7 +37,7 @@ namespace test1
         /// <param name="language">La langue par défaut de l'utilisation ( 'fr' ou 'en' uniquement )</param>
         /// <param name="isOrganizer">L'utilisateur est-il Organisateur de tournoi ( booléen uniquement )</param>
         /// <param name="isAdmin">L'utilisateur est-il administrateur du logiciel  ( booléen uniquement )</param>
-        public Users(int idUser = -1, string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer=false, bool isAdmin=false){
+        public Users (int idUser = -1, string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer=false, bool isAdmin=false){
 
             IDUser_ = idUser;
             name_ = name;
@@ -47,6 +48,17 @@ namespace test1
             language_ = language;
             isOrganizer_ = isOrganizer;
             isAdmin_ = isAdmin;
+
+            checkVariable.Add( "idUser" , false );
+            checkVariable.Add( "name" , false );
+            checkVariable.Add( "firstName" , false );
+            checkVariable.Add( "email" , false );
+            checkVariable.Add( "password" , false );
+            checkVariable.Add( "language" , false );
+            checkVariable.Add( "idOrganization" , false );
+            checkVariable.Add( "isOrganizer" , false );
+            checkVariable.Add( "isAdmin" , false );
+
 
         }
 
@@ -236,10 +248,10 @@ namespace test1
         /// <summary>
         /// Mets à jours les informations de l'instance dans la BDD ou insert si nécessaire
         /// </summary>
-        public void updateToDataBase () {
+        public void update () {
 
-            // si l'idUser est défini alors on update
-            if ( IDUser_ != -1 ) {
+            // si l'idUser est défini alors on update et toutes les données sont correctes
+            if ( IDUser_ != -1 && !checkVariable.Any( p => p.Value == false ) ) {
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
@@ -270,9 +282,19 @@ namespace test1
                 // clear commande et ferme la connection
                 dbConnect.Lacommande.Parameters.Clear();
                 dbConnect.Laconnexion.Close();
-            
-            // sinon on l'insert
-            } else {
+
+                // sinon on l'insert
+            }
+
+        }
+
+
+        /// <summary>
+        /// Insert l'user dans la base de donnée
+        /// </summary>
+        public void insert () {
+
+            if ( !checkVariable.Any( p => p.Value == false ) ) {
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
@@ -285,7 +307,6 @@ namespace test1
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_language" , language_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_isOrganizer" , isOrganizer_ );
                 dbConnect.Lacommande.Parameters.AddWithValue( "@_isAdmin" , isAdmin_ );
-                dbConnect.Lacommande.Parameters.AddWithValue( "@_idUser" , IDUser_ );
                 dbConnect.Lacommande.CommandText = sqlRequest;
 
                 // exécute la requête
@@ -303,9 +324,7 @@ namespace test1
                 // clear commande et ferme la connection
                 dbConnect.Lacommande.Parameters.Clear();
                 dbConnect.Laconnexion.Close();
-
             }
-
         }
 
 
@@ -313,14 +332,14 @@ namespace test1
         /// Mets à jours la BDD depuis une liste d'instance PLayerlcass
         /// </summary>
         /// <param name="listPlayer"></param>
-        public void updateToDataBase ( List<Users> listPlayer ) {
+        public void update ( List<Users> listPlayer ) {
 
             if ( listPlayer.Count < 1 ) {
                 MessageBox.Show( "Impossible d'update depuis une liste vide" );
             } else {
 
                 foreach ( Users player in listPlayer ) {
-                    player.updateToDataBase();
+                    player.update();
                 }
 
             }
@@ -330,10 +349,10 @@ namespace test1
         /// <summary>
         /// Supprime l'instance de la BDD ( ID doit être différent de -1 )
         /// </summary>
-        public void deleteFromDataBase () {
+        public void delete () {
 
             // si l'id existe on supprime
-            if ( IDUser_ != -1 ) {
+            if ( IDUser_ != -1) {
 
                 dbConnect.Laconnexion.Open();
                 // creation requête et ajout à la commande
@@ -371,7 +390,7 @@ namespace test1
         ///  Supprime de la BDD depuis une liste d'instance de Users
         /// </summary>
         /// <param name="listPlayer"></param>
-        public void deleteFromDataBase ( List<Users> listPlayer ) {
+        public void delete ( List<Users> listPlayer ) {
 
             if ( listPlayer.Count < 1 ) {
                 MessageBox.Show( "Impossible de supprimer depuis une liste vide" );
