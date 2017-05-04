@@ -411,7 +411,7 @@ namespace test1 {
         /// demande à la BDD de retourner tous les users dans le dataset
         /// </summary>
         /// <returns>récupère le dataset avec toutes les informations en bases de donnée user</returns>
-        static public DataSet getAllUsers () {
+        public DataSet getAllUsers () {
 
             
             string request = "SELECT `name`, `firstName`, `email`, `password`, `pseudo`, `language`, `isOrganizer`, `isAdmin` FROM `user`";
