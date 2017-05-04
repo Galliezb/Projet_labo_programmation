@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 using MySql.Data.MySqlClient;
 using MySql.Data;
 
@@ -403,6 +404,25 @@ namespace test1 {
 
             }
 
+
+        }
+
+        /// <summary>
+        /// demande à la BDD de retourner tous les users dans le dataset
+        /// </summary>
+        /// <returns>récupère le dataset avec toutes les informations en bases de donnée user</returns>
+        public DataSet getAllUsers () {
+
+            
+            string request = "SELECT `name`, `firstName`, `email`, `password`, `pseudo`, `language`, `isOrganizer`, `isAdmin` FROM `user`";
+            MySqlDataAdapter monDataAdapter = new MySqlDataAdapter(request,dbConnect.Laconnexion);
+
+            MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder( monDataAdapter );
+
+            DataSet monDataSet = new DataSet();
+            monDataAdapter.Fill( monDataSet , "user" );
+
+            return monDataSet;
 
         }
 
