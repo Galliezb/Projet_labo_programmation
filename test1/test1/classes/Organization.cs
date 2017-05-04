@@ -21,11 +21,11 @@ namespace test1 {
         public Organisation ( int IdOrga = -1 , string Name = "non défini" , string NameResp = "non défini" , string Mail = "non défini" , DateTime DateCreation = new DateTime() , string Description = "non défini" ) {
 
             idOrganization_ = IdOrga;
-            this.Name = Name;
-            this.Nameresp = NameResp;
-            this.Mail = Mail;
-            this.DateCreation = DateCreation;
-            this.Description = Description;
+            nameOrganization_ = Name;
+            nameResponsable_ = NameResp;
+            mailResponsable_ = Mail;
+            dateCreation_ = DateCreation;
+            description_ = Description;
 
 
         }

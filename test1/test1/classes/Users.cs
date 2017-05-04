@@ -38,14 +38,14 @@ namespace test1 {
         public Users ( int idUser = -1 , string name = "non défini" , string firstName = "non défini" , string email = "non défini" , string password = "non défini" , string pseudo = "non défini" , string language = "non défini" , bool isOrganizer = false , bool isAdmin = false ) {
 
             IDUser_ = idUser;
-            this.name = name;
-            this.firstName = firstName;
-            this.email = email;
-            this.password = password;
-            this.pseudo = pseudo;
-            this.language = language;
-            this.isOrganizer = isOrganizer;
-            this.isAdmin = isAdmin;
+            name_ = name;
+            firstName_ = firstName;
+            email_ = email;
+            pass_ = password;
+            pseudo_ = pseudo;
+            language_ = language;
+            isOrganizer_ = isOrganizer;
+            isAdmin_ = isAdmin;
 
         }
 
