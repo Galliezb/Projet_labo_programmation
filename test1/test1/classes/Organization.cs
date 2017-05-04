@@ -28,11 +28,11 @@ namespace test1 {
             description_ = Description;
 
             checkVariable.Add( "idOrganization" , true );
-            checkVariable.Add( "nameOrganization" , false );
-            checkVariable.Add( "nameResponsable" , false );
-            checkVariable.Add( "mailResponsable" , false );
-            checkVariable.Add( "dateCreation" , false );
-            checkVariable.Add( "description" , false );
+            checkVariable.Add( "nameOrganization" , true );
+            checkVariable.Add( "nameResponsable" , true );
+            checkVariable.Add( "mailResponsable" , true );
+            checkVariable.Add( "dateCreation" , true );
+            checkVariable.Add( "description" , true );
 
 
         }

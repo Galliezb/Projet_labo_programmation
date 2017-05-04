@@ -50,14 +50,14 @@ namespace test1
             isAdmin_ = isAdmin;
 
             checkVariable.Add( "idUser" , true );
-            checkVariable.Add( "name" , false );
-            checkVariable.Add( "firstName" , false );
-            checkVariable.Add( "email" , false );
-            checkVariable.Add( "password" , false );
-            checkVariable.Add( "language" , false );
-            checkVariable.Add( "idOrganization" , false );
-            checkVariable.Add( "isOrganizer" , false );
-            checkVariable.Add( "isAdmin" , false );
+            checkVariable.Add( "name" , true );
+            checkVariable.Add( "firstName" , true );
+            checkVariable.Add( "email" , true );
+            checkVariable.Add( "password" , true );
+            checkVariable.Add( "language" , true );
+            checkVariable.Add( "idOrganization" , true );
+            checkVariable.Add( "isOrganizer" , true );
+            checkVariable.Add( "isAdmin" , true );
 
 
         }
