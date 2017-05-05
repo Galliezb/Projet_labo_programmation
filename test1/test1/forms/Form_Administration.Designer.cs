@@ -35,9 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panelAddUser = new System.Windows.Forms.Panel();
-            this.panelUpdateInfo = new System.Windows.Forms.Panel();
-            this.cbbItems = new System.Windows.Forms.ComboBox();
-            this.lbChooseItem = new System.Windows.Forms.Label();
+            this.cbLanguage = new System.Windows.Forms.ComboBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.rtbDesc = new System.Windows.Forms.RichTextBox();
             this.lbDesc = new System.Windows.Forms.Label();
@@ -57,9 +55,11 @@
             this.tbNameUser = new System.Windows.Forms.TextBox();
             this.lbNameUser = new System.Windows.Forms.Label();
             this.btSubmit = new System.Windows.Forms.Button();
-            this.panelChangeInfo = new System.Windows.Forms.Panel();
-            this.cbLanguage = new System.Windows.Forms.ComboBox();
+            this.panelUpdateInfo = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbbItems = new System.Windows.Forms.ComboBox();
+            this.lbChooseItem = new System.Windows.Forms.Label();
+            this.panelChangeInfo = new System.Windows.Forms.Panel();
             this.panelAddUser.SuspendLayout();
             this.panelUpdateInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -123,42 +123,20 @@
             this.panelAddUser.TabIndex = 4;
             this.panelAddUser.Visible = false;
             // 
-            // panelUpdateInfo
+            // cbLanguage
             // 
-            this.panelUpdateInfo.Controls.Add(this.dataGridView1);
-            this.panelUpdateInfo.Controls.Add(this.cbbItems);
-            this.panelUpdateInfo.Controls.Add(this.lbChooseItem);
-            this.panelUpdateInfo.Location = new System.Drawing.Point(177, 0);
-            this.panelUpdateInfo.Name = "panelUpdateInfo";
-            this.panelUpdateInfo.Size = new System.Drawing.Size(829, 795);
-            this.panelUpdateInfo.TabIndex = 44;
-            this.panelUpdateInfo.Visible = false;
-            // 
-            // cbbItems
-            // 
-            this.cbbItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.cbbItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbbItems.ForeColor = System.Drawing.Color.White;
-            this.cbbItems.FormattingEnabled = true;
-            this.cbbItems.Items.AddRange(new object[] {
-            "User",
-            "Tournament",
-            "Organization",
-            "Team"});
-            this.cbbItems.Location = new System.Drawing.Point(380, 82);
-            this.cbbItems.Name = "cbbItems";
-            this.cbbItems.Size = new System.Drawing.Size(232, 28);
-            this.cbbItems.TabIndex = 1;
-            this.cbbItems.SelectedIndexChanged += new System.EventHandler(this.cbbItems_SelectedIndexChanged);
-            // 
-            // lbChooseItem
-            // 
-            this.lbChooseItem.AutoSize = true;
-            this.lbChooseItem.Location = new System.Drawing.Point(126, 85);
-            this.lbChooseItem.Name = "lbChooseItem";
-            this.lbChooseItem.Size = new System.Drawing.Size(134, 20);
-            this.lbChooseItem.TabIndex = 0;
-            this.lbChooseItem.Text = "Choose the type :";
+            this.cbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.cbLanguage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbLanguage.ForeColor = System.Drawing.Color.White;
+            this.cbLanguage.FormattingEnabled = true;
+            this.cbLanguage.Items.AddRange(new object[] {
+            "fr",
+            "en"});
+            this.cbLanguage.Location = new System.Drawing.Point(383, 424);
+            this.cbLanguage.Name = "cbLanguage";
+            this.cbLanguage.Size = new System.Drawing.Size(232, 28);
+            this.cbLanguage.TabIndex = 44;
             // 
             // tbFirstName
             // 
@@ -341,27 +319,16 @@
             this.btSubmit.UseVisualStyleBackColor = true;
             this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
             // 
-            // panelChangeInfo
+            // panelUpdateInfo
             // 
-            this.panelChangeInfo.Location = new System.Drawing.Point(258, 0);
-            this.panelChangeInfo.Name = "panelChangeInfo";
-            this.panelChangeInfo.Size = new System.Drawing.Size(748, 780);
-            this.panelChangeInfo.TabIndex = 45;
-            // 
-            // cbLanguage
-            // 
-            this.cbLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
-            this.cbLanguage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbLanguage.ForeColor = System.Drawing.Color.White;
-            this.cbLanguage.FormattingEnabled = true;
-            this.cbLanguage.Items.AddRange(new object[] {
-            "fr",
-            "en"});
-            this.cbLanguage.Location = new System.Drawing.Point(383, 424);
-            this.cbLanguage.Name = "cbLanguage";
-            this.cbLanguage.Size = new System.Drawing.Size(232, 28);
-            this.cbLanguage.TabIndex = 44;
+            this.panelUpdateInfo.Controls.Add(this.dataGridView1);
+            this.panelUpdateInfo.Controls.Add(this.cbbItems);
+            this.panelUpdateInfo.Controls.Add(this.lbChooseItem);
+            this.panelUpdateInfo.Location = new System.Drawing.Point(177, 0);
+            this.panelUpdateInfo.Name = "panelUpdateInfo";
+            this.panelUpdateInfo.Size = new System.Drawing.Size(829, 795);
+            this.panelUpdateInfo.TabIndex = 44;
+            this.panelUpdateInfo.Visible = false;
             // 
             // dataGridView1
             // 
@@ -370,7 +337,7 @@
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Schoolbook", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -391,7 +358,7 @@
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Schoolbook", 12F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -406,6 +373,39 @@
             this.dataGridView1.Size = new System.Drawing.Size(798, 582);
             this.dataGridView1.TabIndex = 2;
             // 
+            // cbbItems
+            // 
+            this.cbbItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
+            this.cbbItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbItems.ForeColor = System.Drawing.Color.White;
+            this.cbbItems.FormattingEnabled = true;
+            this.cbbItems.Items.AddRange(new object[] {
+            "User",
+            "Tournament",
+            "Organization",
+            "Team"});
+            this.cbbItems.Location = new System.Drawing.Point(380, 82);
+            this.cbbItems.Name = "cbbItems";
+            this.cbbItems.Size = new System.Drawing.Size(232, 28);
+            this.cbbItems.TabIndex = 1;
+            this.cbbItems.SelectedIndexChanged += new System.EventHandler(this.cbbItems_SelectedIndexChanged);
+            // 
+            // lbChooseItem
+            // 
+            this.lbChooseItem.AutoSize = true;
+            this.lbChooseItem.Location = new System.Drawing.Point(126, 85);
+            this.lbChooseItem.Name = "lbChooseItem";
+            this.lbChooseItem.Size = new System.Drawing.Size(134, 20);
+            this.lbChooseItem.TabIndex = 0;
+            this.lbChooseItem.Text = "Choose the type :";
+            // 
+            // panelChangeInfo
+            // 
+            this.panelChangeInfo.Location = new System.Drawing.Point(258, 0);
+            this.panelChangeInfo.Name = "panelChangeInfo";
+            this.panelChangeInfo.Size = new System.Drawing.Size(748, 780);
+            this.panelChangeInfo.TabIndex = 45;
+            // 
             // Form_Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -413,9 +413,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1005, 768);
             this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.panelUpdateInfo);
             this.Controls.Add(this.panelAddUser);
             this.Controls.Add(this.panelChangeInfo);
+            this.Controls.Add(this.panelUpdateInfo);
             this.Font = new System.Drawing.Font("Century Schoolbook", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

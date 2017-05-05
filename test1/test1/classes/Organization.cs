@@ -18,6 +18,15 @@ namespace test1 {
         DatabaseConnection dbConnect = new DatabaseConnection();
         Session laSession = new Session();
 
+        /// <summary>
+        /// Constructeur Organisation, sans paramètre = non défini et -1 pour les ints
+        /// </summary>
+        /// <param name="IdOrga">L'ID de l'organisation</param>
+        /// <param name="Name">Le nom de l'organisation</param>
+        /// <param name="NameResp">Le nom du responsable de l'organisation</param>
+        /// <param name="Mail">LKe mail du responsable</param>
+        /// <param name="DateCreation">La date de création de l'organisation</param>
+        /// <param name="Description">La description de l'organisation</param>
         public Organisation ( int IdOrga = -1 , string Name = "non défini" , string NameResp = "non défini" , string Mail = "non défini" , DateTime DateCreation = new DateTime() , string Description = "non défini" ) {
 
             idOrganization_ = IdOrga;
