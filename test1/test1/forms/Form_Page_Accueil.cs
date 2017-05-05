@@ -286,6 +286,9 @@ namespace test1
 
             //MessageBox.Show( PanelAdmin.Size.Width.ToString() );
             panelFill.Size = new Size( this.Size.Width-panelGauche.Size.Width , panelFill.Size.Height);
+
+
+
         }
     }
 }

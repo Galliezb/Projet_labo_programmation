@@ -13,6 +13,7 @@ namespace test1 {
 
         Users newUser;
         Users userForDataGrid = new Users();
+        DataSet dataForDataGrid = new DataSet();
         Session laSession = new Session();
 
         public Form_Administration () {
@@ -113,10 +114,20 @@ namespace test1 {
 
         private void cbbItems_SelectedIndexChanged ( object sender , EventArgs e ) {
             if ( cbbItems.SelectedItem.ToString() == "User" ) {
-                dataGridView1.DataSource = userForDataGrid.getAllUsers();
+                dataForDataGrid = userForDataGrid.getAllUsers();
+                dataGridView1.DataSource = dataForDataGrid;
                 dataGridView1.DataMember = "user";
-                MessageBox.Show( dataGridView1.DataSource.ToString() );
             }
+        }
+
+
+        private void tps_Tick ( object sender , EventArgs e ) {
+            dataGridView1.Size = new Size( dataGridView1.Parent.Size.Width , dataGridView1.Size.Height );
+            dataGridView1.Parent.Size = new Size( dataGridView1.Parent.Parent.Size.Width-247 , dataGridView1.Size.Height );
+        }
+
+        private void button1_Click ( object sender , EventArgs e ) {
+            userForDataGrid.update( dataForDataGrid );
         }
     }
 }

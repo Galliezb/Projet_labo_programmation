@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent () {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Add User to DB");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Update Informations");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Change Your Informations");
@@ -60,6 +61,8 @@
             this.cbbItems = new System.Windows.Forms.ComboBox();
             this.lbChooseItem = new System.Windows.Forms.Label();
             this.panelChangeInfo = new System.Windows.Forms.Panel();
+            this.tps = new System.Windows.Forms.Timer(this.components);
+            this.updateDataGridView = new System.Windows.Forms.Button();
             this.panelAddUser.SuspendLayout();
             this.panelUpdateInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,7 +94,7 @@
             treeNode4,
             treeNode5,
             treeNode6});
-            this.treeView1.Size = new System.Drawing.Size(153, 768);
+            this.treeView1.Size = new System.Drawing.Size(235, 768);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -117,9 +120,9 @@
             this.panelAddUser.Controls.Add(this.tbNameUser);
             this.panelAddUser.Controls.Add(this.lbNameUser);
             this.panelAddUser.Controls.Add(this.btSubmit);
-            this.panelAddUser.Location = new System.Drawing.Point(177, 0);
+            this.panelAddUser.Location = new System.Drawing.Point(241, 0);
             this.panelAddUser.Name = "panelAddUser";
-            this.panelAddUser.Size = new System.Drawing.Size(829, 795);
+            this.panelAddUser.Size = new System.Drawing.Size(765, 795);
             this.panelAddUser.TabIndex = 4;
             this.panelAddUser.Visible = false;
             // 
@@ -321,12 +324,13 @@
             // 
             // panelUpdateInfo
             // 
+            this.panelUpdateInfo.Controls.Add(this.updateDataGridView);
             this.panelUpdateInfo.Controls.Add(this.dataGridView1);
             this.panelUpdateInfo.Controls.Add(this.cbbItems);
             this.panelUpdateInfo.Controls.Add(this.lbChooseItem);
-            this.panelUpdateInfo.Location = new System.Drawing.Point(177, 0);
+            this.panelUpdateInfo.Location = new System.Drawing.Point(244, 0);
             this.panelUpdateInfo.Name = "panelUpdateInfo";
-            this.panelUpdateInfo.Size = new System.Drawing.Size(829, 795);
+            this.panelUpdateInfo.Size = new System.Drawing.Size(759, 768);
             this.panelUpdateInfo.TabIndex = 44;
             this.panelUpdateInfo.Visible = false;
             // 
@@ -353,6 +357,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.dataGridView1.Location = new System.Drawing.Point(18, 135);
             this.dataGridView1.Name = "dataGridView1";
@@ -370,7 +375,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Size = new System.Drawing.Size(798, 582);
+            this.dataGridView1.Size = new System.Drawing.Size(731, 582);
             this.dataGridView1.TabIndex = 2;
             // 
             // cbbItems
@@ -401,10 +406,25 @@
             // 
             // panelChangeInfo
             // 
-            this.panelChangeInfo.Location = new System.Drawing.Point(258, 0);
+            this.panelChangeInfo.Location = new System.Drawing.Point(241, 0);
             this.panelChangeInfo.Name = "panelChangeInfo";
-            this.panelChangeInfo.Size = new System.Drawing.Size(748, 780);
+            this.panelChangeInfo.Size = new System.Drawing.Size(762, 768);
             this.panelChangeInfo.TabIndex = 45;
+            // 
+            // tps
+            // 
+            this.tps.Enabled = true;
+            this.tps.Tick += new System.EventHandler(this.tps_Tick);
+            // 
+            // updateDataGridView
+            // 
+            this.updateDataGridView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateDataGridView.Location = new System.Drawing.Point(338, 724);
+            this.updateDataGridView.Name = "updateDataGridView";
+            this.updateDataGridView.Size = new System.Drawing.Size(99, 32);
+            this.updateDataGridView.TabIndex = 45;
+            this.updateDataGridView.Text = "UPDATE";
+            this.updateDataGridView.UseVisualStyleBackColor = true;
             // 
             // Form_Administration
             // 
@@ -413,12 +433,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(96)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(1005, 768);
             this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.panelUpdateInfo);
             this.Controls.Add(this.panelAddUser);
             this.Controls.Add(this.panelChangeInfo);
-            this.Controls.Add(this.panelUpdateInfo);
             this.Font = new System.Drawing.Font("Century Schoolbook", 12F);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Administration";
             this.Text = "Form_Administration";
@@ -460,5 +480,7 @@
         private System.Windows.Forms.Panel panelChangeInfo;
         private System.Windows.Forms.ComboBox cbLanguage;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Timer tps;
+        private System.Windows.Forms.Button updateDataGridView;
     }
 }
